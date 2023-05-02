@@ -1,1 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+@import "abstracts/mixins", "abstracts/variables";
+
+body {
+  font-family: 'Cairo', sans-serif !important;
+  background-color: $backgroundColor !important;
+  box-sizing: border-box;
+  direction: rtl;
+  text-align: right !important;
+  overflow-x: hidden;
+}
+button.primary {
+  @include buttons($mainGreenColor, $mainGreenColor, $white, $fontSize , $mainGreenColor, $white);
+}
+button.primary-outline {
+  @include buttons(transparent, $mainGreenColor, $mainGreenColor, $fontSize, $white,$mainGreenColor);
+}
+ul.list-unstyled { padding: 0 }
+
+.flexBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq {
+  .panel {
+    margin-bottom: 1em;
+    border-radius: 10px;
+    .panel-heading {
+      background: #fff;
+      border: 1px solid #E8E8E8;
+      box-shadow: 0 3px 6px rgb(109 108 108 / 16%);
+      border-radius: 10px;
+      .panel-title {
+        button {
+          color: #14395B;
+          text-decoration: none;
+        }
+      }
+    }
+    .panel-body {
+      padding-top: 0;
+    }
+  }
+  .panel-open {
+    .panel {
+      border: 1px solid #186AA5;
+      border-radius: 32px;
+      .panel-heading {
+        box-shadow: none;
+        background: transparent;
+        border: none;
+      }
+    }
+  }
+}
+.mediaGallery {
+  .gallery {
+    .img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        border-radius: 24px;
+      }
+    }
+  }
+  .owl-item.active.center {
+    .gallery {
+      .img {
+        img {
+          width: 150%;
+        }
+      }
+    }
+  }
+  .owl-item.active:not(.center) {
+    .gallery {
+      .img {
+        height: 525px;
+        img {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";

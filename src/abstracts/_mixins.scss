@@ -1,0 +1,34 @@
+@import "../abstracts/variables";
+@mixin buttons ($back-color, $border-color, $font-color, $font-size : $fontSize, $hovered-font-color, $hovered-back-color) {
+  background-color: $back-color;
+  border: 1px solid $border-color;
+  color: $font-color;
+  font-size: $font-size;
+  padding: 10px 2.5em;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+  z-index: 1;
+  transition: all 150ms ease-in-out;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: $hovered-back-color;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: all 150ms ease-in-out;
+    border-radius: 10px;
+  }
+  &:hover {
+    color: $hovered-font-color;
+    &::after {
+      width: 100%;
+    }
+  }
+}

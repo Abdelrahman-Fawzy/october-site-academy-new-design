@@ -1,0 +1,55 @@
+.missions, .targets, .staffs {
+  margin: 3em 0;
+  align-items: center;
+  .mission-text, .target-text, .staff-text {
+    flex: 2;
+    margin-right: 2em;
+    .mission, .target, .staff {
+      display: flex;
+      align-items: flex-start;
+      gap: 1em;
+      margin-bottom: 1em;
+      .img {
+        background: #D9ECF7;
+        padding: 10px;
+        border-radius: 16px;
+        img {
+          width: 40px;
+        }
+      }
+      .text {
+        h6 {
+          color: #363636;
+          font-weight: bold;
+          font-size: 1.5rem;
+          margin: 10px 0;
+        }
+        p {
+          line-height: 1.9em;
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .mission-img, .target-img, .staff-img {
+    margin: 0 2em;
+    img {
+      width: 100%;
+    }
+  }
+}
+.mission-img {
+  flex: 3;
+}
+.target-img {
+  flex: 1.5;
+}
+.staff-img {
+  flex: 2;
+}
+.target {
+  .text {
+    p { width: 85%;}
+  }
+}

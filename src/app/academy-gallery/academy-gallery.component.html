@@ -1,0 +1,1714 @@
+<div class="header">
+  <div class="container">
+    <h2 class="mainTitle">
+      <div class="front-bubble"></div>
+      ميديا الاكاديمية
+      <div class="back-bubble"></div>
+    </h2>
+  </div>
+</div>
+<div class="media-gallery">
+  <div class="container">
+    <div class="tabs">
+      <button id="mediaDefaultOpen" class="tabLinks" (click)="openTab($event, 'buildings')">
+        <img src="assets/images/media-icons/buildings.svg" alt="">
+        قاعات ومباني الأكاديمية
+      </button>
+      <button class="tabLinks" (click)="openTab($event, 'conferences')">
+        <img src="assets/images/media-icons/conferences.svg" alt="">
+        المؤتمرات والندوات والاخبار
+      </button>
+      <button class="tabLinks" (click)="openTab($event, 'graduation-party')">
+        <img src="assets/images/media-icons/graduations-party.svg" alt="">
+        حفلات التخرج
+      </button>
+      <button class="tabLinks" (click)="openTab($event, 'training')">
+        <img src="assets/images/media-icons/training.svg" alt="">
+        التدريب العملي
+      </button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="tabcontent" id="buildings">
+      <h4>صور قاعات ومباني الأكاديمية</h4>
+      <p>صور من القاعات التعليمية والفصول الدراسية ومعامل الكمبيوتر ومباني أكاديمية 6 أكتوبر</p>
+      <div class="all-branches" id="all-branches">
+        <div class="row">
+          <div class="col-3">
+            <div class="branch">
+              <div class="img">
+                <img src="assets/images/branchs/haram.png" alt="">
+              </div>
+              <h6>فرع الهرم</h6>
+              <button class="primary" (click)="openBranch('haramBranch')">مشاهدة الصور</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="branch">
+              <div class="img">
+                <img src="assets/images/branchs/shobra.png" alt="">
+              </div>
+              <h6>فرع شبرا الخيمة</h6>
+              <button class="primary" (click)="openBranch('shobraBranch')">مشاهدة الصور</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="branch">
+              <div class="img">
+                <img src="assets/images/branchs/tanta.png" alt="">
+              </div>
+              <h6>فرع طنطا</h6>
+              <button class="primary" (click)="openBranch('tantaBranch')">مشاهدة الصور</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="branch">
+              <div class="img">
+                <img src="assets/images/branchs/tanta.png" alt="">
+              </div>
+              <h6>فرع بنها</h6>
+              <button class="primary" (click)="openBranch('benhaBranch')">مشاهدة الصور</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-branch" id="haramBranch">
+        <h4 class="title-name">فرع الهرم</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/1.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/2.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/3.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/4.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/5.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/6.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/7.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/8.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/9.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/10.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/11.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/12.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">صور فروع اخرى</h4>
+          <div class="row">
+            <div class="col-4">
+              <div class="branch">
+                <div class="img">
+                  <img src="assets/images/branchs/shobra.png" alt="">
+                </div>
+                <h6>فرع شبرا الخيمة</h6>
+                <button class="primary" (click)="openBranch('shobraBranch')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="branch">
+                <div class="img">
+                  <img src="assets/images/branchs/tanta.png" alt="">
+                </div>
+                <h6>فرع طنطا</h6>
+                <button class="primary" (click)="openBranch('tantaBranch')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="branch">
+                <div class="img">
+                  <img src="assets/images/branchs/tanta.png" alt="">
+                </div>
+                <h6>فرع بنها</h6>
+                <button class="primary" (click)="openBranch('benhaBranch')">مشاهدة الصور</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-branch" id="shobraBranch">
+        <h4 class="title-name">فرع شبرا الخيمة</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/5.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/8.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/7.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/6.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/12.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/10.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/11.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/9.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/2.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/4.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/1.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/3.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">صور فروع اخرى</h4>
+          <div class="row">
+            <div class="col-4">
+              <div class="branch">
+                <div class="img">
+                  <img src="assets/images/branchs/haram.png" alt="">
+                </div>
+                <h6>فرع الهرم</h6>
+                <button class="primary" (click)="openBranch('haramBranch')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="branch">
+                <div class="img">
+                  <img src="assets/images/branchs/tanta.png" alt="">
+                </div>
+                <h6>فرع طنطا</h6>
+                <button class="primary" (click)="openBranch('tantaBranch')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="branch">
+                <div class="img">
+                  <img src="assets/images/branchs/tanta.png" alt="">
+                </div>
+                <h6>فرع بنها</h6>
+                <button class="primary" (click)="openBranch('benhaBranch')">مشاهدة الصور</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-branch" id="tantaBranch">
+        <h4 class="title-name">فرع طنطا</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/3.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/1.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/4.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/2.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/7.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/5.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/6.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/8.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/10.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/9.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/12.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/11.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">صور فروع اخرى</h4>
+          <div class="row">
+            <div class="col-4">
+              <div class="branch">
+                <div class="img">
+                  <img src="assets/images/branchs/haram.png" alt="">
+                </div>
+                <h6>فرع الهرم</h6>
+                <button class="primary" (click)="openBranch('haramBranch')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="branch">
+                <div class="img">
+                  <img src="assets/images/branchs/shobra.png" alt="">
+                </div>
+                <h6>فرع شبرا الخيمة</h6>
+                <button class="primary" (click)="openBranch('shobraBranch')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="branch">
+                <div class="img">
+                  <img src="assets/images/branchs/tanta.png" alt="">
+                </div>
+                <h6>فرع بنها</h6>
+                <button class="primary" (click)="openBranch('benhaBranch')">مشاهدة الصور</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-branch" id="benhaBranch">
+        <h4 class="title-name">فرع بنها</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/9.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/12.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/11.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/10.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/1.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/4.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/2.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/3.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/8.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/5.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/7.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/branchs/6.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">صور فروع اخرى</h4>
+          <div class="row">
+            <div class="col-4">
+              <div class="branch">
+                <div class="img">
+                  <img src="assets/images/branchs/haram.png" alt="">
+                </div>
+                <h6>فرع الهرم</h6>
+                <button class="primary" (click)="openBranch('haramBranch')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="branch">
+                <div class="img">
+                  <img src="assets/images/branchs/shobra.png" alt="">
+                </div>
+                <h6>فرع شبرا الخيمة</h6>
+                <button class="primary" (click)="openBranch('shobraBranch')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="branch">
+                <div class="img">
+                  <img src="assets/images/branchs/tanta.png" alt="">
+                </div>
+                <h6>فرع طنطا</h6>
+                <button class="primary" (click)="openBranch('tantaBranch')">مشاهدة الصور</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tabcontent" id="conferences">
+      <h4>المؤتمرات والندوات والاخبار</h4>
+      <p>تعرف على آخر أخبار وفعاليات أكاديمية 6 أكتوبر</p>
+      <div class="all-articles" id="all-articles">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 mb-4">
+              <div class="card">
+                <img src="assets/images/article-img.png" class="card-img-top" alt="article">
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title" (click)="openArticle('article1')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h5 class="date">
+                      <span>04\04\2023</span>
+                      <img src="assets/images/icons/date.svg" alt="">
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.   عرض المزيد
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="assets/images/article-img.png" class="card-img-top" alt="article">
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title" (click)="openArticle('article2')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h5 class="date">
+                      <span>04\04\2023</span>
+                      <img src="assets/images/icons/date.svg" alt="">
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.   عرض المزيد
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="assets/images/article-img.png" class="card-img-top" alt="article">
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title" (click)="openArticle('article3')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h5 class="date">
+                      <span>04\04\2023</span>
+                      <img src="assets/images/icons/date.svg" alt="">
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.   عرض المزيد
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="another_articles">
+                <div class="title">احدث الاخبار</div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article1.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="green">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article2.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="blue">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article3.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="yellow">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article4.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="red">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article5.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="blue">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <a href="" class="showmore">عرض المزيد</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-article" id="article1">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 mb-4">
+              <div class="card">
+                <img src="assets/images/article-img.png" class="card-img-top" alt="article">
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h5 class="date">
+                      <span>04\04\2023</span>
+                      <img src="assets/images/icons/date.svg" alt="">
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم. لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="another_articles">
+                <div class="title">احدث الاخبار</div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article1.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="green">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article2.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="blue">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article3.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="yellow">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article4.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="red">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article5.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="blue">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <a href="" class="showmore">عرض المزيد</a>
+              </div>
+            </div>
+          </div>
+          <h4 class="another-title">مقالات و اخبار مرتبطة</h4>
+          <div class="row related">
+            <div class="col-4">
+              <div class="card">
+                <div class="card-img">
+                  <img src="assets/images/related-article-img.png" class="card-img-top" alt="article">
+                  <h5 class="date">
+                    <span>04\04\2023</span>
+                    <img src="assets/images/icons/white-date.svg" alt="">
+                  </h5>
+                </div>
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title" (click)="openArticle('article1')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <div class="card-img">
+                  <img src="assets/images/related-article-img.png" class="card-img-top" alt="article">
+                  <h5 class="date">
+                    <span>04\04\2023</span>
+                    <img src="assets/images/icons/white-date.svg" alt="">
+                  </h5>
+                </div>
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title" (click)="openArticle('article2')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <div class="card-img">
+                  <img src="assets/images/related-article-img.png" class="card-img-top" alt="article">
+                  <h5 class="date">
+                    <span>04\04\2023</span>
+                    <img src="assets/images/icons/white-date.svg" alt="">
+                  </h5>
+                </div>
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title" (click)="openArticle('article3')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-article" id="article2">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 mb-4">
+              <div class="card">
+                <img src="assets/images/article-img.png" class="card-img-top" alt="article">
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h5 class="date">
+                      <span>04\04\2023</span>
+                      <img src="assets/images/icons/date.svg" alt="">
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم. لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="another_articles">
+                <div class="title">احدث الاخبار</div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article1.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="green">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article2.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="blue">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article3.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="yellow">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article4.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="red">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article5.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="blue">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <a href="" class="showmore">عرض المزيد</a>
+              </div>
+            </div>
+          </div>
+          <h4 class="another-title">مقالات و اخبار مرتبطة</h4>
+          <div class="row related">
+            <div class="col-4">
+              <div class="card">
+                <div class="card-img">
+                  <img src="assets/images/related-article-img.png" class="card-img-top" alt="article">
+                  <h5 class="date">
+                    <span>04\04\2023</span>
+                    <img src="assets/images/icons/white-date.svg" alt="">
+                  </h5>
+                </div>
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title" (click)="openArticle('article1')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <div class="card-img">
+                  <img src="assets/images/related-article-img.png" class="card-img-top" alt="article">
+                  <h5 class="date">
+                    <span>04\04\2023</span>
+                    <img src="assets/images/icons/white-date.svg" alt="">
+                  </h5>
+                </div>
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title" (click)="openArticle('article2')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <div class="card-img">
+                  <img src="assets/images/related-article-img.png" class="card-img-top" alt="article">
+                  <h5 class="date">
+                    <span>04\04\2023</span>
+                    <img src="assets/images/icons/white-date.svg" alt="">
+                  </h5>
+                </div>
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title" (click)="openArticle('article3')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-article" id="article3">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 mb-4">
+              <div class="card">
+                <img src="assets/images/article-img.png" class="card-img-top" alt="article">
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h5 class="date">
+                      <span>04\04\2023</span>
+                      <img src="assets/images/icons/date.svg" alt="">
+                    </h5>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم. لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="another_articles">
+                <div class="title">احدث الاخبار</div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article1.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="green">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article2.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="blue">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article3.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="yellow">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article4.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="red">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <div class="article">
+                  <div class="article_img">
+                    <img src="assets/images/article5.png" alt="">
+                  </div>
+                  <div class="article_info">
+                    <span class="blue">لوريم إيبسوم</span>
+                    <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)   <a href="#">عرض المزيد</a></p>
+                  </div>
+                </div>
+                <a href="" class="showmore">عرض المزيد</a>
+              </div>
+            </div>
+          </div>
+          <h4 class="another-title">مقالات و اخبار مرتبطة</h4>
+          <div class="row related">
+            <div class="col-4">
+              <div class="card">
+                <div class="card-img">
+                  <img src="assets/images/related-article-img.png" class="card-img-top" alt="article">
+                  <h5 class="date">
+                    <span>04\04\2023</span>
+                    <img src="assets/images/icons/white-date.svg" alt="">
+                  </h5>
+                </div>
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title" (click)="openArticle('article1')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <div class="card-img">
+                  <img src="assets/images/related-article-img.png" class="card-img-top" alt="article">
+                  <h5 class="date">
+                    <span>04\04\2023</span>
+                    <img src="assets/images/icons/white-date.svg" alt="">
+                  </h5>
+                </div>
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title" (click)="openArticle('article2')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <div class="card-img">
+                  <img src="assets/images/related-article-img.png" class="card-img-top" alt="article">
+                  <h5 class="date">
+                    <span>04\04\2023</span>
+                    <img src="assets/images/icons/white-date.svg" alt="">
+                  </h5>
+                </div>
+                <div class="card-body">
+                  <div class="article_title">
+                    <h4 class="title" (click)="openArticle('article3')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                  </div>
+                  <p class="card-text">
+                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tabcontent" id="graduation-party">
+      <h4>صور حفلات تخرج دفعات اكاديمية 6 اكتوبر</h4>
+      <p>تهتم إدارة الأكاديمية بحفلات التخرج للطلبة الخريجين وتكريم الطلبة المتفوقين بحضور عدد من الفنانين ونخبة من الاعلاميين والنجوم</p>
+      <div class="all-classes" id="all-classes">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <div class="class">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>دفعة 2022</h6>
+                <button class="primary" (click)="openClass('2022class')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="class">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>دفعة 2021</h6>
+                <button class="primary" (click)="openClass('2021class')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="class">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>دفعة 2020</h6>
+                <button class="primary" (click)="openClass('2020class')">مشاهدة الصور</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-class" id="2022class">
+        <h4 class="title-name">دفعة 2022</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/16.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/81.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/101.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/54.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/95.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/31.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/53.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/30.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/25.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/52.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/98.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/78.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">صور حفلات تخرج دفعات اخرى</h4>
+          <div class="row">
+            <div class="col-4">
+              <div class="class">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>دفعة 2022</h6>
+                <button class="primary" (click)="openClass('2022class')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="class">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>دفعة 2021</h6>
+                <button class="primary" (click)="openClass('2021class')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="class">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>دفعة 2020</h6>
+                <button class="primary" (click)="openClass('2020class')">مشاهدة الصور</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-class" id="2021class">
+        <h4 class="title-name">دفعة 2021</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/16.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/81.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/101.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/54.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/95.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/31.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/53.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/30.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/25.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/52.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/98.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/78.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">صور حفلات تخرج دفعات اخرى</h4>
+          <div class="row">
+            <div class="col-4">
+              <div class="class">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>دفعة 2022</h6>
+                <button class="primary" (click)="openClass('2022class')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="class">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>دفعة 2021</h6>
+                <button class="primary" (click)="openClass('2021class')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="class">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>دفعة 2020</h6>
+                <button class="primary" (click)="openClass('2020class')">مشاهدة الصور</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-class" id="2020class">
+        <h4 class="title-name">دفعة 2020</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/16.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/81.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/101.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/54.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/95.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/31.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/53.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/30.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/25.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/52.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/98.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/78.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">صور حفلات تخرج دفعات اخرى</h4>
+          <div class="row">
+            <div class="col-4">
+              <div class="class">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>دفعة 2022</h6>
+                <button class="primary" (click)="openClass('2022class')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="class">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>دفعة 2021</h6>
+                <button class="primary" (click)="openClass('2021class')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="class">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>دفعة 2020</h6>
+                <button class="primary" (click)="openClass('2020class')">مشاهدة الصور</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tabcontent" id="training">
+      <div class="all-trainings" id="all-trainings">
+        <div class="row">
+          <div class="col-6">
+            <div class="container">
+              <p class="training-p">
+                التدريب العملى لطلاب الأكاديمية هو واحد من أهم المراحل التي نركز عليها فى تعليم وتأهيل خريجين قادرين علي تلبية متطلبات سوق العمل
+              </p>
+              <p class="training-p">
+                التدريب العملي هو تطبيق عملى على ما تم تدريسه لطلاب الاكاديمية من خلال تجارب ميدانية تكسب الطالب المعرفة و المهارة عن بيئة العمل الحقيقية التي سوف يواجهها بعد التخرج
+              </p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="img">
+              <img src="assets/images/trainingFirst.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="img">
+              <img src="assets/images/trainingSecond.png" alt="">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="container">
+              <p class="training-p">
+                قد عملت إدارة الأكاديمية خلال السنوات الماضية على توفير كل الإمكانات والسبل التي من شأنها إرساء قواعد عملية تدريبية متينة الأساس، عميقة المفاهيم، مفصلة الأهداف ومحددة المراحل والخطوات، بحيث تكون مكملة ومحققة للخطط الدراسية المختلفة
+              </p>
+              <p class="training-p">
+                و فى سبيل تحقيق هذا الغرض سارعت الاكاديمية بالشراكة مع كبرى الشركات و المصانع والفنادق والهيئات سواء فى القطاع العام أو الخاص ,كل المحافل ذات الصلة بالتدريب العملى لإتاحة التدريب العملى لطلاب الأكاديمية لديهم
+              </p>
+            </div>
+          </div>
+        </div>
+        <h4 class="my-4">صور تدريبات عملى فى اكاديمية 6 اكتوبر</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training1')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training2')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training3')">مشاهدة الصور</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-training" id="training1">
+        <h4>صور التدريب العملى فى اكاديمية 6 اكتوبر</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/16.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/81.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/101.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/54.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/95.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/31.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/53.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/30.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/25.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/52.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/98.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/78.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">صور تدريب عملى أخرى</h4>
+          <div class="row">
+            <div class="col-4">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training1')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training2')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training3')">مشاهدة الصور</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-training" id="training2">
+        <h4>صور التدريب العملى فى اكاديمية 6 اكتوبر</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/16.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/81.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/101.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/54.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/95.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/31.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/53.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/30.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/25.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/52.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/98.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/78.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">صور تدريب عملى أخرى</h4>
+          <div class="row">
+            <div class="col-4">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training1')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training2')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training3')">مشاهدة الصور</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-training" id="training3">
+        <h4>صور التدريب العملى فى اكاديمية 6 اكتوبر</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/16.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/81.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/101.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/54.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/95.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/31.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/53.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/30.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/25.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/52.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/98.png" alt="">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img">
+                <img src="assets/images/departments-icons/78.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">صور تدريب عملى أخرى</h4>
+          <div class="row">
+            <div class="col-4">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training1')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training2')">مشاهدة الصور</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training3')">مشاهدة الصور</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

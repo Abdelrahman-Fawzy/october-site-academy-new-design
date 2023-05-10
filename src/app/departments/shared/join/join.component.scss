@@ -1,0 +1,47 @@
+@import "../../../../abstracts/mixins", "../../../../abstracts/variables";
+.text-center {
+  p {
+    font-size: 23px;
+    font-weight: bold;
+  }
+}
+.containerOfJoin {
+  display: flex;
+  justify-content: flex-end;
+  .forJoin {
+    display: flex;
+    background: rgba(37, 159, 139, 14%);
+    justify-content: end;
+    align-items: center;
+    width: 80%;
+    padding: 5em;
+    position: relative;
+    .img {
+      background: #fff;
+      padding: 7px;
+      width: 250px;
+      height: 300px;
+      position: absolute;
+      right: -100px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .data {
+      h3 {
+        font-weight: bold;
+        color: $mainBlueColor;
+      }
+      p {
+        width: 60%;
+        margin: 2em 0;
+        color: #6D6D6D;
+      }
+      .actions {
+        display: flex;
+        gap: 1em;
+      }
+    }
+  }
+}

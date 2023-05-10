@@ -1,0 +1,84 @@
+@import "../../abstracts/variables", "../../abstracts/mixins";
+.studying-system {
+  .system-tabs {
+    background: $white;
+    margin-top: 2em;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 16%);
+    &__header {
+      padding: 15px;
+      border-bottom: 1px solid #707070;
+      h4 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0;
+        color: $mainBlueColor;
+      }
+    }
+    &__body {
+      padding: 1.5em;
+      display: flex;
+      justify-content: space-around;
+      button.tablinks {
+        background: transparent;
+        border: none;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        font-weight: bold;
+        &.active {
+          color: $mainGreenColor;
+          svg {
+            path {
+              fill: $mainGreenColor
+            }
+          }
+        }
+      }
+    }
+  }
+  .system-content {
+    &__body {
+      background: $white;
+      padding: 1em 2em;
+      border-radius: 20px;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 16%);
+      margin-top: 2em;
+      -webkit-animation: fadeEffect 1s;
+      animation: fadeEffect 1s;
+      display: none;
+      .header {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img {
+          width: 15px;
+        }
+        span {
+          font-weight: bold;
+          color: $mainGreenColor;
+        }
+      }
+      .body {
+        p, li {
+          color: #707070;
+          line-height: 2em;
+          font-size: 20px;
+          margin: 0 2em;
+        }
+      }
+    }
+  }
+}
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

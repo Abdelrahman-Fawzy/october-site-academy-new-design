@@ -286,12 +286,14 @@
 .contact {
   .box {
     background-image: url('/assets/images/shapes/contact.png');
-    background-size: 100% 100%;
+    background-size: 100%;
     background-position: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3em;
+    border-radius: 20px;
+    background-repeat: no-repeat;
     .contact-us {
       h4 {
         color: $white;
@@ -321,8 +323,8 @@
       }
     }
     .img {
-      width: 300px;
-      height: 300px;
+      width: 250px;
+      height: 250px;
       img {
         width: 100%;
       }

@@ -15,6 +15,9 @@ button.primary {
 button.primary-outline {
   @include buttons(transparent, $mainGreenColor, $mainGreenColor, $fontSize, $white,$mainGreenColor);
 }
+button.primary-white {
+  @include buttons($white, $white, $mainGreenColor, $fontSize, $white,$mainGreenColor);
+}
 ul.list-unstyled { padding: 0 }
 
 .flexBox {
@@ -23,7 +26,7 @@ ul.list-unstyled { padding: 0 }
   align-items: center;
 }
 
-.faq {
+.faq, .tabcontent#conversations {
   .panel {
     margin-bottom: 1em;
     border-radius: 10px;

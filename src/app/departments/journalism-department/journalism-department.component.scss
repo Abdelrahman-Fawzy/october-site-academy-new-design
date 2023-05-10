@@ -1,0 +1,94 @@
+.missions {
+  margin: 3em 0;
+}
+.missions, .targets, .staffs {
+  align-items: center;
+  .mission-text, .target-text, .staff-text {
+    flex: 2;
+    margin-right: 2em;
+    .mission, .target, .staff {
+      display: flex;
+      align-items: flex-start;
+      gap: 1em;
+      margin-bottom: 1em;
+      .img {
+        background: #D9ECF7;
+        padding: 10px;
+        border-radius: 16px;
+        img {
+          width: 40px;
+        }
+      }
+      .text {
+        h6 {
+          color: #363636;
+          font-weight: bold;
+          font-size: 1.5rem;
+          margin: 10px 0;
+        }
+        p {
+          line-height: 1.9em;
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .mission-img, .target-img, .staff-img {
+    margin: 0 2em;
+    img {
+      width: 100%;
+    }
+  }
+}
+.mission-img, .mission-text {
+  flex: 1 !important;
+}
+.target-img {
+  flex: 1.5;
+}
+.staff-img {
+  flex: 2;
+}
+.target {
+  .text {
+    p { width: 85%;}
+  }
+}
+
+
+.targeting {
+  background-image: url('/assets/images/departments-icons/journalismDepartTarget.png');
+  background-position: right;
+  background-size: 55% 140%;
+  background-repeat: no-repeat;
+  margin: 0 3em;
+  padding: 3em;
+  .targeting-box {
+    width: 60%;
+    margin-inline-start: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    .img {
+      background: #D9ECF7;
+      padding: 10px;
+      border-radius: 16px;
+      img {
+        width: 40px;
+      }
+    }
+    h6 {
+      color: #363636;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+    p {
+      line-height: 1.9em;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 7em;
+    }
+  }
+}

@@ -1,0 +1,184 @@
+@import "../../abstracts/variables", "../../abstracts/mixins";
+.graduates {
+  &__header {
+    background-image: url('/assets/images/graduates.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 580px;
+    position: relative;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url('/assets/images/shadow.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .info {
+        margin: 4em 5em 0;
+        h3 {
+          background: #BB0000;
+          width: fit-content;
+          text-align: center;
+          padding: 10px 30px;
+          color: $white;
+          transform: rotate(-3deg);
+          font-weight: bold;
+          font-size: 45px;
+          box-shadow: 0px 20px 50px rgba(0, 0, 0, 53%);
+        }
+        p {
+          color: $white;
+          margin: 22px 0;
+          transform: rotate(-2deg);
+          width: fit-content;
+          text-align: center;
+          font-size: 23px;
+        }
+      }
+    }
+  }
+  .graduation-parties-gallery {
+    text-align: center;
+    margin-top: 3em;
+    h3 {
+      color: #363636;
+      font-weight: bold;
+    }
+    .classes {
+      gap: 2em;
+      justify-content: space-between;
+      .class {
+        width: 275px;
+        background: $white;
+        box-shadow: 0px 3px 80px rgba(0, 0, 0, 24%);
+        .img {
+          margin: 10px;
+          overflow: hidden;
+          img {
+            overflow: hidden;
+            transition: all 0.4s;
+            width: 100%;
+          }
+          &:hover {
+            img {
+              transform: scale(1.2);
+            }
+          }
+        }
+        h6 {
+          color: $mainBlueColor;
+          font-weight: bold;
+          margin: 0;
+        }
+        button.primary {
+          margin: 1em;
+          margin-bottom: 2em;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .graduates-reviews {
+    background: $white;
+    margin: 4em 0;
+    padding: 3em;
+    border-top: 1px solid rgba(112, 112, 112, 23%);
+    h5 {
+      text-align: center;
+      margin-bottom: 2em;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .review {
+      display: flex;
+      align-items: center;
+      border: 1px solid rgba(112, 112, 112, 23%);
+      border-radius: 10px;
+      padding: 1em;
+      margin-bottom: 2em;
+      .graduate-info {
+        flex: 2;
+        text-align: center;
+        .img {
+          width: 70px;
+          margin: auto;
+          img {
+            width: 100%;
+          }
+        }
+        h4 {
+          color: $mainBlueColor;
+          font-size: 1.2rem;
+          margin: 0.5em 0;
+        }
+        .rating {
+          fa-icon {
+            color: #F68C1F;
+          }
+        }
+      }
+      .graduate-review {
+        flex: 4;
+        p {
+          margin: 0;
+          color: #707070;
+          line-height: 1.7em;
+        }
+      }
+    }
+  }
+  .contact {
+    .box {
+      background-image: url('/assets/images/shapes/contact.png');
+      background-size: 100%;
+      background-position: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3em;
+      border-radius: 20px;
+      background-repeat: no-repeat;
+      .contact-us {
+        h4 {
+          color: $white;
+          font-weight: 600;
+          font-size: $fontSize + 14;
+        }
+        p {
+          color: $white;
+          font-size: $fontSize + 3;
+        }
+        .email {
+          display: flex;
+          padding: 7px 10px;
+          background: #fff;
+          border-radius: 20px;
+          input {
+            background: transparent;
+            border: none;
+            outline: none;
+            box-shadow: none;
+          }
+          button.forward {
+            background: $mainGreenColor;
+            border: none;
+            border-radius: 12px;
+          }
+        }
+      }
+      .img {
+        width: 250px;
+        height: 250px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

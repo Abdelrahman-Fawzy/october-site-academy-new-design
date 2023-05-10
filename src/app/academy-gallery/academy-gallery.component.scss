@@ -1,0 +1,373 @@
+@import "../../abstracts/variables", "../../abstracts/mixins";
+.header {
+  background-image: url('/assets/images/media-gallery.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 500px;
+  padding: 3em 0;
+}
+.mainTitle {
+  display: inline-block;
+  background: $mainGreenColor;
+  color: #fff;
+  padding: 10px 25px 10px 25px;
+  font-size: $fontSize + 4;
+  position: relative;
+  .front-bubble, .back-bubble {
+    background: transparent;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    border-width: 22px 22px 22px 22px;
+    border-style: solid;
+  }
+  .front-bubble {
+    border-color: transparent $mainGreenColor transparent transparent;
+    left: -44px;
+  }
+  .back-bubble {
+    border-color: $mainGreenColor transparent $mainGreenColor $mainGreenColor;
+    right: -22px;
+  }
+}
+.media-gallery {
+  background-image: url('/assets/images/shapes/grey-shape.png');
+  background-size: 50% 100%;
+  background-position: 50em -15em;
+  background-repeat: no-repeat;
+  .tabs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    // width: 75%;
+    // margin: auto;
+    gap: 3em;
+    background: #fff;
+    padding: 15px;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0px 3px 6px rgb(0, 0, 0, 16%);
+    button.tabLinks {
+      background: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      padding: 10px 0;
+      transition: 0.3s;
+      &.active {
+        color: $mainGreenColor;
+        font-weight: bold;
+        border-bottom: 2px solid $mainGreenColor !important;
+      }
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  .tabcontent {
+    display: none;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    position: relative;
+    margin: 2em 4em;
+    text-align: center;
+    h4.title-name, h4.another-title { color: $mainBlueColor; font-weight: bold; }
+    h4.another-title {
+      text-align: initial;
+      margin: 1em 0;
+    }
+    &#buildings {
+      .branch {
+        padding: 10px;
+        background: $white;
+        box-shadow: 0px 3px 80px rgba(0, 0, 0, 24%);
+        .img {
+          overflow: hidden;
+          img {
+            overflow: hidden;
+            transition: all 0.4s;
+            width: 100%;
+          }
+          &:hover {
+            img {
+              transform: scale(1.2);
+            }
+          }
+        }
+        h6 {
+          color: $mainBlueColor;
+          font-weight: bold;
+          margin: 1em;
+        }
+        button.primary {
+          margin: 1em;
+          font-size: 12px;
+        }
+      }
+      .specific-branch {
+        display: none;
+        -webkit-animation: fadeEffect 1s;
+        animation: fadeEffect 1s;
+        position: relative;
+        .img {
+          img { width: 100%; }
+        }
+      }
+    }
+    &#conferences {
+      .card {
+        margin-bottom: 2em;
+        .article_title {
+          display: flex;
+          justify-content: space-between;
+          h4 {
+            color: $mainBlueColor;
+            margin: 0.5em 0;
+            cursor: pointer;
+          }
+          h5 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+        p.card-text {
+          color: #7B8591;
+          line-height: 33px;
+          font-size: 14px;
+        }
+      }
+      button.primary {
+        display: block;
+        margin: auto;
+      }
+      .another_articles {
+        background: #fff;
+        .title {
+          background: $mainBlueColor;
+          text-align: center;
+          padding: 10px;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          color: #fff;
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 1em;
+        }
+        .article {
+          display: flex;
+          padding: 0 20px;
+          gap: 1em;
+          margin-bottom: 3.1em;
+          .article_img {
+            height: 150px;
+            img {
+              border-radius: 10px;
+              height: 100%;
+            }
+          }
+          .article_info {
+            text-align: initial;
+            span {
+              display: block;
+              margin-top: 1em;
+              text-transform: uppercase;
+              font-weight: 600;
+              letter-spacing: 3px;
+              font-size: 13px;
+              &.green {
+                color: #40BE65;
+              }
+              &.blue {
+                color: #0072CA;
+              }
+              &.yellow {
+                color: #D9A34A;
+              }
+              &.red {
+                color: #FF4967;
+              }
+            }
+            p {
+              max-height: 100px;
+              overflow: hidden;
+              color: #7B8591;
+              margin: 1em 0;
+              a {
+                color: #7B8591;
+                font-weight: bold;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        .showmore {
+          display: block;
+          padding: 1em;
+          text-align: center;
+          border-top: 1px solid #EFF0F0;
+          color: #7B8591;
+        }
+      }
+      .specific-article {
+        display: none;
+        -webkit-animation: fadeEffect 1s;
+        animation: fadeEffect 1s;
+        position: relative;
+        .card {
+          p.card-text {
+            line-height: 25px;
+          }
+        }
+        .related {
+          .card {
+            .card-img { position: relative; }
+            h5.date {
+              position: absolute;
+              bottom: 10px;
+              left: 10px;
+              color: $white;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              font-weight: bold;
+              font-size: 16px;
+              img { width: 20px; }
+            }
+            h4.title { font-size: 18px; font-weight: bold; }
+            .article_title {
+              display: block;
+            }
+            .card-body {
+              text-align: initial;
+            }
+            p.card-text {
+              a {
+                font-weight: bold;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+    &#graduation-party {
+      .class {
+        padding: 10px;
+        background: $white;
+        box-shadow: 0px 3px 80px rgba(0, 0, 0, 24%);
+        .img {
+          overflow: hidden;
+          img {
+            overflow: hidden;
+            transition: all 0.4s;
+            width: 100%;
+          }
+          &:hover {
+            img {
+              transform: scale(1.2);
+            }
+          }
+        }
+        h6 {
+          color: $mainBlueColor;
+          font-weight: bold;
+          margin: 1em;
+        }
+        button.primary {
+          margin: 1em;
+          font-size: 12px;
+        }
+      }
+      .specific-class {
+        display: none;
+        -webkit-animation: fadeEffect 1s;
+        animation: fadeEffect 1s;
+        position: relative;
+        .img {
+          img { width: 100%; }
+        }
+      }
+    }
+    &#training {
+      .training-p {
+        color: #707070;
+        font-size: 20px;
+        width: 80%;
+        margin: auto;
+        text-align: initial;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        line-height: 2em;
+      }
+      .img {
+        img { width: 100%; }
+      }
+      .training {
+        padding: 10px;
+        background: $white;
+        box-shadow: 0px 3px 80px rgba(0, 0, 0, 24%);
+        .img {
+          overflow: hidden;
+          img {
+            overflow: hidden;
+            transition: all 0.4s;
+            width: 100%;
+          }
+          &:hover {
+            img {
+              transform: scale(1.2);
+            }
+          }
+        }
+        h6 {
+          color: $mainBlueColor;
+          font-weight: bold;
+          margin: 1em;
+        }
+        button.primary {
+          margin: 1em;
+          font-size: 12px;
+        }
+      }
+      .specific-training {
+        display: none;
+        -webkit-animation: fadeEffect 1s;
+        animation: fadeEffect 1s;
+        position: relative;
+        .img {
+          img { width: 100%; }
+        }
+      }
+    }
+  }
+  .tabs {
+    button {
+      transition: 0.3s;
+      &.active {
+        color: $mainGreenColor;
+        font-weight: bold;
+        border-bottom: 2px solid $mainGreenColor !important;
+      }
+    }
+  }
+
+  /* Fade in tabs */
+  @-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+}

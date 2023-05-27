@@ -26,35 +26,35 @@
     <div class="col-md-3 col-sm-6">
       <div class="anotherPages margin-top-7">
         <p class="directP">روابط أخري</p>
-        <a>
+        <a [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">
           الاقسام الدراسية
         </a>
-        <a>
+        <a [routerLink]="'studying-system'">
           النظام الدراسي
         </a>
-        <a>
+        <a (click)="register()">
           التسجيل اونلاين
         </a>
-        <a>
-          ميديا الاكاديمية
+        <a [routerLink]="'academy-gallery'">
+          ميديا الأكاديمية
         </a>
-        <a>
+        <a [routerLink]="'graduates'">
           الخريجين
         </a>
       </div>
     </div>
     <div class="col-md-3 col-sm-6">
       <div class="anotherPages margin-top-10">
-        <a>
+        <a [routerLink]="'about-academy'" [queryParams]="{item: 'partners'}">
           شركاء النجاح
         </a>
-        <a>
+        <a href="https://e-learning.6ohd.com/ar/login" target="_blank">
           المنصة الالكترونية
         </a>
-        <a>
+        <a [routerLink]="'about-academy'" [queryParams]="{item: 'conversations'}">
           FAQs سؤال و جواب
         </a>
-        <a>
+        <a [routerLink]="'about-academy'" [queryParams]="{item: 'jobs'}">
           الوظائف
         </a>
       </div>

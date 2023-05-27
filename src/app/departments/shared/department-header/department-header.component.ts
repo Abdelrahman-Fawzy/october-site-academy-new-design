@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { RegisterModalComponent } from 'src/app/shared/register-modal/register-modal.component';
 
 @Component({
   selector: 'app-department-header',
@@ -9,10 +11,15 @@ export class DepartmentHeaderComponent implements OnInit {
 
   @Input('departName') departName;
   @Input('departImg') departImg;
+  modalRef?: BsModalRef;
 
-  constructor() { }
+  constructor(private modalService: BsModalService) {}
 
   ngOnInit(): void {
+  }
+
+  register() {
+    this.modalRef = this.modalService.show(RegisterModalComponent, {class: 'modal-xl modal-dialog-centered'});
   }
 
 }

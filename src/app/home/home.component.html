@@ -1,62 +1,62 @@
 <div class="welcoming">
   <div class="container">
-    <h2>مرحبا بكم أكاديمية 6 أكتوبر</h2>
+    <h2>مرحبا بكم في أكاديمية 6 أكتوبر</h2>
     <p class="directP">الأولى في التعليم الفني في مصر</p>
     <div class="actions">
-      <button class="primary">قم بالتسجيل الان</button>
-      <button class="primary-outline">تعرف على الاقسام</button>
+      <button class="primary" (click)="register()">قم بالتسجيل الان</button>
+      <button class="primary-outline" [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">تعرف على الاقسام</button>
     </div>
     <div class="images">
       <div class="firstPart">
-        <img class="iconic" src="assets/images/home-welcoming/left.png" alt="">
+        <img class="iconic" [src]="Departments[0].DepartImg" alt="">
         <div class="overlay">
-          <span>إدارة اعمال</span>
+          <a [routerLink]="Departments[0].DepartLink">{{Departments[0].DepartName}}</a>
           <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
         </div>
       </div>
       <div class="secondPart">
         <div class="img1">
-          <img class="iconic" src="assets/images/home-welcoming/Frame 14252.png" alt="">
+          <img class="iconic" [src]="Departments[1].DepartImg" alt="">
           <div class="overlay">
-            <span>خدمات بترولية</span>
+            <a [routerLink]="Departments[1].DepartLink">{{Departments[1].DepartName}}</a>
             <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
           </div>
         </div>
         <div class="img2">
-          <img class="iconic" src="assets/images/home-welcoming/Frame 14251.png" alt="">
+          <img class="iconic" [src]="Departments[2].DepartImg" alt="">
           <div class="overlay">
-            <span>خدمات طبية</span>
+            <a [routerLink]="Departments[2].DepartLink">{{Departments[2].DepartName}}</a>
             <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
           </div>
         </div>
       </div>
       <div class="thirdPart">
-        <img class="iconic" src="assets/images/home-welcoming/Middle.png" alt="">
+        <img class="iconic" [src]="Departments[3].DepartImg" alt="">
         <div class="overlay">
-          <span>سياحة و فنادق</span>
+          <a [routerLink]="Departments[3].DepartLink">{{Departments[3].DepartName}}</a>
           <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
         </div>
       </div>
       <div class="fourthPart">
         <div class="img1">
-          <img class="iconic" src="assets/images/home-welcoming/Frame 14248.png" alt="">
+          <img class="iconic" [src]="Departments[4].DepartImg" alt="">
           <div class="overlay">
-            <span>صحافة و اعلام</span>
+            <a [routerLink]="Departments[4].DepartLink">{{Departments[4].DepartName}}</a>
             <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
           </div>
         </div>
         <div class="img2">
-          <img class="iconic" src="assets/images/home-welcoming/Frame 14249.png" alt="">
+          <img class="iconic" [src]="Departments[5].DepartImg" alt="">
           <div class="overlay">
-            <span>تكنولوجيا المعلومات</span>
+            <a [routerLink]="Departments[5].DepartLink">{{Departments[5].DepartName}}</a>
             <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
           </div>
         </div>
       </div>
       <div class="fifthPart">
-        <img class="iconic" src="assets/images/home-welcoming/right.png" alt="">
+        <img class="iconic" [src]="Departments[6].DepartImg" alt="">
         <div class="overlay">
-          <span>مساحة و خرائط</span>
+          <a [routerLink]="Departments[6].DepartLink">{{Departments[6].DepartName}}</a>
           <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
         </div>
       </div>
@@ -65,13 +65,13 @@
 </div>
 <div class="academy_numbers">
   <div class="container">
-    <h4>الاكاديمية  في ارقام</h4>
+    <h4>الأكاديمية  في ارقام</h4>
     <p class="directP">حقائق وأرقام خاصة بأكاديمية 6 أكتوبر خلال السنوات السابقة</p>
     <div class="row">
       <div class="col-md-3">
         <div class="number">
           <img src="assets/images/icons/experience.png" alt="experience">
-          <span class="num">23</span>
+          <span class="num">26</span>
           <span class="title">عدد سنوات الخبرة</span>
         </div>
       </div>
@@ -168,97 +168,7 @@
     </ng-template>
   </owl-carousel-o>
 </div>
-<div class="branches">
-  <div class="container">
-    <h3>فروع أكاديمية 6 أكتوبر</h3>
-    <div class="row">
-      <div class="col-md-3">
-        <div class="branch">
-          <img class="location" src="assets/images/icons/location.svg" alt="location">
-          <h4>الفرع الرئيسى بالجيزة</h4>
-          <p>الجيزة : 232 ش الهرم محطة ش ضياء بجوار مطعم بازوكا</p>
-          <ul class="list-unstyled">
-            <li>
-              <img src="assets/images/icons/green_call.svg" alt="call">
-              <span>02-42242224</span>
-            </li>
-            <li>
-              <img src="assets/images/icons/whatsapp.svg" alt="whatsapp">
-              <span>01028800044</span>
-            </li>
-          </ul>
-          <a class="getDirections">
-            <span>احصل على الاتجاهات</span>
-            <img src="assets/images/icons/arrow.png" alt="arrow">
-          </a>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="branch">
-          <img class="location" src="assets/images/icons/location.svg" alt="location">
-          <h4>فرع الأكاديمية بالقليوبية</h4>
-          <p>القليوبية : شبرا الخيمة شارع 15 مايو (الشـارع الجـديد) محطة جامـع أبو الهـنا</p>
-          <ul class="list-unstyled">
-            <li>
-              <img src="assets/images/icons/green_call.svg" alt="call">
-              <span>02-42242224</span>
-            </li>
-            <li>
-              <img src="assets/images/icons/whatsapp.svg" alt="whatsapp">
-              <span>01028800044</span>
-            </li>
-          </ul>
-          <a class="getDirections">
-            <span>احصل على الاتجاهات</span>
-            <img src="assets/images/icons/arrow.png" alt="arrow">
-          </a>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="branch">
-          <img class="location" src="assets/images/icons/location.svg" alt="location">
-          <h4>فرع الأكاديمية بالغربية</h4>
-          <p>الغربية : طنطا ش الشهيد مصطفى أبو زهره (نايف عماد سابقاً ) بجوار مودرن سكول</p>
-          <ul class="list-unstyled">
-            <li>
-              <img src="assets/images/icons/green_call.svg" alt="call">
-              <span>02-42242224</span>
-            </li>
-            <li>
-              <img src="assets/images/icons/whatsapp.svg" alt="whatsapp">
-              <span>01028800044</span>
-            </li>
-          </ul>
-          <a class="getDirections">
-            <span>احصل على الاتجاهات</span>
-            <img src="assets/images/icons/arrow.png" alt="arrow">
-          </a>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="branch">
-          <img class="location" src="assets/images/icons/location.svg" alt="location">
-          <h4>فرع بنها</h4>
-          <p>كورنيش النيل حي الڤلل شارع رقم 2 بجوار استراحة المحافظ</p>
-          <ul class="list-unstyled">
-            <li>
-              <img src="assets/images/icons/green_call.svg" alt="call">
-              <span>02-42242224</span>
-            </li>
-            <li>
-              <img src="assets/images/icons/whatsapp.svg" alt="whatsapp">
-              <span>01028800044</span>
-            </li>
-          </ul>
-          <a class="getDirections">
-            <span>احصل على الاتجاهات</span>
-            <img src="assets/images/icons/arrow.png" alt="arrow">
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<app-branches></app-branches>
 <div class="partners">
   <h3>شركاء النجاح</h3>
   <ngx-slick-carousel class="carousel"
@@ -272,7 +182,7 @@
   </ngx-slick-carousel>
 </div>
 <div class="faq">
-  <h3>الأسئلة المكررة</h3>
+  <h3>الأسئلة الشائعة</h3>
   <div class="container">
     <accordion [isAnimated]="true">
       <accordion-group heading="هل في إمكانية انى اكمل بعد سنتين ؟" [isOpen]="isFirstOpen">
@@ -290,7 +200,7 @@
     </accordion>
   </div>
   <div class="more_questions d-flex justify-content-center mt-4">
-    <button class="primary">المزيد من الاسئلة</button>
+    <button class="primary" [routerLink]="'about-academy'" [queryParams]="{item: 'conversations'}">المزيد من الأسئلة</button>
   </div>
 </div>
 <div class="contact">

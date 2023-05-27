@@ -2,7 +2,7 @@
   <div class="container">
     <h2 class="mainTitle">
       <div class="front-bubble"></div>
-      عن الاكاديمية
+      عن الأكاديمية
       <div class="back-bubble"></div>
     </h2>
   </div>
@@ -10,29 +10,29 @@
 <div class="about-academy">
   <div class="container">
     <div class="tabs">
-      <button id="defaultOpen" class="tabLinks" (click)="openTab($event, 'vision')">
+      <button id="academyVision" class="tabLinks" (click)="openTab($event, 'vision')">
         <img src="assets/images/about-icons/vision.svg" alt="">
-        رؤية الاكاديمية
+        رؤية الأكاديمية
       </button>
-      <button class="tabLinks" (click)="openTab($event, 'departments')">
+      <button id="academyDepartments" class="tabLinks" (click)="openTab($event, 'departments')">
         <img src="assets/images/about-icons/departs.svg" alt="">
-        أقسام الاكاديمية
+        أقسام الأكاديمية
       </button>
-      <button class="tabLinks" (click)="openTab($event, 'acceptence')">
+      <button id="academyAcceptence" class="tabLinks" (click)="openTab($event, 'acceptence')">
         <img src="assets/images/about-icons/acceptence.svg" alt="">
         التقديم و القبول
       </button>
-      <button class="tabLinks" (click)="openTab($event, 'partners')">
+      <button id="academyPartners" class="tabLinks" (click)="openTab($event, 'partners')">
         <img src="assets/images/about-icons/partners.svg" alt="">
         الشركاء
       </button>
-      <button class="tabLinks" (click)="openTab($event, 'jobs')">
+      <button id="academyJobs" class="tabLinks" (click)="openTab($event, 'jobs')">
         <img src="assets/images/about-icons/jobs.svg" alt="">
         الوظائف
       </button>
-      <button class="tabLinks" (click)="openTab($event, 'conversations')">
+      <button id="academyConversations" class="tabLinks" (click)="openTab($event, 'conversations')">
         <img src="assets/images/about-icons/conversations.png" alt="">
-        الاسئلة المكررة
+        الأسئلة الشائعة
       </button>
     </div>
   </div>
@@ -100,7 +100,7 @@
                 <img src="assets/images/departments-icons/it.svg" alt="">
               </div>
               <div class="info">
-                <a [routerLink]="'departments/it-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">تكنولوجيا المعلومات</a>
+                <a routerLink="/departments/it-department">تكنولوجيا المعلومات</a>
                 <h6>الاقسام : 32</h6>
               </div>
             </div>
@@ -111,7 +111,7 @@
                 <img src="assets/images/departments-icons/maps.svg" alt="">
               </div>
               <div class="info">
-                <a [routerLink]="'departments/maps-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">مساحة و خرائط</a>
+                <a routerLink="/departments/maps-department">مساحة و خرائط</a>
                 <h6>الاقسام : 32</h6>
               </div>
             </div>
@@ -122,7 +122,7 @@
                 <img src="assets/images/departments-icons/medical.svg" alt="">
               </div>
               <div class="info">
-                <a [routerLink]="'departments/medical-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">خدمات طبية</a>
+                <a routerLink="/departments/medical-department">خدمات صحية</a>
                 <h6>الاقسام : 32</h6>
               </div>
             </div>
@@ -133,7 +133,7 @@
                 <img src="assets/images/departments-icons/oil.svg" alt="">
               </div>
               <div class="info">
-                <a [routerLink]="'departments/petrol-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">خدمات بترولية</a>
+                <a routerLink="/departments/petrol-department">خدمات بترولية</a>
                 <h6>الاقسام : 32</h6>
               </div>
             </div>
@@ -144,7 +144,7 @@
                 <img src="assets/images/departments-icons/hotels.svg" alt="">
               </div>
               <div class="info">
-                <a [routerLink]="'departments/hotels-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">سياحة وفنادق</a>
+                <a routerLink="/departments/hotels-department">سياحة وفنادق</a>
                 <h6>الاقسام : 32</h6>
               </div>
             </div>
@@ -155,7 +155,7 @@
                 <img src="assets/images/departments-icons/journalism.svg" alt="">
               </div>
               <div class="info">
-                <a routerLink="departments/journalism-department">صحافة و إعلام</a>
+                <a routerLink="/departments/journalism-department">صحافة و إعلام</a>
                 <h6>الاقسام : 32</h6>
               </div>
             </div>
@@ -166,7 +166,7 @@
                 <img src="assets/images/departments-icons/bussiness.svg" alt="">
               </div>
               <div class="info">
-                <a [routerLink]="'departments/bussiness-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">إدارة أعمال</a>
+                <a routerLink="/departments/bussiness-department">إدارة أعمال</a>
                 <h6>الاقسام : 32</h6>
               </div>
             </div>
@@ -221,8 +221,8 @@
             <h3>للإلتحاق بأكاديمية 6 أكتوبر</h3>
             <p>يحصل الطالب على شهادة معتمدة من كبرى الجامعات المصرية للعمل داخل مصر وتصدق من وزارة الخارجية المصرية للعمل خارج مصر</p>
             <div class="actions">
-              <button class="primary">قم بالتسجيل الان</button>
-              <button class="primary-outline">تعرف على الاقسام</button>
+              <button class="primary" (click)="register()">قم بالتسجيل الان</button>
+              <button class="primary-outline" [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">تعرف على الاقسام</button>
             </div>
           </div>
         </div>
@@ -266,7 +266,7 @@
       <div class="container">
         <div class="row notRegister">
           <div class="col-md-6">
-            <p class="conditions">تعلن أكاديمية 6 أكتوبر بفرع ( الهرم - شبرا- طنطا ) عن حاجتها لأعضاء هيئة تدريس بنظام الدوام الجزئى بأقسامها المختلفة : قسم الخدمات الطبية - قسم الخدمات البترولية - قسم المساحة و الخرائط - قسم ادارة الأعمال - قسم الصحافة و الإعلام - قسم تكنولوجيا المعلومات - قسم السياحة و الفنادق وذلك طبقًاً للشروط الآتية</p>
+            <p class="conditions">تعلن أكاديمية 6 أكتوبر بفرع ( الهرم - شبرا- طنطا ) عن حاجتها لأعضاء هيئة تدريس بنظام الدوام الجزئى بأقسامها المختلفة : قسم الخدمات الصحية - قسم الخدمات البترولية - قسم المساحة و الخرائط - قسم ادارة الأعمال - قسم الصحافة و الإعلام - قسم تكنولوجيا المعلومات - قسم السياحة و الفنادق وذلك طبقًاً للشروط الآتية</p>
             <ul class="list-unstyled">
               <li>مؤهل علمى مناسب للتخصص</li>
               <li>خبرة عملية و أكاديمية لا تقل عن ثلاث سنوات</li>

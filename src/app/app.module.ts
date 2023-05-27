@@ -28,7 +28,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { GraduatesComponent } from './graduates/graduates.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AcademyGalleryComponent } from './academy-gallery/academy-gallery.component';
-
+import { RegisterModalComponent } from './shared/register-modal/register-modal.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -53,7 +56,8 @@ import { AcademyGalleryComponent } from './academy-gallery/academy-gallery.compo
     DepartmentsImagesComponent,
     ContactUsComponent,
     GraduatesComponent,
-    AcademyGalleryComponent
+    AcademyGalleryComponent,
+    RegisterModalComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +66,11 @@ import { AcademyGalleryComponent } from './academy-gallery/academy-gallery.compo
     SlickCarouselModule,
     AccordionModule,
     CarouselModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ModalModule.forRoot(),
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

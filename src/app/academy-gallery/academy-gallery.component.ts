@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-academy-gallery',
@@ -7,11 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcademyGalleryComponent implements OnInit {
   isFirstOpen = true;
+  param;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    document.getElementById("mediaDefaultOpen").click();
+    this.route.queryParams.subscribe(params => {
+      this.param = params.item
+    })
+
+    console.log(this.param);
+
+    if ( this.param == 'buildings') document.getElementById("mediaDefaultOpen").click();
+    if ( this.param == 'conferences') document.getElementById("conferencesAndNews").click();
+    if ( this.param == 'graduation-party') document.getElementById("parties").click();
+    if ( this.param == 'training') document.getElementById("trainingS").click();
+
+    // document.getElementById("mediaDefaultOpen").click();
   }
 
   openTab(evt, tabName) {

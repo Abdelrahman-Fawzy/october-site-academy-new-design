@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { RegisterModalComponent } from 'src/app/shared/register-modal/register-modal.component';
 
 @Component({
   selector: 'app-join',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JoinComponent implements OnInit {
 
-  constructor() { }
+  modalRef?: BsModalRef;
+
+  constructor(private modalService: BsModalService) {}
 
   ngOnInit(): void {
   }
 
+  register() {
+    this.modalRef = this.modalService.show(RegisterModalComponent, {class: 'modal-xl modal-dialog-centered'});
+  }
 }

@@ -1,0 +1,100 @@
+<div class="modal-header">
+  <h4 class="modal-title">التسجيل فى الأكاديمية</h4>
+  <button type="button" data-bs-dismiss="modal" class="btn-close close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true" class="visually-hidden">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="myForm" (ngSubmit)="RegisterWithUs()">
+    <ng-container *ngIf="!isSubmited">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="form-group">
+            <label for="name">الاسم</label>
+            <input [(ngModel)]="registerData.ticket_customer_name" formControlName="customer_name" id="name" type="text" class="form-control" placeholder="اكتب اسمك هنا ...">
+            <div *ngIf="f.customer_name.touched && f.customer_name.invalid">
+              <div class="text-danger" *ngIf="f.customer_name.errors.required">Name is required.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="form-group">
+            <label for="nationalId">الرقم القومي</label>
+            <input [(ngModel)]="registerData.national_id" formControlName="national_id" id="nationalId" type="number" class="form-control">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="form-group">
+            <label for="certificate">المؤهل</label>
+            <select [(ngModel)]="registerData.qualification_id" formControlName="qualification_id" class="form-control" id="certificate">
+              <option *ngFor="let graduationYear of graduationYears.data.list" [value]="graduationYear.key">{{graduationYear.value}}</option>
+            </select>
+            <div *ngIf="f.qualification_id.touched && f.qualification_id.invalid">
+              <div class="text-danger" *ngIf="f.qualification_id.errors.required">Qualification is required.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="form-group">
+            <label for="graduationYear">سنة التخرج</label>
+            <select [(ngModel)]="registerData.grauation_year" formControlName="grauation_year" class="form-control" id="graduationYear">
+              <option *ngFor="let qualification of qualifications.data.list" [value]="qualification.qualification_id">{{qualification.qualification}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="form-group">
+            <label for="governorate">المحافظة</label>
+            <select [(ngModel)]="registerData.gov_id" formControlName="gov_id" class="form-control" id="governorate">
+              <option *ngFor="let governorate of governorates.data.list" [value]="governorate.governorate_id">{{governorate.governorate_name}}</option>
+            </select>
+            <div *ngIf="f.gov_id.touched && f.gov_id.invalid">
+              <div class="text-danger" *ngIf="f.gov_id.errors.required">Governorate is required.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="form-group">
+            <label for="sector">القسم</label>
+            <select [(ngModel)]="registerData.section_id" formControlName="section_id" class="form-control" id="sector">
+              <option *ngFor="let section of sections.data.list" [value]="section.section_id">{{section.section_name}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="form-group">
+            <label for="branch">الفرع</label>
+            <select [(ngModel)]="registerData.branch_id" formControlName="branch_id" class="form-control" id="branch">
+              <option *ngFor="let branche of branches.data.list" [value]="branche.id">{{branche.name}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="form-group">
+            <label for="ways">وسيلة التعارف</label>
+            <select [(ngModel)]="registerData.method_of_acquaintance" formControlName="method_of_acquaintance" class="form-control" id="ways">
+              <option *ngFor="let acquaintance of acquaintances.data.list" [value]="acquaintance.qualification_id">{{acquaintance.acquaintance_name}}</option>
+            </select>
+            <div *ngIf="f.method_of_acquaintance.touched && f.method_of_acquaintance.invalid">
+              <div class="text-danger" *ngIf="f.method_of_acquaintance.errors.required">Method Of Acquaintance is required.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="form-group">
+            <label for="phone">رقم الهاتف</label>
+            <input [(ngModel)]="registerData.ticket_phone_number" formControlName="phone_number" type="text" class="form-control" id="phone">
+            <div *ngIf="f.phone_number.touched && f.phone_number.invalid">
+              <div class="text-danger" *ngIf="f.phone_number.errors.required">Phone is required.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="primary send">تسجيل الان</button>
+    </ng-container>
+    <div class="confirmed" *ngIf="isSubmited">
+      <img src="assets/images/icons/confirmed.gif" alt="">
+      <p>تم تسجيل طلبك بنجاح</p>
+    </div>
+  </form>
+</div>

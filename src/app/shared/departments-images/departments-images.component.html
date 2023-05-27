@@ -20,7 +20,7 @@
         <div class="img2">
           <img class="iconic" src="assets/images/home-welcoming/Frame 14251.png" alt="">
           <div class="overlay">
-            <span>خدمات طبية</span>
+            <span>خدمات صحية</span>
             <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
           </div>
         </div>
@@ -57,8 +57,8 @@
       </div>
     </div>
     <div class="actions">
-      <button class="primary">قم بالتسجيل الان</button>
-      <button class="primary-outline">تعرف على الاقسام</button>
+      <button class="primary" (click)="register()">قم بالتسجيل الان</button>
+      <button class="primary-outline" [routerLink]="'../about-academy'" [queryParams]="{item: 'departments'}">تعرف على الاقسام</button>
     </div>
   </div>
 </div>

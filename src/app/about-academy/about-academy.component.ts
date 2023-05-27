@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { RegisterModalComponent } from '../shared/register-modal/register-modal.component';
 
 @Component({
   selector: 'app-about-academy',
@@ -8,11 +11,22 @@ import { Component, OnInit } from '@angular/core';
 export class AboutAcademyComponent implements OnInit {
 
   isFirstOpen = true;
+  modalRef?: BsModalRef;
+  param;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private modalService: BsModalService) { }
 
   ngOnInit(): void {
-    document.getElementById("defaultOpen").click();
+    this.route.queryParams.subscribe(params => {
+      this.param = params.item
+    })
+    if ( this.param == 'vision') document.getElementById("academyVision").click();
+    if ( this.param == 'departments') document.getElementById("academyDepartments").click();
+    if ( this.param == 'acceptence') document.getElementById("academyAcceptence").click();
+    if ( this.param == 'partners') document.getElementById("academyPartners").click();
+    if ( this.param == 'jobs') document.getElementById("academyJobs").click();
+    if ( this.param == 'conversations') document.getElementById("academyConversations").click();
+
     document.getElementById("defaultChildOpen").click();
   }
 
@@ -42,6 +56,10 @@ export class AboutAcademyComponent implements OnInit {
     }
     document.getElementById(tabName).style.display = "block";
     evt.target.classList.add('active');
+  }
+
+  register() {
+    this.modalRef = this.modalService.show(RegisterModalComponent, {class: 'modal-xl modal-dialog-centered'});
   }
 
 }

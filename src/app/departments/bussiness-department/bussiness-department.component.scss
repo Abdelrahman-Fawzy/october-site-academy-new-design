@@ -55,3 +55,9 @@
     p { width: 85%;}
   }
 }
+@media ( max-width: 991px ) {
+  .mission-text, .target-text, .staff-text {
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+}

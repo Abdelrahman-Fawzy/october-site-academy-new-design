@@ -58,11 +58,6 @@
 
 
 .targeting {
-  background-image: url('/assets/images/departments-icons/journalismDepartTarget.png');
-  background-position: right;
-  background-size: 55% 140%;
-  background-repeat: no-repeat;
-  margin: 0 3em;
   padding: 3em;
   .targeting-box {
     width: 60%;
@@ -90,5 +85,24 @@
       font-weight: 500;
       margin-bottom: 7em;
     }
+  }
+}
+@media ( min-width: 992px ) {
+  .targeting {
+    background-image: url('/assets/images/departments-icons/journalismDepartTarget.png');
+    background-position: right;
+    background-size: 55% 140%;
+    background-repeat: no-repeat;
+    margin: 0 3em;
+  }
+}
+@media ( max-width: 991px ) {
+  .mission-text, .target-text, .staff-text {
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+
+  .targeting-box {
+    width: 100% !important;
   }
 }

@@ -1,7 +1,7 @@
 @import "../../../abstracts/variables", "../../../abstracts/mixins";
 footer {
   position: relative;
-  .row {padding: 0em 10em 0;}
+  .footer-box {padding: 0em 10em 0;}
   .contact {
     margin-top: 3em;
     p {
@@ -150,14 +150,14 @@ footer {
         gap: 1em;
       }
     }
-    .row {
+    .footer-box {
       padding: 2em 4em 0;
     }
   }
 }
 
 @media (max-width: 991px) {
-  .row {
+  .footer-box {
     padding: 2em 0em 0em !important;
     text-align: center !important;
     & > div { margin-bottom: 1em; }
@@ -170,4 +170,10 @@ footer {
 @media (max-width: 767px) {
   .texts { width: 100%; }
   .social { width: 100%; }
+}
+@media (max-width: 575px) {
+  .copyRight {
+    margin: 0 2em !important;
+    padding-bottom: 1em;
+  }
 }

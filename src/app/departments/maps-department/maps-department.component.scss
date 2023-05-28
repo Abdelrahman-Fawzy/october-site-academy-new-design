@@ -56,10 +56,6 @@
 
 
 .targeting {
-  background-image: url('/assets/images/departments-icons/mapsDepartTarget.png');
-  background-position: right;
-  background-size: 65% 107%;
-  background-repeat: no-repeat;
   margin: 0 3em;
   .targeting-box {
     width: 60%;
@@ -89,3 +85,22 @@
     }
   }
 }
+@media ( min-width: 992px ) {
+  .targeting {
+    background-image: url('/assets/images/departments-icons/mapsDepartTarget.png');
+    background-position: right;
+    background-size: 65% 107%;
+    background-repeat: no-repeat;
+  }
+}
+@media ( max-width: 991px ) {
+  .mission-text, .target-text, .staff-text {
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+
+  .targeting-box {
+    width: 100% !important;
+  }
+}
+

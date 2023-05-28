@@ -53,6 +53,7 @@
     .classes {
       gap: 2em;
       justify-content: space-between;
+      flex-wrap: wrap;
       .class {
         width: 275px;
         background: $white;
@@ -135,12 +136,12 @@
   }
   .contact {
     .box {
-      background-image: url('/assets/images/shapes/contact.png');
       background-size: 100%;
       background-position: center;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       padding: 3em;
       border-radius: 20px;
       background-repeat: no-repeat;
@@ -179,6 +180,53 @@
           width: 100%;
         }
       }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .contact {
+    .box {
+      background-image: url('/assets/images/shapes/contact.png');
+    }
+  }
+  .academy_numbers {
+    background-image: url('/assets/images/shapes/numbers.png');
+  }
+}
+@media ( max-width: 991px) {
+  .contact {
+    margin-bottom: 4em;
+    .box {
+      background-color: $mainGreenColor;
+      padding: 2em;
+      .contact-us {
+        width: 100%;
+      }
+      .img { display: none; }
+    }
+  }
+}
+@media ( max-width: 767px) {
+  .graduation-parties-gallery {
+    .classes {
+      .class {
+        width: 100% !important;
+      }
+    }
+  }
+}
+@media ( max-width: 576px) {
+  .graduates__header {
+    min-height: 400px;
+    .info {
+      h3 {
+        font-size: 26px !important;
+      }
+    }
+  }
+  .graduates-reviews {
+    .review {
+      flex-direction: column;
     }
   }
 }

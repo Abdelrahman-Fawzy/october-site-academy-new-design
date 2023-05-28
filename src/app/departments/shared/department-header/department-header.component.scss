@@ -4,10 +4,8 @@
   background-position: top;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  padding: 1em;
   overflow: hidden;
   h3 {
-    margin-top: 3em;
     font-size: 37px;
     color: $white;
   }
@@ -20,5 +18,39 @@
     width: 700px;
     height: 500px;
     img { width: 100%; }
+  }
+}
+
+@media ( min-width: 992px ) {
+  .departHeader {
+    h3 {
+      margin-top: 3em;
+    }
+  }
+}
+
+@media ( max-width: 991px ) {
+  .departHeader {
+    padding: 5em;
+    .first-part {
+      width: 100%;
+      button {
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media ( max-width: 575px ) {
+  .departHeader {
+    .first-part {
+      h3 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
   }
 }

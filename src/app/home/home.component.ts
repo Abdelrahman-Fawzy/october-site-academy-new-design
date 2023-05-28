@@ -97,6 +97,13 @@ export class HomeComponent implements OnInit {
           arrows: false,
         },
       },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        },
+      },
     ],
   };
 

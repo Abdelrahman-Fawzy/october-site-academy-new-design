@@ -77,16 +77,23 @@ export class HomeComponent implements OnInit {
     slidesToScroll: 2,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 5,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
           arrows: false,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           arrows: false,
         },
       },
@@ -119,7 +126,7 @@ export class HomeComponent implements OnInit {
   constructor(private modalService: BsModalService) {}
 
   ngOnInit(): void {
-    this.test()
+    // this.test()
   }
 
   register() {

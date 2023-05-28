@@ -1,5 +1,5 @@
 <div class="fixed">
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-xl navbar-light">
     <a class="navbar-brand" href="#">
       <img src="assets/images/main_assets/New_Logo.png" alt="logo">
     </a>
@@ -16,37 +16,89 @@
         <li class="nav-item categoriesList">
           <a class="nav-link" [routerLink]="'about-academy'" [queryParams]="{item: 'vision'}" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">عن الأكاديمية</a>
           <ul class="list-unstyled categories">
-            <div class="firstPart">
-              <ul class="list-unstyled">
-                <li>
-                  <a [routerLink]="'about-academy'" [queryParams]="{item: 'vision'}">
-                    <div class="img-icon">
-                      <img src="assets/images/about-icons/vision.png" alt="vision">
-                    </div>
-                    رؤية الأكاديمية
-                  </a>
-                </li>
-                <li>
-                  <a [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">
-                    <div class="img-icon">
-                      <img src="assets/images/about-icons/departs.png" alt="departs">
-                    </div>
-                    أقسام الأكاديمية
-                  </a>
-                </li>
-                <li>
-                  <a [routerLink]="'about-academy'" [queryParams]="{item: 'acceptence'}">
-                    <div class="img-icon">
-                      <img src="assets/images/about-icons/acceptence.png" alt="acceptence">
-                    </div>
-                    التقديم و القبول
-                  </a>
-                </li>
+            <div class="d-none d-xl-flex" style="gap: 2em;">
+              <div class="firstPart">
+                <ul class="list-unstyled">
+                  <li>
+                    <a [routerLink]="'about-academy'" [queryParams]="{item: 'vision'}">
+                      <div class="img-icon">
+                        <img src="assets/images/about-icons/vision.png" alt="vision">
+                      </div>
+                      رؤية الأكاديمية
+                    </a>
+                  </li>
+                  <li>
+                    <a [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">
+                      <div class="img-icon">
+                        <img src="assets/images/about-icons/departs.png" alt="departs">
+                      </div>
+                      أقسام الأكاديمية
+                    </a>
+                  </li>
+                  <li>
+                    <a [routerLink]="'about-academy'" [queryParams]="{item: 'acceptence'}">
+                      <div class="img-icon">
+                        <img src="assets/images/about-icons/acceptence.png" alt="acceptence">
+                      </div>
+                      التقديم و القبول
+                    </a>
+                  </li>
 
-              </ul>
+                </ul>
+              </div>
+              <div class="line"></div>
+              <div class="secondPart">
+                <li>
+                  <a [routerLink]="'about-academy'" [queryParams]="{item: 'partners'}">
+                    <div class="img-icon">
+                      <img src="assets/images/about-icons/partners.png" alt="partners">
+                    </div>
+                    الشركاء
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'about-academy'" [queryParams]="{item: 'jobs'}">
+                    <div class="img-icon">
+                      <img src="assets/images/about-icons/jobs.png" alt="jobs">
+                    </div>
+                    الوظائف
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'about-academy'" [queryParams]="{item: 'conversations'}">
+                    <div class="img-icon">
+                      <img src="assets/images/about-icons/conversations.png" alt="conversations">
+                    </div>
+                    الأسئلة الشائعة
+                  </a>
+                </li>
+              </div>
             </div>
-            <div class="line"></div>
-            <div class="secondPart">
+            <div class="d-xl-none responsiveCategories">
+              <li>
+                <a [routerLink]="'about-academy'" [queryParams]="{item: 'vision'}">
+                  <div class="img-icon">
+                    <img src="assets/images/about-icons/vision.png" alt="vision">
+                  </div>
+                  رؤية الأكاديمية
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">
+                  <div class="img-icon">
+                    <img src="assets/images/about-icons/departs.png" alt="departs">
+                  </div>
+                  أقسام الأكاديمية
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="'about-academy'" [queryParams]="{item: 'acceptence'}">
+                  <div class="img-icon">
+                    <img src="assets/images/about-icons/acceptence.png" alt="acceptence">
+                  </div>
+                  التقديم و القبول
+                </a>
+              </li>
               <li>
                 <a [routerLink]="'about-academy'" [queryParams]="{item: 'partners'}">
                   <div class="img-icon">
@@ -77,7 +129,70 @@
         <li class="nav-item categoriesList">
           <a class="nav-link"> <span class="caret"></span> الأقسام الدراسية</a>
           <ul class="list-unstyled categories">
-            <div class="firstPart">
+            <div class="d-none d-xl-flex" style="gap: 2em;">
+              <div class="firstPart">
+                <li>
+                  <a [routerLink]="'departments/petrol-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+                    <div class="img-icon">
+                      <img src="assets/images/departments-icons/oil.png" alt="oil">
+                    </div>
+                    خدمات بترولية
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'departments/medical-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+                    <div class="img-icon">
+                      <img src="assets/images/departments-icons/medical.png" alt="medical">
+                    </div>
+                    خدمات صحية
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'departments/it-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+                    <div class="img-icon">
+                      <img src="assets/images/departments-icons/it.png" alt="it">
+                    </div>
+                    تكنولوجيا المعلومات
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'departments/maps-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+                    <div class="img-icon">
+                      <img src="assets/images/departments-icons/maps.png" alt="maps">
+                    </div>
+                    مساحة وخرائط
+                  </a>
+                </li>
+              </div>
+              <div class="line"></div>
+              <div class="secondPart">
+                <li>
+                  <a [routerLink]="'departments/bussiness-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+                    <div class="img-icon">
+                      <img src="assets/images/departments-icons/bussiness.png" alt="bussiness">
+                    </div>
+                    إدارة أعمال
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'departments/hotels-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+                    <div class="img-icon">
+                      <img src="assets/images/departments-icons/hotels.png" alt="hotels">
+                    </div>
+                    سياحة و فنادق
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'departments/journalism-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+                    <div class="img-icon">
+                      <img src="assets/images/departments-icons/journalism.png" alt="journalism">
+                    </div>
+                    صحافة و إعلام
+                  </a>
+                </li>
+              </div>
+            </div>
+            <div class="d-xl-none responsiveCategories">
               <li>
                 <a [routerLink]="'departments/petrol-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
                   <div class="img-icon">
@@ -110,9 +225,6 @@
                   مساحة وخرائط
                 </a>
               </li>
-            </div>
-            <div class="line"></div>
-            <div class="secondPart">
               <li>
                 <a [routerLink]="'departments/bussiness-department'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
                   <div class="img-icon">
@@ -142,8 +254,47 @@
         </li>
         <li class="nav-item categoriesList">
           <a class="nav-link" [routerLink]="'academy-gallery'" [queryParams]="{item: 'buildings'}" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">ميديا الأكاديمية</a>
-          <ul class="list-unstyled categories">
-            <div class="firstPart">
+          <ul class="list-unstyled categories gallery">
+            <div class="d-none d-xl-flex" style="gap: 2em;">
+              <div class="firstPart">
+                <li>
+                  <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'buildings'}">
+                    <div class="img-icon">
+                      <img src="assets/images/media-icons/buildings.png" alt="buildings">
+                    </div>
+                    قاعات و مباني الأكاديمية
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'graduation-party'}">
+                    <div class="img-icon">
+                      <img src="assets/images/media-icons//graduations-party.png" alt="graduations-party">
+                    </div>
+                    حفلات التخرج
+                  </a>
+                </li>
+              </div>
+              <div class="line"></div>
+              <div class="secondPart">
+                <li>
+                  <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'conferences'}">
+                    <div class="img-icon">
+                      <img src="assets/images/media-icons/conferences.png" alt="conferences">
+                    </div>
+                    المؤتمرات و الندوات و الاخبار
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'training'}">
+                    <div class="img-icon">
+                      <img src="assets/images/media-icons/training.png" alt="training">
+                    </div>
+                    التدريب العملي
+                  </a>
+                </li>
+              </div>
+            </div>
+            <div class="d-xl-none responsiveCategories">
               <li>
                 <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'buildings'}">
                   <div class="img-icon">
@@ -160,9 +311,6 @@
                   حفلات التخرج
                 </a>
               </li>
-            </div>
-            <div class="line"></div>
-            <div class="secondPart">
               <li>
                 <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'conferences'}">
                   <div class="img-icon">

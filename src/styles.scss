@@ -59,10 +59,13 @@ ul.list-unstyled { padding: 0 }
       border: 1px solid #E8E8E8;
       box-shadow: 0 3px 6px rgb(109 108 108 / 16%);
       border-radius: 10px;
+      overflow-x: auto;
       .panel-title {
         button {
           color: #14395B;
           text-decoration: none;
+          outline: none;
+          box-shadow: none;
         }
       }
     }
@@ -108,6 +111,36 @@ ul.list-unstyled { padding: 0 }
         height: 525px;
         img {
           width: 60%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    .navbar-collapse {
+      ul.navbar-nav {
+        li {
+          a {
+            font-size: $fontSize + 3;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:1199px) {
+}
+// responsive
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar {
+    .navbar-collapse {
+      ul.navbar-nav {
+        li {
+          a {
+            font-size: $fontSize;
+          }
         }
       }
     }

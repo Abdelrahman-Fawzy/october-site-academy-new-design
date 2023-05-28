@@ -1,9 +1,6 @@
 @import "../../../abstracts/variables", "../../../abstracts/mixins";
 footer {
   position: relative;
-  background-image: url("/assets/images/main_assets/footer.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   .row {padding: 0em 10em 0;}
   .contact {
     margin-top: 3em;
@@ -121,4 +118,56 @@ footer {
       }
     }
   }
+}
+
+
+
+
+@media (min-width: 1200px) {
+  footer {
+    background-image: url("/assets/images/main_assets/footer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    // padding: 13em 0em 2em;
+  }
+}
+
+@media (max-width: 1199px) {
+  footer {
+    background-color: #37c3ad;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    .questions {
+      position: relative;
+      top: -2em;
+      border-radius: 15px;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 16%);
+      background: #fff;
+      .background {
+        padding: 2em;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 1em;
+      }
+    }
+    .row {
+      padding: 2em 4em 0;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .row {
+    padding: 2em 0em 0em !important;
+    text-align: center !important;
+    & > div { margin-bottom: 1em; }
+  }
+  .contact-us {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .texts { width: 100%; }
+  .social { width: 100%; }
 }

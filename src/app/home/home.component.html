@@ -6,7 +6,7 @@
       <button class="primary" (click)="register()">قم بالتسجيل الان</button>
       <button class="primary-outline" [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">تعرف على الاقسام</button>
     </div>
-    <div class="images">
+    <div class="images d-none d-md-flex">
       <div class="firstPart">
         <img class="iconic" [src]="Departments[0].DepartImg" alt="">
         <div class="overlay">
@@ -61,6 +61,57 @@
         </div>
       </div>
     </div>
+    <div class="images responsiveImages d-md-none">
+      <div class="depart">
+        <img class="iconic" [src]="Departments[0].DepartImg" alt="">
+        <div class="overlay">
+          <a [routerLink]="Departments[0].DepartLink">{{Departments[0].DepartName}}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        </div>
+      </div>
+      <div class="depart">
+        <img class="iconic" [src]="Departments[1].DepartImg" alt="">
+        <div class="overlay">
+          <a [routerLink]="Departments[1].DepartLink">{{Departments[1].DepartName}}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        </div>
+      </div>
+      <div class="depart">
+        <img class="iconic" [src]="Departments[2].DepartImg" alt="">
+        <div class="overlay">
+          <a [routerLink]="Departments[2].DepartLink">{{Departments[2].DepartName}}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        </div>
+      </div>
+      <div class="depart">
+        <img class="iconic" [src]="Departments[3].DepartImg" alt="">
+        <div class="overlay">
+          <a [routerLink]="Departments[3].DepartLink">{{Departments[3].DepartName}}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        </div>
+      </div>
+      <div class="depart">
+        <img class="iconic" [src]="Departments[4].DepartImg" alt="">
+        <div class="overlay">
+          <a [routerLink]="Departments[4].DepartLink">{{Departments[4].DepartName}}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        </div>
+      </div>
+      <div class="depart">
+        <img class="iconic" [src]="Departments[5].DepartImg" alt="">
+        <div class="overlay">
+          <a [routerLink]="Departments[5].DepartLink">{{Departments[5].DepartName}}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        </div>
+      </div>
+      <div class="depart">
+        <img class="iconic" [src]="Departments[6].DepartImg" alt="">
+        <div class="overlay">
+          <a [routerLink]="Departments[6].DepartLink">{{Departments[6].DepartName}}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <div class="academy_numbers">
@@ -68,28 +119,28 @@
     <h4>الأكاديمية  في ارقام</h4>
     <p class="directP">حقائق وأرقام خاصة بأكاديمية 6 أكتوبر خلال السنوات السابقة</p>
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-lg-3 col-sm-6">
         <div class="number">
           <img src="assets/images/icons/experience.png" alt="experience">
           <span class="num">26</span>
           <span class="title">عدد سنوات الخبرة</span>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-lg-3 col-sm-6">
         <div class="number">
           <img src="assets/images/icons/departments.png" alt="departments">
           <span class="num">7</span>
           <span class="title">عدد أقسام الأكاديمية</span>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-lg-3 col-sm-6">
         <div class="number">
           <img src="assets/images/icons/graduates.png" alt="graduates">
           <span class="num">28693</span>
           <span class="title">عدد الخريجين</span>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-lg-3 col-sm-6">
         <div class="number">
           <img src="assets/images/icons/staff.png" alt="staff">
           <span class="num">60</span>

@@ -27,7 +27,7 @@
           <div class="form-group">
             <label for="certificate">المؤهل</label>
             <select [(ngModel)]="registerData.qualification_id" formControlName="qualification_id" class="form-control" id="certificate">
-              <option *ngFor="let graduationYear of graduationYears.data.list" [value]="graduationYear.key">{{graduationYear.value}}</option>
+              <option *ngFor="let qualification of qualifications.data.list" [value]="qualification.qualification_id">{{qualification.qualification}}</option>
             </select>
             <div *ngIf="f.qualification_id.touched && f.qualification_id.invalid">
               <div class="text-danger" *ngIf="f.qualification_id.errors.required">Qualification is required.</div>
@@ -38,7 +38,7 @@
           <div class="form-group">
             <label for="graduationYear">سنة التخرج</label>
             <select [(ngModel)]="registerData.grauation_year" formControlName="grauation_year" class="form-control" id="graduationYear">
-              <option *ngFor="let qualification of qualifications.data.list" [value]="qualification.qualification_id">{{qualification.qualification}}</option>
+              <option *ngFor="let graduationYear of graduationYears.data.list" [value]="graduationYear.key">{{graduationYear.value}}</option>
             </select>
           </div>
         </div>

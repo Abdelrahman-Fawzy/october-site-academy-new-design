@@ -31,6 +31,10 @@
     right: -22px;
   }
 }
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
 .about-academy {
   background-image: url('/assets/images/shapes/home-shape.png');
   background-size: 50% 100%;
@@ -498,4 +502,5 @@
       button { width: 100%; }
     }
   }
+  .imgShape { padding: 0;}
 }

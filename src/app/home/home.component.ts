@@ -13,6 +13,9 @@ export class HomeComponent implements OnInit {
   isFirstOpen = true;
   modalRef?: BsModalRef;
   incrementer = 0
+  slideIndex = 1;
+  GallerySlides = document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>
+  demos = document.getElementsByClassName("demo");
 
   Departments = [
     {
@@ -133,7 +136,8 @@ export class HomeComponent implements OnInit {
   constructor(private modalService: BsModalService) {}
 
   ngOnInit(): void {
-    // this.test()
+    this.test()
+    this.showSlides(this.slideIndex)
   }
 
   register() {
@@ -163,6 +167,27 @@ export class HomeComponent implements OnInit {
 
   change(from, to) {
     this.Departments.splice(to, 0, this.Departments.splice(from, 1)[0]);
+  }
+
+  plusSlides(n) {
+    this.showSlides(this.slideIndex += n);
+  }
+
+  currentSlide(n) {
+    this.showSlides(this.slideIndex = n);
+  }
+
+  showSlides(n) {
+    if (n > this.GallerySlides.length) {this.slideIndex = 1}
+    if (n < 1) {this.slideIndex = this.GallerySlides.length}
+    for (let i = 0; i < this.GallerySlides.length; i++) {
+      this.GallerySlides[i].style.display = "none";
+    }
+    for (let i = 0; i < this.demos.length; i++) {
+      this.demos[i].className = this.demos[i].className.replace(" active", "");
+    }
+    this.GallerySlides[this.slideIndex-1].style.display = "block";
+    this.demos[this.slideIndex-1].className += " active";
   }
 
 }

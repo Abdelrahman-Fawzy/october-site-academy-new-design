@@ -31,7 +31,8 @@ import { AcademyGalleryComponent } from './academy-gallery/academy-gallery.compo
 import { RegisterModalComponent } from './shared/register-modal/register-modal.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ToTopButtonComponent } from './shared/to-top-button/to-top-button.component'
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { HttpClientModule } from '@angular/common/http'
     ContactUsComponent,
     GraduatesComponent,
     AcademyGalleryComponent,
-    RegisterModalComponent
+    RegisterModalComponent,
+    ToTopButtonComponent
   ],
   imports: [
     BrowserModule,

@@ -55,6 +55,33 @@ export class HomeComponent implements OnInit {
     },
   ]
 
+  experienceYears = 0;
+
+  experienceYearsStop = setInterval(() => {
+    this.experienceYears++
+    if (this.experienceYears == 26) {
+      clearInterval(this.experienceYearsStop)
+    }
+  }, 100)
+
+  academyDeparts = 0;
+
+  academyDepartsStop = setInterval(() => {
+    this.academyDeparts++
+    if (this.academyDeparts == 7) {
+      clearInterval(this.academyDepartsStop)
+    }
+  }, 200)
+
+  staffNumber = 0
+
+  staffNumberStop = setInterval(() => {
+    this.staffNumber++
+    if ( this.staffNumber == 60 ) {
+      clearInterval(this.staffNumberStop)
+    }
+  }, 50)
+
 
   slides = [
     {img: "assets/images/partners/helwan.png"},
@@ -152,7 +179,7 @@ export class HomeComponent implements OnInit {
     setTimeout(() => {
       this.change(0, 6)
       this.stopCounter()
-    }, 1000)
+    }, 30000)
   }
 
   stopCounter() {

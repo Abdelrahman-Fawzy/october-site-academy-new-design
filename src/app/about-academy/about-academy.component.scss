@@ -33,6 +33,7 @@
 }
 .flex-grid {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
 }
 .about-academy {
@@ -85,13 +86,16 @@
       }
       .childTabContents {
         .text {
-          p {
+          p, li {
             font-size: $fontSize + 4;
             line-height: 45px;
             margin: 0 3em 0 0;
             color: #363636;
             font-weight: bold;
           }
+        }
+        .imgShape {
+          padding: 0;
         }
         .img {
           display: flex;
@@ -105,6 +109,23 @@
             bottom: 5px;
             right: -5px;
             width: 85%;
+          }
+        }
+        .greenP {
+          color: $mainGreenColor !important;
+          font-size: 20px !important;
+        }
+        &#equation {
+          .text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img { width: 150px; }
+          }
+        }
+        &#question {
+          ul {
+            list-style-image: url('/assets/images/icons/correct.svg');
           }
         }
       }

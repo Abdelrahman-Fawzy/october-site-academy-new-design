@@ -1,0 +1,62 @@
+{
+  "HOME": "الرئيسية",
+  "ABOUT": "عن الأكاديمية",
+  "ABOUT_SUB_ITEMS": {
+    "VISION": "رؤية الأكاديمية",
+    "DEPARTMENTS": "أقسام الأكاديمية",
+    "ACCEPTENCE": "التقديم و القبول",
+    "PARTNERS": "الشركاء",
+    "JOBS": "الوظائف",
+    "FAQ": "الأسئلة الشائعة"
+  },
+  "DEPARTMENTS": "الأقسام الدراسية",
+  "DEPARTMENTS_SUB_ITEMS": {
+    "PETROLIUM": "خدمات بترولية",
+    "MEDICAL": "خدمات صحية",
+    "IT": "تكنولوجيا المعلومات",
+    "MAPS": "مساحة وخرائط",
+    "BUSSINESS": "إدارة أعمال",
+    "HOTELS": "سياحة و فنادق",
+    "JOURNALISM": "صحافة و إعلام"
+  },
+  "MEDIA": "ميديا الأكاديمية",
+  "MEDIA_SUB_ITEMS": {
+    "BUILDINGS": "قاعات و مباني الأكاديمية",
+    "GRADUATION_PARTIES": "حفلات التخرج",
+    "CONFERENCES": "المؤتمرات و الندوات و الاخبار",
+    "TRAINING": "التدريب العملي"
+  },
+  "ACADEMIC_SYSTEM": "النظام الدراسى",
+  "GRADUATES": "الخريجين",
+  "PLATFORM": "المنصة الالكترونية",
+  "CONTACT_US": "تواصل معنا",
+  "REGISTER": "سجل الان",
+  "AR": "اللغة العربية",
+  "EN": "اللغة الانجليزية",
+
+  "WELCOME": "مرحبا بكم في أكاديمية 6 أكتوبر",
+  "FIRST_TECHNICIAN": "الأولى في التعليم الفني في مصر",
+  "REGISTER_NOW": "قم بالتسجيل الان",
+  "KNOWING_DEPARTS": "تعرف على الاقسام",
+  "ACADEMY_NUMBERS": "الأكاديمية في ارقام",
+  "FACTS": "حقائق وأرقام خاصة بأكاديمية 6 أكتوبر خلال السنوات السابقة",
+  "EXPERIENCE_YEARS": "عدد سنوات الخبرة",
+  "DEPARTS_NUMBER": "عدد أقسام الأكاديمية",
+  "GRADUATES_NUMBER": "عدد الخريجين",
+  "STAFF_NUMBER": "عدد أعضاء هيئة التدريس",
+  "PICTURES_FROM_ACADEMY": "صور من الأكاديمية",
+  "GET_DIRECTIONS": "احصل على الاتجاهات",
+  "ACADEMY_BRANCHES": "فروع أكاديمية 6 أكتوبر",
+  "SUCCESS_PARTNERS": "شركاء النجاح",
+  "MORE_QUESTIONS": "المزيد من الأسئلة",
+  "KEEP_IN_TOUCH": "ابقى على تواصل معنا",
+  "ENTER_EMAIL_TO_JOIN": "ادخل بريدك الالكتروني لمعرفة كل ما هو جديد عن اكاديمية 6 اكتوبر",
+  "EMAIL": "البريد الالكتروني",
+  "DO_YOU_HAVE_QUESTIONS": "هل لديك اى أسئلة ؟",
+  "WE_HAVE_TEAM": "لدينا فريق مخصص للرد على سائلتكم و استفساراتكم",
+
+  "ANOTHER_LINKS": "روابط أخري",
+  "ONLINE_REGISTER": "التسجيل اونلاين",
+  "QUESTION_ANSWER": "FAQs سؤال و جواب",
+  "COPYRIGHT": "جميع الحقوق محفوظة 2022"
+}

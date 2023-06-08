@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
 import * as AOS from 'aos'
 
 @Component({
@@ -7,7 +8,11 @@ import * as AOS from 'aos'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+  constructor(@Inject(DOCUMENT) private document: Document) {}
+
   ngOnInit(): void {
+    this.document.documentElement.lang = localStorage.getItem("currentLang");
     AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function

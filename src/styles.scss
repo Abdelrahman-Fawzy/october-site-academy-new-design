@@ -1,12 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 @import "abstracts/mixins", "abstracts/variables";
 
+
+html[lang="en"] {
+  direction: ltr;
+  body {
+    font-family: 'Tajawal', sans-serif;
+    text-align: left !important;
+  }
+  .navbar {
+    ul#dropdown-animated {
+      inset: 100% 0 auto auto !important
+    }
+  }
+}
+
+html[lang="ar"] {
+  direction: rtl;
+  body {
+    font-family: 'Cairo', sans-serif !important;
+    text-align: right !important;
+  }
+  .navbar {
+    ul#dropdown-animated {
+      inset: 100% auto auto 0 !important;
+    }
+  }
+}
 body {
-  font-family: 'Cairo', sans-serif !important;
   background-color: $backgroundColor !important;
   box-sizing: border-box;
-  direction: rtl;
-  text-align: right !important;
   overflow-x: hidden;
 }
 button.primary {

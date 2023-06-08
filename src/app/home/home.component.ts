@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { RegisterModalComponent } from '../shared/register-modal/register-modal.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -20,37 +21,37 @@ export class HomeComponent implements OnInit {
   Departments = [
     {
       DepartImg: 'assets/images/home-welcoming/bussiness.png',
-      DepartName: 'إدارة اعمال',
+      DepartName: localStorage.getItem("currentLang") == 'ar' ? 'إدارة اعمال' : 'Business Management',
       DepartLink: '/departments/bussiness-department'
     },
     {
       DepartImg: 'assets/images/home-welcoming/petrolium.png',
-      DepartName: 'خدمات بترولية',
+      DepartName: this.translate.currentLang == 'ar' ? 'خدمات بترولية' : 'Petroleum Services',
       DepartLink: '/departments/petrol-department'
     },
     {
       DepartImg: 'assets/images/home-welcoming/medical.png',
-      DepartName: 'خدمات صحية',
+      DepartName: this.translate.currentLang == 'ar' ? 'خدمات صحية' : 'Medical Services',
       DepartLink: '/departments/medical-department'
     },
     {
       DepartImg: 'assets/images/home-welcoming/hotels.png',
-      DepartName: 'سياحة و فنادق',
+      DepartName: this.translate.currentLang == 'ar' ? 'سياحة و فنادق' : 'Tourism And Hotels',
       DepartLink: '/departments/hotels-department'
     },
     {
       DepartImg: 'assets/images/home-welcoming/journalism.png',
-      DepartName: 'صحافة و اعلام',
+      DepartName: this.translate.currentLang == 'ar' ? 'صحافة و إعلام' : 'Journalism and Media',
       DepartLink: '/departments/journalism-department'
     },
     {
       DepartImg: 'assets/images/home-welcoming/it.png',
-      DepartName: 'تكنولوجيا المعلومات',
+      DepartName: this.translate.currentLang == 'ar' ? 'تكنولوجيا المعلومات' : 'Information Technology',
       DepartLink: '/departments/it-department'
     },
     {
       DepartImg: 'assets/images/home-welcoming/maps.png',
-      DepartName: 'مساحة و خرائط',
+      DepartName: this.translate.currentLang == 'ar' ? 'مساحة وخرائط' : 'Survey And Maps',
       DepartLink: '/departments/maps-department'
     },
   ]
@@ -96,7 +97,7 @@ export class HomeComponent implements OnInit {
   ];
 
   sliderConfig = {
-    rtl: true,
+    rtl: this.translate.currentLang == 'ar' ? true : false,
     dots: false,
     arrows: false,
     autoplay: true,
@@ -138,29 +139,15 @@ export class HomeComponent implements OnInit {
   };
 
   customOptions: OwlOptions = {
-    rtl: true,
+    rtl: this.translate.currentLang == 'ar' ? true : false,
     loop: true,
     center: true,
     margin: 20,
     nav: false,
     items: 3,
-    navSpeed: 2000,
-    // responsive: {
-    //   0: {
-    //     items: 1
-    //   },
-    //   400: {
-    //     items: 2
-    //   },
-    //   740: {
-    //     items: 3
-    //   },
-    //   940: {
-    //     items: 4
-    //   }
-    // },
+    navSpeed: 2000
   }
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService, public translate: TranslateService) {}
 
   ngOnInit(): void {
     this.test()

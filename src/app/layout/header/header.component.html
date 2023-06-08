@@ -11,10 +11,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="''" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">الرئيسية</a>
+          <a class="nav-link" [routerLink]="''" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+            {{ "HOME" | translate }}
+          </a>
         </li>
         <li class="nav-item categoriesList">
-          <a class="nav-link" [routerLink]="'about-academy'" [queryParams]="{item: 'vision'}" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">عن الأكاديمية</a>
+          <a class="nav-link" [routerLink]="'about-academy'" [queryParams]="{item: 'vision'}" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+            {{ "ABOUT" | translate }}
+          </a>
           <ul class="list-unstyled categories">
             <div class="d-none d-xl-flex" style="gap: 2em;">
               <div class="firstPart">
@@ -24,7 +28,7 @@
                       <div class="img-icon">
                         <img src="assets/images/about-icons/vision.png" alt="vision">
                       </div>
-                      رؤية الأكاديمية
+                      {{ "ABOUT_SUB_ITEMS.VISION" | translate }}
                     </a>
                   </li>
                   <li>
@@ -32,7 +36,7 @@
                       <div class="img-icon">
                         <img src="assets/images/about-icons/departs.png" alt="departs">
                       </div>
-                      أقسام الأكاديمية
+                      {{ "ABOUT_SUB_ITEMS.DEPARTMENTS" | translate }}
                     </a>
                   </li>
                   <li>
@@ -40,7 +44,7 @@
                       <div class="img-icon">
                         <img src="assets/images/about-icons/acceptence.png" alt="acceptence">
                       </div>
-                      التقديم و القبول
+                      {{ "ABOUT_SUB_ITEMS.ACCEPTENCE" | translate }}
                     </a>
                   </li>
 
@@ -53,7 +57,7 @@
                     <div class="img-icon">
                       <img src="assets/images/about-icons/partners.png" alt="partners">
                     </div>
-                    الشركاء
+                    {{ "ABOUT_SUB_ITEMS.PARTNERS" | translate }}
                   </a>
                 </li>
                 <li>
@@ -61,7 +65,7 @@
                     <div class="img-icon">
                       <img src="assets/images/about-icons/jobs.png" alt="jobs">
                     </div>
-                    الوظائف
+                    {{ "ABOUT_SUB_ITEMS.JOBS" | translate }}
                   </a>
                 </li>
                 <li>
@@ -69,7 +73,7 @@
                     <div class="img-icon">
                       <img src="assets/images/about-icons/conversations.png" alt="conversations">
                     </div>
-                    الأسئلة الشائعة
+                    {{ "ABOUT_SUB_ITEMS.FAQ" | translate }}
                   </a>
                 </li>
               </div>
@@ -80,7 +84,7 @@
                   <div class="img-icon">
                     <img src="assets/images/about-icons/vision.png" alt="vision">
                   </div>
-                  رؤية الأكاديمية
+                  {{ "ABOUT_SUB_ITEMS.VISION" | translate }}
                 </a>
               </li>
               <li>
@@ -88,7 +92,7 @@
                   <div class="img-icon">
                     <img src="assets/images/about-icons/departs.png" alt="departs">
                   </div>
-                  أقسام الأكاديمية
+                  {{ "ABOUT_SUB_ITEMS.DEPARTMENTS" | translate }}
                 </a>
               </li>
               <li>
@@ -96,7 +100,7 @@
                   <div class="img-icon">
                     <img src="assets/images/about-icons/acceptence.png" alt="acceptence">
                   </div>
-                  التقديم و القبول
+                  {{ "ABOUT_SUB_ITEMS.ACCEPTENCE" | translate }}
                 </a>
               </li>
               <li>
@@ -104,7 +108,7 @@
                   <div class="img-icon">
                     <img src="assets/images/about-icons/partners.png" alt="partners">
                   </div>
-                  الشركاء
+                  {{ "ABOUT_SUB_ITEMS.PARTNERS" | translate }}
                 </a>
               </li>
               <li>
@@ -112,7 +116,7 @@
                   <div class="img-icon">
                     <img src="assets/images/about-icons/jobs.png" alt="jobs">
                   </div>
-                  الوظائف
+                  {{ "ABOUT_SUB_ITEMS.JOBS" | translate }}
                 </a>
               </li>
               <li>
@@ -120,14 +124,14 @@
                   <div class="img-icon">
                     <img src="assets/images/about-icons/conversations.png" alt="conversations">
                   </div>
-                  الأسئلة الشائعة
+                  {{ "ABOUT_SUB_ITEMS.FAQ" | translate }}
                 </a>
               </li>
             </div>
           </ul>
         </li>
         <li class="nav-item categoriesList">
-          <a class="nav-link"> <span class="caret"></span> الأقسام الدراسية</a>
+          <a class="nav-link"> <span class="caret"></span> {{ "DEPARTMENTS" | translate }}</a>
           <ul class="list-unstyled categories">
             <div class="d-none d-xl-flex" style="gap: 2em;">
               <div class="firstPart">
@@ -136,7 +140,7 @@
                     <div class="img-icon">
                       <img src="assets/images/departments-icons/oil.png" alt="oil">
                     </div>
-                    خدمات بترولية
+                    {{ "DEPARTMENTS_SUB_ITEMS.PETROLIUM" | translate }}
                   </a>
                 </li>
                 <li>
@@ -144,7 +148,7 @@
                     <div class="img-icon">
                       <img src="assets/images/departments-icons/medical.png" alt="medical">
                     </div>
-                    خدمات صحية
+                    {{ "DEPARTMENTS_SUB_ITEMS.MEDICAL" | translate }}
                   </a>
                 </li>
                 <li>
@@ -152,7 +156,7 @@
                     <div class="img-icon">
                       <img src="assets/images/departments-icons/it.png" alt="it">
                     </div>
-                    تكنولوجيا المعلومات
+                    {{ "DEPARTMENTS_SUB_ITEMS.IT" | translate }}
                   </a>
                 </li>
                 <li>
@@ -160,7 +164,7 @@
                     <div class="img-icon">
                       <img src="assets/images/departments-icons/maps.png" alt="maps">
                     </div>
-                    مساحة وخرائط
+                    {{ "DEPARTMENTS_SUB_ITEMS.MAPS" | translate }}
                   </a>
                 </li>
               </div>
@@ -171,7 +175,7 @@
                     <div class="img-icon">
                       <img src="assets/images/departments-icons/bussiness.png" alt="bussiness">
                     </div>
-                    إدارة أعمال
+                    {{ "DEPARTMENTS_SUB_ITEMS.BUSSINESS" | translate }}
                   </a>
                 </li>
                 <li>
@@ -179,7 +183,7 @@
                     <div class="img-icon">
                       <img src="assets/images/departments-icons/hotels.png" alt="hotels">
                     </div>
-                    سياحة و فنادق
+                    {{ "DEPARTMENTS_SUB_ITEMS.HOTELS" | translate }}
                   </a>
                 </li>
                 <li>
@@ -187,7 +191,7 @@
                     <div class="img-icon">
                       <img src="assets/images/departments-icons/journalism.png" alt="journalism">
                     </div>
-                    صحافة و إعلام
+                    {{ "DEPARTMENTS_SUB_ITEMS.JOURNALISM" | translate }}
                   </a>
                 </li>
               </div>
@@ -198,7 +202,7 @@
                   <div class="img-icon">
                     <img src="assets/images/departments-icons/oil.png" alt="oil">
                   </div>
-                  خدمات بترولية
+                  {{ "DEPARTMENTS_SUB_ITEMS.PETROLIUM" | translate }}
                 </a>
               </li>
               <li>
@@ -206,7 +210,7 @@
                   <div class="img-icon">
                     <img src="assets/images/departments-icons/medical.png" alt="medical">
                   </div>
-                  خدمات صحية
+                  {{ "DEPARTMENTS_SUB_ITEMS.MEDICAL" | translate }}
                 </a>
               </li>
               <li>
@@ -214,7 +218,7 @@
                   <div class="img-icon">
                     <img src="assets/images/departments-icons/it.png" alt="it">
                   </div>
-                  تكنولوجيا المعلومات
+                  {{ "DEPARTMENTS_SUB_ITEMS.IT" | translate }}
                 </a>
               </li>
               <li>
@@ -222,7 +226,7 @@
                   <div class="img-icon">
                     <img src="assets/images/departments-icons/maps.png" alt="maps">
                   </div>
-                  مساحة وخرائط
+                  {{ "DEPARTMENTS_SUB_ITEMS.MAPS" | translate }}
                 </a>
               </li>
               <li>
@@ -230,7 +234,7 @@
                   <div class="img-icon">
                     <img src="assets/images/departments-icons/bussiness.png" alt="bussiness">
                   </div>
-                  إدارة أعمال
+                  {{ "DEPARTMENTS_SUB_ITEMS.BUSSINESS" | translate }}
                 </a>
               </li>
               <li>
@@ -238,7 +242,7 @@
                   <div class="img-icon">
                     <img src="assets/images/departments-icons/hotels.png" alt="hotels">
                   </div>
-                  سياحة و فنادق
+                  {{ "DEPARTMENTS_SUB_ITEMS.HOTELS" | translate }}
                 </a>
               </li>
               <li>
@@ -246,14 +250,16 @@
                   <div class="img-icon">
                     <img src="assets/images/departments-icons/journalism.png" alt="journalism">
                   </div>
-                  صحافة و إعلام
+                  {{ "DEPARTMENTS_SUB_ITEMS.JOURNALISM" | translate }}
                 </a>
               </li>
             </div>
           </ul>
         </li>
         <li class="nav-item categoriesList">
-          <a class="nav-link" [routerLink]="'academy-gallery'" [queryParams]="{item: 'buildings'}" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">ميديا الأكاديمية</a>
+          <a class="nav-link" [routerLink]="'academy-gallery'" [queryParams]="{item: 'buildings'}" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+            {{ "MEDIA" | translate }}
+          </a>
           <ul class="list-unstyled categories gallery">
             <div class="d-none d-xl-flex" style="gap: 2em;">
               <div class="firstPart">
@@ -262,7 +268,7 @@
                     <div class="img-icon">
                       <img src="assets/images/media-icons/buildings.png" alt="buildings">
                     </div>
-                    قاعات و مباني الأكاديمية
+                    {{ "MEDIA_SUB_ITEMS.BUILDINGS" | translate }}
                   </a>
                 </li>
                 <li>
@@ -270,7 +276,7 @@
                     <div class="img-icon">
                       <img src="assets/images/media-icons//graduations-party.png" alt="graduations-party">
                     </div>
-                    حفلات التخرج
+                    {{ "MEDIA_SUB_ITEMS.GRADUATION_PARTIES" | translate }}
                   </a>
                 </li>
               </div>
@@ -281,7 +287,7 @@
                     <div class="img-icon">
                       <img src="assets/images/media-icons/conferences.png" alt="conferences">
                     </div>
-                    المؤتمرات و الندوات و الاخبار
+                    {{ "MEDIA_SUB_ITEMS.CONFERENCES" | translate }}
                   </a>
                 </li>
                 <li>
@@ -289,7 +295,7 @@
                     <div class="img-icon">
                       <img src="assets/images/media-icons/training.png" alt="training">
                     </div>
-                    التدريب العملي
+                    {{ "MEDIA_SUB_ITEMS.TRAINING" | translate }}
                   </a>
                 </li>
               </div>
@@ -300,7 +306,7 @@
                   <div class="img-icon">
                     <img src="assets/images/media-icons/buildings.png" alt="buildings">
                   </div>
-                  قاعات و مباني الأكاديمية
+                  {{ "MEDIA_SUB_ITEMS.BUILDINGS" | translate }}
                 </a>
               </li>
               <li>
@@ -308,7 +314,7 @@
                   <div class="img-icon">
                     <img src="assets/images/media-icons//graduations-party.png" alt="graduations-party">
                   </div>
-                  حفلات التخرج
+                  {{ "MEDIA_SUB_ITEMS.GRADUATION_PARTIES" | translate }}
                 </a>
               </li>
               <li>
@@ -316,7 +322,7 @@
                   <div class="img-icon">
                     <img src="assets/images/media-icons/conferences.png" alt="conferences">
                   </div>
-                  المؤتمرات و الندوات و الاخبار
+                  {{ "MEDIA_SUB_ITEMS.CONFERENCES" | translate }}
                 </a>
               </li>
               <li>
@@ -324,25 +330,61 @@
                   <div class="img-icon">
                     <img src="assets/images/media-icons/training.png" alt="training">
                   </div>
-                  التدريب العملي
+                  {{ "MEDIA_SUB_ITEMS.TRAINING" | translate }}
                 </a>
               </li>
             </div>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'studying-system'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">النظام الدراسى</a>
+          <a class="nav-link" [routerLink]="'studying-system'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+            {{ "ACADEMIC_SYSTEM" | translate }}
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'graduates'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">الخريجين</a>
+          <a class="nav-link" [routerLink]="'graduates'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+            {{ "GRADUATES" | translate }}
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://e-learning.6ohd.com/ar/login" target="_blank">المنصة الالكترونية</a>
+          <a class="nav-link" href="https://e-learning.6ohd.com/ar/login" target="_blank">
+            {{ "PLATFORM" | translate }}
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'contact-us'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">تواصل معنا</a>
+          <a class="nav-link" [routerLink]="'contact-us'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+            {{ "CONTACT_US" | translate }}
+          </a>
         </li>
       </ul>
+      <div class="actions d-flex align-items-center" style="gap: 10px;">
+        <button class="primary" (click)="register()">{{ "REGISTER" | translate }}</button>
+        <div class="btn-group" dropdown>
+          <button id="button-animated" dropdownToggle type="button" class="dropdown-toggle"
+                  aria-controls="dropdown-animated">
+            <div class="language-icon">
+              <img src="assets/images/main_assets/egypt.svg" alt="" *ngIf="translate.currentLang == 'ar'">
+              <img src="assets/images/main_assets/usaLarge.png" alt="" *ngIf="translate.currentLang == 'en'">
+            </div>
+            <span class="caret"></span>
+          </button>
+          <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu"
+              role="menu" aria-labelledby="button-animated">
+            <li role="menuitem">
+              <a class="dropdown-item" (click)="changeCurrentLang('ar')">
+                <img src="assets/images/main_assets/Arabia.png" alt="">
+                {{ "AR" | translate }}
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item" (click)="changeCurrentLang('en')">
+                <img src="assets/images/main_assets/usa.png" alt="">
+                {{ "EN" | translate }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </nav>
 </div>

@@ -1,0 +1,62 @@
+{
+  "HOME": "Home",
+  "ABOUT": "About Academy",
+  "ABOUT_SUB_ITEMS": {
+    "VISION": "Academy Vision",
+    "DEPARTMENTS": "Academy Departments",
+    "ACCEPTENCE": "Submission And Acceptance",
+    "PARTNERS": "Partners",
+    "JOBS": "Jobs",
+    "FAQ": "Common Questions"
+  },
+  "DEPARTMENTS": "Departments",
+  "DEPARTMENTS_SUB_ITEMS": {
+    "PETROLIUM": "Petroleum Services",
+    "MEDICAL": "Medical Services",
+    "IT": "Information Technology",
+    "MAPS": "Survey And Maps",
+    "BUSSINESS": "Business Management",
+    "HOTELS": "Tourism And Hotels",
+    "JOURNALISM": "Journalism and Media"
+  },
+  "MEDIA": "Academy Media",
+  "MEDIA_SUB_ITEMS": {
+    "BUILDINGS": "Halls And Buildings Of The Academy",
+    "GRADUATION_PARTIES": "Graduation Parties",
+    "CONFERENCES": "Conferences, Seminars And News",
+    "TRAINING": "Practical Training"
+  },
+  "ACADEMIC_SYSTEM": "Academic System",
+  "GRADUATES": "Graduates",
+  "PLATFORM": "Electronic Platform",
+  "CONTACT_US": "Contact US",
+  "REGISTER": "Register Now",
+  "AR": "Arabic",
+  "EN": "ENGLISH",
+
+  "WELCOME": "Welcome To The 6th Of October Academy",
+  "FIRST_TECHNICIAN": "The First In Technical Education In Egypt",
+  "REGISTER_NOW": "Register Now",
+  "KNOWING_DEPARTS": "Go To The Departments",
+  "ACADEMY_NUMBERS": "Academy In Numbers",
+  "FACTS": "Facts And Figures For The 6th Of October Academy During The Previous Years",
+  "EXPERIENCE_YEARS": "Years Of Experience",
+  "DEPARTS_NUMBER": "Number Of Academic Departments",
+  "GRADUATES_NUMBER": "Number Of Graduates",
+  "STAFF_NUMBER": "Number Of Staff",
+  "PICTURES_FROM_ACADEMY": "Pictures From The Academy",
+  "GET_DIRECTIONS": "Get Directions",
+  "ACADEMY_BRANCHES": "6th of October Academy Branches",
+  "SUCCESS_PARTNERS": "Success Partners",
+  "MORE_QUESTIONS": "More Questions",
+  "KEEP_IN_TOUCH": "Stay In Touch With Us",
+  "ENTER_EMAIL_TO_JOIN": "Enter your e-mail to know all that is new about the 6th of October Academy",
+  "EMAIL": "EMAIL",
+  "DO_YOU_HAVE_QUESTIONS": "Do You Have Any Questions ?",
+  "WE_HAVE_TEAM": "We Have A Dedicated Team To Answer Your Questions And Inquiries",
+
+  "ANOTHER_LINKS": "Other Links",
+  "ONLINE_REGISTER": "Online Registration",
+  "QUESTION_ANSWER": "FAQs Question and answer",
+  "COPYRIGHT": "All rights reserved 2022"
+}

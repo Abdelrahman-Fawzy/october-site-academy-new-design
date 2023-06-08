@@ -1,12 +1,17 @@
-<footer>
-  <div class="questions" data-aos="flip-right" data-aos-duration="2000" data-aos-offset="100">
+<footer [ngStyle]="{'background-image': translate.currentLang == 'ar'
+? 'url(/assets/images/main_assets/footer.png)'
+: 'url(/assets/images/main_assets/footerEnglish.png)'}">
+  <div class="questions" data-aos="flip-right" data-aos-duration="2000" data-aos-offset="100"
+    [ngStyle]="{'background-image': translate.currentLang == 'ar'
+      ? 'url(/assets/images/shapes/questions.png)'
+      : 'url(/assets/images/shapes/questionsEnglish.png)'}">
     <div class="background">
       <div class="texts">
-        <h4>هل لديك اى أسئلة ؟</h4>
-        <p>لدينا فريق مخصص للرد على سائلتكم و استفساراتكم </p>
+        <h4>{{"DO_YOU_HAVE_QUESTIONS" | translate}}</h4>
+        <p>{{"WE_HAVE_TEAM" | translate}}</p>
       </div>
       <div class="social">
-        <h3>تواصل معنا</h3>
+        <h3>{{"CONTACT_US" | translate}}</h3>
         <ul class="list-unstyled">
           <li><img src="assets/images/icons/facebook.svg" alt="facebook"></li>
           <li><img src="assets/images/icons/google.svg" alt="google"></li>
@@ -24,43 +29,43 @@
     </div>
     <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="500">
       <div class="anotherPages margin-top-7">
-        <p class="directP">روابط أخري</p>
+        <p class="directP">{{"ANOTHER_LINKS" | translate}}</p>
         <a [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">
-          الاقسام الدراسية
+          {{"DEPARTMENTS" | translate}}
         </a>
         <a [routerLink]="'studying-system'">
-          النظام الدراسي
+          {{"ACADEMIC_SYSTEM" | translate}}
         </a>
         <a (click)="register()">
-          التسجيل اونلاين
+          {{"ONLINE_REGISTER" | translate}}
         </a>
         <a [routerLink]="'academy-gallery'">
-          ميديا الأكاديمية
+          {{"MEDIA" | translate}}
         </a>
         <a [routerLink]="'graduates'">
-          الخريجين
+          {{"GRADUATES" | translate}}
         </a>
       </div>
     </div>
     <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="900">
       <div class="anotherPages margin-top-10">
         <a [routerLink]="'about-academy'" [queryParams]="{item: 'partners'}">
-          شركاء النجاح
+          {{"SUCCESS_PARTNERS" | translate}}
         </a>
         <a href="https://e-learning.6ohd.com/ar/login" target="_blank">
-          المنصة الالكترونية
+          {{"PLATFORM" | translate}}
         </a>
         <a [routerLink]="'about-academy'" [queryParams]="{item: 'conversations'}">
-          FAQs سؤال و جواب
+          {{"QUESTION_ANSWER" | translate}}
         </a>
         <a [routerLink]="'about-academy'" [queryParams]="{item: 'jobs'}">
-          الوظائف
+          {{"ABOUT_SUB_ITEMS.JOBS" | translate}}
         </a>
       </div>
     </div>
     <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="1000">
       <div class="contact-us margin-top-7">
-        <p class="directP">تواصل معنا</p>
+        <p class="directP">{{"CONTACT_US" | translate}}</p>
         <div class="contacts-ways">
           <h6>
             <span>02-42242224</span>
@@ -84,7 +89,7 @@
   </div>
   <hr />
   <div class="copyRight">
-    <p class="mt-3">جميع الحقوق محفوظة 2022</p>
+    <p class="mt-3">{{"COPYRIGHT" | translate}}</p>
     <img src="assets/images/main_assets/small-logo.png" alt="logo"/>
   </div>
 </footer>

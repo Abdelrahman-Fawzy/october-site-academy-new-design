@@ -79,7 +79,7 @@ footer {
   //   margin-top: 7em;
   // }
   .questions {
-    background-image: url('/assets/images/shapes/questions.png');
+    // background-image: url('/assets/images/shapes/questions.png');
     background-position: center;
     background-size: 100% 100%;
     width: 80%;
@@ -125,7 +125,7 @@ footer {
 
 @media (min-width: 1200px) {
   footer {
-    background-image: url("/assets/images/main_assets/footer.png");
+    // background-image: url("/assets/images/main_assets/footer.png");
     background-repeat: no-repeat;
     background-size: cover;
     // padding: 13em 0em 2em;
@@ -135,6 +135,7 @@ footer {
 @media (max-width: 1199px) {
   footer {
     background-color: #37c3ad;
+    background-image: none !important;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     .questions {
@@ -153,6 +154,10 @@ footer {
     .footer-box {
       padding: 2em 4em 0;
     }
+  }
+  .copyRight {
+    margin: 0 2em !important;
+    padding-bottom: 1em;
   }
 }
 

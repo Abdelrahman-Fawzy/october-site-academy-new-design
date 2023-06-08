@@ -31,8 +31,11 @@ import { AcademyGalleryComponent } from './academy-gallery/academy-gallery.compo
 import { RegisterModalComponent } from './shared/register-modal/register-modal.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ToTopButtonComponent } from './shared/to-top-button/to-top-button.component'
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 @NgModule({
@@ -72,9 +75,22 @@ import { ToTopButtonComponent } from './shared/to-top-button/to-top-button.compo
     ModalModule.forRoot(),
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BsDropdownModule,
+    TranslateModule.forRoot({
+      defaultLanguage: "ar",
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}

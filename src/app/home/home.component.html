@@ -1,15 +1,15 @@
 <div class="welcoming" data-aos="fade-up" data-aos-duration="2000">
   <div class="container">
-    <h2>مرحبا بكم في أكاديمية 6 أكتوبر</h2>
-    <p class="directP">الأولى في التعليم الفني في مصر</p>
+    <h2>{{"WELCOME" | translate}}</h2>
+    <p class="directP">{{"FIRST_TECHNICIAN" | translate}}</p>
     <div class="actions">
-      <button class="primary" (click)="register()">قم بالتسجيل الان</button>
-      <button class="primary-outline" [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">تعرف على الاقسام</button>
+      <button class="primary" (click)="register()">{{"REGISTER_NOW" | translate}}</button>
+      <button class="primary-outline" [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">{{"KNOWING_DEPARTS" | translate}}</button>
     </div>
     <div class="images d-none d-md-flex">
       <div class="firstPart">
         <img class="iconic" [src]="Departments[0].DepartImg" alt="">
-        <div class="overlay">
+        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
           <a [routerLink]="Departments[0].DepartLink">{{Departments[0].DepartName}}</a>
           <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
         </div>
@@ -17,14 +17,14 @@
       <div class="secondPart">
         <div class="img1">
           <img class="iconic" [src]="Departments[1].DepartImg" alt="">
-          <div class="overlay">
+          <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
             <a [routerLink]="Departments[1].DepartLink">{{Departments[1].DepartName}}</a>
             <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
           </div>
         </div>
         <div class="img2">
           <img class="iconic" [src]="Departments[2].DepartImg" alt="">
-          <div class="overlay">
+          <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
             <a [routerLink]="Departments[2].DepartLink">{{Departments[2].DepartName}}</a>
             <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
           </div>
@@ -32,7 +32,7 @@
       </div>
       <div class="thirdPart">
         <img class="iconic" [src]="Departments[3].DepartImg" alt="">
-        <div class="overlay">
+        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
           <a [routerLink]="Departments[3].DepartLink">{{Departments[3].DepartName}}</a>
           <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
         </div>
@@ -40,14 +40,14 @@
       <div class="fourthPart">
         <div class="img1">
           <img class="iconic" [src]="Departments[4].DepartImg" alt="">
-          <div class="overlay">
+          <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
             <a [routerLink]="Departments[4].DepartLink">{{Departments[4].DepartName}}</a>
             <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
           </div>
         </div>
         <div class="img2">
           <img class="iconic" [src]="Departments[5].DepartImg" alt="">
-          <div class="overlay">
+          <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
             <a [routerLink]="Departments[5].DepartLink">{{Departments[5].DepartName}}</a>
             <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
           </div>
@@ -55,7 +55,7 @@
       </div>
       <div class="fifthPart">
         <img class="iconic" [src]="Departments[6].DepartImg" alt="">
-        <div class="overlay">
+        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
           <a [routerLink]="Departments[6].DepartLink">{{Departments[6].DepartName}}</a>
           <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
         </div>
@@ -64,49 +64,49 @@
     <div class="images responsiveImages d-md-none">
       <div class="depart">
         <img class="iconic" [src]="Departments[0].DepartImg" alt="">
-        <div class="overlay">
+        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
           <a [routerLink]="Departments[0].DepartLink">{{Departments[0].DepartName}}</a>
           <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
         </div>
       </div>
       <div class="depart">
         <img class="iconic" [src]="Departments[1].DepartImg" alt="">
-        <div class="overlay">
+        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
           <a [routerLink]="Departments[1].DepartLink">{{Departments[1].DepartName}}</a>
           <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
         </div>
       </div>
       <div class="depart">
         <img class="iconic" [src]="Departments[2].DepartImg" alt="">
-        <div class="overlay">
+        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
           <a [routerLink]="Departments[2].DepartLink">{{Departments[2].DepartName}}</a>
           <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
         </div>
       </div>
       <div class="depart">
         <img class="iconic" [src]="Departments[3].DepartImg" alt="">
-        <div class="overlay">
+        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
           <a [routerLink]="Departments[3].DepartLink">{{Departments[3].DepartName}}</a>
           <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
         </div>
       </div>
       <div class="depart">
         <img class="iconic" [src]="Departments[4].DepartImg" alt="">
-        <div class="overlay">
+        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
           <a [routerLink]="Departments[4].DepartLink">{{Departments[4].DepartName}}</a>
           <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
         </div>
       </div>
       <div class="depart">
         <img class="iconic" [src]="Departments[5].DepartImg" alt="">
-        <div class="overlay">
+        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
           <a [routerLink]="Departments[5].DepartLink">{{Departments[5].DepartName}}</a>
           <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
         </div>
       </div>
       <div class="depart">
         <img class="iconic" [src]="Departments[6].DepartImg" alt="">
-        <div class="overlay">
+        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
           <a [routerLink]="Departments[6].DepartLink">{{Departments[6].DepartName}}</a>
           <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
         </div>
@@ -116,35 +116,35 @@
 </div>
 <div class="academy_numbers">
   <div class="container">
-    <h4 data-aos="fade-left" data-aos-duration="2000" data-aos-offset="100">الأكاديمية  في ارقام</h4>
-    <p data-aos="fade-right" data-aos-duration="2000" data-aos-offset="100" class="directP">حقائق وأرقام خاصة بأكاديمية 6 أكتوبر خلال السنوات السابقة</p>
+    <h4 data-aos="fade-left" data-aos-duration="2000" data-aos-offset="100">{{"ACADEMY_NUMBERS" | translate}}</h4>
+    <p data-aos="fade-right" data-aos-duration="2000" data-aos-offset="100" class="directP">{{"FACTS" | translate}}</p>
     <div class="row" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="100">
       <div class="col-lg-3 col-sm-6">
         <div class="number">
           <img src="assets/images/icons/experience.png" alt="experience">
           <span class="num">{{experienceYears}}</span>
-          <span class="title">عدد سنوات الخبرة</span>
+          <span class="title">{{"EXPERIENCE_YEARS" | translate}}</span>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6">
         <div class="number">
           <img src="assets/images/icons/departments.png" alt="departments">
           <span class="num">{{academyDeparts}}</span>
-          <span class="title">عدد أقسام الأكاديمية</span>
+          <span class="title">{{"DEPARTS_NUMBER" | translate}}</span>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6">
         <div class="number">
           <img src="assets/images/icons/graduates.png" alt="graduates">
           <span class="num">28693</span>
-          <span class="title">عدد الخريجين</span>
+          <span class="title">{{"GRADUATES_NUMBER" | translate}}</span>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6">
         <div class="number">
           <img src="assets/images/icons/staff.png" alt="staff">
           <span class="num">{{staffNumber}}</span>
-          <span class="title">عدد أعضاء هيئة التدريس</span>
+          <span class="title">{{"STAFF_NUMBER" | translate}}</span>
         </div>
       </div>
     </div>
@@ -177,7 +177,7 @@
   </div>
 </div>
 <div class="mediaGallery">
-  <h3 data-aos="fade-left" data-aos-duration="2000" data-aos-offset="100">صور من الأكاديمية</h3>
+  <h3 data-aos="fade-left" data-aos-duration="2000" data-aos-offset="100">{{"PICTURES_FROM_ACADEMY" | translate}}</h3>
   <div class="points">
     <img src="assets/images/shapes/points.png" alt="">
   </div>
@@ -255,7 +255,7 @@
 </div>
 <app-branches></app-branches>
 <div class="partners">
-  <h3>شركاء النجاح</h3>
+  <h3>{{"SUCCESS_PARTNERS" | translate}}</h3>
   <ngx-slick-carousel class="carousel"
     #slickModal="slick-carousel"
     [config]="sliderConfig">
@@ -267,7 +267,7 @@
   </ngx-slick-carousel>
 </div>
 <div class="faq">
-  <h3 data-aos="fade-left" data-aos-duration="2000" data-aos-offset="100">الأسئلة الشائعة</h3>
+  <h3 data-aos="fade-left" data-aos-duration="2000" data-aos-offset="100">{{"ABOUT_SUB_ITEMS.FAQ" | translate}}</h3>
   <div class="container">
     <accordion [isAnimated]="true">
       <accordion-group data-aos="fade-up" data-aos-duration="2000" data-aos-offset="100" heading="هل في إمكانية انى اكمل بعد سنتين ؟" [isOpen]="isFirstOpen">
@@ -285,18 +285,18 @@
     </accordion>
   </div>
   <div class="more_questions d-flex justify-content-center mt-4">
-    <button class="primary" [routerLink]="'about-academy'" [queryParams]="{item: 'conversations'}">المزيد من الأسئلة</button>
+    <button class="primary" [routerLink]="'about-academy'" [queryParams]="{item: 'conversations'}">{{"MORE_QUESTIONS" | translate}}</button>
   </div>
 </div>
 <div class="contact" data-aos="flip-left" data-aos-duration="2000" data-aos-offset="100">
   <div class="container">
     <div class="box">
       <div class="contact-us">
-        <h4>ابقى على تواصل معنا</h4>
-        <p>ادخل بريدك الالكتروني لمعرفة كل ما هو جديد عن اكاديمية 6 اكتوبر</p>
+        <h4>{{"KEEP_IN_TOUCH" | translate}}</h4>
+        <p>{{"ENTER_EMAIL_TO_JOIN" | translate}}</p>
         <form>
           <div class="email">
-            <input type="text" class="form-control" placeholder="البريد الالكتروني">
+            <input type="text" class="form-control" placeholder="{{'EMAIL' | translate}}">
             <button class="forward">
               <img src="assets/images/icons/forward.png" alt="forward">
             </button>

@@ -13,6 +13,55 @@ html[lang="en"] {
       inset: 100% 0 auto auto !important
     }
   }
+  .mainTitle {
+    .front-bubble {
+      border-color: transparent transparent transparent $mainGreenColor;
+      right: -44px;
+    }
+    .back-bubble {
+      border-color: $mainGreenColor $mainGreenColor $mainGreenColor transparent;
+      left: -22px;
+    }
+  }
+  .about-academy {
+    .tabcontent {
+      &#vision {
+        .childTabContents {
+          .text {
+            p, li {
+              margin: 0 0 0 3em;
+            }
+          }
+          .img {
+            img.contentImg {
+              left: -5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .missions, .targets, .staffs {
+    .mission-text, .target-text, .staff-text {
+      margin-left: 2em;
+    }
+  }
+  .targeting {
+    .targeting-box {
+      margin-inline-end: auto;
+    }
+  }
+  @media (min-width:1400px) {
+    .forJoin {
+      .img {
+        left: -100px;
+      }
+      .data {
+        width: 90%;
+        p { width: 70%; }
+      }
+    }
+  }
 }
 
 html[lang="ar"] {
@@ -24,6 +73,62 @@ html[lang="ar"] {
   .navbar {
     ul#dropdown-animated {
       inset: 100% auto auto 0 !important;
+    }
+  }
+  .mainTitle {
+    .front-bubble {
+      border-color: transparent $mainGreenColor transparent transparent;
+      left: -44px;
+    }
+    .back-bubble {
+      border-color: $mainGreenColor transparent $mainGreenColor $mainGreenColor;
+      right: -22px;
+    }
+  }
+  .about-academy {
+    .tabcontent {
+      &#vision {
+        .childTabContents {
+          .text {
+            p, li {
+              margin: 0 3em 0 0;
+            }
+          }
+          .img {
+            img.contentImg {
+              right: -5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .missions, .targets, .staffs {
+    .mission-text, .target-text, .staff-text {
+      margin-right: 2em;
+    }
+  }
+  .targeting {
+    .targeting-box {
+      margin-inline-start: auto;
+    }
+  }
+  @media (min-width:1400px) {
+    .forJoin {
+      .img {
+        right: -100px;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .about-academy {
+      .tabcontent#acceptence {
+        .requirement {
+          ul {
+            margin-right: 2em;
+          }
+        }
+      }
     }
   }
 }

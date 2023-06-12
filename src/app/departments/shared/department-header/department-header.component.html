@@ -3,9 +3,9 @@
     <div class="d-flex justify-content-between">
       <div class="first-part">
         <h3>{{departName}}</h3>
-        <p>للتسجيل في القسم<br>
-          قم بملء استمارة التقديم عبر الإنترنت</p>
-        <button class="primary-white" (click)="register()">قم بالتسجيل الان</button>
+        <p>{{ translate.currentLang == 'ar' ? 'للتسجيل في القسم' : 'To register in the department'}}<br>
+          {{ translate.currentLang == 'ar' ? 'قم بملء استمارة التقديم عبر الإنترنت' : 'Fill in the online application form'}}</p>
+        <button class="primary-white" (click)="register()">{{ 'REGISTER_NOW' | translate }}</button>
       </div>
       <div class="second-part d-none d-lg-block">
         <div class="img">

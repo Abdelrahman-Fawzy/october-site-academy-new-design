@@ -1,4 +1,4 @@
-<app-department-header [departName]="'قسم الخدمات البترولية'" [departImg]="'assets/images/departments-icons/petrolDepartCover.svg'">
+<app-department-header [departName]="translate.currentLang == 'ar' ? 'قسم الخدمات البترولية' : 'Petroleum Services Department' " [departImg]="'assets/images/departments-icons/petrolDepartCover.svg'">
 </app-department-header>
 
 <div class="missions d-flex">
@@ -8,8 +8,9 @@
         <img src="assets/images/departments-icons/departVision.svg" alt="">
       </div>
       <div class="text">
-        <h6>رؤية القسم</h6>
-        <p>تتطلع اكاديمية 6 أكتوبر إلى أن تتبوأ مكانة مرموقة بين مؤسسات التعليم في مصر وعلى المستوى الأقليمي إنطلاقاً من مساهمتها فى تطوير العملية التعليمة في مجال الخدمات البترولية وتفاعلها مع مجتمعها من ا من خلال تخريج فنيين متميزين قادرين على المنافسة محلياً وإقليميا.ً</p>
+        <h6>{{ "DEPART_VISION" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">تتطلع اكاديمية 6 أكتوبر إلى أن تتبوأ مكانة مرموقة بين مؤسسات التعليم في مصر وعلى المستوى الأقليمي إنطلاقاً من مساهمتها فى تطوير العملية التعليمة في مجال الخدمات البترولية وتفاعلها مع مجتمعها من ا من خلال تخريج فنيين متميزين قادرين على المنافسة محلياً وإقليميا.ً</p>
+        <p *ngIf="translate.currentLang == 'en'">The 6th of October Academy aspires to occupy a prominent position among educational institutions in Egypt and at the regional level, based on its contribution to the development of the educational process in the field of petroleum services and its interaction with its community through the graduation of distinguished technicians who are able to compete locally and regionally.</p>
       </div>
     </div>
     <div class="mission">
@@ -17,8 +18,9 @@
         <img src="assets/images/departments-icons/departMessage.svg" alt="">
       </div>
       <div class="text">
-        <h6>رسالة القسم</h6>
-        <p>تهدف أكاديمية 6 أكتوبر المتخصصة في المجال التعليمى في الخدمات البترولية في إعداد نخبة من الفنيين المتخصصين في مجالات الخدمات البترولية لتفى بالمتطلبات المحلية والاقليمية من فنين تفيد هذا المجال وذلك من خلال الاهتمام بالعملية التعليمية وتنمية مهارات الخريج وتهيئته للالتحاق بكبرى الشركات العاملة في مجال البترول.</p>
+        <h6>{{ "DEPART_MESSAGE" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">تهدف أكاديمية 6 أكتوبر المتخصصة في المجال التعليمى في الخدمات البترولية في إعداد نخبة من الفنيين المتخصصين في مجالات الخدمات البترولية لتفى بالمتطلبات المحلية والاقليمية من فنين تفيد هذا المجال وذلك من خلال الاهتمام بالعملية التعليمية وتنمية مهارات الخريج وتهيئته للالتحاق بكبرى الشركات العاملة في مجال البترول.</p>
+        <p *ngIf="translate.currentLang == 'en'">The 6th of October Academy, specialized in the educational field of petroleum services, aims to prepare a group of technicians specialized in the fields of petroleum services to meet the local and regional requirements of technicians benefiting from this field, by paying attention to the educational process, developing the skills of the graduate and preparing him to join major companies operating in the field of petroleum.</p>
       </div>
     </div>
     <div class="mission">
@@ -26,8 +28,8 @@
         <img src="assets/images/departments-icons/departCertificate.svg" alt="">
       </div>
       <div class="text">
-        <h6>الشهادة</h6>
-        <p>يحصل الطالب على شهادة معتمدة من كبرى الجامعات المصرية للعمل داخل مصر وتصدق من وزارة الخارجية المصرية للعمل خارج مصر</p>
+        <h6>{{ "CERTIFICATE" | translate }}</h6>
+        <p>{{ "OBTAIN_CERTIFICATE" | translate }}</p>
       </div>
     </div>
   </div>
@@ -45,8 +47,9 @@
         <img src="assets/images/departments-icons/goal.svg" alt="">
       </div>
       <div class="text">
-        <h6>أهداف القسم</h6>
-        <p>يهدف قسم الخدمات البترولية لتخريج كوادر عالية على مستوي علمي وعملي فى مجال الخدمات البترولية بحيث يكون الخريج مثال يحتذى به من خلال عمله في الشركات الكبرى ويكون قادر على اداء خدمة مميزة ترقي بمستوى الشركة ويحصل الطالب على شهادة اخصائي معتمدة دوليا. توفر الأكاديمية فرص التدريب في كبرى الشركات العاملة في مجال البترول في جميع المحافظات تحت اشراف كامل من المهندسين والفنين العاملين بالأكاديمية.</p>
+        <h6>{{ "DEPART_GOALS" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">يهدف قسم الخدمات البترولية لتخريج كوادر عالية على مستوي علمي وعملي فى مجال الخدمات البترولية بحيث يكون الخريج مثال يحتذى به من خلال عمله في الشركات الكبرى ويكون قادر على اداء خدمة مميزة ترقي بمستوى الشركة ويحصل الطالب على شهادة اخصائي معتمدة دوليا. توفر الأكاديمية فرص التدريب في كبرى الشركات العاملة في مجال البترول في جميع المحافظات تحت اشراف كامل من المهندسين والفنين العاملين بالأكاديمية.</p>
+        <p *ngIf="translate.currentLang == 'en'">The Department of Petroleum Services aims to graduate high cadres on a scientific and practical level in the field of petroleum services so that the graduate is an example to follow through his work in large companies and is able to perform a distinguished service that raises the level of the company, and the student obtains an internationally accredited specialist certificate. The Academy provides training opportunities in major companies operating in the petroleum field in all governorates under the full supervision of the engineers and technicians working at the Academy.</p>
       </div>
     </div>
   </div>
@@ -58,8 +61,9 @@
         <img src="assets/images/departments-icons/departStaff.svg" alt="">
       </div>
       <div class="text">
-        <h6>أعضاء هيئة التدريس</h6>
-        <p>اي حاجهيضم القسم أفضل المهندسين والفنين الاكفاء والمتميزين في عملهم وذوي خبرة عالية سواء اكاديمية او عملية وتحرص الأكاديمية على رفع كفاءة العاملين في القسم باستمرار الاشتراك بالدورات او الدراسات العملية والأكاديمية.</p>
+        <h6>{{ "DEPART_STAFF" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">يضم القسم أفضل المهندسين والفنين الاكفاء والمتميزين في عملهم وذوي خبرة عالية سواء اكاديمية او عملية وتحرص الأكاديمية على رفع كفاءة العاملين في القسم باستمرار الاشتراك بالدورات او الدراسات العملية والأكاديمية.</p>
+        <p *ngIf="translate.currentLang == 'en'">The department includes the best engineers and technicians who are competent and distinguished in their work and have high experience, whether academic or practical. The Academy is keen to raise the efficiency of the employees in the department by continuing to participate in courses or practical and academic studies.</p>
       </div>
     </div>
     <div class="staff">
@@ -67,8 +71,9 @@
         <img src="assets/images/departments-icons/graduateJobDescription.svg" alt="">
       </div>
       <div class="text">
-        <h6>توصيف عمل الخريج</h6>
-        <p>يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بمختلف اعمال الخدمات البترولية في كافة الشركات العاملة في المجال ويندمج داخل الشركة ويكون ذو كفاء عالية ملم بآداب المهنة وحسن التعامل مع العاملين.</p>
+        <h6>{{ "GRADUATE_JOB_DESCRIPTION" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بمختلف اعمال الخدمات البترولية في كافة الشركات العاملة في المجال ويندمج داخل الشركة ويكون ذو كفاء عالية ملم بآداب المهنة وحسن التعامل مع العاملين.</p>
+        <p *ngIf="translate.currentLang == 'en'">The department aims to qualify the graduate to be able to carry out various petroleum services work in all companies operating in the field and to integrate within the company and to be highly qualified and familiar with professional ethics and good dealing with workers.</p>
       </div>
     </div>
     <div class="staff">
@@ -76,8 +81,9 @@
         <img src="assets/images/departments-icons/books.svg" alt="">
       </div>
       <div class="text">
-        <h6>النظام الدراسي</h6>
-        <p>عامان دراسيان 4 ترم</p>
+        <h6>{{ "ACADEMIC_SYSTEM" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">عامان دراسيان 4 ترم.</p>
+        <p *ngIf="translate.currentLang == 'en'">Two academic years, 4 semester.</p>
       </div>
     </div>
   </div>

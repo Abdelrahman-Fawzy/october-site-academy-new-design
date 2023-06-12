@@ -1,6 +1,7 @@
 <div class="text-center my-5">
-  <p>للتسجيل  في القسم قم بملء استمارة التقديم عبر الإنترنت</p>
-  <button class="primary" (click)="register()">قم بالتسجيل الان</button>
+  <p *ngIf="translate.currentLang == 'ar'">للتسجيل  في القسم قم بملء استمارة التقديم عبر الإنترنت</p>
+  <p *ngIf="translate.currentLang == 'en'">To register for the department, fill out the online application form</p>
+  <button class="primary" (click)="register()">{{"REGISTER_NOW" | translate}}</button>
 </div>
 <div class="containerOfJoin">
   <div class="forJoin">
@@ -8,11 +9,11 @@
       <img src="assets/images/toJoin.png" alt="">
     </div>
     <div class="data">
-      <h3>للإلتحاق بأكاديمية 6 أكتوبر</h3>
-      <p>يحصل الطالب على شهادة معتمدة من كبرى الجامعات المصرية للعمل داخل مصر وتصدق من وزارة الخارجية المصرية للعمل خارج مصر</p>
+      <h3>{{ "TOJOIN" | translate }}</h3>
+      <p>{{ "OBTAIN_CERTIFICATE" | translate }}</p>
       <div class="actions">
-        <button class="primary" (click)="register()">قم بالتسجيل الان</button>
-        <button class="primary-outline" [routerLink]="'../../about-academy'" [queryParams]="{item: 'departments'}">تعرف على الاقسام</button>
+        <button class="primary" (click)="register()">{{ "REGISTER_NOW" | translate }}</button>
+        <button class="primary-outline" [routerLink]="'../../about-academy'" [queryParams]="{item: 'departments'}">{{ "KNOWING_DEPARTS" | translate }}</button>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <footer [ngStyle]="{'background-image': translate.currentLang == 'ar'
 ? 'url(/assets/images/main_assets/footer.png)'
 : 'url(/assets/images/main_assets/footerEnglish.png)'}">
-  <div class="questions" data-aos="flip-right" data-aos-duration="2000" data-aos-offset="100"
+  <div class="questions" data-aos="flip-right" data-aos-duration="2000"
     [ngStyle]="{'background-image': translate.currentLang == 'ar'
       ? 'url(/assets/images/shapes/questions.png)'
       : 'url(/assets/images/shapes/questionsEnglish.png)'}">
@@ -22,12 +22,12 @@
     </div>
   </div>
   <div class="footer-box d-flex flex-wrap">
-    <div class="col-lg-3 col-sm-6 flexBox" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="100">
+    <div class="col-lg-3 col-sm-6 flexBox" data-aos="fade-up" data-aos-duration="2000">
       <div class="logo">
         <img src="assets/images/main_assets/white-logo.png" alt="logo"/>
       </div>
     </div>
-    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="500">
+    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="2000">
       <div class="anotherPages margin-top-7">
         <p class="directP">{{"ANOTHER_LINKS" | translate}}</p>
         <a [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">
@@ -47,7 +47,7 @@
         </a>
       </div>
     </div>
-    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="900">
+    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="2000">
       <div class="anotherPages margin-top-10">
         <a [routerLink]="'about-academy'" [queryParams]="{item: 'partners'}">
           {{"SUCCESS_PARTNERS" | translate}}
@@ -63,7 +63,7 @@
         </a>
       </div>
     </div>
-    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="1000">
+    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="2000">
       <div class="contact-us margin-top-7">
         <p class="directP">{{"CONTACT_US" | translate}}</p>
         <div class="contacts-ways">

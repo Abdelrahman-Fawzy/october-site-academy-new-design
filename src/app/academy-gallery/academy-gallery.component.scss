@@ -1,6 +1,5 @@
 @import "../../abstracts/variables", "../../abstracts/mixins";
 .header {
-  background-image: url('/assets/images/media-gallery.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 500px;
@@ -21,14 +20,6 @@
     top: 0;
     border-width: 22px 22px 22px 22px;
     border-style: solid;
-  }
-  .front-bubble {
-    border-color: transparent $mainGreenColor transparent transparent;
-    left: -44px;
-  }
-  .back-bubble {
-    border-color: $mainGreenColor transparent $mainGreenColor $mainGreenColor;
-    right: -22px;
   }
 }
 .media-gallery {

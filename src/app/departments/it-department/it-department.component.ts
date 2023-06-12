@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-it-department',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItDepartmentComponent implements OnInit {
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit(): void {
   }

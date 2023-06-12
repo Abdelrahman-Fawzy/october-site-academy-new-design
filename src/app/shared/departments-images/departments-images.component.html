@@ -1,6 +1,6 @@
 <div class="departments">
   <div class="container">
-    <h4>الأقسام الدراسية</h4>
+    <h4>{{"DEPARTMENTS" | translate}}</h4>
     <div class="images d-none d-md-flex">
       <div class="firstPart">
         <img class="iconic" [src]="Departments[0].DepartImg" alt="">
@@ -108,8 +108,8 @@
       </div>
     </div>
     <div class="actions">
-      <button class="primary" (click)="register()">قم بالتسجيل الان</button>
-      <button class="primary-outline" [routerLink]="'../about-academy'" [queryParams]="{item: 'departments'}">تعرف على الاقسام</button>
+      <button class="primary" (click)="register()">{{"REGISTER_NOW" | translate}}</button>
+      <button class="primary-outline" [routerLink]="'../about-academy'" [queryParams]="{item: 'departments'}">{{"KNOWING_DEPARTS" | translate}}</button>
     </div>
   </div>
 </div>

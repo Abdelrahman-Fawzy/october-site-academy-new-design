@@ -1,4 +1,4 @@
-<app-department-header [departName]="'قسم الخدمات الصحية'" [departImg]="'assets/images/departments-icons/medicalDepartCover.svg'">
+<app-department-header [departName]="translate.currentLang == 'ar' ? 'قسم الخدمات الصحية' : 'Department of Health Services'" [departImg]="'assets/images/departments-icons/medicalDepartCover.svg'">
 </app-department-header>
 
 <div class="missions d-flex">
@@ -8,8 +8,9 @@
         <img src="assets/images/departments-icons/departVision.svg" alt="">
       </div>
       <div class="text">
-        <h6>رؤية القسم</h6>
-        <p>للقسم رؤية في أن يصبح مركزا للتميز يساهم في تطوير مفهوم التمريض وإعداد خريجين ذو مهارات علمية ويقدم معاون تمريض متميز يستطيع الاندماج في سوق العمل بكفاءة ومهارة عالية.</p>
+        <h6>{{ "DEPART_VISION" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">للقسم رؤية في أن يصبح مركزا للتميز يساهم في تطوير مفهوم التمريض وإعداد خريجين ذو مهارات علمية ويقدم معاون تمريض متميز يستطيع الاندماج في سوق العمل بكفاءة ومهارة عالية.</p>
+        <p *ngIf="translate.currentLang == 'en'">The department has a vision to become a center of excellence that contributes to the development of the concept of nursing and prepares graduates with scientific skills and provides distinguished nursing assistants who can integrate into the labor market with high efficiency and skill.</p>
       </div>
     </div>
     <div class="mission">
@@ -17,8 +18,9 @@
         <img src="assets/images/departments-icons/departMessage.svg" alt="">
       </div>
       <div class="text">
-        <h6>رسالة القسم</h6>
-        <p>التمييز في مجال التعليم التمريضي والممارسة المهنية المتطورة لخريجي الأكاديمية لمواكبة العصر وتلبية احتياجات المجتمع للتعليم في مجال التمريض التي تركز على التعاون والمشاركة النشطة في التعلم، والتفكير النقدي لتطوير فهم واسع من المبادئ الأساسية بالتعليم في مجال التمريض يُمكن الخريجين من التأهيل أكاديمياً وعلميا وأخلاقيا للعمل بمجال التمريض.</p>
+        <h6>{{ "DEPART_MESSAGE" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">التمييز في مجال التعليم التمريضي والممارسة المهنية المتطورة لخريجي الأكاديمية لمواكبة العصر وتلبية احتياجات المجتمع للتعليم في مجال التمريض التي تركز على التعاون والمشاركة النشطة في التعلم، والتفكير النقدي لتطوير فهم واسع من المبادئ الأساسية بالتعليم في مجال التمريض يُمكن الخريجين من التأهيل أكاديمياً وعلميا وأخلاقيا للعمل بمجال التمريض.</p>
+        <p *ngIf="translate.currentLang == 'en'">Distinction in the field of nursing education and the advanced professional practice of the academy’s graduates to keep pace with the times and meet the needs of society for education in the field of nursing that focus on cooperation and active participation in learning, and critical thinking to develop a broad understanding of the basic principles of education in the field of nursing that enables graduates to qualify academically, scientifically and ethically to work in the field of nursing .</p>
       </div>
     </div>
     <div class="mission">
@@ -26,8 +28,8 @@
         <img src="assets/images/departments-icons/departCertificate.svg" alt="">
       </div>
       <div class="text">
-        <h6>الشهادة</h6>
-        <p>يحصل الطالب على شهادة معتمدة من كبرى الجامعات المصرية للعمل داخل مصر وتصدق من وزارة الخارجية المصرية للعمل خارج مصر</p>
+        <h6>{{ "CERTIFICATE" | translate }}</h6>
+        <p>{{ "OBTAIN_CERTIFICATE" | translate }}</p>
       </div>
     </div>
   </div>
@@ -45,8 +47,9 @@
         <img src="assets/images/departments-icons/goal.svg" alt="">
       </div>
       <div class="text">
-        <h6>أهداف القسم</h6>
-        <p>الهدف من قسم الخدمات الطبية هو إعداد كوادر تمريضية علمية و مهنية قادرة على الإبداع و إنتاج المعرفة و المنافسة وإعداد تدريسي متميز علمياً و مهنياً و ثقافياً وتقديم الرعاية الصحية الأولية العلاجية والوقائية بالمستشفيات التى يتم عمل الخريج بها - مباشرة الحالات الإسعافية الأولية. توفر الأكاديمية جميع الاجهزة المساعدة في العملية التعليمية الخاصة بمجال التمريض سواء التقليدية او الحديثة وتوفر فرص التدريب في كبرى المستشفيات.</p>
+        <h6>{{ "DEPART_GOALS" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">الهدف من قسم الخدمات الطبية هو إعداد كوادر تمريضية علمية و مهنية قادرة على الإبداع و إنتاج المعرفة و المنافسة وإعداد تدريسي متميز علمياً و مهنياً و ثقافياً وتقديم الرعاية الصحية الأولية العلاجية والوقائية بالمستشفيات التى يتم عمل الخريج بها - مباشرة الحالات الإسعافية الأولية. توفر الأكاديمية جميع الاجهزة المساعدة في العملية التعليمية الخاصة بمجال التمريض سواء التقليدية او الحديثة وتوفر فرص التدريب في كبرى المستشفيات.</p>
+        <p *ngIf="translate.currentLang == 'en'">The aim of the Medical Services Department is to prepare scientific and professional nursing cadres capable of creativity, production of knowledge and competition, preparing distinguished teaching staff scientifically, professionally and culturally, and providing curative and preventive primary health care in the hospitals in which the graduate works - directing first aid cases. The Academy provides all assistive devices in the educational process in the field of nursing, whether traditional or modern, and provides training opportunities in major hospitals.</p>
       </div>
     </div>
   </div>
@@ -58,8 +61,9 @@
         <img src="assets/images/departments-icons/departStaff.svg" alt="">
       </div>
       <div class="text">
-        <h6>أعضاء هيئة التدريس</h6>
-        <p>يضم القسم نخبة من أعضاء هيئة التدريس الاكفاء والمميزين في عملهم وذوي خبرة عالية وتحرص الأكاديمية على رفع كفاءة العاملين في القسم باستمرار سواء بحضور الندوات او الاشتراك بالدورات او الدراسات العملية والأكاديمية او حضور المؤتمرات الطبية.</p>
+        <h6>{{ "DEPART_STAFF" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">يضم القسم نخبة من أعضاء هيئة التدريس الاكفاء والمميزين في عملهم وذوي خبرة عالية وتحرص الأكاديمية على رفع كفاءة العاملين في القسم باستمرار سواء بحضور الندوات او الاشتراك بالدورات او الدراسات العملية والأكاديمية او حضور المؤتمرات الطبية.</p>
+        <p *ngIf="translate.currentLang == 'en'">The department includes a group of qualified and distinguished faculty members with high experience in their work. The Academy is keen to constantly raise the efficiency of the staff in the department, whether by attending seminars, participating in courses, practical and academic studies, or attending medical conferences.</p>
       </div>
     </div>
     <div class="staff">
@@ -67,8 +71,9 @@
         <img src="assets/images/departments-icons/graduateJobDescription.svg" alt="">
       </div>
       <div class="text">
-        <h6>توصيف عمل الخريج</h6>
-        <p>يهدف لقسم الخدمات الطبية الى تاهيل الخريج ليكون له القابلية على القيام بمختلف الاعمال التمريضية في كافة التخصصات ويندمج داخل المجتمع الطبي والمستشفيات ويكون ذو كفاء عالية في مجال التمريض فى كافة نواحي المهنة ويكون ملم بآداب المهنة وحسن التعامل مع المرضى.</p>
+        <h6>{{ "GRADUATE_JOB_DESCRIPTION" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">يهدف لقسم الخدمات الطبية الى تاهيل الخريج ليكون له القابلية على القيام بمختلف الاعمال التمريضية في كافة التخصصات ويندمج داخل المجتمع الطبي والمستشفيات ويكون ذو كفاء عالية في مجال التمريض فى كافة نواحي المهنة ويكون ملم بآداب المهنة وحسن التعامل مع المرضى.</p>
+        <p *ngIf="translate.currentLang == 'en'">The Department of Medical Services aims to qualify the graduate to be able to carry out various nursing work in all disciplines, to integrate within the medical community and hospitals, to be highly qualified in the field of nursing in all aspects of the profession, and to be familiar with professional ethics and good dealing with patients.</p>
       </div>
     </div>
     <div class="staff">
@@ -76,8 +81,9 @@
         <img src="assets/images/departments-icons/books.svg" alt="">
       </div>
       <div class="text">
-        <h6>النظام الدراسي</h6>
-        <p>عامان دراسيان 4 ترم</p>
+        <h6>{{ "ACADEMIC_SYSTEM" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">عامان دراسيان 4 ترم.</p>
+        <p *ngIf="translate.currentLang == 'en'">Two academic years, 4 semester.</p>
       </div>
     </div>
   </div>

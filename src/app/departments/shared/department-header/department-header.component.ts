@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { RegisterModalComponent } from 'src/app/shared/register-modal/register-modal.component';
 
@@ -13,7 +14,7 @@ export class DepartmentHeaderComponent implements OnInit {
   @Input('departImg') departImg;
   modalRef?: BsModalRef;
 
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService, public translate: TranslateService) {}
 
   ngOnInit(): void {
   }

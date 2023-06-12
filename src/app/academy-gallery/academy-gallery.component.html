@@ -1,8 +1,8 @@
-<div class="header">
+<div class="header" [ngStyle]="{'background-image': translate.currentLang == 'ar' ? 'url(/assets/images/media-gallery.png)' : 'url(/assets/images/media-galleryEnglish.png)'}">
   <div class="container">
     <h2 class="mainTitle">
       <div class="front-bubble"></div>
-      ميديا الأكاديمية
+      {{"MEDIA" | translate}}
       <div class="back-bubble"></div>
     </h2>
   </div>
@@ -12,26 +12,26 @@
     <div class="tabs">
       <button id="mediaDefaultOpen" class="tabLinks" (click)="openTab($event, 'buildings')">
         <img src="assets/images/media-icons/buildings.svg" alt="">
-        قاعات ومباني الأكاديمية
+        {{"MEDIA_SUB_ITEMS.BUILDINGS" | translate}}
       </button>
       <button id="conferencesAndNews" class="tabLinks" (click)="openTab($event, 'conferences')">
         <img src="assets/images/media-icons/conferences.svg" alt="">
-        المؤتمرات والندوات والاخبار
+        {{"MEDIA_SUB_ITEMS.CONFERENCES" | translate}}
       </button>
       <button id="parties" class="tabLinks" (click)="openTab($event, 'graduation-party')">
         <img src="assets/images/media-icons/graduations-party.svg" alt="">
-        حفلات التخرج
+        {{"MEDIA_SUB_ITEMS.GRADUATION_PARTIES" | translate}}
       </button>
       <button id="trainingS" class="tabLinks" (click)="openTab($event, 'training')">
         <img src="assets/images/media-icons/training.svg" alt="">
-        التدريب العملي
+        {{"MEDIA_SUB_ITEMS.TRAINING" | translate}}
       </button>
     </div>
   </div>
   <div class="content">
     <div class="tabcontent" id="buildings">
-      <h4>صور قاعات ومباني الأكاديمية</h4>
-      <p>صور من القاعات التعليمية والفصول الدراسية ومعامل الكمبيوتر ومباني أكاديمية 6 أكتوبر</p>
+      <h4>{{"BUILDING_PHOTOS" | translate}}</h4>
+      <p>{{"BUILDING_CLASSES_PHOTOS" | translate}}</p>
       <div class="all-branches" id="all-branches">
         <div class="row">
           <div class="col-lg-3 col-md-6">
@@ -39,8 +39,8 @@
               <div class="img">
                 <img src="assets/images/branchs/haram.png" alt="">
               </div>
-              <h6>فرع الهرم</h6>
-              <button class="primary" (click)="openBranch('haramBranch')">مشاهدة الصور</button>
+              <h6>{{"HARAM_BRANCH" | translate}}</h6>
+              <button class="primary" (click)="openBranch('haramBranch')">{{"VIEW_PHOTOS" | translate}}</button>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
@@ -48,8 +48,8 @@
               <div class="img">
                 <img src="assets/images/branchs/shobra.png" alt="">
               </div>
-              <h6>فرع شبرا الخيمة</h6>
-              <button class="primary" (click)="openBranch('shobraBranch')">مشاهدة الصور</button>
+              <h6>{{"SHOBRA_BRANCH" | translate}}</h6>
+              <button class="primary" (click)="openBranch('shobraBranch')">{{"VIEW_PHOTOS" | translate}}</button>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
@@ -57,8 +57,8 @@
               <div class="img">
                 <img src="assets/images/branchs/tanta.png" alt="">
               </div>
-              <h6>فرع طنطا</h6>
-              <button class="primary" (click)="openBranch('tantaBranch')">مشاهدة الصور</button>
+              <h6>{{"TANTA_BRANCH" | translate}}</h6>
+              <button class="primary" (click)="openBranch('tantaBranch')">{{"VIEW_PHOTOS" | translate}}</button>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
@@ -66,14 +66,14 @@
               <div class="img">
                 <img src="assets/images/branchs/tanta.png" alt="">
               </div>
-              <h6>فرع بنها</h6>
-              <button class="primary" (click)="openBranch('benhaBranch')">مشاهدة الصور</button>
+              <h6>{{"BENHA_BRANCH_NAME" | translate}}</h6>
+              <button class="primary" (click)="openBranch('benhaBranch')">{{"VIEW_PHOTOS" | translate}}</button>
             </div>
           </div>
         </div>
       </div>
       <div class="specific-branch" id="haramBranch">
-        <h4 class="title-name">فرع الهرم</h4>
+        <h4 class="title-name">{{"HARAM_BRANCH" | translate}}</h4>
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -142,15 +142,15 @@
             </div>
           </div>
 
-          <h4 class="another-title">صور فروع اخرى</h4>
+          <h4 class="another-title">{{"OTHER_BRANCHES_PHOTOS" | translate}}</h4>
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <div class="branch">
                 <div class="img">
                   <img src="assets/images/branchs/shobra.png" alt="">
                 </div>
-                <h6>فرع شبرا الخيمة</h6>
-                <button class="primary" (click)="openBranch('shobraBranch')">مشاهدة الصور</button>
+                <h6>{{"SHOBRA_BRANCH" | translate}}</h6>
+                <button class="primary" (click)="openBranch('shobraBranch')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -158,8 +158,8 @@
                 <div class="img">
                   <img src="assets/images/branchs/tanta.png" alt="">
                 </div>
-                <h6>فرع طنطا</h6>
-                <button class="primary" (click)="openBranch('tantaBranch')">مشاهدة الصور</button>
+                <h6>{{"TANTA_BRANCH" | translate}}</h6>
+                <button class="primary" (click)="openBranch('tantaBranch')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -167,15 +167,15 @@
                 <div class="img">
                   <img src="assets/images/branchs/tanta.png" alt="">
                 </div>
-                <h6>فرع بنها</h6>
-                <button class="primary" (click)="openBranch('benhaBranch')">مشاهدة الصور</button>
+                <h6>{{"BENHA_BRANCH_NAME" | translate}}</h6>
+                <button class="primary" (click)="openBranch('benhaBranch')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="specific-branch" id="shobraBranch">
-        <h4 class="title-name">فرع شبرا الخيمة</h4>
+        <h4 class="title-name">{{"SHOBRA_BRANCH" | translate}}</h4>
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -244,15 +244,15 @@
             </div>
           </div>
 
-          <h4 class="another-title">صور فروع اخرى</h4>
+          <h4 class="another-title">{{"OTHER_BRANCHES_PHOTOS" | translate}}</h4>
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <div class="branch">
                 <div class="img">
                   <img src="assets/images/branchs/haram.png" alt="">
                 </div>
-                <h6>فرع الهرم</h6>
-                <button class="primary" (click)="openBranch('haramBranch')">مشاهدة الصور</button>
+                <h6>{{"HARAM_BRANCH" | translate}}</h6>
+                <button class="primary" (click)="openBranch('haramBranch')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -260,8 +260,8 @@
                 <div class="img">
                   <img src="assets/images/branchs/tanta.png" alt="">
                 </div>
-                <h6>فرع طنطا</h6>
-                <button class="primary" (click)="openBranch('tantaBranch')">مشاهدة الصور</button>
+                <h6>{{"TANTA_BRANCH" | translate}}</h6>
+                <button class="primary" (click)="openBranch('tantaBranch')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -269,15 +269,15 @@
                 <div class="img">
                   <img src="assets/images/branchs/tanta.png" alt="">
                 </div>
-                <h6>فرع بنها</h6>
-                <button class="primary" (click)="openBranch('benhaBranch')">مشاهدة الصور</button>
+                <h6>{{"BENHA_BRANCH_NAME" | translate}}</h6>
+                <button class="primary" (click)="openBranch('benhaBranch')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="specific-branch" id="tantaBranch">
-        <h4 class="title-name">فرع طنطا</h4>
+        <h4 class="title-name">{{"TANTA_BRANCH" | translate}}</h4>
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -346,15 +346,15 @@
             </div>
           </div>
 
-          <h4 class="another-title">صور فروع اخرى</h4>
+          <h4 class="another-title">{{"OTHER_BRANCHES_PHOTOS" | translate}}</h4>
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <div class="branch">
                 <div class="img">
                   <img src="assets/images/branchs/haram.png" alt="">
                 </div>
-                <h6>فرع الهرم</h6>
-                <button class="primary" (click)="openBranch('haramBranch')">مشاهدة الصور</button>
+                <h6>{{"HARAM_BRANCH" | translate}}</h6>
+                <button class="primary" (click)="openBranch('haramBranch')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -362,8 +362,8 @@
                 <div class="img">
                   <img src="assets/images/branchs/shobra.png" alt="">
                 </div>
-                <h6>فرع شبرا الخيمة</h6>
-                <button class="primary" (click)="openBranch('shobraBranch')">مشاهدة الصور</button>
+                <h6>{{"SHOBRA_BRANCH" | translate}}</h6>
+                <button class="primary" (click)="openBranch('shobraBranch')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -371,15 +371,15 @@
                 <div class="img">
                   <img src="assets/images/branchs/tanta.png" alt="">
                 </div>
-                <h6>فرع بنها</h6>
-                <button class="primary" (click)="openBranch('benhaBranch')">مشاهدة الصور</button>
+                <h6>{{"BENHA_BRANCH_NAME" | translate}}</h6>
+                <button class="primary" (click)="openBranch('benhaBranch')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="specific-branch" id="benhaBranch">
-        <h4 class="title-name">فرع بنها</h4>
+        <h4 class="title-name">{{"BENHA_BRANCH_NAME" | translate}}</h4>
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -448,15 +448,15 @@
             </div>
           </div>
 
-          <h4 class="another-title">صور فروع اخرى</h4>
+          <h4 class="another-title">{{"OTHER_BRANCHES_PHOTOS" | translate}}</h4>
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <div class="branch">
                 <div class="img">
                   <img src="assets/images/branchs/haram.png" alt="">
                 </div>
-                <h6>فرع الهرم</h6>
-                <button class="primary" (click)="openBranch('haramBranch')">مشاهدة الصور</button>
+                <h6>{{"HARAM_BRANCH" | translate}}</h6>
+                <button class="primary" (click)="openBranch('haramBranch')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -464,8 +464,8 @@
                 <div class="img">
                   <img src="assets/images/branchs/shobra.png" alt="">
                 </div>
-                <h6>فرع شبرا الخيمة</h6>
-                <button class="primary" (click)="openBranch('shobraBranch')">مشاهدة الصور</button>
+                <h6>{{"SHOBRA_BRANCH" | translate}}</h6>
+                <button class="primary" (click)="openBranch('shobraBranch')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -473,8 +473,8 @@
                 <div class="img">
                   <img src="assets/images/branchs/tanta.png" alt="">
                 </div>
-                <h6>فرع طنطا</h6>
-                <button class="primary" (click)="openBranch('tantaBranch')">مشاهدة الصور</button>
+                <h6>{{"TANTA_BRANCH" | translate}}</h6>
+                <button class="primary" (click)="openBranch('tantaBranch')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
@@ -482,8 +482,8 @@
       </div>
     </div>
     <div class="tabcontent" id="conferences">
-      <h4>المؤتمرات والندوات والاخبار</h4>
-      <p>تعرف على آخر أخبار وفعاليات أكاديمية 6 أكتوبر</p>
+      <h4>{{"MEDIA_SUB_ITEMS.CONFERENCES" | translate}}</h4>
+      <p>{{"ACADEMY_NEWS" | translate}}</p>
       <div class="all-articles" id="all-articles">
         <div class="container">
           <div class="row">
@@ -492,14 +492,17 @@
                 <img src="assets/images/article-img.png" class="card-img-top" alt="article">
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title" (click)="openArticle('article1')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title" (click)="openArticle('article1')">{{"LOREM" | translate}}</h4>
                     <h5 class="date">
                       <span>04\04\2023</span>
                       <img src="assets/images/icons/date.svg" alt="">
                     </h5>
                   </div>
-                  <p class="card-text">
-                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.   عرض المزيد
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
+                    وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. عرض المزيد
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. view more
                   </p>
                 </div>
               </div>
@@ -507,14 +510,17 @@
                 <img src="assets/images/article-img.png" class="card-img-top" alt="article">
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title" (click)="openArticle('article2')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title" (click)="openArticle('article2')">{{"LOREM" | translate}}</h4>
                     <h5 class="date">
                       <span>04\04\2023</span>
                       <img src="assets/images/icons/date.svg" alt="">
                     </h5>
                   </div>
-                  <p class="card-text">
-                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.   عرض المزيد
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
+                    وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. عرض المزيد
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. view more
                   </p>
                 </div>
               </div>
@@ -522,21 +528,24 @@
                 <img src="assets/images/article-img.png" class="card-img-top" alt="article">
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title" (click)="openArticle('article3')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title" (click)="openArticle('article3')">{{"LOREM" | translate}}</h4>
                     <h5 class="date">
                       <span>04\04\2023</span>
                       <img src="assets/images/icons/date.svg" alt="">
                     </h5>
                   </div>
-                  <p class="card-text">
-                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.   عرض المزيد
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
+                    وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. عرض المزيد
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. view more
                   </p>
                 </div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="another_articles">
-                <div class="title">احدث الاخبار</div>
+                <div class="title">{{"LATEST_NEWS" | translate}}</div>
                 <div class="article">
                   <div class="article_img">
                     <img src="assets/images/article1.png" alt="">
@@ -596,21 +605,24 @@
                 <img src="assets/images/article-img.png" class="card-img-top" alt="article">
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title">{{"LOREM" | translate}}</h4>
                     <h5 class="date">
                       <span>04\04\2023</span>
                       <img src="assets/images/icons/date.svg" alt="">
                     </h5>
                   </div>
-                  <p class="card-text">
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
                     لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم. لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص.
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the 1960s with the release of Letraset plastic sheets containing passages of this text, and has recently spread again with the advent of electronic publishing programs such as Aldus Page Maker, which also contained copies of the Lorem Ipsum text. Lorem Ipsum is simply Formal text (meaning that the purpose is the form, not the content) and is used in the industries of printing presses and publishing houses. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the 1960s with the release of Letraset plastic sheets containing passages of this text, and has recently spread again with the advent of electronic publishing programs such as Aldus Page Maker, which also contained copies of the Lorem Ipsum text. Lorem Ipsum is simply Formal text (meaning that the purpose is the form, not the content) and is used in the industries of printing presses and publishing houses. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the sixties of this century with the release of "Letraset" plastic chips containing passages of this text, and it has spread again recently with the emergence of electronic publishing programs such as "Aldus Page Maker", which also contained copies of the text of Lorem Ipsum. Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the 1960s with the release of Letraset plastic sheets containing passages of this text, and has recently spread again with the advent of electronic publishing programs such as Aldus Page Maker, which also contained copies of the Lorem Ipsum text. Lorem Ipsum is simply Formal text (meaning that the purpose is the form, not the content) and is used in the industries of printing presses and publishing houses. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the sixties of this century with the issuance of "Letraset" plastic sheets containing passages from this text.
                   </p>
                 </div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="another_articles">
-                <div class="title">احدث الاخبار</div>
+                <div class="title">{{"LATEST_NEWS" | translate}}</div>
                 <div class="article">
                   <div class="article_img">
                     <img src="assets/images/article1.png" alt="">
@@ -660,7 +672,7 @@
               </div>
             </div>
           </div>
-          <h4 class="another-title">مقالات و اخبار مرتبطة</h4>
+          <h4 class="another-title">{{"RELATED_ARTICLES" | translate}}</h4>
           <div class="row related">
             <div class="col-lg-4 col-md-6">
               <div class="card">
@@ -673,10 +685,13 @@
                 </div>
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title" (click)="openArticle('article1')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title" (click)="openArticle('article1')">{{"LOREM" | translate}}</h4>
                   </div>
-                  <p class="card-text">
-                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
+                    وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. عرض المزيد
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. view more
                   </p>
                 </div>
               </div>
@@ -692,10 +707,13 @@
                 </div>
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title" (click)="openArticle('article2')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title" (click)="openArticle('article2')">{{"LOREM" | translate}}</h4>
                   </div>
-                  <p class="card-text">
-                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
+                    وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. عرض المزيد
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. view more
                   </p>
                 </div>
               </div>
@@ -711,10 +729,13 @@
                 </div>
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title" (click)="openArticle('article3')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title" (click)="openArticle('article3')">{{"LOREM" | translate}}</h4>
                   </div>
-                  <p class="card-text">
-                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
+                    وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. عرض المزيد
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. view more
                   </p>
                 </div>
               </div>
@@ -730,21 +751,24 @@
                 <img src="assets/images/article-img.png" class="card-img-top" alt="article">
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title">{{"LOREM" | translate}}</h4>
                     <h5 class="date">
                       <span>04\04\2023</span>
                       <img src="assets/images/icons/date.svg" alt="">
                     </h5>
                   </div>
-                  <p class="card-text">
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
                     لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم. لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص.
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the 1960s with the release of Letraset plastic sheets containing passages of this text, and has recently spread again with the advent of electronic publishing programs such as Aldus Page Maker, which also contained copies of the Lorem Ipsum text. Lorem Ipsum is simply Formal text (meaning that the purpose is the form, not the content) and is used in the industries of printing presses and publishing houses. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the 1960s with the release of Letraset plastic sheets containing passages of this text, and has recently spread again with the advent of electronic publishing programs such as Aldus Page Maker, which also contained copies of the Lorem Ipsum text. Lorem Ipsum is simply Formal text (meaning that the purpose is the form, not the content) and is used in the industries of printing presses and publishing houses. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the sixties of this century with the release of "Letraset" plastic chips containing passages of this text, and it has spread again recently with the emergence of electronic publishing programs such as "Aldus Page Maker", which also contained copies of the text of Lorem Ipsum. Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the 1960s with the release of Letraset plastic sheets containing passages of this text, and has recently spread again with the advent of electronic publishing programs such as Aldus Page Maker, which also contained copies of the Lorem Ipsum text. Lorem Ipsum is simply Formal text (meaning that the purpose is the form, not the content) and is used in the industries of printing presses and publishing houses. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the sixties of this century with the issuance of "Letraset" plastic sheets containing passages from this text.
                   </p>
                 </div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="another_articles">
-                <div class="title">احدث الاخبار</div>
+                <div class="title">{{"LATEST_NEWS" | translate}}</div>
                 <div class="article">
                   <div class="article_img">
                     <img src="assets/images/article1.png" alt="">
@@ -794,7 +818,7 @@
               </div>
             </div>
           </div>
-          <h4 class="another-title">مقالات و اخبار مرتبطة</h4>
+          <h4 class="another-title">{{"RELATED_ARTICLES" | translate}}</h4>
           <div class="row related">
             <div class="col-lg-4 col-md-6">
               <div class="card">
@@ -807,10 +831,13 @@
                 </div>
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title" (click)="openArticle('article1')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title" (click)="openArticle('article1')">{{"LOREM" | translate}}</h4>
                   </div>
-                  <p class="card-text">
-                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
+                    وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. عرض المزيد
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. view more
                   </p>
                 </div>
               </div>
@@ -826,10 +853,13 @@
                 </div>
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title" (click)="openArticle('article2')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title" (click)="openArticle('article2')">{{"LOREM" | translate}}</h4>
                   </div>
-                  <p class="card-text">
-                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
+                    وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. عرض المزيد
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. view more
                   </p>
                 </div>
               </div>
@@ -845,10 +875,13 @@
                 </div>
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title" (click)="openArticle('article3')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title" (click)="openArticle('article3')">{{"LOREM" | translate}}</h4>
                   </div>
-                  <p class="card-text">
-                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
+                    وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. عرض المزيد
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. view more
                   </p>
                 </div>
               </div>
@@ -864,21 +897,24 @@
                 <img src="assets/images/article-img.png" class="card-img-top" alt="article">
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title">{{"LOREM" | translate}}</h4>
                     <h5 class="date">
                       <span>04\04\2023</span>
                       <img src="assets/images/icons/date.svg" alt="">
                     </h5>
                   </div>
-                  <p class="card-text">
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
                     لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم. لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت"  البلاستيكية تحوي مقاطع من هذا النص.
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the 1960s with the release of Letraset plastic sheets containing passages of this text, and has recently spread again with the advent of electronic publishing programs such as Aldus Page Maker, which also contained copies of the Lorem Ipsum text. Lorem Ipsum is simply Formal text (meaning that the purpose is the form, not the content) and is used in the industries of printing presses and publishing houses. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the 1960s with the release of Letraset plastic sheets containing passages of this text, and has recently spread again with the advent of electronic publishing programs such as Aldus Page Maker, which also contained copies of the Lorem Ipsum text. Lorem Ipsum is simply Formal text (meaning that the purpose is the form, not the content) and is used in the industries of printing presses and publishing houses. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the sixties of this century with the release of "Letraset" plastic chips containing passages of this text, and it has spread again recently with the emergence of electronic publishing programs such as "Aldus Page Maker", which also contained copies of the text of Lorem Ipsum. Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the 1960s with the release of Letraset plastic sheets containing passages of this text, and has recently spread again with the advent of electronic publishing programs such as Aldus Page Maker, which also contained copies of the Lorem Ipsum text. Lorem Ipsum is simply Formal text (meaning that the purpose is the form, not the content) and is used in the industries of printing presses and publishing houses. Lorem Ipsum has been the standard for formal text since the fifteenth century when an unknown printer randomly stacked a group of letters it took from a text, to serve as a manual or formal reference for these characters. Five centuries did not eliminate this text, but it even became used in its original form in printing and electronic typesetting. It spread widely in the sixties of this century with the issuance of "Letraset" plastic sheets containing passages from this text.
                   </p>
                 </div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="another_articles">
-                <div class="title">احدث الاخبار</div>
+                <div class="title">{{"LATEST_NEWS" | translate}}</div>
                 <div class="article">
                   <div class="article_img">
                     <img src="assets/images/article1.png" alt="">
@@ -928,7 +964,7 @@
               </div>
             </div>
           </div>
-          <h4 class="another-title">مقالات و اخبار مرتبطة</h4>
+          <h4 class="another-title">{{"RELATED_ARTICLES" | translate}}</h4>
           <div class="row related">
             <div class="col-lg-4 col-md-6">
               <div class="card">
@@ -941,10 +977,13 @@
                 </div>
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title" (click)="openArticle('article1')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title" (click)="openArticle('article1')">{{"LOREM" | translate}}</h4>
                   </div>
-                  <p class="card-text">
-                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
+                    وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. عرض المزيد
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. view more
                   </p>
                 </div>
               </div>
@@ -960,10 +999,13 @@
                 </div>
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title" (click)="openArticle('article2')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title" (click)="openArticle('article2')">{{"LOREM" | translate}}</h4>
                   </div>
-                  <p class="card-text">
-                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
+                    وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. عرض المزيد
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. view more
                   </p>
                 </div>
               </div>
@@ -979,10 +1021,13 @@
                 </div>
                 <div class="card-body">
                   <div class="article_title">
-                    <h4 class="title" (click)="openArticle('article3')">لوريم إيبسوم هو ببساطة نص شكلي</h4>
+                    <h4 class="title" (click)="openArticle('article3')">{{"LOREM" | translate}}</h4>
                   </div>
-                  <p class="card-text">
-                    لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل ) ويُستخدم في صناعات المطابع ودور النشر.<a>عرض المزيد</a>
+                  <p class="card-text" *ngIf="translate.currentLang == 'ar' ">
+                    وريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. عرض المزيد
+                  </p>
+                  <p class="card-text" *ngIf="translate.currentLang == 'en' ">
+                    Lorem Ipsum is simply a formal script (meaning form is the goal, not content) and is used by the printing and publishing industries. view more
                   </p>
                 </div>
               </div>
@@ -992,8 +1037,9 @@
       </div>
     </div>
     <div class="tabcontent" id="graduation-party">
-      <h4>صور حفلات تخرج دفعات اكاديمية 6 اكتوبر</h4>
-      <p>تهتم إدارة الأكاديمية بحفلات التخرج للطلبة الخريجين وتكريم الطلبة المتفوقين بحضور عدد من الفنانين ونخبة من الاعلاميين والنجوم</p>
+      <h4>{{"ACADEMY_GRADUATION_PARTIES_PHOTOS" | translate }}</h4>
+      <p *ngIf="translate.currentLang == 'ar' ">تهتم إدارة الأكاديمية بحفلات التخرج للطلبة الخريجين وتكريم الطلبة المتفوقين بحضور عدد من الفنانين ونخبة من الاعلاميين والنجوم</p>
+      <p *ngIf="translate.currentLang == 'en' ">The academy administration is interested in graduation ceremonies for graduate students and honoring outstanding students in the presence of a number of artists and elite media figures and stars.</p>
       <div class="all-classes" id="all-classes">
         <div class="container">
           <div class="row">
@@ -1002,8 +1048,8 @@
                 <div class="img">
                   <img src="assets/images/first.png" alt="">
                 </div>
-                <h6>دفعة 2022</h6>
-                <button class="primary" (click)="openClass('2022class')">مشاهدة الصور</button>
+                <h6>{{"CLASS2022" | translate}}</h6>
+                <button class="primary" (click)="openClass('2022class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1011,8 +1057,8 @@
                 <div class="img">
                   <img src="assets/images/second.png" alt="">
                 </div>
-                <h6>دفعة 2021</h6>
-                <button class="primary" (click)="openClass('2021class')">مشاهدة الصور</button>
+                <h6>{{"CLASS2021" | translate}}</h6>
+                <button class="primary" (click)="openClass('2021class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1020,15 +1066,15 @@
                 <div class="img">
                   <img src="assets/images/third.png" alt="">
                 </div>
-                <h6>دفعة 2020</h6>
-                <button class="primary" (click)="openClass('2020class')">مشاهدة الصور</button>
+                <h6>{{"CLASS2020" | translate}}</h6>
+                <button class="primary" (click)="openClass('2020class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="specific-class" id="2022class">
-        <h4 class="title-name">دفعة 2022</h4>
+        <h4 class="title-name">{{"CLASS2022" | translate}}</h4>
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -1097,15 +1143,15 @@
             </div>
           </div>
 
-          <h4 class="another-title">صور حفلات تخرج دفعات اخرى</h4>
+          <h4 class="another-title">{{"ANOTHER_PARTIES_PHOTOS" | translate}}</h4>
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <div class="class">
                 <div class="img">
                   <img src="assets/images/first.png" alt="">
                 </div>
-                <h6>دفعة 2022</h6>
-                <button class="primary" (click)="openClass('2022class')">مشاهدة الصور</button>
+                <h6>{{"CLASS2022" | translate}}</h6>
+                <button class="primary" (click)="openClass('2022class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1113,8 +1159,8 @@
                 <div class="img">
                   <img src="assets/images/second.png" alt="">
                 </div>
-                <h6>دفعة 2021</h6>
-                <button class="primary" (click)="openClass('2021class')">مشاهدة الصور</button>
+                <h6>{{"CLASS2021" | translate}}</h6>
+                <button class="primary" (click)="openClass('2021class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1122,15 +1168,15 @@
                 <div class="img">
                   <img src="assets/images/third.png" alt="">
                 </div>
-                <h6>دفعة 2020</h6>
-                <button class="primary" (click)="openClass('2020class')">مشاهدة الصور</button>
+                <h6>{{"CLASS2020" | translate}}</h6>
+                <button class="primary" (click)="openClass('2020class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="specific-class" id="2021class">
-        <h4 class="title-name">دفعة 2021</h4>
+        <h4 class="title-name">{{"CLASS2021" | translate}}</h4>
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -1199,15 +1245,15 @@
             </div>
           </div>
 
-          <h4 class="another-title">صور حفلات تخرج دفعات اخرى</h4>
+          <h4 class="another-title">{{"ANOTHER_PARTIES_PHOTOS" | translate}}</h4>
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <div class="class">
                 <div class="img">
                   <img src="assets/images/first.png" alt="">
                 </div>
-                <h6>دفعة 2022</h6>
-                <button class="primary" (click)="openClass('2022class')">مشاهدة الصور</button>
+                <h6>{{"CLASS2022" | translate}}</h6>
+                <button class="primary" (click)="openClass('2022class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1215,8 +1261,8 @@
                 <div class="img">
                   <img src="assets/images/second.png" alt="">
                 </div>
-                <h6>دفعة 2021</h6>
-                <button class="primary" (click)="openClass('2021class')">مشاهدة الصور</button>
+                <h6>{{"CLASS2021" | translate}}</h6>
+                <button class="primary" (click)="openClass('2021class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1224,15 +1270,15 @@
                 <div class="img">
                   <img src="assets/images/third.png" alt="">
                 </div>
-                <h6>دفعة 2020</h6>
-                <button class="primary" (click)="openClass('2020class')">مشاهدة الصور</button>
+                <h6>{{"CLASS2020" | translate}}</h6>
+                <button class="primary" (click)="openClass('2020class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="specific-class" id="2020class">
-        <h4 class="title-name">دفعة 2020</h4>
+        <h4 class="title-name">{{"CLASS2020" | translate}}</h4>
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -1301,15 +1347,15 @@
             </div>
           </div>
 
-          <h4 class="another-title">صور حفلات تخرج دفعات اخرى</h4>
+          <h4 class="another-title">{{"ANOTHER_PARTIES_PHOTOS" | translate}}</h4>
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <div class="class">
                 <div class="img">
                   <img src="assets/images/first.png" alt="">
                 </div>
-                <h6>دفعة 2022</h6>
-                <button class="primary" (click)="openClass('2022class')">مشاهدة الصور</button>
+                <h6>{{"CLASS2022" | translate}}</h6>
+                <button class="primary" (click)="openClass('2022class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1317,8 +1363,8 @@
                 <div class="img">
                   <img src="assets/images/second.png" alt="">
                 </div>
-                <h6>دفعة 2021</h6>
-                <button class="primary" (click)="openClass('2021class')">مشاهدة الصور</button>
+                <h6>{{"CLASS2021" | translate}}</h6>
+                <button class="primary" (click)="openClass('2021class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1326,8 +1372,8 @@
                 <div class="img">
                   <img src="assets/images/third.png" alt="">
                 </div>
-                <h6>دفعة 2020</h6>
-                <button class="primary" (click)="openClass('2020class')">مشاهدة الصور</button>
+                <h6>{{"CLASS2020" | translate}}</h6>
+                <button class="primary" (click)="openClass('2020class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
@@ -1339,11 +1385,18 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="container">
-              <p class="training-p">
+              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
                 التدريب العملى لطلاب الأكاديمية هو واحد من أهم المراحل التي نركز عليها فى تعليم وتأهيل خريجين قادرين علي تلبية متطلبات سوق العمل
               </p>
-              <p class="training-p">
+              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
                 التدريب العملي هو تطبيق عملى على ما تم تدريسه لطلاب الأكاديمية من خلال تجارب ميدانية تكسب الطالب المعرفة و المهارة عن بيئة العمل الحقيقية التي سوف يواجهها بعد التخرج
+              </p>
+
+              <p class="training-p" *ngIf="translate.currentLang == 'en'">
+                Practical training for the academy's students is one of the most important stages that we focus on in educating and qualifying graduates who are able to meet the requirements of the labor market.
+              </p>
+              <p class="training-p" *ngIf="translate.currentLang == 'en'">
+                Practical training is a practical application of what was taught to the students of the Academy through field experiments that give the student knowledge and skills about the real work environment that he will face after graduation.
               </p>
             </div>
           </div>
@@ -1361,16 +1414,23 @@
           </div>
           <div class="col-lg-6">
             <div class="container">
-              <p class="training-p">
+              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
                 قد عملت إدارة الأكاديمية خلال السنوات الماضية على توفير كل الإمكانات والسبل التي من شأنها إرساء قواعد عملية تدريبية متينة الأساس، عميقة المفاهيم، مفصلة الأهداف ومحددة المراحل والخطوات، بحيث تكون مكملة ومحققة للخطط الدراسية المختلفة
               </p>
-              <p class="training-p">
+              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
                 و فى سبيل تحقيق هذا الغرض سارعت الأكاديمية بالشراكة مع كبرى الشركات و المصانع والفنادق والهيئات سواء فى القطاع العام أو الخاص ,كل المحافل ذات الصلة بالتدريب العملى لإتاحة التدريب العملى لطلاب الأكاديمية لديهم
+              </p>
+
+              <p class="training-p" *ngIf="translate.currentLang == 'en'">
+                Over the past years, the Academy's administration has worked to provide all the capabilities and means that would establish the bases of a solid-based training process, with deep concepts, detailed goals, and specific stages and steps, so that they are complementary and fulfilling to the various study plans.
+              </p>
+              <p class="training-p" *ngIf="translate.currentLang == 'en'">
+                In order to achieve this purpose, the Academy hastened to partner with major companies, factories, hotels, and agencies, whether in the public or private sectors, in all forums related to practical training, to provide practical training for the students of the Academy.
               </p>
             </div>
           </div>
         </div>
-        <h4 class="my-4">صور تدريبات عملى فى اكاديمية 6 اكتوبر</h4>
+        <h4 class="my-4">{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
         <div class="container">
           <div class="row">
             <div class="col-lg-4 col-md-6">
@@ -1379,7 +1439,7 @@
                   <img src="assets/images/first.png" alt="">
                 </div>
                 <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training1')">مشاهدة الصور</button>
+                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1388,7 +1448,7 @@
                   <img src="assets/images/second.png" alt="">
                 </div>
                 <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training2')">مشاهدة الصور</button>
+                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1397,14 +1457,14 @@
                   <img src="assets/images/third.png" alt="">
                 </div>
                 <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training3')">مشاهدة الصور</button>
+                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="specific-training" id="training1">
-        <h4>صور التدريب العملى فى اكاديمية 6 اكتوبر</h4>
+        <h4>{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -1473,7 +1533,7 @@
             </div>
           </div>
 
-          <h4 class="another-title">صور تدريب عملى أخرى</h4>
+          <h4 class="another-title">{{"ANOTHER_TRAINING_PHOTOS" | translate}}</h4>
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <div class="training">
@@ -1481,7 +1541,7 @@
                   <img src="assets/images/first.png" alt="">
                 </div>
                 <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training1')">مشاهدة الصور</button>
+                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1490,7 +1550,7 @@
                   <img src="assets/images/second.png" alt="">
                 </div>
                 <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training2')">مشاهدة الصور</button>
+                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1499,14 +1559,14 @@
                   <img src="assets/images/third.png" alt="">
                 </div>
                 <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training3')">مشاهدة الصور</button>
+                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="specific-training" id="training2">
-        <h4>صور التدريب العملى فى اكاديمية 6 اكتوبر</h4>
+        <h4>{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -1575,7 +1635,7 @@
             </div>
           </div>
 
-          <h4 class="another-title">صور تدريب عملى أخرى</h4>
+          <h4 class="another-title">{{"ANOTHER_TRAINING_PHOTOS" | translate}}</h4>
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <div class="training">
@@ -1583,7 +1643,7 @@
                   <img src="assets/images/first.png" alt="">
                 </div>
                 <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training1')">مشاهدة الصور</button>
+                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1592,7 +1652,7 @@
                   <img src="assets/images/second.png" alt="">
                 </div>
                 <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training2')">مشاهدة الصور</button>
+                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1601,14 +1661,14 @@
                   <img src="assets/images/third.png" alt="">
                 </div>
                 <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training3')">مشاهدة الصور</button>
+                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="specific-training" id="training3">
-        <h4>صور التدريب العملى فى اكاديمية 6 اكتوبر</h4>
+        <h4>{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -1677,7 +1737,7 @@
             </div>
           </div>
 
-          <h4 class="another-title">صور تدريب عملى أخرى</h4>
+          <h4 class="another-title">{{"ANOTHER_TRAINING_PHOTOS" | translate}}</h4>
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <div class="training">
@@ -1685,7 +1745,7 @@
                   <img src="assets/images/first.png" alt="">
                 </div>
                 <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training1')">مشاهدة الصور</button>
+                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1694,7 +1754,7 @@
                   <img src="assets/images/second.png" alt="">
                 </div>
                 <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training2')">مشاهدة الصور</button>
+                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -1703,7 +1763,7 @@
                   <img src="assets/images/third.png" alt="">
                 </div>
                 <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training3')">مشاهدة الصور</button>
+                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>

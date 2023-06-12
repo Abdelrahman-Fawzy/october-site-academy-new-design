@@ -1,4 +1,4 @@
-<app-department-header [departName]="'قسم المساحة والخرائط'" [departImg]="'assets/images/departments-icons/mapsDepartCover.svg'">
+<app-department-header [departName]="translate.currentLang == 'ar' ? 'قسم المساحة والخرائط' : 'Department of Survey and Maps'" [departImg]="'assets/images/departments-icons/mapsDepartCover.svg'">
 </app-department-header>
 
 <div class="missions d-flex">
@@ -8,8 +8,9 @@
         <img src="assets/images/departments-icons/departVision.svg" alt="">
       </div>
       <div class="text">
-        <h6>رؤية القسم</h6>
-        <p>التميز والجودة في الاداء وتحقيق الريادة والتميز في مجال المساحة والخرائط لخدمة المجتمع بأخصائي مساحة تقني ذو كفاءة عالية.</p>
+        <h6>{{ "DEPART_VISION" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">التميز والجودة في الاداء وتحقيق الريادة والتميز في مجال المساحة والخرائط لخدمة المجتمع بأخصائي مساحة تقني ذو كفاءة عالية.</p>
+        <p *ngIf="translate.currentLang == 'en'">Excellence and quality in performance and achieving leadership and excellence in the field of surveying and maps to serve the community with a highly qualified technical surveying specialist.</p>
       </div>
     </div>
     <div class="mission">
@@ -17,8 +18,9 @@
         <img src="assets/images/departments-icons/departMessage.svg" alt="">
       </div>
       <div class="text">
-        <h6>رسالة القسم</h6>
-        <p>تأهيل خريجي القسم تأهيلا تقنيا في مجال المساحة والخرائط وبما يسهم في تلبية احتياجات سوق العمل في المشاريع الهندسية المختلفة (مساحية وانشائية) على اختلاف احجامها لدوائر القطاع العام والخاص.</p>
+        <h6>{{ "DEPART_MESSAGE" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">تأهيل خريجي القسم تأهيلا تقنيا في مجال المساحة والخرائط وبما يسهم في تلبية احتياجات سوق العمل في المشاريع الهندسية المختلفة (مساحية وانشائية) على اختلاف احجامها لدوائر القطاع العام والخاص.</p>
+        <p *ngIf="translate.currentLang == 'en'">Qualifying graduates of the department technically in the field of surveying and maps, in a way that contributes to meeting the needs of the labor market in various engineering projects (surveying and construction) of all sizes for public and private sector departments.</p>
       </div>
     </div>
     <div class="mission">
@@ -26,8 +28,8 @@
         <img src="assets/images/departments-icons/departCertificate.svg" alt="">
       </div>
       <div class="text">
-        <h6>الشهادة</h6>
-        <p>يحصل الطالب على شهادة معتمدة من كبرى الجامعات المصرية للعمل داخل مصر وتصدق من وزارة الخارجية المصرية للعمل خارج مصر</p>
+        <h6>{{ "CERTIFICATE" | translate }}</h6>
+        <p>{{ "OBTAIN_CERTIFICATE" | translate }}</p>
       </div>
     </div>
   </div>
@@ -41,8 +43,9 @@
       <img src="assets/images/departments-icons/goal.svg" alt="">
     </div>
     <div class="text">
-      <h6>أهداف القسم</h6>
-      <p>يهدف قسم المساحة والخرائط الى ما يلي تخريج كوادر تقنية مؤهلة للقيام بأعمال المسح الارضي والتصويري أعمال الرفع التفصيلي الطبوغرافي و إنشاء الشبكات وحساب كميات الحفر والردم ورفع حدود الأرضي وحساب مساحتها فضلا عن اعمال التسوية لمعالم سطح الارض الطبيعية منها والاصطناعية باستخدام الاجهزة المساحية التقليدية و الحديثة (اجهزة المحطة الكاملة Total Station) واجهزة التوقيع العالمي الملاحي والمساحي (GPS ،. يضاف الى ذلك اعداد ورسم خرائط الطبوغرافية ، العقارية ، الموضوعية ، والتفصيلية . وكذلك استخدام نظم المعلومات الجغرافية, . (GIS) من اجل بناء قاعدة بيانات وانتاج الخرائط الرقمية في مختلف المجالات. بالإضافة إلى أجهزة المسح التقليدية كالتيدوليت والموازين يتوفر في القسم مجموعه كبيره لأحدث ما توصلت إليه أجهزة المسح الإلكترونية وأجهزة المحطات الشاملة وأجهزة تحديد المواقع بالأقمار الصناعية وزارة الزراعة والري والصرف – وزارة الصحة والسكان – وزارة الصناعة والتجارة والهيئة العامة للمساحة بالإضافة الى فرص السفر لجميع الدول العربية والخاصة الخليجية, ويقوم القسم بإستخدام أحدث الحاسبات الآلية لإنتاج الخرائط بمختلف أشكالها ومقاييسها ، ويتم حساب المساحات والكميات والإحداثيات من خلال برامج يقوم القسم باستخدام أحدث الحاسبات الآلية لإنتاج الخرائط بمختلف أشكالها ومقاييسها ، ويتم حساب المساحات والكميات والإحداثيات من خلال برامج مساحية Office - ARC GIS- AutoCAD- Civil 3D- Surfer</p>
+      <h6>{{ "DEPART_GOALS" | translate }}</h6>
+      <p *ngIf="translate.currentLang == 'ar'">يهدف قسم المساحة والخرائط الى ما يلي تخريج كوادر تقنية مؤهلة للقيام بأعمال المسح الارضي والتصويري أعمال الرفع التفصيلي الطبوغرافي و إنشاء الشبكات وحساب كميات الحفر والردم ورفع حدود الأرضي وحساب مساحتها فضلا عن اعمال التسوية لمعالم سطح الارض الطبيعية منها والاصطناعية باستخدام الاجهزة المساحية التقليدية و الحديثة (اجهزة المحطة الكاملة Total Station) واجهزة التوقيع العالمي الملاحي والمساحي (GPS ،. يضاف الى ذلك اعداد ورسم خرائط الطبوغرافية ، العقارية ، الموضوعية ، والتفصيلية . وكذلك استخدام نظم المعلومات الجغرافية, . (GIS) من اجل بناء قاعدة بيانات وانتاج الخرائط الرقمية في مختلف المجالات. بالإضافة إلى أجهزة المسح التقليدية كالتيدوليت والموازين يتوفر في القسم مجموعه كبيره لأحدث ما توصلت إليه أجهزة المسح الإلكترونية وأجهزة المحطات الشاملة وأجهزة تحديد المواقع بالأقمار الصناعية وزارة الزراعة والري والصرف – وزارة الصحة والسكان – وزارة الصناعة والتجارة والهيئة العامة للمساحة بالإضافة الى فرص السفر لجميع الدول العربية والخاصة الخليجية, ويقوم القسم بإستخدام أحدث الحاسبات الآلية لإنتاج الخرائط بمختلف أشكالها ومقاييسها ، ويتم حساب المساحات والكميات والإحداثيات من خلال برامج يقوم القسم باستخدام أحدث الحاسبات الآلية لإنتاج الخرائط بمختلف أشكالها ومقاييسها ، ويتم حساب المساحات والكميات والإحداثيات من خلال برامج مساحية Office - ARC GIS- AutoCAD- Civil 3D- Surfer</p>
+      <p *ngIf="translate.currentLang == 'en'">The Department of Surveying and Maps aims at the following: Graduating qualified technical cadres to carry out ground and photographic survey work, detailed topographical lifting work, establishing networks, calculating excavation and filling quantities, raising land boundaries and calculating its area, as well as leveling works for natural and artificial features of the Earth’s surface using traditional and modern surveying devices (devices The complete station) and the global navigational and cadastral signature devices (GPS), in addition to the preparation and drawing of topographic, real estate, thematic, and detailed maps, as well as the use of geographic information systems (GIS) in order to build a database and produce digital maps in various fields. In addition to traditional scanning devices such as todolites and scales, the department has a large collection of the latest findings of electronic scanning devices, comprehensive station devices, and satellite positioning devices. Ministry of Agriculture, Irrigation and Drainage - Ministry of Health and Population - Ministry of Industry and Trade and the General Authority for Survey, in addition to travel opportunities for all Arab and private countries The department uses the latest computers to produce maps of various shapes and sizes, and the areas, quantities, and coordinates are calculated through programs. Civil 3D- Surfer</p>
     </div>
   </div>
 </div>
@@ -54,8 +57,9 @@
         <img src="assets/images/departments-icons/departStaff.svg" alt="">
       </div>
       <div class="text">
-        <h6>أعضاء هيئة التدريس</h6>
-        <p>يضم القسم نخبة من مهندسي المساحة الذين قاموا بإدارة عدة مشاريع مما أكسبهم خبرة عالية ، وكذلك تحرص الأكاديمية على رفع مستوى كفاءتهم بما تتيحه لهم من حضور دورات داخلية وخارجية في مختلف علوم المساحة</p>
+        <h6>{{ "DEPART_STAFF" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">يضم القسم نخبة من مهندسي المساحة الذين قاموا بإدارة عدة مشاريع مما أكسبهم خبرة عالية ، وكذلك تحرص الأكاديمية على رفع مستوى كفاءتهم بما تتيحه لهم من حضور دورات داخلية وخارجية في مختلف علوم المساحة</p>
+        <p *ngIf="translate.currentLang == 'en'">The department includes a group of surveying engineers who have managed several projects, which gave them high experience. The Academy is also keen to raise the level of their competence by allowing them to attend internal and external courses in various surveying sciences.</p>
       </div>
     </div>
     <div class="staff">
@@ -63,8 +67,9 @@
         <img src="assets/images/departments-icons/graduateJobDescription.svg" alt="">
       </div>
       <div class="text">
-        <h6>توصيف عمل الخريج</h6>
-        <p>يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بالمهام الاتية : اجراء الرفع المساحي ذات الدقة العالية للمشاريع الهندسية (السدود ،الخزانات ، الجسور ، الانفاق , وطرق المطارات) من اجل بناء قاعدة بيانات وانتاج الخرائط الرقمية في مختلف المجالات – شبكات المياه – شبكات الكهرباء- الصرف الصحي – الطرق – المصانع الكبرى و غيرها استخدام نظم المعلومات الجغرافية حساب كميات الحفر والردم الازمة للمشروعات كمشروعات الطرق والتسويات</p>
+        <h6>{{ "GRADUATE_JOB_DESCRIPTION" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بالمهام الاتية : اجراء الرفع المساحي ذات الدقة العالية للمشاريع الهندسية (السدود ،الخزانات ، الجسور ، الانفاق , وطرق المطارات) من اجل بناء قاعدة بيانات وانتاج الخرائط الرقمية في مختلف المجالات – شبكات المياه – شبكات الكهرباء- الصرف الصحي – الطرق – المصانع الكبرى و غيرها استخدام نظم المعلومات الجغرافية حساب كميات الحفر والردم الازمة للمشروعات كمشروعات الطرق والتسويات</p>
+        <p *ngIf="translate.currentLang == 'en'">The department aims to qualify the graduate to be able to perform the following tasks: conducting high-accuracy survey surveys for engineering projects (dams, reservoirs, bridges, tunnels, and airport roads) in order to build a database and produce digital maps in various fields - water networks - electricity networks - Sanitary drainage - roads - major factories and others Using geographic information systems Calculating the quantities of excavation and filling necessary for projects such as road and settlement projects</p>
       </div>
     </div>
     <div class="staff">
@@ -72,8 +77,9 @@
         <img src="assets/images/departments-icons/books.svg" alt="">
       </div>
       <div class="text">
-        <h6>النظام الدراسي</h6>
-        <p>عامان دراسيان 4 ترم</p>
+        <h6>{{ "ACADEMIC_SYSTEM" | translate }}</h6>
+        <p *ngIf="translate.currentLang == 'ar'">عامان دراسيان 4 ترم.</p>
+        <p *ngIf="translate.currentLang == 'en'">Two academic years, 4 semester.</p>
       </div>
     </div>
   </div>

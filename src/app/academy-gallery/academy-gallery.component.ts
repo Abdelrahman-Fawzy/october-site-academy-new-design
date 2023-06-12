@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-academy-gallery',
@@ -10,7 +11,7 @@ export class AcademyGalleryComponent implements OnInit {
   isFirstOpen = true;
   param;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, public translate: TranslateService) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {

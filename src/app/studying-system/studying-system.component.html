@@ -2,26 +2,26 @@
   <div class="container">
     <div class="system-tabs">
       <div class="system-tabs__header">
-        <h4>النظام الدراسي بالأكاديمية</h4>
+        <h4>{{"ACADEMY_ACADEMIC_SYSTEM" | translate}}</h4>
       </div>
       <div class="system-tabs__body">
         <button id="defaultOpen" class="tablinks" (click)="openTab($event, 'acceptenceConditions')">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 29.25 29.25">
+          <svg [ngStyle]="{'transform': translate.currentLang == 'ar' ? 'rotate(0deg)' : 'rotate(180deg)'}" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 29.25 29.25">
             <path id="Icon_ionic-ios-arrow-dropleft-circle" data-name="Icon ionic-ios-arrow-dropleft-circle" d="M18,3.375A14.625,14.625,0,1,0,32.625,18,14.623,14.623,0,0,0,18,3.375ZM21.052,23.7a1.362,1.362,0,0,1,0,1.92,1.34,1.34,0,0,1-.956.394,1.364,1.364,0,0,1-.963-.4l-6.609-6.63a1.355,1.355,0,0,1,.042-1.87l6.708-6.729a1.357,1.357,0,1,1,1.92,1.92L15.434,18Z" transform="translate(-3.375 -3.375)" fill="#363636"/>
           </svg>
-          شروط القبول
+          {{"ADMISSION_REQUIREMENTS" | translate}}
         </button>
         <button class="tablinks" (click)="openTab($event, 'studyingPeriod')">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 29.25 29.25">
+          <svg [ngStyle]="{'transform': translate.currentLang == 'ar' ? 'rotate(0deg)' : 'rotate(180deg)'}" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 29.25 29.25">
             <path id="Icon_ionic-ios-arrow-dropleft-circle" data-name="Icon ionic-ios-arrow-dropleft-circle" d="M18,3.375A14.625,14.625,0,1,0,32.625,18,14.623,14.623,0,0,0,18,3.375ZM21.052,23.7a1.362,1.362,0,0,1,0,1.92,1.34,1.34,0,0,1-.956.394,1.364,1.364,0,0,1-.963-.4l-6.609-6.63a1.355,1.355,0,0,1,.042-1.87l6.708-6.729a1.357,1.357,0,1,1,1.92,1.92L15.434,18Z" transform="translate(-3.375 -3.375)" fill="#363636"/>
           </svg>
-          مدة الدراسة
+          {{"STUDY_DURATION" | translate}}
         </button>
         <button class="tablinks" (click)="openTab($event, 'introducingDocuments')">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 29.25 29.25">
+          <svg [ngStyle]="{'transform': translate.currentLang == 'ar' ? 'rotate(0deg)' : 'rotate(180deg)'}" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 29.25 29.25">
             <path id="Icon_ionic-ios-arrow-dropleft-circle" data-name="Icon ionic-ios-arrow-dropleft-circle" d="M18,3.375A14.625,14.625,0,1,0,32.625,18,14.623,14.623,0,0,0,18,3.375ZM21.052,23.7a1.362,1.362,0,0,1,0,1.92,1.34,1.34,0,0,1-.956.394,1.364,1.364,0,0,1-.963-.4l-6.609-6.63a1.355,1.355,0,0,1,.042-1.87l6.708-6.729a1.357,1.357,0,1,1,1.92,1.92L15.434,18Z" transform="translate(-3.375 -3.375)" fill="#363636"/>
           </svg>
-          الأوراق المطلوبة للتقديم
+          {{"REQUIRED_PAPERS" | translate}}
         </button>
       </div>
     </div>
@@ -29,33 +29,35 @@
       <div class="system-content__body" id="acceptenceConditions">
         <div class="header">
           <img src="assets/images/icons/acceptenceConditions.svg" alt="">
-          <span>شروط القبول</span>
+          <span>{{"ADMISSION_REQUIREMENTS" | translate}}</span>
         </div>
         <div class="body">
-          <p>يقبل الطلاب من حملة الثانوية العامة والأزهرية و الدبلومات الفنية ( تجارة – زراعة – صناعي – سياحة فنادق ) و ما يعادلها من خرجي هذا العام والاعوام السابقة ودون التقيد بالمجموع أو سنة التخرج ويوجد قسم خاص لراسبي الثانوية العامة</p>
+          <p *ngIf="translate.currentLang == 'ar'">يقبل الطلاب من حملة الثانوية العامة والأزهرية و الدبلومات الفنية ( تجارة – زراعة – صناعي – سياحة فنادق ) و ما يعادلها من خرجي هذا العام والاعوام السابقة ودون التقيد بالمجموع أو سنة التخرج ويوجد قسم خاص لراسبي الثانوية العامة</p>
+          <p *ngIf="translate.currentLang == 'en'">Students who hold high school diplomas, Azhar and technical diplomas (commerce - agriculture - industrial - hotel tourism) and their equivalent are accepted from the graduates of this year and previous years, without being restricted to the total or year of graduation. There is a special section for high school dropouts.</p>
         </div>
       </div>
       <div class="system-content__body" id="studyingPeriod">
         <div class="header">
           <img src="assets/images/icons/studyingPeriod.svg" alt="">
-          <span>مدة الدراسة</span>
+          <span>{{"STUDY_DURATION" | translate}}</span>
         </div>
         <div class="body">
-          <p>مدة الدراسة عامان دراسيان - 4 ترم</p>
+          <p *ngIf="translate.currentLang == 'ar'">مدة الدراسة عامان دراسيان - 4 ترم</p>
+          <p *ngIf="translate.currentLang == 'en'">The duration of the study is two academic years - 4 semesters</p>
         </div>
       </div>
       <div class="system-content__body" id="introducingDocuments">
         <div class="header">
           <img src="assets/images/icons/introducingDocuments.svg" alt="">
-          <span>الأوراق المطلوبة للتقديم</span>
+          <span>{{"REQUIRED_PAPERS" | translate}}</span>
         </div>
         <div class="body">
           <ul class="list-unstyled">
-            <li> - أصل المؤهل الدراسي</li>
-            <li> - أصل شهادة الميلاد</li>
-            <li> - صورة البطاقة الشخصية</li>
-            <li> - عدد ( 8 ) صورة شخصية</li>
-            <li> - ملف التقديم من الأكاديمية</li>
+            <li>- {{ "ACADEMIC_QUALIFICATION" | translate }}</li>
+            <li>- {{ "BIRTH_CERTIFICATE" | translate }}</li>
+            <li>- {{ "ID_CARD" | translate }}</li>
+            <li>- {{ "PERSONAL_PHOTOS" | translate }}</li>
+            <li>- {{ "APPLICATION_FILE" | translate }}</li>
           </ul>
         </div>
       </div>

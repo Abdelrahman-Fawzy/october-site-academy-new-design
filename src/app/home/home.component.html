@@ -116,9 +116,9 @@
 </div>
 <div class="academy_numbers">
   <div class="container">
-    <h4 data-aos="fade-left" data-aos-duration="2000" data-aos-offset="100">{{"ACADEMY_NUMBERS" | translate}}</h4>
-    <p data-aos="fade-right" data-aos-duration="2000" data-aos-offset="100" class="directP">{{"FACTS" | translate}}</p>
-    <div class="row" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="100">
+    <h4 data-aos="fade-left" data-aos-duration="2000">{{"ACADEMY_NUMBERS" | translate}}</h4>
+    <p data-aos="fade-right" data-aos-duration="2000" class="directP">{{"FACTS" | translate}}</p>
+    <div class="row" data-aos="fade-up" data-aos-duration="2000">
       <div class="col-lg-3 col-sm-6">
         <div class="number">
           <img src="assets/images/icons/experience.png" alt="experience">
@@ -153,12 +153,12 @@
 <div class="about">
   <div class="container">
     <div class="row align-items-baseline">
-      <div class="col-lg-3" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="100">
+      <div class="col-lg-3" data-aos="fade-left" data-aos-duration="1500">
         <div class="logo">
           <img src="assets/images/main_assets/logo.svg" alt="logo">
         </div>
       </div>
-      <div class="col-lg-9" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="100">
+      <div class="col-lg-9" data-aos="fade-right" data-aos-duration="1500">
         <div class="intro">
           <div class="points">
             <img src="assets/images/shapes/points.png" alt="">
@@ -177,7 +177,7 @@
   </div>
 </div>
 <div class="mediaGallery">
-  <h3 data-aos="fade-left" data-aos-duration="2000" data-aos-offset="100">{{"PICTURES_FROM_ACADEMY" | translate}}</h3>
+  <h3 data-aos="fade-left" data-aos-duration="2000">{{"PICTURES_FROM_ACADEMY" | translate}}</h3>
   <div class="points">
     <img src="assets/images/shapes/points.png" alt="">
   </div>
@@ -267,20 +267,20 @@
   </ngx-slick-carousel>
 </div>
 <div class="faq">
-  <h3 data-aos="fade-left" data-aos-duration="2000" data-aos-offset="100">{{"ABOUT_SUB_ITEMS.FAQ" | translate}}</h3>
+  <h3 data-aos="fade-left" data-aos-duration="2000">{{"ABOUT_SUB_ITEMS.FAQ" | translate}}</h3>
   <div class="container">
     <accordion [isAnimated]="true">
-      <accordion-group data-aos="fade-up" data-aos-duration="2000" data-aos-offset="100" heading="هل في إمكانية انى اكمل بعد سنتين ؟" [isOpen]="isFirstOpen">
-        <p>الأكاديمية تؤهل حضرتك للحصول على مؤهل مهني لمدة عامين دراسيين فقط ولا يوجد أي معهد أو أكاديميه سنتين خارج مكتب التنسيق على مستوى جمهورية مصر العربية لديه إمكانية تكملة الدراسة لأن الدراسة تكون منتهية بعد العامين الدراسيين.</p>
+      <accordion-group data-aos="fade-up" data-aos-duration="2000" [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية انى اكمل بعد سنتين ؟' : 'Is it possible for me to complete after two years?'" [isOpen]="isFirstOpen">
+        <p>{{ "POSSABILITY_OF_CONTINUING" | translate }}</p>
       </accordion-group>
-      <accordion-group data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300" heading="هل الشهادة معتمدة ولا لا ؟ هي اعتماد الشهادة منين ؟">
-        <p>الأكاديمية تؤهل حضرتك للحصول على مؤهل مهني لمدة عامين دراسيين فقط ولا يوجد أي معهد أو أكاديميه سنتين خارج مكتب التنسيق على مستوى جمهورية مصر العربية لديه إمكانية تكملة الدراسة لأن الدراسة تكون منتهية بعد العامين الدراسيين.</p>
+      <accordion-group data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300" [heading]="translate.currentLang == 'ar' ? 'هل الشهادة معتمدة ولا لا ؟ هي اعتماد الشهادة منين ؟' : 'Is the certificate accredited or not? Where is the certification from?'">
+        <p>{{ "CERTIFIED_CERTIFICATION" | translate }}</p>
       </accordion-group>
-      <accordion-group data-aos="fade-up" data-aos-duration="2000" data-aos-offset="500" heading="هل الشهادة موثقة خارجيا؟ هي الشهادة معتمدة من الخارجية؟ ">
-        <p>نعم الشهادة توثق من وزارة الخارجية المصرية لكي تستطيع العمل بها خارج جمهورية مصر العربية.</p>
+      <accordion-group data-aos="fade-up" data-aos-duration="2000" data-aos-offset="500" [heading]="translate.currentLang == 'ar' ? 'هل الشهادة موثقة خارجيا؟ هي الشهادة معتمدة من الخارجية؟' : 'Is the certificate documented externally? Is the certificate accredited by the Ministry of Foreign Affairs?'">
+        <p>{{ "ACCREDIATED_CERTIFICATION" | translate }}</p>
       </accordion-group>
-      <accordion-group data-aos="fade-up" data-aos-duration="2000" data-aos-offset="700" heading=" هل في إمكانية للتوظيف ؟ الأكاديمية بتوظفني بعد ما اتخرج ؟">
-        <p>نحن نقوم بنأهيل حضرتك بجميع الأدوات والمهارات اللازمة لسوق العمل سواء النظرية او العملية بأعلى مستوى مطلوب للتوظيف وبدراسه عمليه بنسبه 80%.</p>
+      <accordion-group data-aos="fade-up" data-aos-duration="2000" data-aos-offset="700" [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية للتوظيف ؟ الأكاديمية بتوظفني بعد ما اتخرج ؟' : 'Is there a possibility of employment? The academy will hire me after I graduate?'">
+        <p>{{ "POSSABILITY_OF_EMPLOYING" | translate }}</p>
       </accordion-group>
     </accordion>
   </div>
@@ -288,7 +288,7 @@
     <button class="primary" [routerLink]="'about-academy'" [queryParams]="{item: 'conversations'}">{{"MORE_QUESTIONS" | translate}}</button>
   </div>
 </div>
-<div class="contact" data-aos="flip-left" data-aos-duration="2000" data-aos-offset="100">
+<div class="contact" data-aos="flip-left" data-aos-duration="2000">
   <div class="container">
     <div class="box">
       <div class="contact-us">

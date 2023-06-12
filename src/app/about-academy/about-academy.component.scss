@@ -1,6 +1,6 @@
 @import "../../abstracts/variables", "../../abstracts/mixins";
 .header {
-  background-image: url('/assets/images/fsf.png');
+  // background-image: url('/assets/images/fsf.png');
   background-size: cover;
   background-repeat: no-repeat;
   height: 350px;
@@ -22,19 +22,12 @@
     border-width: 22px 22px 22px 22px;
     border-style: solid;
   }
-  .front-bubble {
-    border-color: transparent $mainGreenColor transparent transparent;
-    left: -44px;
-  }
-  .back-bubble {
-    border-color: $mainGreenColor transparent $mainGreenColor $mainGreenColor;
-    right: -22px;
-  }
 }
 .flex-grid {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 2em;
 }
 .about-academy {
   background-image: url('/assets/images/shapes/home-shape.png');
@@ -74,7 +67,7 @@
         justify-content: center;
         gap: 3em;
         position: absolute;
-        top: 3em;
+        top: 1em;
         z-index: 3;
         width: 100%;
         button.ChildTabLinks {
@@ -89,10 +82,10 @@
           p, li {
             font-size: $fontSize + 4;
             line-height: 45px;
-            margin: 0 3em 0 0;
             color: #363636;
             font-weight: bold;
           }
+          p { margin-bottom: 10px;}
         }
         .imgShape {
           padding: 0;
@@ -107,7 +100,6 @@
           img.contentImg {
             position: absolute;
             bottom: 5px;
-            right: -5px;
             width: 85%;
           }
         }
@@ -294,7 +286,7 @@
         font-size: 17px;
       }
       ul {
-        margin-right: 1em;
+        // margin-right: 1em;
         line-height: 3em;
         li {
           display: flex;
@@ -407,7 +399,6 @@
     width: 80%;
     .img {
       position: absolute;
-      right: -100px;
       width: 250px;
     }
   }
@@ -436,13 +427,6 @@
   }
   .tabcontent#departments {
     .container { padding: 7em 0; }
-  }
-  .tabcontent#acceptence {
-    .requirement {
-      ul {
-        margin-right: 2em;
-      }
-    }
   }
 }
 

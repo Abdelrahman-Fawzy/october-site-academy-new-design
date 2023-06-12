@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { RegisterModalComponent } from '../shared/register-modal/register-modal.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-academy',
@@ -14,7 +15,7 @@ export class AboutAcademyComponent implements OnInit {
   modalRef?: BsModalRef;
   param;
 
-  constructor(private route: ActivatedRoute, private modalService: BsModalService) { }
+  constructor(private route: ActivatedRoute, private modalService: BsModalService, public translate: TranslateService) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-studying-system',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudyingSystemComponent implements OnInit {
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit(): void {
     document.getElementById('defaultOpen').click();

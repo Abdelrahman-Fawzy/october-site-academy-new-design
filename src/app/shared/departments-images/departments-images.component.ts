@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { RegisterModalComponent } from '../register-modal/register-modal.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-departments-images',
@@ -49,7 +50,7 @@ export class DepartmentsImagesComponent implements OnInit {
     },
   ]
 
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService, public translate: TranslateService) {}
 
   ngOnInit(): void {
   }

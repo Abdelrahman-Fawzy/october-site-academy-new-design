@@ -1,46 +1,51 @@
 <div class="graduates">
-  <div class="graduates__header">
-    <div class="overlay">
+  <div class="graduates__header" [ngStyle]="{'background-image': translate.currentLang == 'ar'
+    ? 'url(/assets/images/graduates.png)'
+    : 'url(/assets/images/graduatesEnglish.png)'}">
+    <div class="overlay" [ngStyle]="{'background-image': translate.currentLang == 'ar'
+    ? 'url(/assets/images/shadow.png)'
+    : 'url(/assets/images/shadowEnglish.png)'}">
       <div class="container">
         <div class="info">
-          <h3>أكثر من 28,693 خريجين</h3>
-          <p>أكاديمية 6 أكتوبر الأولى في التعليم الفني في مصر</p>
+          <h3>{{"TOTAL_GRADUATES_NUMBER" | translate}}</h3>
+          <p>{{"ACADEMIC_FIRST_TECHNICIAN" | translate}}</p>
         </div>
       </div>
     </div>
   </div>
   <div class="graduation-parties-gallery">
-    <h5>صور حفلات التخرج</h5>
-    <p>تهتم إدارة الأكاديمية بحفلات التخرج للطلبة الخريجين وتكريم الطلبة المتفوقين بحضور عدد من الفنانين ونخبة من الاعلاميين والنجوم</p>
+    <h5>{{"GRADUATION_PARTIES_PHOTOS" | translate}}</h5>
+    <p *ngIf="translate.currentLang == 'ar'">تهتم إدارة الأكاديمية بحفلات التخرج للطلبة الخريجين وتكريم الطلبة المتفوقين بحضور عدد من الفنانين ونخبة من الاعلاميين والنجوم</p>
+    <p *ngIf="translate.currentLang == 'en'">The academy administration is interested in graduation ceremonies for graduate students and honoring outstanding students in the presence of a number of artists and elite media figures and stars.</p>
     <div class="container">
       <div class="d-flex classes">
         <div class="class">
           <div class="img">
             <img src="assets/images/first.png" alt="">
           </div>
-          <h6>دفعة 2022</h6>
-          <button class="primary">مشاهدة الصور</button>
+          <h6>{{"CLASS2022" | translate}}</h6>
+          <button class="primary">{{"VIEW_PHOTOS" | translate}}</button>
         </div>
         <div class="class">
           <div class="img">
             <img src="assets/images/second.png" alt="">
           </div>
-          <h6>دفعة 2021</h6>
-          <button class="primary">مشاهدة الصور</button>
+          <h6>{{"CLASS2021" | translate}}</h6>
+          <button class="primary">{{"VIEW_PHOTOS" | translate}}</button>
         </div>
         <div class="class">
           <div class="img">
             <img src="assets/images/third.png" alt="">
           </div>
-          <h6>دفعة 2020</h6>
-          <button class="primary">مشاهدة الصور</button>
+          <h6>{{"CLASS2020" | translate}}</h6>
+          <button class="primary">{{"VIEW_PHOTOS" | translate}}</button>
         </div>
       </div>
     </div>
   </div>
   <div class="graduates-reviews">
     <div class="container">
-    <h5>اراء الطلاب</h5>
+    <h5>{{"STUDENTS_REVIEWS" | translate}}</h5>
       <div class="row">
         <div class="col-lg-6">
           <div class="review">
@@ -131,11 +136,11 @@
     <div class="container">
       <div class="box">
         <div class="contact-us">
-          <h4>ابقى على تواصل معنا</h4>
-          <p>ادخل بريدك الالكتروني لمعرفة كل ما هو جديد عن اكاديمية 6 اكتوبر</p>
+          <h4>{{"KEEP_IN_TOUCH" | translate}}</h4>
+          <p>{{"ENTER_EMAIL_TO_JOIN" | translate}}</p>
           <form>
             <div class="email">
-              <input type="text" class="form-control" placeholder="البريد الالكتروني">
+              <input type="text" class="form-control" placeholder="{{'EMAIL' | translate}}">
               <button class="forward">
                 <img src="assets/images/icons/forward.png" alt="forward">
               </button>

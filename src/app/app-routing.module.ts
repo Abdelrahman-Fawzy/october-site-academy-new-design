@@ -13,6 +13,7 @@ import { StudyingSystemComponent } from './studying-system/studying-system.compo
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { GraduatesComponent } from './graduates/graduates.component';
 import { AcademyGalleryComponent } from './academy-gallery/academy-gallery.component';
+import { ItGraphicDepartmentComponent } from './departments/it-graphic-department/it-graphic-department.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,11 @@ const routes: Routes = [
   {
     path: 'departments/it-department',
     component: ItDepartmentComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'departments/it-graphic-department',
+    component: ItGraphicDepartmentComponent,
     pathMatch: 'full'
   },
   {

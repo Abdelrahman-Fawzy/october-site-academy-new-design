@@ -135,6 +135,7 @@ ul#dropdown-animated {
   }
   li.categoriesList:hover ul.categories {
     display: block;
+    z-index: 3;
   }
 }
 

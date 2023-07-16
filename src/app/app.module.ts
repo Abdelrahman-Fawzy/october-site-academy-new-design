@@ -36,6 +36,7 @@ import { ToTopButtonComponent } from './shared/to-top-button/to-top-button.compo
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ItGraphicDepartmentComponent } from './departments/it-graphic-department/it-graphic-department.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     GraduatesComponent,
     AcademyGalleryComponent,
     RegisterModalComponent,
-    ToTopButtonComponent
+    ToTopButtonComponent,
+    ItGraphicDepartmentComponent
   ],
   imports: [
     BrowserModule,

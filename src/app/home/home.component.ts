@@ -69,7 +69,7 @@ export class HomeComponent implements OnInit {
 
   academyDepartsStop = setInterval(() => {
     this.academyDeparts++
-    if (this.academyDeparts == 7) {
+    if (this.academyDeparts == 8) {
       clearInterval(this.academyDepartsStop)
     }
   }, 200)
@@ -78,22 +78,22 @@ export class HomeComponent implements OnInit {
 
   staffNumberStop = setInterval(() => {
     this.staffNumber++
-    if ( this.staffNumber == 60 ) {
+    if (this.staffNumber == 60) {
       clearInterval(this.staffNumberStop)
     }
   }, 50)
 
 
   slides = [
-    {img: "assets/images/partners/helwan.png"},
-    {img: "assets/images/partners/adults.png"},
-    {img: "assets/images/partners/assiut.png"},
-    {img: "assets/images/partners/dubai.png"},
-    {img: "assets/images/partners/investigation.png"},
-    {img: "assets/images/partners/azhar.png"},
-    {img: "assets/images/partners/benha.png"},
-    {img: "assets/images/partners/watny.png"},
-    {img: "assets/images/partners/cairo.png"},
+    { img: "assets/images/partners/helwan.png" },
+    { img: "assets/images/partners/adults.png" },
+    { img: "assets/images/partners/assiut.png" },
+    { img: "assets/images/partners/dubai.png" },
+    { img: "assets/images/partners/investigation.png" },
+    { img: "assets/images/partners/azhar.png" },
+    { img: "assets/images/partners/benha.png" },
+    { img: "assets/images/partners/watny.png" },
+    { img: "assets/images/partners/cairo.png" },
   ];
 
   sliderConfig = {
@@ -147,7 +147,7 @@ export class HomeComponent implements OnInit {
     items: 3,
     navSpeed: 2000
   }
-  constructor(private modalService: BsModalService, public translate: TranslateService) {}
+  constructor(private modalService: BsModalService, public translate: TranslateService) { }
 
   ngOnInit(): void {
     this.test()
@@ -155,7 +155,7 @@ export class HomeComponent implements OnInit {
   }
 
   register() {
-    this.modalRef = this.modalService.show(RegisterModalComponent, {class: 'modal-xl modal-dialog-centered'});
+    this.modalRef = this.modalService.show(RegisterModalComponent, { class: 'modal-xl modal-dialog-centered' });
   }
 
   test() {
@@ -192,16 +192,16 @@ export class HomeComponent implements OnInit {
   }
 
   showSlides(n) {
-    if (n > this.GallerySlides.length) {this.slideIndex = 1}
-    if (n < 1) {this.slideIndex = this.GallerySlides.length}
+    if (n > this.GallerySlides.length) { this.slideIndex = 1 }
+    if (n < 1) { this.slideIndex = this.GallerySlides.length }
     for (let i = 0; i < this.GallerySlides.length; i++) {
       this.GallerySlides[i].style.display = "none";
     }
     for (let i = 0; i < this.demos.length; i++) {
       this.demos[i].className = this.demos[i].className.replace(" active", "");
     }
-    this.GallerySlides[this.slideIndex-1].style.display = "block";
-    this.demos[this.slideIndex-1].className += " active";
+    this.GallerySlides[this.slideIndex - 1].style.display = "block";
+    this.demos[this.slideIndex - 1].className += " active";
   }
 
 }

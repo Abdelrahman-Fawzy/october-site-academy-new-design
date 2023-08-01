@@ -1,4 +1,4 @@
-<app-department-header [departName]="translate.currentLang == 'ar' ? 'قسم الصحافة والإعلام' : 'Department of Journalism and Media'" [departImg]="'assets/images/departments-icons/journalismDepartCover.svg'">
+<app-department-header [departName]="translate.currentLang == 'ar' ? 'قسم الصحافة والإعلام' : 'Department of Media Services'" [departImg]="'assets/images/departments-icons/journalismDepartCover.svg'">
 </app-department-header>
 
 <div class="missions d-flex">
@@ -10,7 +10,7 @@
       <div class="text">
         <h6>{{ "DEPART_VISION" | translate }}</h6>
         <p *ngIf="translate.currentLang == 'ar' ">تسعى أكاديمية 6 أكتوبر من خلال قسم الخدمات الإعلامية والصحفية  لأن تكون الرائدة فى اعداد الكوادر الفنية المتخصصة فى المجال، كما تسعى الى تميز خريجها لتكون أفضل الكوادر وأن تجتذب أعلي الكفاءات العلمية للتطوير الدائم المتلائم مع احتياجات سوق العمل الإعلامى  بتدريس المواد المتعلقة بالصحافة والاذاعة والتليفزيون والعلاقات العامة على يد نخبة متميزة من اعضاء هيئة التدريس والهيئة المعاونة .</p>
-        <p *ngIf="translate.currentLang == 'en' ">Department of Journalism and Media The Department of Journalism and Media is characterized by teaching subjects related to journalism, radio, television and public relations by a distinguished elite of faculty members and the supporting staff, during two academic years that qualifies the student for the labor market in the field of journalism and media according to the academic and training qualifications required, so that the student becomes able to work As a reporter or editor in paper and electronic newspapers, or as a reporter and broadcaster in both radio and television, in addition to public relations in major institutions and companies.</p>
+        <p *ngIf="translate.currentLang == 'en' ">Through the Department of Media and Journalism Services, 6th of October Academy aims to be a leading institution in preparing specialized technical personnel in the field. We strive to distinguish our graduates as top-tier professionals, attracting the highest academic qualifications for continuous development that aligns with the needs of the media job market. We achieve this by offering courses related to journalism, radio, television, and public relations, taught by an exceptional teaching stuff.</p>
       </div>
     </div>
     <div class="mission">
@@ -20,7 +20,7 @@
       <div class="text">
         <h6>{{ "DEPART_MESSAGE" | translate }}</h6>
         <p *ngIf="translate.currentLang == 'ar' ">تتبلور رسالة القسم في إعداد وتأهيل خريجين على مستوى عال من الكفاءة و الفاعلية  و تلبية احتياجات سوق وتحقيق مكانة متقدمة بين أفضل اكاديميات الصحافة والاعلام في مصر والوطن العربي من خلال تأهيل الخريجين للمنافسة في سوق العمل المحلي والوطني والعالمي فى المجال الصحفي والإعلامي لتكون الأكاديمية في مقدمة الاكاديميات المصرية والعربية للصحافة والإعلام.</p>
-        <p *ngIf="translate.currentLang == 'en' ">Achieving an advanced position among the best academies of journalism and media in Egypt and the Arab world by qualifying graduates to compete in the local, national and global labor market in the field of journalism and media so that the academy is at the forefront of Egyptian and Arab academies for journalism and media, and seeks to gain the community’s trust in its graduates by providing a distinguished environment Teaching, learning, scientific research and community service.</p>
+        <p *ngIf="translate.currentLang == 'en' ">The mission of the department is to prepare and qualify graduates at a high level of competence and effectiveness, meeting the needs of the market and achieving a prominent position among the best journalism and media academies in Egypt and the Arab world. By equipping graduates to compete in the local, national, and international job markets in the field of journalism and media, the academy aims to be at the forefront of Egyptian and Arab journalism and media academies.</p>
       </div>
     </div>
     <div class="mission">
@@ -55,7 +55,12 @@
         <p *ngIf="translate.currentLang == 'ar'"> التدريب على مهارات الوقوف امام الكاميرا واستخدام ادوات التصوير.</p>
         <p *ngIf="translate.currentLang == 'ar'">اكساب مهارات التعليق الصوتى واستخدام ادواته</p>
 
-        <p *ngIf="translate.currentLang == 'en' ">The department aims to provide students with theoretical and practical information in the field of journalism as follows: Training students on the art and skills of journalistic writing Training students on the art and skills of conducting journalistic investigations Training students on the art and skills of all information, classifying and writing it in news, editing and publishing it Training students on the art and skills of reporting Truth to the public, exposing falsehood and media misinformation - Training students on the art and skills of crafting accurate, objective, clear and ethical media messages - Training students on the art and skills of preparing, writing and publishing scientific research Training students on knowing the regulations, instructions, laws and charters that regulate the work of journalism.</p>
+        <p *ngIf="translate.currentLang == 'en' ">Graduating qualified technical personnel capable of performing media support services.</p>
+        <p *ngIf="translate.currentLang == 'en' ">Providing students with theoretical and practical knowledge in visual, audio, and written media.</p>
+        <p *ngIf="translate.currentLang == 'en' ">Equipping trainees with the art and skills of journalism writing and investigative reporting.</p>
+        <p *ngIf="translate.currentLang == 'en' ">Training on information gathering, classification, editing, and publishing skills.</p>
+        <p *ngIf="translate.currentLang == 'en' ">Training on camera presence and the use of filming tools.</p>
+        <p *ngIf="translate.currentLang == 'en' ">Developing skills in voice-over commentary and its tools.</p>
       </div>
     </div>
   </div>
@@ -79,7 +84,7 @@
       <div class="text">
         <h6>{{ "GRADUATE_JOB_DESCRIPTION" | translate }}</h6>
         <p *ngIf="translate.currentLang == 'ar' ">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بمختلف اعمال الخدمات الإعلامية والصحفية  وتأهيلهم  لسوق العمل فى المجال الصحفي والإعلامي وفق ما يتطلبه من مؤهلات دراسية وتدريبية، ليصبح قادر على العمل كمراسل او محرر صحفي فى الصحف الورقية والالكترونية، او معد ومذيع فى الراديو والتليفزيون </p>
-        <p *ngIf="translate.currentLang == 'en' ">The Department of Journalism and Information qualifies for the following jobs: Journalist Editor / Television Producer / Program Producer / Correspondent.</p>
+        <p *ngIf="translate.currentLang == 'en' ">The department aims to prepare graduates to be capable of undertaking various tasks in media and journalism services, equipping them for the job market in the field of journalism and media, in line with the required academic and training qualifications. They will be prepared to work as reporters or editors in print and digital newspapers, or as producers and presenters in radio broadcasting.</p>
       </div>
     </div>
     <div class="staff">
@@ -89,7 +94,7 @@
       <div class="text">
         <h6>{{ "ACADEMIC_SYSTEM" | translate }}</h6>
         <p *ngIf="translate.currentLang == 'ar'">عامان دراسيان 4 ترم.</p>
-        <p *ngIf="translate.currentLang == 'en'">Two academic years, 4 semester.</p>
+        <p *ngIf="translate.currentLang == 'en'">The academic program spans two academic years, consisting of four semesters.</p>
       </div>
     </div>
   </div>

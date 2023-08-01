@@ -39,7 +39,7 @@
         <a (click)="register()">
           {{"ONLINE_REGISTER" | translate}}
         </a>
-        <a [routerLink]="'academy-gallery'">
+        <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'buildings'}">
           {{"MEDIA" | translate}}
         </a>
         <a [routerLink]="'graduates'">

@@ -1,4 +1,4 @@
-<app-department-header [departName]="translate.currentLang == 'ar' ? 'قسم تكنولوجيا الشبكات' : 'Network Technology Department'" [departImg]="'assets/images/departments-icons/itDepartCover.svg'">
+<app-department-header [departName]="translate.currentLang == 'ar' ? 'قسم تكنولوجيا الشبكات' : 'Department of Network Technology'" [departImg]="'assets/images/departments-icons/itDepartCover.svg'">
 </app-department-header>
 
 <div class="missions d-flex">
@@ -11,7 +11,9 @@
         <h6>{{ "DEPART_VISION" | translate }}</h6>
         <p *ngIf="translate.currentLang == 'ar'">تسعى أكاديمية 6 أكتوبر فى قسم تكنولوجيا الشبكات  إلى توفير مقومات التطوير المستمر للتعليم فى مجال تكنولوجيا الشبكات  لمواكبة التطورات العلمية والتكنولوجية المتسارعة، والارتقاء بخريجي القسم إلى مستوى التميز والقدرة التنافسية العالية.</p>
         <p *ngIf="translate.currentLang == 'ar'">ويُقْصَدُ به القسم المنوظ بالعملية التعليمية الكاملة لطلاب التخصص  والمسؤول عن إعداد وتخريج  اختصاصى مهنى فى (تصميم الشبكات وتشغيلها وادارة قواعد البيانات المرتبطة بها ) حسب المتطلبات  المهنية الواردة في اللائحة.</p>
-        <p *ngIf="translate.currentLang == 'en'">The 6th of October Academy in the Department of Information Technology seeks to provide the elements for the continuous development of education in the field of information technology to keep pace with the rapid scientific and technological developments, and to raise the graduates of the department to the level of excellence and high competitiveness.</p>
+
+        <p *ngIf="translate.currentLang == 'en'">October 6 Academy seeks, in the Department of Network Technology, to provide the necessary elements for continuous development in the field of network technology, to keep pace with rapid scientific and technological advancements, and to elevate the graduates of the department to a level of excellence and high competitiveness.</p>
+        <p *ngIf="translate.currentLang == 'en'">The department is dedicated to the complete educational process for specialized students and is responsible for preparing and graduating professional specialists in (network design, operation, and management of associated databases) in accordance with the professional requirements stipulated in the regulations.</p>
       </div>
     </div>
     <div class="mission">
@@ -21,7 +23,7 @@
       <div class="text">
         <h6>{{ "DEPART_MESSAGE" | translate }}</h6>
         <p *ngIf="translate.currentLang == 'ar'">تتبلور رسالة القسم في توظيف جميع خدمات تكنولوجيا الشبكات لتقديم حلول متميزة  فى مجال التشبيك بغرض الالتزام بالمعايير والمستويات العالمية في نظم الشبكات  الحاسوبية ومواكبة التقدم والتطور في مجال تكنولوجيا الشبكات وقوعد البيانات والتركيز على متطلبات السوق الفنية- تقديم أفضل البرامج الإلكترونية المستمدة من المؤسسات الأكاديمية ذات المستوى العالمي والحفاظ عليها بالإضافة إلى نشر المهارات المتعلقة بالتشبيك</p>
-        <p *ngIf="translate.currentLang == 'en'">The department's mission is to employ all information technology services to provide distinguished solutions for the purpose of transforming all services electronically in an effective and efficient manner based on knowledge and transparency - adherence to international standards and levels in computer information systems and keep abreast of progress and development in the field of information technology and focus on the requirements of the electronic market - providing the best electronic programs Drawn from and maintain world-class academic institutions as well as disseminate skills related to intelligent and interactive design of the science of information technology and harness the power of this science to provide appropriate solutions in organizational contexts.</p>
+        <p *ngIf="translate.currentLang == 'en'">The mission of the Department of Network Technology revolves around utilizing all the services of network technology to provide exceptional solutions in the field of networking, with the aim of adhering to global standards and levels in computer network systems, keeping up with advancements and developments in network technology and databases, and focusing on the requirements of the technical market. We are committed to offering the best electronic programs derived from world-class academic institutions and ensuring their preservation, along with the dissemination of networking-related skills.</p>
       </div>
     </div>
     <div class="mission">
@@ -53,7 +55,11 @@
         <p *ngIf="translate.currentLang == 'ar'">تأسيس المتدربين بالأسس النظرية ومنهجيات التطبيق بما يمكنهم من المنافسة العالمية</p>
         <p *ngIf="translate.currentLang == 'ar'">تأهيل المتدربين فنياً لمواكبة التطور السريع في مجال تقنية وتكنولوجيا المعلومات</p>
         <p *ngIf="translate.currentLang == 'ar'">اكتساب مهارات العمل على برمجيات الشبكات وقواعد البيانات</p>
-        <p *ngIf="translate.currentLang == 'en'">Preparing specialists in the field of information technology, networks and their management, software and databases, and securing qualified people with theoretical foundations and application methodologies, enabling them to compete globally in the development of computer and information technologies and keeping pace with the rapid development in the field of technology and information technology. The Academy provides several divisions to cope with the tremendous development in the field of technology: the Programming Division, which includes web programming and applications for computers and mobile devices - also the Computer Networks Division - the Graphic Division - the Montage Division - the Computer Maintenance Division.</p>
+
+        <p *ngIf="translate.currentLang == 'en'">Preparing specialists and professionals in the field of network technology and specialized software.</p>
+        <p *ngIf="translate.currentLang == 'en'">Establishing trainees with theoretical foundations and application methodologies that enable them to compete globally.</p>
+        <p *ngIf="translate.currentLang == 'en'">Technically equipping trainees to keep pace with the rapid advancements in information technology and network technology.</p>
+        <p *ngIf="translate.currentLang == 'en'">Acquiring skills to work with network software and databases.</p>
       </div>
     </div>
   </div>
@@ -67,7 +73,7 @@
       <div class="text">
         <h6>{{ "DEPART_STAFF" | translate }}</h6>
         <p *ngIf="translate.currentLang == 'ar'">يضم القسم نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين والمهندسين الأكفاء وذوي خبرة عالية أكاديمياً وتدريبياً</p>
-        <p *ngIf="translate.currentLang == 'en'">The department includes a group of faculty members who are professors, teaching assistants, and engineers who are qualified and distinguished in their work and have high experience, whether academic or practical.</p>
+        <p *ngIf="translate.currentLang == 'en'">The department comprises a teaching staff, including professors, teaching assistant, and competent engineers, all of whom possess extensive academic and training experience</p>
       </div>
     </div>
     <div class="staff">
@@ -77,7 +83,7 @@
       <div class="text">
         <h6>{{ "GRADUATE_JOB_DESCRIPTION" | translate }}</h6>
         <p *ngIf="translate.currentLang == 'ar'">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بالمهام الفنية لفنى الشبكات  في كافة المنظمات العاملة في المجال ويكون ذو كفاء عالية وملم بكافة ما يتخصص به فى مجال تكنولوجيا  الشبكات .</p>
-        <p *ngIf="translate.currentLang == 'en'">The department aims to qualify the graduate to be able to carry out tasks, whether in the field of software, computer networks, graphics, or montage in all organizations working in the field.</p>
+        <p *ngIf="translate.currentLang == 'en'">The department aims to qualify the graduate to be capable of carrying out technical tasks as a network technician in all organizations operating in the field, possessing high competence and proficiency in all aspects related to network technology.</p>
       </div>
     </div>
     <div class="staff">
@@ -87,7 +93,7 @@
       <div class="text">
         <h6>{{ "ACADEMIC_SYSTEM" | translate }}</h6>
         <p *ngIf="translate.currentLang == 'ar'">عامان دراسيان 4 ترم.</p>
-        <p *ngIf="translate.currentLang == 'en'">Two academic years, 4 semester.</p>
+        <p *ngIf="translate.currentLang == 'en'">The academic program spans two academic years, consisting of four semesters.</p>
       </div>
     </div>
   </div>

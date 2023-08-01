@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   modalRef?: BsModalRef;
   currentLang: string
 
-  constructor(private modalService: BsModalService, public translate: TranslateService, @Inject(DOCUMENT) private document: Document) {}
+  constructor(private modalService: BsModalService, public translate: TranslateService, @Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
     this.currentLang = localStorage.getItem("currentLang") || "ar";
@@ -22,13 +22,14 @@ export class HeaderComponent implements OnInit {
   }
 
   register() {
-    this.modalRef = this.modalService.show(RegisterModalComponent, {class: 'modal-xl modal-dialog-centered'});
+    this.modalRef = this.modalService.show(RegisterModalComponent, { class: 'modal-xl modal-dialog-centered' });
   }
 
   changeCurrentLang(lang: string) {
     this.translate.use(lang);
     localStorage.setItem('currentLang', lang);
     this.document.documentElement.lang = localStorage.getItem("currentLang");
+    window.location.reload();
   }
 
 }

@@ -118,6 +118,7 @@
   "ACQUAINTENCE": "وسيلة التعارف",
   "SEND": "إرسال",
   "TYPE_NAME": "أكتب إسمك هنا",
+  "TYPE_PHONE": "رقم الهاتف",
   "TYPE_EXPERIENCE": "أدخل عدد سنوات الخبرة",
   "TYPE_MESSAGE": "أدخل الرسالة الخاصة بك",
   "NAME_REQUIRED": "الإسم مطلوب",
@@ -132,7 +133,7 @@
   "DEPART_GOALS": "أهداف القسم",
   "DEPART_STAFF": "أعضاء هيئة التدريس",
   "GRADUATE_JOB_DESCRIPTION": "توصيف عمل الخريج",
-  "TRAINING_PHOTOS": "صور التدريب العملى",
+  "TRAINING_PHOTOS": "صور التدريب العملى و الميدانى",
 
   "BUILDING_PHOTOS": "صور قاعات ومباني الأكاديمية",
   "BUILDING_CLASSES_PHOTOS": "صور من القاعات التعليمية والفصول الدراسية ومعامل الكمبيوتر ومباني أكاديمية 6 أكتوبر",

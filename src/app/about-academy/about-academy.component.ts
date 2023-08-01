@@ -21,12 +21,12 @@ export class AboutAcademyComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       this.param = params.item
     })
-    if ( this.param == 'vision') document.getElementById("academyVision").click();
-    if ( this.param == 'departments') document.getElementById("academyDepartments").click();
-    if ( this.param == 'acceptence') document.getElementById("academyAcceptence").click();
-    if ( this.param == 'partners') document.getElementById("academyPartners").click();
-    if ( this.param == 'jobs') document.getElementById("academyJobs").click();
-    if ( this.param == 'conversations') document.getElementById("academyConversations").click();
+    if (this.param == 'vision') document.getElementById("academyVision").click();
+    if (this.param == 'departments') document.getElementById("academyDepartments").click();
+    if (this.param == 'acceptence') document.getElementById("academyAcceptence").click();
+    if (this.param == 'partners') document.getElementById("academyPartners").click();
+    if (this.param == 'jobs') document.getElementById("academyJobs").click();
+    if (this.param == 'conversations') document.getElementById("academyConversations").click();
 
     document.getElementById("defaultChildOpen").click();
   }
@@ -60,7 +60,7 @@ export class AboutAcademyComponent implements OnInit {
   }
 
   register() {
-    this.modalRef = this.modalService.show(RegisterModalComponent, {class: 'modal-xl modal-dialog-centered'});
+    this.modalRef = this.modalService.show(RegisterModalComponent, { class: 'modal-xl modal-dialog-centered' });
   }
 
 }

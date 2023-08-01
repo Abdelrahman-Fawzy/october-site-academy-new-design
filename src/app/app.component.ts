@@ -9,7 +9,7 @@ import * as AOS from 'aos'
 })
 export class AppComponent implements OnInit {
 
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(@Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
     this.document.documentElement.lang = localStorage.getItem("currentLang");

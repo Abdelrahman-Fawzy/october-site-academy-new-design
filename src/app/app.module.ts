@@ -34,10 +34,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ToTopButtonComponent } from './shared/to-top-button/to-top-button.component'
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ItGraphicDepartmentComponent } from './departments/it-graphic-department/it-graphic-department.component';
-
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -79,6 +79,9 @@ import { ItGraphicDepartmentComponent } from './departments/it-graphic-departmen
     FormsModule,
     ReactiveFormsModule,
     BsDropdownModule,
+    ToastrModule.forRoot({
+      positionClass: localStorage.getItem('currentLang') == 'ar' ? 'toast-bottom-right' : 'toast-bottom-left'
+    }),
     TranslateModule.forRoot({
       defaultLanguage: "ar",
       loader: {

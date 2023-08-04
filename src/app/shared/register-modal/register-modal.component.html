@@ -7,11 +7,28 @@
 <div class="modal-body">
   <form [formGroup]="myForm" (ngSubmit)="RegisterWithUs()">
     <ng-container *ngIf="!isSubmited">
+      <div class="nationality">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="nationality" id="egyptian" value="egyptian"
+            (change)="showGovernorate()" checked>
+          <label class="form-check-label" for="egyptian">
+            مصري
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="nationality" id="foreign" value="foreign"
+            (change)="showNationality()">
+          <label class="form-check-label" for="foreign">
+            أجنبي
+          </label>
+        </div>
+      </div>
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="form-group">
             <label for="name">{{ "NAME" | translate}}</label>
-            <input [(ngModel)]="registerData.ticket_customer_name" formControlName="customer_name" id="name" type="text" class="form-control" placeholder="{{'TYPE_NAME' | translate}}">
+            <input [(ngModel)]="registerData.ticket_customer_name" formControlName="customer_name" id="name" type="text"
+              class="form-control" placeholder="{{'TYPE_NAME' | translate}}">
             <div *ngIf="f.customer_name.touched && f.customer_name.invalid">
               <div class="text-danger" *ngIf="f.customer_name.errors.required">{{"NAME_REQUIRED" | translate}}</div>
             </div>
@@ -20,33 +37,53 @@
         <div class="col-lg-8">
           <div class="form-group">
             <label for="nationalId">{{ "ID" | translate}}</label>
-            <input [(ngModel)]="registerData.national_id" formControlName="national_id" id="nationalId" type="number" class="form-control">
+            <input [(ngModel)]="registerData.national_id" formControlName="national_id" id="nationalId" type="number"
+              class="form-control">
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="form-group">
             <label for="certificate">{{ "QUALIFICATION" | translate}}</label>
-            <select [(ngModel)]="registerData.qualification_id" formControlName="qualification_id" class="form-control" id="certificate">
-              <option *ngFor="let qualification of qualifications.data.list" [value]="qualification.qualification_id">{{qualification.qualification}}</option>
+            <select [(ngModel)]="registerData.qualification_id" formControlName="qualification_id" class="form-control"
+              id="certificate">
+              <option *ngFor="let qualification of qualifications?.data.list" [value]="qualification.qualification_id">
+                {{qualification.qualification}}</option>
             </select>
             <div *ngIf="f.qualification_id.touched && f.qualification_id.invalid">
-              <div class="text-danger" *ngIf="f.qualification_id.errors.required">{{"QUALIFICATION_REQUIRED" | translate}}</div>
+              <div class="text-danger" *ngIf="f.qualification_id.errors.required">
+                {{"QUALIFICATION_REQUIRED" | translate}}</div>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="form-group">
             <label for="graduationYear">{{ "GRADUATION_YEAR" | translate}}</label>
-            <select [(ngModel)]="registerData.grauation_year" formControlName="grauation_year" class="form-control" id="graduationYear">
-              <option *ngFor="let graduationYear of graduationYears.data.list" [value]="graduationYear.key">{{graduationYear.value}}</option>
+            <select [(ngModel)]="registerData.grauation_year" formControlName="grauation_year" class="form-control"
+              id="graduationYear">
+              <option *ngFor="let graduationYear of graduationYears?.data.list" [value]="graduationYear.key">
+                {{graduationYear.value}}</option>
             </select>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6" *ngIf="this.studentNationality == 'foreign'">
+          <div class="form-group">
+            <label for="country">{{ "COUNTRY" | translate}}</label>
+            <select (change)="getCountryCode()" [(ngModel)]="registerData.country_id" formControlName="country_id"
+              class="form-control" id="country">
+              <option *ngFor="let country of countries?.data.list" [value]="country.country_id">
+                {{country.country_name}}</option>
+            </select>
+            <div *ngIf="f.country_id.touched && f.country_id.invalid">
+              <div class="text-danger" *ngIf="f.country_id.errors.required">{{"COUNTRY_REQUIRED" | translate}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" *ngIf="this.studentNationality == 'egyptian'">
           <div class="form-group">
             <label for="governorate">{{ "GOVERNORATE" | translate}}</label>
             <select [(ngModel)]="registerData.gov_id" formControlName="gov_id" class="form-control" id="governorate">
-              <option *ngFor="let governorate of governorates.data.list" [value]="governorate.governorate_id">{{governorate.governorate_name}}</option>
+              <option *ngFor="let governorate of governorates?.data.list" [value]="governorate.governorate_id">
+                {{governorate.governorate_name}}</option>
             </select>
             <div *ngIf="f.gov_id.touched && f.gov_id.invalid">
               <div class="text-danger" *ngIf="f.gov_id.errors.required">{{"GOVERNORATE_REQUIRED" | translate}}</div>
@@ -57,7 +94,8 @@
           <div class="form-group">
             <label for="sector">{{ "DEPARTMENT" | translate}}</label>
             <select [(ngModel)]="registerData.section_id" formControlName="section_id" class="form-control" id="sector">
-              <option *ngFor="let section of sections.data.list" [value]="section.section_id">{{section.section_name}}</option>
+              <option *ngFor="let section of sections?.data.list" [value]="section.section_id">{{section.section_name}}
+              </option>
             </select>
           </div>
         </div>
@@ -65,28 +103,37 @@
           <div class="form-group">
             <label for="branch">{{ "BRANCH" | translate}}</label>
             <select [(ngModel)]="registerData.branch_id" formControlName="branch_id" class="form-control" id="branch">
-              <option *ngFor="let branche of branches.data.list" [value]="branche.id">{{branche.name}}</option>
+              <option *ngFor="let branche of branches?.data.list" [value]="branche.id">{{branche.name}}</option>
             </select>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="form-group">
             <label for="ways">{{ "ACQUAINTENCE" | translate}}</label>
-            <select [(ngModel)]="registerData.method_of_acquaintance" formControlName="method_of_acquaintance" class="form-control" id="ways">
-              <option *ngFor="let acquaintance of acquaintances.data.list" [value]="acquaintance.qualification_id">{{acquaintance.acquaintance_name}}</option>
+            <select [(ngModel)]="registerData.method_of_acquaintance" formControlName="method_of_acquaintance"
+              class="form-control" id="ways">
+              <option *ngFor="let acquaintance of acquaintances?.data.list" [value]="acquaintance.qualification_id">
+                {{acquaintance.acquaintance_name}}</option>
             </select>
             <div *ngIf="f.method_of_acquaintance.touched && f.method_of_acquaintance.invalid">
-              <div class="text-danger" *ngIf="f.method_of_acquaintance.errors.required">{{"ACQUAINTENCE_REQUIRED" | translate}}</div>
+              <div class="text-danger" *ngIf="f.method_of_acquaintance.errors.required">
+                {{"ACQUAINTENCE_REQUIRED" | translate}}</div>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
-          <div class="form-group">
-            <label for="phone">{{ "PHONE" | translate}}</label>
-            <input [(ngModel)]="registerData.ticket_phone_number" formControlName="phone_number" type="text" class="form-control" id="phone">
-            <div *ngIf="f.phone_number.touched && f.phone_number.invalid">
-              <div class="text-danger" *ngIf="f.phone_number.errors.required">{{"PHONE_REQUIRED" | translate}}</div>
+          <label for="phone">{{ "PHONE" | translate}}</label>
+          <div class="phone">
+            <div class="phone-box">
+              <input [(ngModel)]="registerData.ticket_phone_number" formControlName="phone_number" type="text"
+                id="phone">
             </div>
+            <div class="countryCode">
+              <input type="text" [value]="countryCode" readonly>
+            </div>
+          </div>
+          <div *ngIf="f.phone_number.touched && f.phone_number.invalid">
+            <div class="text-danger" *ngIf="f.phone_number.errors.required">{{"PHONE_REQUIRED" | translate}}</div>
           </div>
         </div>
       </div>

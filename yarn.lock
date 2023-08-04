@@ -6880,10 +6880,10 @@ ngx-slick-carousel@^0.6.0:
   dependencies:
     tslib "^2.0.0"
 
-ngx-toastr@^16.1.1:
-  version "16.2.0"
-  resolved "https://registry.yarnpkg.com/ngx-toastr/-/ngx-toastr-16.2.0.tgz#f138c31c3b6960a1059aeea7133a44e4db95db79"
-  integrity sha512-7X6UhOKiaUeC2eTOsUqctZH0ZWKG8VlzDxWJhdEF1N3kPod46SU/Vn2l0hbt8EDwTjxHKfKyevU2idkYDoZYog==
+ngx-toastr@14.3.0:
+  version "14.3.0"
+  resolved "https://registry.yarnpkg.com/ngx-toastr/-/ngx-toastr-14.3.0.tgz#3c366fc5ef8aa1ca8f97ae46c468cfcdf44e620d"
+  integrity sha512-d8j/sOr60w5U7rGlcKQ0Ff4u+m2NzhqU5ZdJXn7QW3aR3Zf/rY7/Fd14BmUindTOWVr2NeTYcQXCjLpir0ldpA==
   dependencies:
     tslib "^2.3.0"
 

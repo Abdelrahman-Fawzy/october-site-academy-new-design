@@ -7,6 +7,7 @@ import { Governorates } from '../models/governorates';
 import { Sections } from '../models/sections';
 import { Branches } from '../models/branches';
 import { Acquaintance } from '../models/acquaintance';
+import { Countries } from '../models/countries';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class GetItemsService {
 
   baseUrl = 'https://6oaerp.6ohd.com/api/';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getGraduationYears(): Observable<GraduationYears> {
     return this.http.post<GraduationYears>(this.baseUrl + 'erp/registers/get_graduationYear', {})
@@ -23,6 +24,10 @@ export class GetItemsService {
 
   getQualifications(): Observable<Qualifications> {
     return this.http.post<Qualifications>(this.baseUrl + 'erp/registers/get_qualifications', {})
+  }
+
+  getCountries(): Observable<Countries> {
+    return this.http.post<Countries>(this.baseUrl + 'erp/countries/get_countries', {})
   }
 
   getGovernorates(): Observable<Governorates> {

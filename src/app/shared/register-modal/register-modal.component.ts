@@ -1,10 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { ToastrService } from 'ngx-toastr';
 // import { ToastrService } from 'ngx-toastr';
 import { Register } from 'src/app/models/Register';
 import { Acquaintance } from 'src/app/models/acquaintance';
 import { Branches } from 'src/app/models/branches';
+import { Countries } from 'src/app/models/countries';
 import { Governorates } from 'src/app/models/governorates';
 import { GraduationYears } from 'src/app/models/graduationYears';
 import { Qualifications } from 'src/app/models/qualifications';
@@ -21,12 +24,13 @@ import { RegisterService } from 'src/app/services/register.service';
 export class RegisterModalComponent implements OnInit {
 
   modalRef?: BsModalRef;
-  isSubmited :boolean = false
+  isSubmited: boolean = false
 
-  graduationYears : GraduationYears
-  qualifications : Qualifications
-  governorates : Governorates
-  sections : Sections
+  graduationYears: GraduationYears
+  qualifications: Qualifications
+  countries: Countries
+  governorates: Governorates
+  sections: Sections
   branches: Branches
   acquaintances: Acquaintance
 
@@ -34,17 +38,25 @@ export class RegisterModalComponent implements OnInit {
 
   registerData: Register;
 
+  studentNationality = 'egyptian'
+
+  conutryCode = 20
+  countryIndex;
+  countryCode;
+
   constructor(
     private modalService: BsModalService,
     private getItemsService: GetItemsService,
     private registerService: RegisterService,
-    // private toastr: ToastrService,
+    private toastr: ToastrService,
+    public translate: TranslateService
   ) {
     this.myForm = new FormGroup({
       customer_name: new FormControl('', Validators.required),
       national_id: new FormControl(''),
       qualification_id: new FormControl('', Validators.required),
       grauation_year: new FormControl(''),
+      country_id: new FormControl('', Validators.required),
       gov_id: new FormControl('', Validators.required),
       section_id: new FormControl(''),
       branch_id: new FormControl(''),
@@ -56,6 +68,7 @@ export class RegisterModalComponent implements OnInit {
   ngOnInit(): void {
     this.getGraduationYears()
     this.getQualifications()
+    this.getCountries()
     this.getGovernorates()
     this.getSections()
     this.getBranches()
@@ -74,6 +87,7 @@ export class RegisterModalComponent implements OnInit {
       ticket_customer_name: '',
       method_of_acquaintance: '',
       national_id: '',
+      country_id: '',
       gov_id: '',
       qualification_id: '',
       branch_id: '',
@@ -82,7 +96,7 @@ export class RegisterModalComponent implements OnInit {
     }
   }
 
-  get f(){
+  get f() {
     return this.myForm.controls;
   }
 
@@ -95,6 +109,13 @@ export class RegisterModalComponent implements OnInit {
   getQualifications() {
     this.getItemsService.getQualifications().subscribe(qualifications => {
       this.qualifications = qualifications
+    })
+  }
+
+  getCountries() {
+    this.getItemsService.getCountries().subscribe(countries => {
+      this.countries = countries
+      this.getCountryCode(50)
     })
   }
 
@@ -122,15 +143,40 @@ export class RegisterModalComponent implements OnInit {
     })
   }
 
+  showGovernorate() {
+    this.studentNationality = 'egyptian'
+    this.getCountryCode(50)
+  }
+
+  showNationality() {
+    this.studentNationality = 'foreign'
+  }
+
+  getCountryCode(code?: any) {
+    if (this.studentNationality == 'egyptian') {
+      this.countryIndex = this.countries.data.list.findIndex(object => {
+        return object.country_id == code
+      })
+      this.countryCode = this.countries.data.list[this.countryIndex].country_phone_code
+    } else {
+      this.countryIndex = this.countries.data.list.findIndex(object => {
+        return object.country_id == Number(this.registerData.country_id)
+      })
+      this.countryCode = this.countries.data.list[this.countryIndex].country_phone_code
+    }
+
+  }
+
   RegisterWithUs() {
-    console.log(this.registerData);
+    if (this.registerData.ticket_phone_number.indexOf(this.countryCode) == -1) {
+      this.registerData.ticket_phone_number = this.countryCode + this.registerData.ticket_phone_number
+    }
 
     this.registerService.Register(this.registerData).subscribe(response => {
-      console.log(response);
       this.isSubmited = true;
     }, error => {
       error.error.errors.forEach(errorValue => {
-        // this.toastr.error(errorValue.value)
+        this.toastr.error(errorValue.value)
         this.isSubmited = false;
       })
     })

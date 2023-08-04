@@ -1,4 +1,16 @@
 @import "../../../abstracts/variables", "../../../abstracts/mixins";
+.nationality {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5em;
+  .form-check {
+    display: flex;
+    align-items: center;
+    label.form-check-label {
+      padding: 0 1.5em;
+    }
+  }
+}
 .form-control {
   border-color: $mainGreenColor !important;
   border-radius: $borderRadius - 11  !important;
@@ -20,19 +32,27 @@ input::placeholder {color: #444 !important;}
   align-items: center;
   border: 1px solid $mainGreenColor;
   border-radius: 10px;
-  gap: 10px;
+  // gap: 10px;
   height: calc(2em + 0.7rem + 2px) !important;
-  padding: 0.5rem 0.75rem !important;
+  // padding: 0.5rem 0.75rem !important;
   font-size: 15px !important;
   outline: none !important;
   box-shadow: none !important;
-  .form-group {
-    margin-bottom: 0;
-    select, input {
-      border: none;
-    }
-    input { width: 100%; }
+  .phone-box { flex: 4;}
+  .countryCode {
+    border: 1px solid $mainGreenColor;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
   }
+  select, input {
+    border: none;
+  }
+  input { width: 100%; }
 }
 button.send {
   display: block;

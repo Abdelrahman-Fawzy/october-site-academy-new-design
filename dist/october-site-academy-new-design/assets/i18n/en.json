@@ -111,11 +111,12 @@
   "MESSAGE": "Message",
   "ID": "National ID",
   "QUALIFICATION": "Qualification",
-  "GRADUATION_YEAR": "Graduation Year",
+  "GRADUATION_YEAR": "Year of Graduation",
+  "COUNTRY": "Nationailty",
   "GOVERNORATE": "Governorate",
   "DEPARTMENT": "Department",
   "BRANCH": "Branch",
-  "ACQUAINTENCE": "Means Of Acquaintence",
+  "ACQUAINTENCE": "how did you hear about us?",
   "SEND": "Submit",
   "TYPE_NAME": "Please enter your name here.",
   "TYPE_PHONE": "Enter your phone number.",
@@ -124,8 +125,8 @@
   "NAME_REQUIRED": "Name Is Required",
   "QUALIFICATION_REQUIRED": "Qualification Is Required",
   "GOVERNORATE_REQUIRED": "Governorate Is Required",
-  "ACQUAINTENCE_REQUIRED": "Acquaintence Method Is Required",
-  "PHONE_REQUIRED": "Phone Number Is Required",
+  "ACQUAINTENCE_REQUIRED": "how did you hear about us? Is Required",
+  "PHONE_REQUIRED": "Mobile Number Is Required",
 
   "DEPART_VISION": "Vision of the Department",
   "DEPART_MESSAGE": "Mission of the Department ",
@@ -163,7 +164,10 @@
   "GRADUATION_PARTIES_PHOTOS": "Graduation parties Photos - 6th of October Academy",
   "STUDENTS_REVIEWS": "students’ feedback",
 
-  "REGISTERATION_ON_ACADEMY": "Registration in the academy",
+  "REGISTERATION_ON_ACADEMY": "Registration at the academy:",
+
+  "EGYPTIAN": "Egyptian",
+  "FOREIGN": "Foreign",
 
   "ANOTHER_LINKS": "Other Links",
   "ONLINE_REGISTER": "Online Registration Academy",

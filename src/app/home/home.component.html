@@ -1,4 +1,4 @@
-<div class="welcoming" data-aos="fade-up" data-aos-duration="2000">
+<div class="welcoming" data-aos="fade-up">
   <div class="container">
     <h2>{{"WELCOME" | translate}}</h2>
     <p class="directP">{{"FIRST_TECHNICIAN" | translate}}</p>
@@ -117,9 +117,9 @@
 </div>
 <div class="academy_numbers">
   <div class="container">
-    <h4 data-aos="fade-left" data-aos-duration="2000">{{"ACADEMY_NUMBERS" | translate}}</h4>
-    <!-- <p data-aos="fade-right" data-aos-duration="2000" class="directP">{{"FACTS" | translate}}</p> -->
-    <div class="row" data-aos="fade-up" data-aos-duration="2000">
+    <h4 data-aos="fade-left">{{"ACADEMY_NUMBERS" | translate}}</h4>
+    <!-- <p data-aos="fade-right" class="directP">{{"FACTS" | translate}}</p> -->
+    <div class="row" data-aos="fade-up">
       <div class="col-lg-3 col-sm-6">
         <div class="number">
           <img src="assets/images/icons/experience.png" alt="experience">
@@ -178,11 +178,11 @@
   </div>
 </div>
 <div class="mediaGallery">
-  <h3 data-aos="fade-left" data-aos-duration="2000">{{"PICTURES_FROM_ACADEMY" | translate}}</h3>
+  <h3 data-aos="fade-left">{{"PICTURES_FROM_ACADEMY" | translate}}</h3>
   <div class="points d-none d-md-block">
     <img src="assets/images/shapes/points.png" alt="points">
   </div>
-  <owl-carousel-o class="d-none d-xl-block" [options]="customOptions" data-aos="fade-up" data-aos-duration="2000">
+  <owl-carousel-o class="d-none d-xl-block" [options]="customOptions" data-aos="fade-up">
     <ng-template carouselSlide>
       <div class="gallery">
         <div class="img">
@@ -219,7 +219,7 @@
       </div>
     </ng-template>
   </owl-carousel-o>
-  <div class="container d-xl-none" data-aos="fade-up" data-aos-duration="2000">
+  <div class="container d-xl-none" data-aos="fade-up">
     <div class="academy-gallery">
       <div class="slides">
         <div class="mySlides">
@@ -266,23 +266,23 @@
   </ngx-slick-carousel>
 </div>
 <div class="faq">
-  <h3 data-aos="fade-left" data-aos-duration="2000">{{"ABOUT_SUB_ITEMS.FAQ" | translate}}</h3>
+  <h3 data-aos="fade-left">{{"ABOUT_SUB_ITEMS.FAQ" | translate}}</h3>
   <div class="container">
     <accordion [isAnimated]="true">
-      <accordion-group data-aos="fade-up" data-aos-duration="2000"
+      <accordion-group data-aos="fade-up"
         [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية انى اكمل بعد سنتين ؟' : 'Is it possible to continue for an additional two years?'"
         [isOpen]="isFirstOpen">
         <p>{{ "POSSABILITY_OF_CONTINUING" | translate }}</p>
       </accordion-group>
-      <accordion-group data-aos="fade-up" data-aos-duration="2000"
+      <accordion-group data-aos="fade-up"
         [heading]="translate.currentLang == 'ar' ? 'هل الشهادة معتمدة ولا لا ؟ هي اعتماد الشهادة منين ؟' : 'Is the certificate accredited or not? Where is the certificate accredited from?'">
         <p>{{ "CERTIFIED_CERTIFICATION" | translate }}</p>
       </accordion-group>
-      <accordion-group data-aos="fade-up" data-aos-duration="2000"
+      <accordion-group data-aos="fade-up"
         [heading]="translate.currentLang == 'ar' ? 'هل الشهادة موثقة خارجيا؟ هي الشهادة معتمدة من الخارجية؟' : 'Is the certificate internationally authenticated? Is the certificate accredited by the Ministry of Foreign Affairs?'">
         <p>{{ "ACCREDIATED_CERTIFICATION" | translate }}</p>
       </accordion-group>
-      <accordion-group data-aos="fade-up" data-aos-duration="2000"
+      <accordion-group data-aos="fade-up"
         [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية للتوظيف ؟ الأكاديمية بتوظفني بعد ما اتخرج ؟' : 'Is there a possibility for employment? Will the academy provide me with job opportunities after graduation?'">
         <p>{{ "POSSABILITY_OF_EMPLOYING" | translate }}</p>
       </accordion-group>
@@ -293,7 +293,7 @@
       [queryParams]="{item: 'conversations'}">{{"MORE_QUESTIONS" | translate}}</button>
   </div>
 </div>
-<div class="contact" data-aos="flip-left" data-aos-duration="2000">
+<div class="contact" data-aos="flip-left">
   <div class="container">
     <div class="box">
       <div class="contact-us">

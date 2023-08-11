@@ -21,37 +21,37 @@ export class HomeComponent implements OnInit {
   Departments = [
     {
       DepartImg: 'assets/images/home-welcoming/bussiness.png',
-      DepartName: localStorage.getItem("currentLang") == 'ar' ? 'إدارة اعمال' : 'Business Management',
+      DepartName: localStorage.getItem("currentLang") == 'ar' ? 'إدارة اعمال' : localStorage.getItem("currentLang") == 'gr' ? 'Betriebswirtschaftslehre' : 'Business Management',
       DepartLink: '/departments/bussiness-department'
     },
     {
       DepartImg: 'assets/images/home-welcoming/petrolium.png',
-      DepartName: this.translate.currentLang == 'ar' ? 'خدمات بترولية' : 'Petroleum Services',
+      DepartName: this.translate.currentLang == 'ar' ? 'خدمات بترولية' : localStorage.getItem("currentLang") == 'gr' ? 'Erdöldienstleistungen' : 'Petroleum Services',
       DepartLink: '/departments/petrol-department'
     },
     {
       DepartImg: 'assets/images/home-welcoming/medical.png',
-      DepartName: this.translate.currentLang == 'ar' ? 'خدمات صحية' : 'Medical Services',
+      DepartName: this.translate.currentLang == 'ar' ? 'خدمات صحية' : localStorage.getItem("currentLang") == 'gr' ? 'Gesundheitsdienste' : 'Medical Services',
       DepartLink: '/departments/medical-department'
     },
     {
       DepartImg: 'assets/images/home-welcoming/hotels.png',
-      DepartName: this.translate.currentLang == 'ar' ? 'سياحة و فنادق' : 'Tourism And Hotels',
+      DepartName: this.translate.currentLang == 'ar' ? 'سياحة و فنادق' : localStorage.getItem("currentLang") == 'gr' ? 'Tourismus und Hotels' : 'Tourism And Hotels',
       DepartLink: '/departments/hotels-department'
     },
     {
       DepartImg: 'assets/images/home-welcoming/journalism.png',
-      DepartName: this.translate.currentLang == 'ar' ? 'صحافة و إعلام' : 'Journalism and Media',
+      DepartName: this.translate.currentLang == 'ar' ? 'صحافة و إعلام' : localStorage.getItem("currentLang") == 'gr' ? 'Mediendienste' : 'Journalism and Media',
       DepartLink: '/departments/journalism-department'
     },
     {
       DepartImg: 'assets/images/home-welcoming/it.png',
-      DepartName: this.translate.currentLang == 'ar' ? 'تكنولوجيا المعلومات' : 'Information Technology',
+      DepartName: this.translate.currentLang == 'ar' ? 'تكنولوجيا الشبكات' : localStorage.getItem("currentLang") == 'gr' ? 'Netzwerktechnologie' : 'Information Technology',
       DepartLink: '/departments/it-department'
     },
     {
       DepartImg: 'assets/images/home-welcoming/maps.png',
-      DepartName: this.translate.currentLang == 'ar' ? 'مساحة وخرائط' : 'Survey And Maps',
+      DepartName: this.translate.currentLang == 'ar' ? 'مساحة وخرائط' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Survey And Maps',
       DepartLink: '/departments/maps-department'
     },
   ]

@@ -25,7 +25,7 @@
     transition: all 150ms ease-in-out;
     border-radius: 10px;
   }
-  &:hover {
+  &:not(:disabled):hover {
     color: $hovered-font-color;
     &::after {
       width: 100%;

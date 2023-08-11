@@ -1,4 +1,6 @@
-<app-department-header [departName]="translate.currentLang == 'ar' ? 'قسم تكنولوجيا الجرافيك' : 'Department of Graphic Technology'" [departImg]="'assets/images/departments-icons/itGraphicDepartCover.svg'">
+<app-department-header
+  [departName]="translate.currentLang == 'ar' ? 'قسم تكنولوجيا الجرافيك' : translate.currentLang == 'gr' ? 'Abteilung für Grafiktechnologie' : 'Department of Graphic Technology'"
+  [departImg]="'assets/images/departments-icons/itGraphicDepartCover.svg'">
 </app-department-header>
 
 <div class="missions d-flex">
@@ -9,11 +11,30 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_VISION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">تسعى أكاديمية 6 أكتوبر فى قسم تكنولوجيا الجرافيك  إلى توفير مقومات التطوير المستمر للتعليم فى مجال تكنولوجيا الجرافكس  لمواكبة التطورات العلمية والتكنولوجية المتسارعة، والارتقاء بخريجي القسم إلى مستوى التميز والقدرة التنافسية العالية.</p>
-        <p *ngIf="translate.currentLang == 'ar'">ويُقْصَدُ به القسم المنوظ بالعملية التعليمية الكاملة لطلاب التخصص  والمسؤول عن إعداد وتخريج  اختصاصى مهنى فى (جرافكس- موشن جرافكس-  فنى تصميم ) حسب المتطلبات  المهنية الواردة في اللائحة.</p>
+        <p *ngIf="translate.currentLang == 'ar'">تسعى أكاديمية 6 أكتوبر فى قسم تكنولوجيا الجرافيك إلى توفير مقومات
+          التطوير المستمر للتعليم فى مجال تكنولوجيا الجرافكس لمواكبة التطورات العلمية والتكنولوجية المتسارعة، والارتقاء
+          بخريجي القسم إلى مستوى التميز والقدرة التنافسية العالية.</p>
+        <p *ngIf="translate.currentLang == 'ar'">ويُقْصَدُ به القسم المنوظ بالعملية التعليمية الكاملة لطلاب التخصص
+          والمسؤول عن إعداد وتخريج اختصاصى مهنى فى (جرافكس- موشن جرافكس- فنى تصميم ) حسب المتطلبات المهنية الواردة في
+          اللائحة.</p>
 
-        <p *ngIf="translate.currentLang == 'en'">The Department of Graphic Technology at 6th October Academy aspires to provide the essential elements for continuous development in the field of graphic technology, in order to keep pace with rapid scientific and technological advancements, and elevate the graduates of the department to a level of excellence and high competitiveness.</p>
-        <p *ngIf="translate.currentLang == 'en'">The department is responsible for the complete educational process of specialized students and is dedicated to preparing and graduating professional specialists in (Graphics, Motion Graphics, Design Technician) in accordance with the professional requirements stipulated in the regulations.</p>
+        <p *ngIf="translate.currentLang == 'en'">The Department of Graphic Technology
+          at 6th October Academy aspires to provide the essential elements for continuous development in the field of
+          graphic technology, in order to keep pace with rapid scientific and technological advancements, and elevate
+          the graduates of the department to a level of excellence and high competitiveness.</p>
+        <p *ngIf="translate.currentLang == 'en'">The department is responsible for the
+          complete educational process of specialized students and is dedicated to preparing and graduating professional
+          specialists in (Graphics, Motion Graphics, Design Technician) in accordance with the professional requirements
+          stipulated in the regulations.</p>
+
+        <p *ngIf="translate.currentLang == 'gr'">Die Abteilung für Grafiktechnologie der 6. Oktober-Akademie ist
+          bestrebt, die wesentlichen Elemente für eine kontinuierliche Weiterentwicklung auf dem Gebiet der
+          Grafiktechnologie bereitzustellen, um mit den raschen wissenschaftlichen und technologischen Fortschritten
+          Schritt zu halten und die Absolventen der Abteilung auf ein Exzellenzniveau zu heben hohe
+          Wettbewerbsfähigkeit.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Die Abteilung ist für den gesamten Ausbildungsprozess der Fachstudenten
+          verantwortlich und widmet sich der Vorbereitung und dem Abschluss von Fachkräften (Grafiker, Motion Graphics,
+          Designtechniker) gemäß den in der Verordnung festgelegten beruflichen Anforderungen.</p>
       </div>
     </div>
     <div class="mission">
@@ -22,9 +43,26 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_MESSAGE" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">تتبلور رسالة القسم في توظيف جميع خدمات تكنولوجيا الجرافيك لتقديم حلول متميزة  فى مجال التصميم بغرض الالتزام بالمعايير والمستويات العالمية في نظم التصميم  الحاسوبية ومواكبة التقدم والتطور في مجال تكنولوجيا التصميم والتركيز على متطلبات السوق الفنية- تقديم أفضل البرامج الإلكترونية المستمدة من المؤسسات الأكاديمية ذات المستوى العالمي والحفاظ عليها بالإضافة إلى نشر المهارات المتعلقة بالتصميم الذكي والتفاعلي .</p>
+        <p *ngIf="translate.currentLang == 'ar'">تتبلور رسالة القسم في توظيف جميع خدمات تكنولوجيا الجرافيك لتقديم حلول
+          متميزة فى مجال التصميم بغرض الالتزام بالمعايير والمستويات العالمية في نظم التصميم الحاسوبية ومواكبة التقدم
+          والتطور في مجال تكنولوجيا التصميم والتركيز على متطلبات السوق الفنية- تقديم أفضل البرامج الإلكترونية المستمدة
+          من المؤسسات الأكاديمية ذات المستوى العالمي والحفاظ عليها بالإضافة إلى نشر المهارات المتعلقة بالتصميم الذكي
+          والتفاعلي .</p>
 
-        <p *ngIf="translate.currentLang == 'en'">Utilize all graphic technology services to provide distinguished solutions in the field of design, with a commitment to international standards and levels in computerized design systems, while keeping abreast of advancements and developments in design technology and focusing on the requirements of the artistic market. We offer the best electronic programs derived from world-class academic institutions and ensure their preservation, in addition to disseminating skills related to smart and interactive design.</p>
+        <p *ngIf="translate.currentLang == 'en'">Utilize all graphic technology
+          services to provide distinguished solutions in the field of design, with a commitment to international
+          standards and levels in computerized design systems, while keeping abreast of advancements and developments in
+          design technology and focusing on the requirements of the artistic market. We offer the best electronic
+          programs derived from world-class academic institutions and ensure their preservation, in addition to
+          disseminating skills related to smart and interactive design.</p>
+
+        <p *ngIf="translate.currentLang == 'gr'">Nutzen Sie alle Dienstleistungen der Grafiktechnologie, um
+          herausragende Lösungen im Bereich Design bereitzustellen, wobei Sie sich an internationale Standards und
+          Niveaus computergestützter Designsysteme halten und gleichzeitig über Fortschritte und Entwicklungen in der
+          Designtechnologie auf dem Laufenden bleiben und sich auf die Anforderungen des künstlerischen Marktes
+          konzentrieren. Wir bieten die besten elektronischen Programme an, die von erstklassigen akademischen
+          Institutionen stammen, und sorgen für deren Erhaltung sowie für die Verbreitung von Fähigkeiten im
+          Zusammenhang mit intelligentem und interaktivem Design.</p>
       </div>
     </div>
     <div class="mission">
@@ -52,15 +90,31 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_GOALS" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">إعداد المتخصصين  والمهنين  فى مجال تكنولوجيا  الجرافيك والبرمجيات المتخصصة</p>
-        <p *ngIf="translate.currentLang == 'ar'">تأسيس المتدربين بالأسس النظرية ومنهجيات التطبيق بما يمكنهم من المنافسة العالمية</p>
-        <p *ngIf="translate.currentLang == 'ar'">تأهيل المتدربين فنياً لمواكبة التطور السريع في مجال تقنية وتكنولوجيا المعلومات</p>
+        <p *ngIf="translate.currentLang == 'ar'">إعداد المتخصصين والمهنين فى مجال تكنولوجيا الجرافيك والبرمجيات المتخصصة
+        </p>
+        <p *ngIf="translate.currentLang == 'ar'">تأسيس المتدربين بالأسس النظرية ومنهجيات التطبيق بما يمكنهم من المنافسة
+          العالمية</p>
+        <p *ngIf="translate.currentLang == 'ar'">تأهيل المتدربين فنياً لمواكبة التطور السريع في مجال تقنية وتكنولوجيا
+          المعلومات</p>
         <p *ngIf="translate.currentLang == 'ar'">اكتساب مهارات العمل على برمجيات الجرافيك المونتاج والصوتيات</p>
 
-        <p *ngIf="translate.currentLang == 'en'">Preparing specialists and professionals in the field of Graphics Technology and specialized software.</p>
-        <p *ngIf="translate.currentLang == 'en'">Establishing trainees with theoretical foundations and practical methodologies that enable them to compete globally.</p>
-        <p *ngIf="translate.currentLang == 'en'">Technically qualifying trainees to keep up with the rapid advancements in Information Technology and Technology.</p>
-        <p *ngIf="translate.currentLang == 'en'">Acquiring skills in working with graphic software, editing, and audio production.</p>
+        <p *ngIf="translate.currentLang == 'en'">Preparing specialists and
+          professionals in the field of Graphics Technology and specialized software.</p>
+        <p *ngIf="translate.currentLang == 'en'">Establishing trainees with theoretical
+          foundations and practical methodologies that enable them to compete globally.</p>
+        <p *ngIf="translate.currentLang == 'en'">Technically qualifying trainees to
+          keep up with the rapid advancements in Information Technology and Technology.</p>
+        <p *ngIf="translate.currentLang == 'en'">Acquiring skills in working with
+          graphic software, editing, and audio production.</p>
+
+        <p *ngIf="translate.currentLang == 'gr'">Vorbereitung von Spezialisten und Fachleuten im Bereich
+          Grafiktechnologie und Spezialsoftware.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Ausbildung von Auszubildenden mit theoretischen Grundlagen und
+          praktischen Methoden, die es ihnen ermöglichen, im globalen Wettbewerb zu bestehen.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Technisch qualifizierte Auszubildende, um mit den rasanten
+          Fortschritten in der Informationstechnologie und -technologie Schritt zu halten.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Erwerb von Fähigkeiten im Umgang mit Grafiksoftware, Bearbeitung und
+          Audioproduktion.</p>
       </div>
     </div>
   </div>
@@ -73,8 +127,14 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_STAFF" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">يضم القسم نخبة من اعضاء هيئة التدريس من الاساتذة والمعيدين والمهندسين الاكفاء والمتميزين في عملهم وذوي خبرة عالية سواء اكاديمية او عملية.</p>
-        <p *ngIf="translate.currentLang == 'en'">The department comprises a teaching staff, including professors, teaching assistant, and competent engineers, all of whom possess extensive academic and training experience.</p>
+        <p *ngIf="translate.currentLang == 'ar'">يضم القسم نخبة من اعضاء هيئة التدريس من الاساتذة والمعيدين والمهندسين
+          الاكفاء والمتميزين في عملهم وذوي خبرة عالية سواء اكاديمية او عملية.</p>
+        <p *ngIf="translate.currentLang == 'en'">The department comprises a teaching
+          staff, including professors, teaching assistant, and competent engineers, all of whom possess extensive
+          academic and training experience.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Die Abteilung besteht aus einem Lehrpersonal, darunter Professoren,
+          Lehrassistenten und kompetenten Ingenieuren, die alle über umfangreiche akademische und Ausbildungserfahrung
+          verfügen.</p>
       </div>
     </div>
     <div class="staff">
@@ -83,8 +143,17 @@
       </div>
       <div class="text">
         <h6>{{ "GRADUATE_JOB_DESCRIPTION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بالمهام الفنية لمصمم الجرافيك  في كافة المنظمات العاملة في المجال ويكون ذو كفاء عالية وملم بكافة ما يتخصص به فى مجال تكنولوجيا  الجرافك .</p>
-        <p *ngIf="translate.currentLang == 'en'">The department aims to equip the graduate with the necessary skills to perform technical tasks as a graphic designer in various organizations within the field. The graduate will possess high competence and expertise in the domain of graphic technology.</p>
+        <p *ngIf="translate.currentLang == 'ar'">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بالمهام الفنية لمصمم
+          الجرافيك في كافة المنظمات العاملة في المجال ويكون ذو كفاء عالية وملم بكافة ما يتخصص به فى مجال تكنولوجيا
+          الجرافك .</p>
+        <p *ngIf="translate.currentLang == 'en'">The department aims to equip the
+          graduate with the necessary skills to perform technical tasks as a graphic designer in various organizations
+          within the field. The graduate will possess high competence and expertise in the domain of graphic technology.
+        </p>
+        <p *ngIf="translate.currentLang == 'gr'">Ziel der Abteilung ist es, Absolventen mit den notwendigen Fähigkeiten
+          auszustatten, um technische Aufgaben als Grafikdesigner in verschiedenen Organisationen in diesem Bereich
+          auszuführen. Der Absolvent verfügt über hohe Kompetenz und Fachwissen im Bereich der grafischen Technologie.
+        </p>
       </div>
     </div>
     <div class="staff">
@@ -94,7 +163,10 @@
       <div class="text">
         <h6>{{ "ACADEMIC_SYSTEM" | translate }}</h6>
         <p *ngIf="translate.currentLang == 'ar'">عامان دراسيان 4 ترم.</p>
-        <p *ngIf="translate.currentLang == 'en'">The academic program spans two academic years, consisting of four semesters.</p>
+        <p *ngIf="translate.currentLang == 'en'">The academic program spans two
+          academic years, consisting of four semesters.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Das akademische Programm erstreckt sich über zwei Studienjahre,
+          bestehend aus vier Semestern.</p>
       </div>
     </div>
   </div>

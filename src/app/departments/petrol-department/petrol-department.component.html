@@ -1,4 +1,6 @@
-<app-department-header [departName]="translate.currentLang == 'ar' ? 'قسم الخدمات البترولية' : 'Department of Petroleum Services' " [departImg]="'assets/images/departments-icons/petrolDepartCover.svg'">
+<app-department-header
+  [departName]="translate.currentLang == 'ar' ? 'قسم الخدمات البترولية' : translate.currentLang == 'gr' ? 'Abteilung für Erdöldienstleistungen' : 'Department of Petroleum Services' "
+  [departImg]="'assets/images/departments-icons/petrolDepartCover.svg'">
 </app-department-header>
 
 <div class="missions d-flex">
@@ -9,10 +11,34 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_VISION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">تسعى أكاديمية 6 أكتوبر فى قسم تكنولوجيا الخدمات البترولية إلى توفير مقومات التطوير المستمر للتعليم فى مجال الخدمات البترولية لمواكبة التطورات العلمية  والمهنية المتسارعة فى مجال البترول، والارتقاء بخريجي القسم إلى مستوى التميز والقدرة التنافسية العالية لتلبية متطلبات سوق الخدمات البترولية فى مصر والمنطقة العربية.</p>
-        <p *ngIf="translate.currentLang == 'ar'">ويُقْصَدُ به القسم المنوظ بالعملية التعليمية الكاملة لطلاب التخصص  والمسؤول عن إعداد وتخريج  اختصاصى مهنى فى الخدمات البترولية (الحفر – اللحام – اللحام تحت الماء – فنيات معامل التكرير ) حسب المتطلبات  المهنية الواردة في اللائحة.</p>
-        <p *ngIf="translate.currentLang == 'en'">October 6 Academy seeks, in the Department of Petroleum Services Technology, to provide the necessary elements for continuous development in the field of petroleum services to keep up with the rapid scientific and professional advancements in the petroleum industry. Our aim is to elevate the department's graduates to a level of excellence and high competitiveness, meeting the demands of the petroleum services market in Egypt and the Arab region.</p>
-        <p *ngIf="translate.currentLang == 'en'">The department is dedicated to the complete educational process for students in this specialization, responsible for preparing and graduating professional specialists in petroleum services such as drilling, welding, underwater welding, and refining laboratory techniques, in accordance with the professional requirements specified in the regulations.</p>
+        <p *ngIf="translate.currentLang == 'ar'">تسعى أكاديمية 6 أكتوبر فى قسم تكنولوجيا الخدمات البترولية إلى توفير
+          مقومات التطوير المستمر للتعليم فى مجال الخدمات البترولية لمواكبة التطورات العلمية والمهنية المتسارعة فى مجال
+          البترول، والارتقاء بخريجي القسم إلى مستوى التميز والقدرة التنافسية العالية لتلبية متطلبات سوق الخدمات
+          البترولية فى مصر والمنطقة العربية.</p>
+        <p *ngIf="translate.currentLang == 'ar'">ويُقْصَدُ به القسم المنوظ بالعملية التعليمية الكاملة لطلاب التخصص
+          والمسؤول عن إعداد وتخريج اختصاصى مهنى فى الخدمات البترولية (الحفر – اللحام – اللحام تحت الماء – فنيات معامل
+          التكرير ) حسب المتطلبات المهنية الواردة في اللائحة.</p>
+
+        <p *ngIf="translate.currentLang == 'en'">October 6 Academy seeks, in the
+          Department of Petroleum Services Technology, to provide the necessary elements for continuous development in
+          the field of petroleum services to keep up with the rapid scientific and professional advancements in the
+          petroleum industry. Our aim is to elevate the department's graduates to a level of excellence and high
+          competitiveness, meeting the demands of the petroleum services market in Egypt and the Arab region.</p>
+        <p *ngIf="translate.currentLang == 'en'">The department is dedicated to the
+          complete educational process for students in this specialization, responsible for preparing and graduating
+          professional specialists in petroleum services such as drilling, welding, underwater welding, and refining
+          laboratory techniques, in accordance with the professional requirements specified in the regulations.</p>
+
+        <p *ngIf="translate.currentLang == 'gr'">Die 6. Oktober-Akademie ist bestrebt, in der Abteilung für
+          Erdöldienstleistungstechnologie die notwendigen Elemente für eine kontinuierliche Weiterentwicklung im Bereich
+          der Erdöldienstleistungen bereitzustellen, um mit den raschen wissenschaftlichen und beruflichen Fortschritten
+          in der Erdölindustrie Schritt zu halten. Unser Ziel ist es, die Absolventen der Abteilung auf ein Niveau von
+          Exzellenz und hoher Wettbewerbsfähigkeit zu bringen, um den Anforderungen des Erdöldienstleistungsmarktes in
+          Ägypten und der arabischen Region gerecht zu werden.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Die Abteilung widmet sich dem gesamten Ausbildungsprozess der Studenten
+          dieser Spezialisierung und ist für die Vorbereitung und den Abschluss professioneller Spezialisten für
+          Erdöldienstleistungen wie Bohren, Schweißen, Unterwasserschweißen und Raffinieren von Labortechniken gemäß den
+          in den Vorschriften festgelegten beruflichen Anforderungen verantwortlich.</p>
       </div>
     </div>
     <div class="mission">
@@ -21,8 +47,23 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_MESSAGE" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">تتبلور رسالة القسم في توظيف جميع الخبرات المتخصصة فى مجال الخدمات البترولية لتقديم حلول متميزة  فى مجال  الحفر والللحام والتكرير  بغرض الالتزام بالمعايير والمستويات العالمية في نظم الخدمات البترولية ومواكبة التقدم والتطور في مجال البترول والتركيز على متطلبات السوق الفنية- تقديم أفضل المهارات المتعلقة بالخدمات البترولية والتى تطلبها شركات البترول المحلية والدولية.</p>
-        <p *ngIf="translate.currentLang == 'en'">The mission of the department is to utilize all specialized expertise in the field of petroleum services to provide exceptional solutions in drilling, welding, and refining, with a commitment to adhering to global standards and levels in petroleum services systems. We strive to keep pace with advancements and developments in the petroleum industry, while focusing on the technical market requirements. Our aim is to offer the best skills related to petroleum services, as demanded by both local and international petroleum companies.</p>
+        <p *ngIf="translate.currentLang == 'ar'">تتبلور رسالة القسم في توظيف جميع الخبرات المتخصصة فى مجال الخدمات
+          البترولية لتقديم حلول متميزة فى مجال الحفر والللحام والتكرير بغرض الالتزام بالمعايير والمستويات العالمية في
+          نظم الخدمات البترولية ومواكبة التقدم والتطور في مجال البترول والتركيز على متطلبات السوق الفنية- تقديم أفضل
+          المهارات المتعلقة بالخدمات البترولية والتى تطلبها شركات البترول المحلية والدولية.</p>
+        <p *ngIf="translate.currentLang == 'en'">The mission of the department is to
+          utilize all specialized expertise in the field of petroleum services to provide exceptional solutions in
+          drilling, welding, and refining, with a commitment to adhering to global standards and levels in petroleum
+          services systems. We strive to keep pace with advancements and developments in the petroleum industry, while
+          focusing on the technical market requirements. Our aim is to offer the best skills related to petroleum
+          services, as demanded by both local and international petroleum companies.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Die Aufgabe der Abteilung besteht darin, das gesamte Fachwissen im
+          Bereich der Erdöldienstleistungen zu nutzen, um außergewöhnliche Lösungen beim Bohren, Schweißen und
+          Raffinieren bereitzustellen, mit der Verpflichtung, globale Standards und Niveaus in
+          Erdöldienstleistungssystemen einzuhalten. Wir sind bestrebt, mit den Fortschritten und Entwicklungen in der
+          Erdölindustrie Schritt zu halten und uns dabei auf die technischen Marktanforderungen zu konzentrieren. Unser
+          Ziel ist es, die besten Fähigkeiten im Zusammenhang mit Erdöldienstleistungen anzubieten, wie sie sowohl von
+          lokalen als auch internationalen Erdölunternehmen gefordert werden.</p>
       </div>
     </div>
     <div class="mission">
@@ -50,15 +91,35 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_GOALS" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">إعداد المتخصصين  والمهنين  فى مجال الخدمات البترولية المتخصصة .</p>
-        <p *ngIf="translate.currentLang == 'ar'">تأسيس المتدربين بالأسس النظرية ومنهجيات التطبيق بما يمكنهم من المنافسة العالمية</p>
-        <p *ngIf="translate.currentLang == 'ar'">تأهيل المتدربين فنياً لمواكبة التطور السريع في مجال الخدمات البترولية. </p>
+        <p *ngIf="translate.currentLang == 'ar'">إعداد المتخصصين والمهنين فى مجال الخدمات البترولية المتخصصة .</p>
+        <p *ngIf="translate.currentLang == 'ar'">تأسيس المتدربين بالأسس النظرية ومنهجيات التطبيق بما يمكنهم من المنافسة
+          العالمية</p>
+        <p *ngIf="translate.currentLang == 'ar'">تأهيل المتدربين فنياً لمواكبة التطور السريع في مجال الخدمات البترولية.
+        </p>
         <p *ngIf="translate.currentLang == 'ar'">اكتساب مهارات العمل على معدات الحفر واللحام والتكرير</p>
 
-        <p *ngIf="translate.currentLang == 'en'">The department aims to prepare specialists and professionals in the field of specialized petroleum services.</p>
-        <p *ngIf="translate.currentLang == 'en'">It lays the foundations for trainees in theoretical principles and application methodologies, enabling them to compete on an international level.</p>
-        <p *ngIf="translate.currentLang == 'en'">The department provides technical qualifications to equip trainees to keep up with the rapid advancements in the field of petroleum services.</p>
-        <p *ngIf="translate.currentLang == 'en'">Trainees acquire skills in working with drilling, welding, and refining equipment.</p>
+        <p *ngIf="translate.currentLang == 'en'">The department aims to prepare
+          specialists and professionals in the field of specialized petroleum services.</p>
+        <p *ngIf="translate.currentLang == 'en'">It lays the foundations for trainees
+          in theoretical principles and application methodologies, enabling them to compete on an international level.
+        </p>
+        <p *ngIf="translate.currentLang == 'en'">The department provides technical
+          qualifications to equip trainees to keep up with the rapid advancements in the field of petroleum services.
+        </p>
+        <p *ngIf="translate.currentLang == 'en'">Trainees acquire skills in working
+          with drilling, welding, and refining equipment.</p>
+
+        <p *ngIf="translate.currentLang == 'gr'">Ziel der Abteilung ist die Ausbildung von Spezialisten und Fachkräften
+          im Bereich der spezialisierten Erdöldienstleistungen.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Es vermittelt den Auszubildenden die Grundlagen in theoretischen
+          Grundlagen und Anwendungsmethoden und befähigt sie so, auf internationaler Ebene zu konkurrieren.
+        </p>
+        <p *ngIf="translate.currentLang == 'gr'">Die Abteilung vermittelt technische Qualifikationen, um die
+          Auszubildenden in die Lage zu versetzen, mit den rasanten Fortschritten im Bereich der Erdöldienstleistungen
+          Schritt zu halten.
+        </p>
+        <p *ngIf="translate.currentLang == 'gr'">Die Auszubildenden erwerben Kenntnisse im Umgang mit Bohr-, Schweiß-
+          und Veredelungsgeräten.</p>
       </div>
     </div>
   </div>
@@ -71,8 +132,14 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_STAFF" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">يضم القسم نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين والمهندسين الأكفاء وذوي خبرة عالية أكاديمياً وتدريبياً</p>
-        <p *ngIf="translate.currentLang == 'en'">The department comprises a teaching staff, including professors, teaching assistant, and competent engineers, all of whom possess extensive academic and training experience.</p>
+        <p *ngIf="translate.currentLang == 'ar'">يضم القسم نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين
+          والمهندسين الأكفاء وذوي خبرة عالية أكاديمياً وتدريبياً</p>
+        <p *ngIf="translate.currentLang == 'en'">The department comprises a teaching
+          staff, including professors, teaching assistant, and competent engineers, all of whom possess extensive
+          academic and training experience.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Die Abteilung besteht aus einem Lehrpersonal, darunter Professoren,
+          Lehrassistenten und kompetenten Ingenieuren, die alle über umfangreiche akademische und Ausbildungserfahrung
+          verfügen.</p>
       </div>
     </div>
     <div class="staff">
@@ -81,8 +148,16 @@
       </div>
       <div class="text">
         <h6>{{ "GRADUATE_JOB_DESCRIPTION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بالمهام الفنية لمساعد الخدمات البترولية  في كافة المنظمات العاملة في المجال ويكون ذو كفاء عالية وملم بكافة متطلبات سوق العمل.</p>
-        <p *ngIf="translate.currentLang == 'en'">The department's objective is to qualify the graduate to carry out the technical tasks of a petroleum services assistant in all organizations operating in the field. The graduate will be highly competent and well-versed in all the requirements of the job market.</p>
+        <p *ngIf="translate.currentLang == 'ar'">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بالمهام الفنية لمساعد
+          الخدمات البترولية في كافة المنظمات العاملة في المجال ويكون ذو كفاء عالية وملم بكافة متطلبات سوق العمل.</p>
+        <p *ngIf="translate.currentLang == 'en'">The department's objective is to
+          qualify the graduate to carry out the technical tasks of a petroleum services assistant in all organizations
+          operating in the field. The graduate will be highly competent and well-versed in all the requirements of the
+          job market.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Ziel der Abteilung ist es, den Absolventen für die Durchführung der
+          technischen Aufgaben eines Mineralöldienstleistungsassistenten in allen in diesem Bereich tätigen
+          Organisationen zu qualifizieren. Der Absolvent verfügt über eine hohe Kompetenz und ist mit allen
+          Anforderungen des Arbeitsmarktes bestens vertraut.</p>
       </div>
     </div>
     <div class="staff">
@@ -92,7 +167,10 @@
       <div class="text">
         <h6>{{ "ACADEMIC_SYSTEM" | translate }}</h6>
         <p *ngIf="translate.currentLang == 'ar'">عامان دراسيان 4 ترم.</p>
-        <p *ngIf="translate.currentLang == 'en'">The academic program spans two academic years, consisting of four semesters.</p>
+        <p *ngIf="translate.currentLang == 'en'">The academic program spans two
+          academic years, consisting of four semesters.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Das akademische Programm erstreckt sich über zwei Studienjahre,
+          bestehend aus vier Semestern.</p>
       </div>
     </div>
   </div>

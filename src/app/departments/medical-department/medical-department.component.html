@@ -1,4 +1,6 @@
-<app-department-header [departName]="translate.currentLang == 'ar' ? 'قسم الخدمات الصحية' : 'Department of Health Services'" [departImg]="'assets/images/departments-icons/medicalDepartCover.svg'">
+<app-department-header
+  [departName]="translate.currentLang == 'ar' ? 'قسم الخدمات الصحية' : translate.currentLang == 'gr' ? 'Ministerium für Gesundheitsdienste' : 'Department of Health Services'"
+  [departImg]="'assets/images/departments-icons/medicalDepartCover.svg'">
 </app-department-header>
 
 <div class="missions d-flex">
@@ -9,10 +11,32 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_VISION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">تسعى أكاديمية 6 أكتوبر فى قسم تكنولوجيا الخدمات الصحية إلى توفير مقومات التطوير المستمر للتعليم فى مجال الخدمات  الصحية لمواكبة التطورات العلمية  والمهنية المتسارعة فى المجال ، والارتقاء بخريجي القسم إلى مستوى التميز والقدرة التنافسية العالية لتلبية متطلبات سوق العمل من مساعدى الخدمات الصحية فى مصر والمنطقة العربية.</p>
-        <p *ngIf="translate.currentLang == 'ar'">ويُقْصَدُ به القسم المنوظ بالعملية التعليمية الكاملة لطلاب التخصص  والمسؤول عن إعداد وتخريج  اختصاصى مهنى فى الخدمات الصحية   حسب المتطلبات  المهنية الواردة في اللائحة.</p>
-        <p *ngIf="translate.currentLang == 'en'">October 6 Academy seeks in the Department of Health Services Technology to provide the necessary elements for continuous education in the field of healthcare services, keeping pace with the rapid scientific and professional developments in the field, and elevating the department's graduates to a level of excellence and high competitive ability to meet the requirements of the job market for healthcare assistants in Egypt and the Arab region.</p>
-        <p *ngIf="translate.currentLang == 'en'">The department is intended to carry out the complete educational process for students specializing in this field and is responsible for preparing and graduating professional specialists in healthcare services according to the requirements specified in the regulations.</p>
+        <p *ngIf="translate.currentLang == 'ar'">تسعى أكاديمية 6 أكتوبر فى قسم تكنولوجيا الخدمات الصحية إلى توفير مقومات
+          التطوير المستمر للتعليم فى مجال الخدمات الصحية لمواكبة التطورات العلمية والمهنية المتسارعة فى المجال ،
+          والارتقاء بخريجي القسم إلى مستوى التميز والقدرة التنافسية العالية لتلبية متطلبات سوق العمل من مساعدى الخدمات
+          الصحية فى مصر والمنطقة العربية.</p>
+        <p *ngIf="translate.currentLang == 'ar'">ويُقْصَدُ به القسم المنوظ بالعملية التعليمية الكاملة لطلاب التخصص
+          والمسؤول عن إعداد وتخريج اختصاصى مهنى فى الخدمات الصحية حسب المتطلبات المهنية الواردة في اللائحة.</p>
+
+        <p *ngIf="translate.currentLang == 'en'">October 6 Academy seeks in the
+          Department of Health Services Technology to provide the necessary elements for continuous education in the
+          field of healthcare services, keeping pace with the rapid scientific and professional developments in the
+          field, and elevating the department's graduates to a level of excellence and high competitive ability to meet
+          the requirements of the job market for healthcare assistants in Egypt and the Arab region.</p>
+        <p *ngIf="translate.currentLang == 'en'">The department is intended to carry
+          out the complete educational process for students specializing in this field and is responsible for preparing
+          and graduating professional specialists in healthcare services according to the requirements specified in the
+          regulations.</p>
+
+        <p *ngIf="translate.currentLang == 'gr'">Die 6. Oktober-Akademie ist bestrebt, in der Abteilung für
+          Gesundheitsdienstleistungstechnologie die notwendigen Elemente für eine kontinuierliche Ausbildung im Bereich
+          der Gesundheitsdienste bereitzustellen, mit den raschen wissenschaftlichen und beruflichen Entwicklungen auf
+          diesem Gebiet Schritt zu halten und die Absolventen der Abteilung auf ein Exzellenzniveau zu heben hohe
+          Wettbewerbsfähigkeit, um den Anforderungen des Arbeitsmarktes für Gesundheitshelfer in Ägypten und dem
+          arabischen Raum gerecht zu werden.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Die Abteilung hat die Aufgabe, den gesamten Ausbildungsprozess für
+          Studierende dieser Fachrichtung durchzuführen und ist für die Ausbildung und den Abschluss von Fachkräften im
+          Gesundheitswesen gemäß den in der Verordnung festgelegten Anforderungen verantwortlich.</p>
       </div>
     </div>
     <div class="mission">
@@ -21,8 +45,21 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_MESSAGE" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">تتبلور رسالة القسم في تأهيل المتدربين فنياً فى مجال الخدمات الصحية  بغرض الالتزام بالمعايير والمستويات العالمية في المجال ومواكبة التقدم والتطور المهنى والتركيز على متطلبات السوق الفنية- تقديم أفضل المهارات المتعلقة بالخدمات الصحية والتى تطلبها المؤسسات الطبية والصحية  المحلية والدولية.</p>
-        <p *ngIf="translate.currentLang == 'en'">The department's mission is to technically qualify trainees in the field of health services, aiming to adhere to international standards and levels in the field, keeping up with professional advancements and developments, and focusing on the requirements of the technical market. We strive to provide the best skills related to health services, as demanded by local and international medical and healthcare institutions.</p>
+        <p *ngIf="translate.currentLang == 'ar'">تتبلور رسالة القسم في تأهيل المتدربين فنياً فى مجال الخدمات الصحية بغرض
+          الالتزام بالمعايير والمستويات العالمية في المجال ومواكبة التقدم والتطور المهنى والتركيز على متطلبات السوق
+          الفنية- تقديم أفضل المهارات المتعلقة بالخدمات الصحية والتى تطلبها المؤسسات الطبية والصحية المحلية والدولية.
+        </p>
+        <p *ngIf="translate.currentLang == 'en'">The department's mission is to
+          technically qualify trainees in the field of health services, aiming to adhere to international standards and
+          levels in the field, keeping up with professional advancements and developments, and focusing on the
+          requirements of the technical market. We strive to provide the best skills related to health services, as
+          demanded by local and international medical and healthcare institutions.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Die Aufgabe der Abteilung besteht darin, Auszubildende im Bereich des
+          Gesundheitswesens fachlich zu qualifizieren. Ziel ist es, internationale Standards und Niveaus in diesem
+          Bereich einzuhalten, mit beruflichen Fortschritten und Entwicklungen Schritt zu halten und sich auf die
+          Anforderungen des technischen Marktes zu konzentrieren. Wir sind bestrebt, die besten Fähigkeiten im
+          Zusammenhang mit Gesundheitsdiensten bereitzustellen, wie sie von lokalen und internationalen medizinischen
+          und Gesundheitseinrichtungen gefordert werden.</p>
       </div>
     </div>
     <div class="mission">
@@ -51,14 +88,28 @@
       <div class="text">
         <h6>{{ "DEPART_GOALS" | translate }}</h6>
         <p *ngIf="translate.currentLang == 'ar'">إعداد مساعد الخدمات الصحية المتميز</p>
-        <p *ngIf="translate.currentLang == 'ar'">تأسيس المتدربين بالأسس النظرية ومنهجيات التطبيق بما يمكنهم من المنافسة العالمية</p>
-        <p *ngIf="translate.currentLang == 'ar'">تأهيل المتدربين فنياً لمواكبة التطور السريع في مجال الخدمات الصحية. </p>
+        <p *ngIf="translate.currentLang == 'ar'">تأسيس المتدربين بالأسس النظرية ومنهجيات التطبيق بما يمكنهم من المنافسة
+          العالمية</p>
+        <p *ngIf="translate.currentLang == 'ar'">تأهيل المتدربين فنياً لمواكبة التطور السريع في مجال الخدمات الصحية.
+        </p>
         <p *ngIf="translate.currentLang == 'ar'">اكتساب مهارات العمل بالمؤسسات الطبية ومساعدة الكادر التمريضى بها</p>
 
-        <p *ngIf="translate.currentLang == 'en'">Preparing outstanding healthcare assistants.</p>
-        <p *ngIf="translate.currentLang == 'en'">Establishing trainees with theoretical foundations and application methodologies that enable them to compete globally.</p>
-        <p *ngIf="translate.currentLang == 'en'">Technically qualifying trainees to keep pace with the rapid developments in the field of healthcare services.</p>
-        <p *ngIf="translate.currentLang == 'en'">Acquiring skills to work in medical institutions and assist the nursing staff.</p>
+        <p *ngIf="translate.currentLang == 'en'">Preparing outstanding healthcare
+          assistants.</p>
+        <p *ngIf="translate.currentLang == 'en'">Establishing trainees with theoretical
+          foundations and application methodologies that enable them to compete globally.</p>
+        <p *ngIf="translate.currentLang == 'en'">Technically qualifying trainees to
+          keep pace with the rapid developments in the field of healthcare services.</p>
+        <p *ngIf="translate.currentLang == 'en'">Acquiring skills to work in medical
+          institutions and assist the nursing staff.</p>
+
+        <p *ngIf="translate.currentLang == 'gr'">Hervorragende Gesundheitsassistenten vorbereiten.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Vermittlung theoretischer Grundlagen und Anwendungsmethoden an die
+          Auszubildenden, die es ihnen ermöglichen, im globalen Wettbewerb zu bestehen.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Fachlich qualifizierte Auszubildende, um mit den rasanten Entwicklungen
+          im Gesundheitswesen Schritt halten zu können.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Erwerb von Fähigkeiten zur Arbeit in medizinischen Einrichtungen und
+          zur Unterstützung des Pflegepersonals.</p>
       </div>
     </div>
   </div>
@@ -71,8 +122,14 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_STAFF" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">يضم القسم نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين والمهندسين الأكفاء وذوي خبرة عالية أكاديمياً وتدريبياً</p>
-        <p *ngIf="translate.currentLang == 'en'">The department comprises a teaching staff, including professors, teaching assistant, and competent engineers, all of whom possess extensive academic and training experience.</p>
+        <p *ngIf="translate.currentLang == 'ar'">يضم القسم نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين
+          والمهندسين الأكفاء وذوي خبرة عالية أكاديمياً وتدريبياً</p>
+        <p *ngIf="translate.currentLang == 'en'">The department comprises a teaching
+          staff, including professors, teaching assistant, and competent engineers, all of whom possess extensive
+          academic and training experience.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Die Abteilung besteht aus einem Lehrpersonal, darunter Professoren,
+          Lehrassistenten und kompetenten Ingenieuren, die alle über umfangreiche akademische und Ausbildungserfahrung
+          verfügen.</p>
       </div>
     </div>
     <div class="staff">
@@ -81,8 +138,16 @@
       </div>
       <div class="text">
         <h6>{{ "GRADUATE_JOB_DESCRIPTION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بالمهام الفنية لمساعد الخدمات الصحية  في كافة المنظمات العاملة في المجال ويكون ذو كفاء عالية وملم بكافة متطلبات سوق العمل.</p>
-        <p *ngIf="translate.currentLang == 'en'">The department aims to qualify the graduate to be capable of undertaking the technical tasks of a healthcare assistant in all organizations operating in the field. They will be highly competent and well-versed in all the requirements of the job market.</p>
+        <p *ngIf="translate.currentLang == 'ar'">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بالمهام الفنية لمساعد
+          الخدمات الصحية في كافة المنظمات العاملة في المجال ويكون ذو كفاء عالية وملم بكافة متطلبات سوق العمل.</p>
+        <p *ngIf="translate.currentLang == 'en'">The department aims to qualify the
+          graduate to be capable of undertaking the technical tasks of a healthcare assistant in all organizations
+          operating in the field. They will be highly competent and well-versed in all the requirements of the job
+          market.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Ziel der Abteilung ist es, den Absolventen zu qualifizieren, um die
+          technischen Aufgaben eines Gesundheitsassistenten in allen in diesem Bereich tätigen Organisationen übernehmen
+          zu können. Sie verfügen über hohe Kompetenz und sind mit allen Anforderungen des Arbeitsmarktes bestens
+          vertraut.</p>
       </div>
     </div>
     <div class="staff">
@@ -92,7 +157,10 @@
       <div class="text">
         <h6>{{ "ACADEMIC_SYSTEM" | translate }}</h6>
         <p *ngIf="translate.currentLang == 'ar'">عامان دراسيان 4 ترم.</p>
-        <p *ngIf="translate.currentLang == 'en'">The academic program spans two academic years, consisting of four semesters.</p>
+        <p *ngIf="translate.currentLang == 'en'">The academic program spans two
+          academic years, consisting of four semesters.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Das akademische Programm erstreckt sich über zwei Studienjahre,
+          bestehend aus vier Semestern.</p>
       </div>
     </div>
   </div>

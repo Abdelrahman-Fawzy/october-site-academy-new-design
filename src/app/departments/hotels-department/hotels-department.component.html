@@ -1,4 +1,6 @@
-<app-department-header [departName]="translate.currentLang == 'ar' ? 'قسم السياحية والفنادق' : 'Department of Tourism and Hotels'" [departImg]="'assets/images/departments-icons/hotelsDepartCover.svg'">
+<app-department-header
+  [departName]="translate.currentLang == 'ar' ? 'قسم السياحية والفنادق' : translate.currentLang == 'gr' ? 'Ministerium für Tourismus und Hotels' : 'Department of Tourism and Hotels'"
+  [departImg]="'assets/images/departments-icons/hotelsDepartCover.svg'">
 </app-department-header>
 
 <div class="missions d-flex">
@@ -9,8 +11,22 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_VISION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar' ">تسعى أكاديمية 6 أكتوبر من خلال قسم الخدمات السياحية والفندقية لأن تكون الرائدة فى اعداد الكوادر الفنية المتخصصة فى مجال الخدمات السياحية والفندقية، كما تسعى الى تميز خريجها لتكون أفضل الكوادر وأن تجتذب أعلي الكفاءات العلمية للتطوير الدائم المتلائم مع احتياجات سوق العمل السياحي والفندقي. </p>
-        <p *ngIf="translate.currentLang == 'en' ">Through the Department of Tourism and Hotels Services, October 6th Academy aspires to be a leader in preparing specialized technical professionals in the field of tourism and Hotels services. It aims to distinguish its graduates as top-tier professionals, attracting the highest scientific competencies to facilitate continuous development aligned with the needs of the tourism and hospitality job market.</p>
+        <p *ngIf="translate.currentLang == 'ar' ">تسعى أكاديمية 6 أكتوبر من خلال قسم الخدمات السياحية والفندقية لأن تكون
+          الرائدة فى اعداد الكوادر الفنية المتخصصة فى مجال الخدمات السياحية والفندقية، كما تسعى الى تميز خريجها لتكون
+          أفضل الكوادر وأن تجتذب أعلي الكفاءات العلمية للتطوير الدائم المتلائم مع احتياجات سوق العمل السياحي والفندقي.
+        </p>
+        <p *ngIf="translate.currentLang == 'en' ">Through the Department of Tourism and
+          Hotels Services, October 6th Academy aspires to be a leader in preparing specialized technical professionals
+          in the field of tourism and Hotels services. It aims to distinguish its graduates as top-tier professionals,
+          attracting the highest scientific competencies to facilitate continuous development aligned with the needs of
+          the tourism and hospitality job market.</p>
+
+        <p *ngIf="translate.currentLang == 'gr' ">Durch die Abteilung für Tourismus- und Hoteldienstleistungen strebt
+          die Akademie vom 6. Oktober eine führende Rolle bei der Ausbildung spezialisierter technischer Fachkräfte im
+          Bereich Tourismus- und Hoteldienstleistungen an. Ziel ist es, seine Absolventen als erstklassige Fachkräfte
+          auszuzeichnen und die höchsten wissenschaftlichen Kompetenzen anzuziehen, um eine kontinuierliche
+          Weiterentwicklung im Einklang mit den Anforderungen des Arbeitsmarktes im Tourismus- und Gastgewerbe zu
+          ermöglichen.</p>
       </div>
     </div>
     <div class="mission">
@@ -19,8 +35,23 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_MESSAGE" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar' ">تتبلور رسالة القسم في إعداد وتأهيل خريجين على مستوى عال من الكفاءة و الفاعلية  و تلبية احتياجات سوق العمل السياحى والفندقى محلياً وإقليميا ودولياً و تزويدِ الطلبةِ بالأسسِ العلميةِ وتأهيلهم عمليا للمنافسة فى سوق العمل محليا وإقليميا وتحقيق الريادة فى مجالات التعليم والتدريب والمساهمة فى خدمة المجتمع من خلال تقديم كوادر تستطيع النهوض بالمجال السياحي والفندقي.</p>
-        <p *ngIf="translate.currentLang == 'en' ">The department's mission is embodied in preparing and equipping graduates with a high level of competence and effectiveness, meeting the needs of the local, regional, and international tourism and Hotels job markets. We provide students with solid academic foundations and practical qualifications to compete effectively in the local and regional job markets, aiming to achieve leadership in education and training while contributing to community service. Through our graduates, we strive to uplift the tourism and hospitality industry.</p>
+        <p *ngIf="translate.currentLang == 'ar' ">تتبلور رسالة القسم في إعداد وتأهيل خريجين على مستوى عال من الكفاءة و
+          الفاعلية و تلبية احتياجات سوق العمل السياحى والفندقى محلياً وإقليميا ودولياً و تزويدِ الطلبةِ بالأسسِ العلميةِ
+          وتأهيلهم عمليا للمنافسة فى سوق العمل محليا وإقليميا وتحقيق الريادة فى مجالات التعليم والتدريب والمساهمة فى
+          خدمة المجتمع من خلال تقديم كوادر تستطيع النهوض بالمجال السياحي والفندقي.</p>
+        <p *ngIf="translate.currentLang == 'en' ">The department's mission is embodied
+          in preparing and equipping graduates with a high level of competence and effectiveness, meeting the needs of
+          the local, regional, and international tourism and Hotels job markets. We provide students with solid academic
+          foundations and practical qualifications to compete effectively in the local and regional job markets, aiming
+          to achieve leadership in education and training while contributing to community service. Through our
+          graduates, we strive to uplift the tourism and hospitality industry.</p>
+        <p *ngIf="translate.currentLang == 'gr' ">Die Mission der Abteilung besteht darin, Absolventen mit einem hohen
+          Maß an Kompetenz und Effektivität vorzubereiten und auszustatten, um den Anforderungen der lokalen, regionalen
+          und internationalen Arbeitsmärkte in den Bereichen Tourismus und Hotellerie gerecht zu werden. Wir vermitteln
+          Studierenden solide akademische Grundlagen und praktische Qualifikationen, um auf den lokalen und regionalen
+          Arbeitsmärkten erfolgreich bestehen zu können. Unser Ziel ist es, eine führende Rolle in der allgemeinen und
+          beruflichen Bildung zu übernehmen und gleichzeitig einen Beitrag zum Gemeinwohl zu leisten. Durch unsere
+          Absolventen streben wir danach, die Tourismus- und Gastgewerbebranche voranzutreiben.</p>
       </div>
     </div>
     <div class="mission">
@@ -51,12 +82,28 @@
         <p *ngIf="translate.currentLang == 'ar'">تخريج كوادر تقنية مؤهلة للقيام بأعمال السياحة والفندقة</p>
         <p *ngIf="translate.currentLang == 'ar'">الارتقاء بمتطلبات المؤسسات الفندقية والسياحية فى مصر</p>
         <p *ngIf="translate.currentLang == 'ar'"> إعداد كوادر على مستوي علمي وعملي عالي في مجالي السياحة والفنادق .</p>
-        <p *ngIf="translate.currentLang == 'ar'">تلبية احتياجات الفنادق الكبرى و القرى السياحية ويكون من الكوادر القادرة على اداء خدمة مميزة في المجالين السياحي والفندقي.</p>
+        <p *ngIf="translate.currentLang == 'ar'">تلبية احتياجات الفنادق الكبرى و القرى السياحية ويكون من الكوادر القادرة
+          على اداء خدمة مميزة في المجالين السياحي والفندقي.</p>
 
-        <p *ngIf="translate.currentLang == 'en' ">Graduating qualified technical professionals capable of working in the field of tourism and Hotels.</p>
-        <p *ngIf="translate.currentLang == 'en' ">Elevating the standards of hotels and tourism establishments in Egypt.</p>
-        <p *ngIf="translate.currentLang == 'en' ">Preparing individuals with a high level of academic and practical proficiency in the fields of tourism and hotels.</p>
-        <p *ngIf="translate.currentLang == 'en' ">Meeting the needs of major hotels and tourist resorts with personnel capable of providing exceptional service in both the tourism and hospitality sectors.</p>
+        <p *ngIf="translate.currentLang == 'en' ">Graduating qualified technical
+          professionals capable of working in the field of tourism and Hotels.</p>
+        <p *ngIf="translate.currentLang == 'en' ">Elevating the standards of hotels and
+          tourism establishments in Egypt.</p>
+        <p *ngIf="translate.currentLang == 'en' ">Preparing individuals with a high
+          level of academic and practical proficiency in the fields of tourism and hotels.</p>
+        <p *ngIf="translate.currentLang == 'en' ">Meeting the needs of major hotels and
+          tourist resorts with personnel capable of providing exceptional service in both the tourism and hospitality
+          sectors.</p>
+
+        <p *ngIf="translate.currentLang == 'gr' ">Absolvent qualifizierter technischer Fachkräfte, die in der Lage sind,
+          im Bereich Tourismus und Hotels zu arbeiten.</p>
+        <p *ngIf="translate.currentLang == 'gr' ">Anhebung der Standards von Hotels und Tourismuseinrichtungen in
+          Ägypten.</p>
+        <p *ngIf="translate.currentLang == 'gr' ">Vorbereitung von Personen mit einem hohen Maß an akademischen und
+          praktischen Kenntnissen in den Bereichen Tourismus und Hotellerie.</p>
+        <p *ngIf="translate.currentLang == 'gr' ">Erfüllung der Bedürfnisse großer Hotels und Touristenresorts mit
+          Personal, das in der Lage ist, sowohl im Tourismus- als auch im Gastgewerbesektor außergewöhnliche
+          Dienstleistungen zu erbringen.</p>
       </div>
     </div>
   </div>
@@ -69,8 +116,14 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_STAFF" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar' ">يضم القسم نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين والمهندسين الأكفاء وذوي خبرة عالية أكاديمياً وتدريبياً</p>
-        <p *ngIf="translate.currentLang == 'en' ">The department comprises a teaching staff, including professors, teaching assistant, and competent engineers, all of whom possess extensive academic and training experience</p>
+        <p *ngIf="translate.currentLang == 'ar' ">يضم القسم نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين
+          والمهندسين الأكفاء وذوي خبرة عالية أكاديمياً وتدريبياً</p>
+        <p *ngIf="translate.currentLang == 'en' ">The department comprises a teaching
+          staff, including professors, teaching assistant, and competent engineers, all of whom possess extensive
+          academic and training experience</p>
+        <p *ngIf="translate.currentLang == 'gr' ">Die Abteilung besteht aus einem Lehrpersonal, darunter Professoren,
+          Lehrassistenten und kompetenten Ingenieuren, die alle über umfangreiche akademische und Ausbildungserfahrung
+          verfügen.</p>
       </div>
     </div>
     <div class="staff">
@@ -79,8 +132,14 @@
       </div>
       <div class="text">
         <h6>{{ "GRADUATE_JOB_DESCRIPTION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar' ">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بمختلف اعمال الخدمات الفندقية من الضيافة والاستقبال والهوس كيبينج.وخدمات تجهيز المطبخ السياحى</p>
-        <p *ngIf="translate.currentLang == 'en' ">The department aims to equip graduates with the capability to perform various functions in the Hotels sector, including reception, guest services, and housekeeping, as well as catering services for the tourism industry.</p>
+        <p *ngIf="translate.currentLang == 'ar' ">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بمختلف اعمال الخدمات
+          الفندقية من الضيافة والاستقبال والهوس كيبينج.وخدمات تجهيز المطبخ السياحى</p>
+        <p *ngIf="translate.currentLang == 'en' ">The department aims to equip
+          graduates with the capability to perform various functions in the Hotels sector, including reception, guest
+          services, and housekeeping, as well as catering services for the tourism industry.</p>
+        <p *ngIf="translate.currentLang == 'gr' ">Ziel der Abteilung ist es, Absolventen mit der Fähigkeit auszustatten,
+          verschiedene Funktionen in der Hotelbranche wahrzunehmen, darunter Rezeption, Gästeservice und Housekeeping
+          sowie Catering-Dienstleistungen für die Tourismusbranche.</p>
       </div>
     </div>
     <div class="staff">
@@ -90,7 +149,10 @@
       <div class="text">
         <h6>{{ "ACADEMIC_SYSTEM" | translate }}</h6>
         <p *ngIf="translate.currentLang == 'ar'">عامان دراسيان 4 ترم.</p>
-        <p *ngIf="translate.currentLang == 'en'">The academic program spans two academic years, consisting of four semesters.</p>
+        <p *ngIf="translate.currentLang == 'en'">The academic program spans two
+          academic years, consisting of four semesters.</p>
+        <p *ngIf="translate.currentLang == 'gr'">Das akademische Programm erstreckt sich über zwei Studienjahre,
+          bestehend aus vier Semestern.</p>
       </div>
     </div>
   </div>

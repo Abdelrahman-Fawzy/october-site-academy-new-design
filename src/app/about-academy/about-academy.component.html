@@ -1,4 +1,5 @@
-<div class="header" [ngStyle]="{'background-image': translate.currentLang == 'ar' ? 'url(/assets/images/fsf.png)' : 'url(/assets/images/fsfEnglish.png)'}">
+<div class="header"
+  [ngStyle]="{'background-image': translate.currentLang == 'ar' ? 'url(/assets/images/fsf.png)' : 'url(/assets/images/fsfEnglish.png)'}">
   <div class="container">
     <h2 class="mainTitle">
       <div class="front-bubble"></div>
@@ -39,27 +40,51 @@
   <div class="content">
     <div class="tabcontent" id="vision">
       <div class="childTabs">
-        <button id="defaultChildOpen" class="ChildTabLinks" (click)="openChildTab($event, 'message')">{{ "OUR_MESSAGE" | translate}}</button>
+        <button id="defaultChildOpen" class="ChildTabLinks"
+          (click)="openChildTab($event, 'message')">{{ "OUR_MESSAGE" | translate}}</button>
         <button class="ChildTabLinks" (click)="openChildTab($event, 'vision2')">{{ "OUR_VISION" | translate}}</button>
         <button class="ChildTabLinks" (click)="openChildTab($event, 'target')">{{ "OUR_GOALS" | translate}}</button>
         <button class="ChildTabLinks" (click)="openChildTab($event, 'slogan')">{{ "OUR_SLOGAN" | translate}}</button>
-        <button class="ChildTabLinks" (click)="openChildTab($event, 'equation')">{{ "OUR_EQUATION" | translate}}</button>
-        <button class="ChildTabLinks" (click)="openChildTab($event, 'question')">{{ "OUR_QUESTION" | translate}}</button>
+        <button class="ChildTabLinks"
+          (click)="openChildTab($event, 'equation')">{{ "OUR_EQUATION" | translate}}</button>
+        <button class="ChildTabLinks"
+          (click)="openChildTab($event, 'question')">{{ "OUR_QUESTION" | translate}}</button>
       </div>
       <div class="childTabContents" id="message">
         <div class="flex-grid">
           <div class="col-lg-6">
             <div class="text">
-              <p *ngIf="translate.currentLang == 'ar'">تقديم خدمة تعليمية تدريبية مهنية متميزة ،تعتمد على الابداع في التعليم والإمتاع فى التدريب وصولاً الى الاتقان فى المخرج ، بغرض خدمة المجتمع وفق معايير الجودة المهنية ومن خلال التعاون والشراكة مع مؤسسات رسمية وأكاديمية  ، لتأهيل كوادر مهنية مميزة قادرة علي تحقيق المتطلبات القياسية المطلوبة بأسواق العمل محلياً واقليمياً ودولياً.</p>
-              <p *ngIf="translate.currentLang == 'en'">We aim to provide a comprehensive and distinguished educational service that relies on critical thinking and creativity in teaching, training, scientific research, and community service, in accordance with quality standards. We foster collaboration and partnerships with Egyptian and Arab universities, scientific institutes, and institutions. Additionally, we equip our graduates with the skills to excel in various fields, combining theory and practice. The Academy is committed to serving its students through both theoretical and applied teaching methods in each department.</p>
+              <p *ngIf="translate.currentLang == 'ar'">تقديم خدمة تعليمية تدريبية مهنية متميزة ،تعتمد على الابداع في
+                التعليم والإمتاع فى التدريب وصولاً الى الاتقان فى المخرج ، بغرض خدمة المجتمع وفق معايير الجودة المهنية
+                ومن خلال التعاون والشراكة مع مؤسسات رسمية وأكاديمية ، لتأهيل كوادر مهنية مميزة قادرة علي تحقيق المتطلبات
+                القياسية المطلوبة بأسواق العمل محلياً واقليمياً ودولياً.</p>
+              <p *ngIf="translate.currentLang == 'en'">
+                We aim to provide a comprehensive and distinguished educational service that relies on critical thinking
+                and creativity in teaching, training, scientific research, and community service, in accordance with
+                quality standards. We foster collaboration and partnerships with Egyptian and Arab universities,
+                scientific institutes, and institutions. Additionally, we equip our graduates with the skills to excel
+                in various fields, combining theory and practice. The Academy is committed to serving its students
+                through both theoretical and applied teaching methods in each department.</p>
+              <p *ngIf="translate.currentLang == 'gr'" style="margin-top: 6em;">
+                Unser Ziel ist es, einen umfassenden und herausragenden Bildungsdienst anzubieten, der im Einklang mit
+                Qualitätsstandards auf kritisches Denken und Kreativität in Lehre, Ausbildung, wissenschaftlicher
+                Forschung und gemeinnütziger Arbeit setzt. Wir fördern die Zusammenarbeit und Partnerschaften mit
+                ägyptischen und arabischen Universitäten, wissenschaftlichen Instituten und Institutionen. Darüber
+                hinaus vermitteln wir unseren Absolventen die Fähigkeiten, in verschiedenen Bereichen hervorragende
+                Leistungen zu erbringen, indem wir Theorie und Praxis kombinieren. Die Akademie ist bestrebt, ihre
+                Studierenden in jeder Abteilung sowohl durch theoretische als auch durch angewandte Lehrmethoden zu
+                unterstützen.
+              </p>
             </div>
           </div>
           <div class="col-lg-6 imgShape">
             <div class="img">
               <img class="shape" src="assets/images/shapes/about.png" alt="" *ngIf="translate.currentLang == 'ar'">
-              <img class="shape" src="assets/images/shapes/aboutEnglish.png" alt="" *ngIf="translate.currentLang == 'en'">
+              <img class="shape" src="assets/images/shapes/aboutEnglish.png" alt=""
+                *ngIf="translate.currentLang == 'en' || translate.currentLang == 'gr'">
               <img src="assets/images/message.png" alt="" class="contentImg" *ngIf="translate.currentLang == 'ar'">
-              <img src="assets/images/messageEnglish.png" alt="" class="contentImg" *ngIf="translate.currentLang == 'en'">
+              <img src="assets/images/messageEnglish.png" alt="" class="contentImg"
+                *ngIf="translate.currentLang == 'en' || translate.currentLang == 'gr'">
             </div>
           </div>
         </div>
@@ -68,16 +93,24 @@
         <div class="flex-grid">
           <div class="col-md-6">
             <div class="text">
-              <p *ngIf="translate.currentLang == 'ar'">إعداد كادر مهنى مميز يلبى إحتياجات سوق العمل المحلي والإقليمى والعالمي من خلال برامج مهنية تنافسية .</p>
-              <p *ngIf="translate.currentLang == 'en'">We aim to develop a distinguished professional workforce that meets the demands of the local, regional, and international job markets through competitive professional programs.</p>
+              <p *ngIf="translate.currentLang == 'ar'">إعداد كادر مهنى مميز يلبى إحتياجات سوق العمل المحلي والإقليمى
+                والعالمي من خلال برامج مهنية تنافسية .</p>
+              <p *ngIf="translate.currentLang == 'en'">We aim to develop a
+                distinguished professional workforce that meets the demands of the local, regional, and international
+                job markets through competitive professional programs.</p>
+              <p *ngIf="translate.currentLang == 'gr'">Unser Ziel ist es, durch wettbewerbsfähige Berufsprogramme
+                herausragende Fachkräfte zu entwickeln, die den Anforderungen der lokalen, regionalen und
+                internationalen Arbeitsmärkte gerecht werden.</p>
             </div>
           </div>
           <div class="col-md-6 imgShape">
             <div class="img">
               <img class="shape" src="assets/images/shapes/about.png" alt="" *ngIf="translate.currentLang == 'ar'">
-              <img class="shape" src="assets/images/shapes/aboutEnglish.png" alt="" *ngIf="translate.currentLang == 'en'">
+              <img class="shape" src="assets/images/shapes/aboutEnglish.png" alt=""
+                *ngIf="translate.currentLang == 'en' || translate.currentLang == 'gr'">
               <img src="assets/images/vision.png" alt="" class="contentImg" *ngIf="translate.currentLang == 'ar'">
-              <img src="assets/images/visionEnglish.png" alt="" class="contentImg" *ngIf="translate.currentLang == 'en'">
+              <img src="assets/images/visionEnglish.png" alt="" class="contentImg"
+                *ngIf="translate.currentLang == 'en' || translate.currentLang == 'gr'">
             </div>
           </div>
         </div>
@@ -87,29 +120,46 @@
           <div class="col-md-6">
             <div class="text">
               <ul *ngIf="translate.currentLang == 'ar'">
-                <li>تخريج مهنى  متخصص ممتلك للفنيات والمهارات العملية.</li>
+                <li>تخريج مهنى متخصص ممتلك للفنيات والمهارات العملية.</li>
                 <li>توفير محاضر متطور وقادر على اكساب المتدربين الأداءات المهنية المخططة.</li>
-                <li>توطيد شركة مجتمعية فاعلة بين مؤسسات  القطاعين الخاص والعام.</li>
+                <li>توطيد شركة مجتمعية فاعلة بين مؤسسات القطاعين الخاص والعام.</li>
                 <li>تصميم برامج مهنية متطورة مرتبطة باحتياجات السوق المحلى والأقليمى والدولى.</li>
                 <li>تطوير قدرة مؤسسية مجهزة بأحدث التجهيزات التعليمية .</li>
-                <li>ضمان إعتماد مؤسسى وبرامجى  محلى وعالمى فى التعليم والتدريب المهنى.</li>
+                <li>ضمان إعتماد مؤسسى وبرامجى محلى وعالمى فى التعليم والتدريب المهنى.</li>
               </ul>
               <ul *ngIf="translate.currentLang == 'en'" style="margin-top: 6em;">
                 <li>Graduating specialized professionals equipped with technical skills and practical expertise.</li>
-                <li>Providing advanced instructors capable of imparting planned professional competencies to trainees.</li>
+                <li>Providing advanced instructors capable of imparting planned professional competencies to trainees.
+                </li>
                 <li>Establishing an active community partnership between private and public sector institutions.</li>
-                <li>Designing sophisticated professional programs tailored to meet local, regional, and international market demands.</li>
+                <li>Designing sophisticated professional programs tailored to meet local, regional, and international
+                  market demands.</li>
                 <li>Developing institutional capacity equipped with state-of-the-art educational facilities.</li>
-                <li>Ensuring local and global institutional and program accreditation in vocational education and training.</li>
+                <li>Ensuring local and global institutional and program accreditation in vocational education and
+                  training.</li>
+              </ul>
+              <ul *ngIf="translate.currentLang == 'gr'" style="margin-top: 6em;">
+                <li>Abschluss von Fachkräften, die über technische Fähigkeiten und praktisches Fachwissen verfügen</li>
+                <li>Bereitstellung fortgeschrittener Ausbilder, die in der Lage sind, den Auszubildenden die geplanten
+                  beruflichen Kompetenzen zu vermitteln.</li>
+                <li>Aufbau einer aktiven Community-Partnerschaft zwischen privaten und öffentlichen Institutionen.</li>
+                <li>Entwicklung anspruchsvoller professioneller Programme, die auf lokale, regionale und internationale
+                  Marktanforderungen zugeschnitten sind.</li>
+                <li>Entwicklung institutioneller Kapazitäten, die mit hochmodernen Bildungseinrichtungen ausgestattet
+                  sind.</li>
+                <li>Sicherstellung der lokalen und globalen institutionellen und Programmakkreditierung in der
+                  beruflichen Aus- und Weiterbildung.</li>
               </ul>
             </div>
           </div>
           <div class="col-md-6 imgShape">
             <div class="img">
               <img class="shape" src="assets/images/shapes/about.png" alt="" *ngIf="translate.currentLang == 'ar'">
-              <img class="shape" src="assets/images/shapes/aboutEnglish.png" alt="" *ngIf="translate.currentLang == 'en'">
+              <img class="shape" src="assets/images/shapes/aboutEnglish.png" alt=""
+                *ngIf="translate.currentLang == 'en' || translate.currentLang == 'gr'">
               <img src="assets/images/target.png" alt="" class="contentImg" *ngIf="translate.currentLang == 'ar'">
-              <img src="assets/images/targetEnglish.png" alt="" class="contentImg" *ngIf="translate.currentLang == 'en'">
+              <img src="assets/images/targetEnglish.png" alt="" class="contentImg"
+                *ngIf="translate.currentLang == 'en' || translate.currentLang == 'gr'">
             </div>
           </div>
         </div>
@@ -120,6 +170,7 @@
             <div class="text">
               <p class="text-center greenP" *ngIf="translate.currentLang == 'ar'">امتلك مهنتك</p>
               <p class="text-center greenP" *ngIf="translate.currentLang == 'en'">Owned Your Profession</p>
+              <p class="text-center greenP" *ngIf="translate.currentLang == 'gr'">Besitzte Ihren Beruf</p>
               <ul *ngIf="translate.currentLang == 'ar'">
                 <li>التعـلـم فرصة رائعة للتميز</li>
                 <li>التدريب الكلمة السحرية للتقدم</li>
@@ -130,14 +181,21 @@
                 <li>Training: The magical word for progress.</li>
                 <li>Profession: The fastest path to prosperity.</li>
               </ul>
+              <ul *ngIf="translate.currentLang == 'gr'">
+                <li>Lernen: Eine wunderbare Gelegenheit für Spitzenleistungen.</li>
+                <li>Training: Das Zauberwort für Fortschritt.</li>
+                <li>Beruf: Der schnellste Weg zum Wohlstand.</li>
+              </ul>
             </div>
           </div>
           <div class="col-md-6 imgShape">
             <div class="img">
               <img class="shape" src="assets/images/shapes/about.png" alt="" *ngIf="translate.currentLang == 'ar'">
-              <img class="shape" src="assets/images/shapes/aboutEnglish.png" alt="" *ngIf="translate.currentLang == 'en'">
+              <img class="shape" src="assets/images/shapes/aboutEnglish.png" alt=""
+                *ngIf="translate.currentLang == 'en' || translate.currentLang == 'gr'">
               <img src="assets/images/target.png" alt="" class="contentImg" *ngIf="translate.currentLang == 'ar'">
-              <img src="assets/images/targetEnglish.png" alt="" class="contentImg" *ngIf="translate.currentLang == 'en'">
+              <img src="assets/images/targetEnglish.png" alt="" class="contentImg"
+                *ngIf="translate.currentLang == 'en' || translate.currentLang == 'gr'">
             </div>
           </div>
         </div>
@@ -146,17 +204,21 @@
         <div class="flex-grid">
           <div class="col-md-6">
             <div class="text">
-              <p *ngIf="translate.currentLang == 'ar'">تعليم + تدريب + مهنة  = </p>
-              <p *ngIf="translate.currentLang == 'en'">Education + training + Profession = </p>
+              <p *ngIf="translate.currentLang == 'ar'">تعليم + تدريب + مهنة = </p>
+              <p *ngIf="translate.currentLang == 'en'">Education + training +
+                Profession = </p>
+              <p *ngIf="translate.currentLang == 'gr'">Bildung + Ausbildung + Beruf = </p>
               <img src="assets/images/main_assets/logo.svg" alt="">
             </div>
           </div>
           <div class="col-md-6 imgShape">
             <div class="img">
               <img class="shape" src="assets/images/shapes/about.png" alt="" *ngIf="translate.currentLang == 'ar'">
-              <img class="shape" src="assets/images/shapes/aboutEnglish.png" alt="" *ngIf="translate.currentLang == 'en'">
+              <img class="shape" src="assets/images/shapes/aboutEnglish.png" alt=""
+                *ngIf="translate.currentLang == 'en' || translate.currentLang == 'gr'">
               <img src="assets/images/target.png" alt="" class="contentImg" *ngIf="translate.currentLang == 'ar'">
-              <img src="assets/images/targetEnglish.png" alt="" class="contentImg" *ngIf="translate.currentLang == 'en'">
+              <img src="assets/images/targetEnglish.png" alt="" class="contentImg"
+                *ngIf="translate.currentLang == 'en' || translate.currentLang == 'gr'">
             </div>
           </div>
         </div>
@@ -166,11 +228,20 @@
           <div class="col-md-6">
             <div class="text">
               <p class="text-center greenP" *ngIf="translate.currentLang == 'ar'">لماذا التدريب المهنى؟</p>
-              <p style="margin-top: 6em;" class="text-center greenP" *ngIf="translate.currentLang == 'en'">Why vocational training?</p>
-              <p *ngIf="translate.currentLang == 'ar'">لأن برامج التدريب المهنى هى مطلب عالمى الآن  للأسباب الأربع التالية:</p>
-              <p *ngIf="translate.currentLang == 'en'">Because vocational training programs are a global necessity now for the following four reasons:</p>
+              <p style="margin-top: 6em;" class="text-center greenP" *ngIf="translate.currentLang == 'en'">Why
+                vocational training?</p>
+              <p style="margin-top: 6em;" class="text-center greenP" *ngIf="translate.currentLang == 'gr'">Warum
+                Berufsausbildung?</p>
+
+              <p *ngIf="translate.currentLang == 'ar'">لأن برامج التدريب المهنى هى مطلب عالمى الآن للأسباب الأربع
+                التالية:</p>
+              <p *ngIf="translate.currentLang == 'en'">Because vocational training
+                programs are a global necessity now for the following four reasons:</p>
+              <p *ngIf="translate.currentLang == 'gr'">Weil Berufsbildungsprogramme aus den folgenden vier Gründen heute
+                eine globale Notwendigkeit sind:</p>
+
               <ul *ngIf="translate.currentLang == 'ar'">
-                <li>(عملى) يجمع بين الممارسة العملية(70%)  والتعليم النظري(30%)</li>
+                <li>(عملى) يجمع بين الممارسة العملية(70%) والتعليم النظري(30%)</li>
                 <li>(سريع) التأهيل المباشر لسوق العمل (3- 9شهور)</li>
                 <li>(متخصص) التركيز على التخصص المطلوب بدقة لسوق العمل</li>
                 <li>(أرخص) التكلفة الاقتصادية الأقل توجه عالمى اليوم</li>
@@ -181,14 +252,22 @@
                 <li>(Specialized) Focusing precisely on the required specialization for the job market</li>
                 <li>(cheaper) Economically lower cost, aligned with the current global trend</li>
               </ul>
+              <ul *ngIf="translate.currentLang == 'gr'">
+                <li>(Praktisch) Kombination praktischer Berufserfahrung (70 %) mit theoretischer Ausbildung (30 %)</li>
+                <li>(Schnell) Direktqualifizierung für den Arbeitsmarkt (3-9 Monate)</li>
+                <li>(Spezialisiert) Fokussierung genau auf die erforderliche Spezialisierung für den Arbeitsmarkt</li>
+                <li>(billiger) Wirtschaftlich niedrigere Kosten, abgestimmt auf den aktuellen globalen Trend.</li>
+              </ul>
             </div>
           </div>
           <div class="col-md-6 imgShape">
             <div class="img">
               <img class="shape" src="assets/images/shapes/about.png" alt="" *ngIf="translate.currentLang == 'ar'">
-              <img class="shape" src="assets/images/shapes/aboutEnglish.png" alt="" *ngIf="translate.currentLang == 'en'">
+              <img class="shape" src="assets/images/shapes/aboutEnglish.png" alt=""
+                *ngIf="translate.currentLang == 'en' || translate.currentLang == 'gr'">
               <img src="assets/images/target.png" alt="" class="contentImg" *ngIf="translate.currentLang == 'ar'">
-              <img src="assets/images/targetEnglish.png" alt="" class="contentImg" *ngIf="translate.currentLang == 'en'">
+              <img src="assets/images/targetEnglish.png" alt="" class="contentImg"
+                *ngIf="translate.currentLang == 'en' || translate.currentLang == 'gr'">
             </div>
           </div>
         </div>
@@ -214,7 +293,8 @@
                 <img src="assets/images/departments-icons/it.svg" alt="">
               </div>
               <div class="info">
-                <a routerLink="/departments/it-graphic-department">{{ "DEPARTMENTS_SUB_ITEMS.ITGRAPHIC" | translate}}</a>
+                <a
+                  routerLink="/departments/it-graphic-department">{{ "DEPARTMENTS_SUB_ITEMS.ITGRAPHIC" | translate}}</a>
                 <h6>{{ "DEPARTS" | translate}} : 32</h6>
               </div>
             </div>
@@ -269,7 +349,8 @@
                 <img src="assets/images/departments-icons/journalism.svg" alt="">
               </div>
               <div class="info">
-                <a routerLink="/departments/journalism-department">{{ "DEPARTMENTS_SUB_ITEMS.JOURNALISM" | translate}}</a>
+                <a
+                  routerLink="/departments/journalism-department">{{ "DEPARTMENTS_SUB_ITEMS.JOURNALISM" | translate}}</a>
                 <h6>{{ "DEPARTS" | translate}} : 32</h6>
               </div>
             </div>
@@ -297,8 +378,19 @@
                 <img src="assets/images/icons/requirments.svg" alt="">
               </div>
               <h5>{{"ADMISSION_REQUIREMENTS" | translate}}</h5>
-              <p *ngIf="translate.currentLang == 'ar' ">يقبل الطلاب من حملة الثانوية العامة والأزهرية و الدبلومات الفنية ( تجارة – زراعة – صناعي – سياحة فنادق ) ومايعادلها من خرجي هذا العام والاعوام السابقة ودون التقيد بالمجموع أو سنة التخرج ويوجد قسم خاص لراسبي الثانوية العامة.</p>
-              <p *ngIf="translate.currentLang == 'en' ">We accept students from General Secondary Education, Al-Azhar Secondary Education, and Technical Diplomas (Commerce - Agriculture - Industrial - Tourism & Hotels), as well as equivalent qualifications from the current and previous years, without restriction on the overall grade or year of graduation. There is also a special department for those who did not pass the General Secondary Education exam.</p>
+              <p *ngIf="translate.currentLang == 'ar' ">يقبل الطلاب من حملة الثانوية العامة والأزهرية و الدبلومات الفنية
+                ( تجارة – زراعة – صناعي – سياحة فنادق ) ومايعادلها من خرجي هذا العام والاعوام السابقة ودون التقيد
+                بالمجموع أو سنة التخرج ويوجد قسم خاص لراسبي الثانوية العامة.</p>
+              <p *ngIf="translate.currentLang == 'en' ">We accept students from General
+                Secondary Education, Al-Azhar Secondary Education, and Technical Diplomas (Commerce - Agriculture -
+                Industrial - Tourism & Hotels), as well as equivalent qualifications from the current and previous
+                years, without restriction on the overall grade or year of graduation. There is also a special
+                department for those who did not pass the General Secondary Education exam.</p>
+              <p *ngIf="translate.currentLang == 'gr' ">Wir akzeptieren Schüler der allgemeinen Sekundarstufe, der
+                Al-Azhar-Sekundarstufe und technischer Diplome (Handel, Landwirtschaft, Industrie, Tourismus und Hotels)
+                sowie gleichwertige Qualifikationen aus dem aktuellen und früheren Jahr, ohne Einschränkung der
+                Gesamtnote oder des Jahrgangs Abschluss. Es gibt auch eine spezielle Abteilung für diejenigen, die die
+                Prüfung zur allgemeinen Sekundarstufe nicht bestanden haben.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
@@ -323,7 +415,10 @@
               </div>
               <h5>{{"STUDY_DURATION" | translate}}</h5>
               <p *ngIf="translate.currentLang == 'ar' ">مدة الدراسة عامان دراسيان - 4 ترم</p>
-              <p *ngIf="translate.currentLang == 'en' ">The academic program spans two academic years, consisting of four semesters.</p>
+              <p *ngIf="translate.currentLang == 'en' ">The academic program spans two
+                academic years, consisting of four semesters.</p>
+              <p *ngIf="translate.currentLang == 'gr' ">Das akademische Programm erstreckt sich über zwei Studienjahre,
+                bestehend aus vier Semestern.</p>
             </div>
           </div>
         </div>
@@ -338,7 +433,8 @@
             <p>{{ "OBTAIN_CERTIFICATE" | translate }}</p>
             <div class="actions">
               <button class="primary" (click)="register()">{{"REGISTER_NOW" | translate}}</button>
-              <button class="primary-outline" [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">{{"KNOWING_DEPARTS" | translate}}</button>
+              <button class="primary-outline" [routerLink]="'about-academy'"
+                [queryParams]="{item: 'departments'}">{{"KNOWING_DEPARTS" | translate}}</button>
             </div>
           </div>
         </div>
@@ -346,8 +442,20 @@
     </div>
     <div class="tabcontent" id="partners">
       <div class="container">
-        <p *ngIf="translate.currentLang == 'ar' ">على مدى السنوات السابقة استطاعت أكاديمية 6 أكتوبر من تكوين علاقات ناجحة تتسم بالاستقرار والاستمرارية مع مجموعة من أكبر الجامعات والمعاهد المصرية بالإضافة إلى مجموعة من المستشفيات والمصانع والشركات . ونجحت في استثمار تلك الثقة المتبادلة في تطوير اعمالها وتصبح أكاديمية 6 أكتوبر الأولى في التعليم الفني في مصر</p>
-        <p *ngIf="translate.currentLang == 'en' ">Throughout the previous years, 6 October Academy has managed to establish successful and enduring relationships with a group of major Egyptian universities, institutes, hospitals, factories, and companies. Through these partnerships, the academy has effectively utilized mutual trust to enhance its endeavors, positioning itself as the leading technical education institution in Egypt.</p>
+        <p *ngIf="translate.currentLang == 'ar'">على مدى السنوات السابقة استطاعت أكاديمية 6 أكتوبر من تكوين علاقات
+          ناجحة تتسم بالاستقرار والاستمرارية مع مجموعة من أكبر الجامعات والمعاهد المصرية بالإضافة إلى مجموعة من
+          المستشفيات والمصانع والشركات . ونجحت في استثمار تلك الثقة المتبادلة في تطوير اعمالها وتصبح أكاديمية 6 أكتوبر
+          الأولى في التعليم الفني في مصر</p>
+        <p *ngIf="translate.currentLang == 'en'">Throughout the previous years, 6
+          October Academy has managed to establish successful and enduring relationships with a group of major Egyptian
+          universities, institutes, hospitals, factories, and companies. Through these partnerships, the academy has
+          effectively utilized mutual trust to enhance its endeavors, positioning itself as the leading technical
+          education institution in Egypt.</p>
+        <p *ngIf="translate.currentLang == 'gr'">In den vergangenen Jahren ist es der 6 October Academy gelungen,
+          erfolgreiche und dauerhafte Beziehungen zu einer Gruppe großer ägyptischer Universitäten, Institute,
+          Krankenhäuser, Fabriken und Unternehmen aufzubauen. Durch diese Partnerschaften hat die Akademie das
+          gegenseitige Vertrauen effektiv genutzt, um ihre Bemühungen zu verbessern und sich als führende technische
+          Bildungseinrichtung in Ägypten zu positionieren.</p>
         <div class="partners">
           <div class="partner">
             <img src="assets/images/partners/helwan.png" alt="">
@@ -383,8 +491,23 @@
       <div class="container">
         <div class="row notRegister">
           <div class="col-lg-6">
-            <p class="conditions" *ngIf="translate.currentLang == 'ar' ">تعلن أكاديمية 6 أكتوبر بفرع ( الهرم - شبرا- طنطا ) عن حاجتها لأعضاء هيئة تدريس بنظام الدوام الجزئى بأقسامها المختلفة : قسم الخدمات الصحية - قسم الخدمات البترولية - قسم المساحة و الخرائط - قسم ادارة الأعمال - قسم الصحافة و الإعلام - قسم تكنولوجيا المعلومات - قسم السياحة و الفنادق وذلك طبقًاً للشروط الآتية</p>
-            <p class="conditions" *ngIf="translate.currentLang == 'en' ">6 October Academy, with branches in (Haram - Shubra - Tanta), is pleased to announce its need for part-time teaching staff in various departments: Health Services Department, Petroleum Services Department, Surveying and Mapping Department, Business Management Department, Journalism and Media Department, Information Technology Department, and Tourism and Hotel Department. Interested candidates should meet the following criteria:</p>
+            <p class="conditions" *ngIf="translate.currentLang == 'ar' ">تعلن أكاديمية 6 أكتوبر بفرع ( الهرم - شبرا-
+              طنطا ) عن حاجتها لأعضاء هيئة تدريس بنظام الدوام الجزئى بأقسامها المختلفة : قسم الخدمات الصحية - قسم
+              الخدمات البترولية - قسم المساحة و الخرائط - قسم ادارة الأعمال - قسم الصحافة و الإعلام - قسم تكنولوجيا
+              المعلومات - قسم السياحة و الفنادق وذلك طبقًاً للشروط الآتية</p>
+            <p class="conditions" *ngIf="translate.currentLang == 'en' ">6 October
+              Academy, with branches in (Haram - Shubra - Tanta), is pleased to announce its need for part-time teaching
+              staff in various departments: Health Services Department, Petroleum Services Department, Surveying and
+              Mapping Department, Business Management Department, Journalism and Media Department, Information
+              Technology Department, and Tourism and Hotel Department. Interested candidates should meet the following
+              criteria:</p>
+            <p class="conditions" *ngIf="translate.currentLang == 'gr' ">Die 6. Oktober-Akademie mit Zweigstellen in
+              (Haram – Shubra – Tanta) freut sich, ihren Bedarf an Teilzeit-Lehrpersonal in verschiedenen Abteilungen
+              bekannt zu geben: Abteilung für Gesundheitsdienste, Abteilung für Erdöldienste, Abteilung für Vermessung
+              und Kartierung, Abteilung für Unternehmensführung, Journalismus und Medienabteilung, Abteilung
+              Informationstechnologie und Tourismus- und Hotelabteilung. Interessierte Kandidaten sollten die folgenden
+              Kriterien erfüllen:</p>
+
             <ul class="list-unstyled" *ngIf="translate.currentLang == 'ar' ">
               <li>مؤهل علمى مناسب للتخصص</li>
               <li>خبرة عملية و أكاديمية لا تقل عن ثلاث سنوات</li>
@@ -394,14 +517,25 @@
             <ul class="list-unstyled" *ngIf="translate.currentLang == 'en' ">
               <li>Appropriate academic qualification for the specialization.</li>
               <li>Practical and academic experience of no less than three years.</li>
-              <li>High proficiency and ability in delivering lectures and utilizing programs and equipment relevant to their specialization.</li>
+              <li>High proficiency and ability in delivering lectures and utilizing programs and equipment relevant to
+                their specialization.</li>
               <li>Proficiency in using computer software (WORD–EXCEL–PowerPoint).</li>
+            </ul>
+            <ul class="list-unstyled" *ngIf="translate.currentLang == 'gr' ">
+              <li>Entsprechende akademische Qualifikation für die Spezialisierung.</li>
+              <li>Praktische und akademische Erfahrung von mindestens drei Jahren.</li>
+              <li>Hohe Kompetenz und Fähigkeit, Vorträge zu halten und Programme und Geräte zu nutzen, die für ihre
+                Spezialisierung relevant sind.</li>
+              <li>Kenntnisse im Umgang mit Computersoftware (WORD–EXCEL–PowerPoint).</li>
             </ul>
           </div>
           <div class="col-lg-6">
             <div class="registeration">
               <h3 *ngIf="translate.currentLang == 'ar' ">قدم الأن وأصبح جزء من أكاديمية 6 أكتوبر</h3>
-              <h3 *ngIf="translate.currentLang == 'en' ">Apply Now and Become Part of 6 October Academy.</h3>
+              <h3 *ngIf="translate.currentLang == 'en' ">Apply Now and Become Part of 6
+                October Academy.</h3>
+              <h3 *ngIf="translate.currentLang == 'gr' ">Bewerben Sie sich jetzt und werden Sie Teil der 6.
+                Oktober-Akademie.</h3>
               <form>
                 <div class="row">
                   <div class="col-md-12">
@@ -429,7 +563,8 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <label for="experience">{{ "EXPERIENCE_YEARS" | translate }}</label>
-                      <input type="number" class="form-control" id="experience" placeholder="{{'TYPE_EXPERIENCE' | translate}}">
+                      <input type="number" class="form-control" id="experience"
+                        placeholder="{{'TYPE_EXPERIENCE' | translate}}">
                     </div>
                   </div>
                   <div class="col-md-12">
@@ -459,57 +594,75 @@
     <div class="tabcontent" id="conversations">
       <div class="container">
         <accordion [isAnimated]="true">
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية انى اكمل بعد سنتين ؟' : 'Is it possible to continue for an additional two years?'" [isOpen]="isFirstOpen">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية انى اكمل بعد سنتين ؟' : 'Is it possible to continue for an additional two years?'"
+            [isOpen]="isFirstOpen">
             <p>{{ "POSSABILITY_OF_CONTINUING" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'هل الشهادة معتمدة ولا لا ؟ هي اعتماد الشهادة منين ؟' : 'Is the certificate accredited or not? Where is the certificate accredited from?'">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هل الشهادة معتمدة ولا لا ؟ هي اعتماد الشهادة منين ؟' : 'Is the certificate accredited or not? Where is the certificate accredited from?'">
             <p>{{ "CERTIFIED_CERTIFICATION" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'هل الشهادة موثقة خارجيا؟ هي الشهادة معتمدة من الخارجية؟' : 'Is the certificate internationally authenticated? Is the certificate accredited by the Ministry of Foreign Affairs?'">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هل الشهادة موثقة خارجيا؟ هي الشهادة معتمدة من الخارجية؟' : 'Is the certificate internationally authenticated? Is the certificate accredited by the Ministry of Foreign Affairs?'">
             <p>{{ "ACCREDIATED_CERTIFICATION" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية للتوظيف ؟ الأكاديمية بتوظفني بعد ما اتخرج ؟' : 'Is there a possibility for employment? Will the academy provide me with job opportunities after graduation?'">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية للتوظيف ؟ الأكاديمية بتوظفني بعد ما اتخرج ؟' : 'Is there a possibility for employment? Will the academy provide me with job opportunities after graduation?'">
             <p>{{ "POSSABILITY_OF_EMPLOYING" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'هل لديكم فروع اخرى ؟ (هي دي اول مرة تفتحوا )' : 'Do you have any other branches? (Is this your first time opening?)'">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هل لديكم فروع اخرى ؟ (هي دي اول مرة تفتحوا )' : 'Do you have any other branches? (Is this your first time opening?)'">
             <p>{{ "HAVING_OTHER_BRANCHES" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar'
+          <accordion-group
+            [heading]="translate.currentLang == 'ar'
             ? 'هل في امكانية دمج الدراسة بالاكاديمية واي مكان اخر ؟ انا بدرس في كلية او مكان تاني ممكن ادرس عندكم انا مجند او انا هدخل الجيش ينفع اقدم في الاكاديمية'
             : 'Is it possible to combine my studies at your academy with another place? I am currently studying at another college or institution. Can I study at your academy as well? I am a conscript or will be entering the military service. Is it possible for me to apply to the academy?' ">
             <p>{{ "COMBINE_STUDIES" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'هل فى سكن للمغتربين ؟ هل الاكاديمية بتوفر سكن ؟' : 'Is there accommodation available for non-resident students? Does the academy provide accommodation?' ">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هل فى سكن للمغتربين ؟ هل الاكاديمية بتوفر سكن ؟' : 'Is there accommodation available for non-resident students? Does the academy provide accommodation?' ">
             <p>{{ "POSSABILITY_OF_HOUSING" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'الدراسة لمدة قد إيه أو كام سنة ؟' : 'What is the duration of the study? Or how many years?' ">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'الدراسة لمدة قد إيه أو كام سنة ؟' : 'What is the duration of the study? Or how many years?' ">
             <p>{{ "HOW_LONG_OF_STYUDYING" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'ماهي اماكن التدريب العملي ؟' : 'What are the places of practical training?' ">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'ماهي اماكن التدريب العملي ؟' : 'What are the places of practical training?' ">
             <p>{{ "PRACTICAL_TRAINING_PLACES" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'هل يمكن كتابة طالب في الرقم القومي ؟' : 'Is it possible to write student in the national ID?' ">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هل يمكن كتابة طالب في الرقم القومي ؟' : 'Is it possible to write student in the national ID?' ">
             <p>{{ "STUDENT_NATIONAL_NUMBER" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم سياحة؟' : 'What are the career options after graduating from the Tourism Department?' ">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم سياحة؟' : 'What are the career options after graduating from the Tourism Department?' ">
             <p>{{ "GRADUATE_FROM_TOURISM" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم بترول ؟' : 'What are the career options after graduating from the Petroleum Department?' ">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم بترول ؟' : 'What are the career options after graduating from the Petroleum Department?' ">
             <p>{{ "GRADUATE_FROM_PETROLIUM" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم تكنولوجيا ؟' : 'What are the career options after graduating from the Technology Department?' ">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم تكنولوجيا ؟' : 'What are the career options after graduating from the Technology Department?' ">
             <p>{{ "GRADUATE_FROM_IT" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم ادارة اعمال ؟' : 'What are the career options after graduating from the Business Administration Department?' ">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم ادارة اعمال ؟' : 'What are the career options after graduating from the Business Administration Department?' ">
             <p>{{ "GRADUATE_FROM_BUSSINESS" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم مساحة ؟' : 'What are the career options after graduating from the Surveying Department?' ">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم مساحة ؟' : 'What are the career options after graduating from the Surveying Department?' ">
             <p>{{ "GRADUATE_FROM_SURVEYING" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم خدمات طبية ؟' : 'What career options are available after graduating from the Medical Services Department?' ">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم خدمات طبية ؟' : 'What career options are available after graduating from the Medical Services Department?' ">
             <p>{{ "GRADUATE_FROM_MEDICAL" | translate }}</p>
           </accordion-group>
-          <accordion-group [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم صحافة واعلام؟' : 'What career options are available after graduating from the Journalism and Media Department?' ">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم صحافة واعلام؟' : 'What career options are available after graduating from the Journalism and Media Department?' ">
             <p>{{ "GRADUATE_FROM_MEDIA" | translate }}</p>
           </accordion-group>
         </accordion>

@@ -106,7 +106,7 @@ button#button-animated {
 ul#dropdown-animated {
   min-width: auto;
   li {
-    a { cursor: pointer; }
+    a { cursor: pointer; img {width: 16px;} }
   }
 }
 

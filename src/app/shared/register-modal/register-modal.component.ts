@@ -43,6 +43,7 @@ export class RegisterModalComponent implements OnInit {
   conutryCode = 20
   countryIndex;
   countryCode;
+  formSubmitted = false
 
   constructor(
     private modalService: BsModalService,
@@ -61,7 +62,7 @@ export class RegisterModalComponent implements OnInit {
       section_id: new FormControl(''),
       branch_id: new FormControl(''),
       method_of_acquaintance: new FormControl('', Validators.required),
-      phone_number: new FormControl('', Validators.required),
+      phone_number: new FormControl('', [Validators.required]),
     })
   }
 
@@ -75,6 +76,7 @@ export class RegisterModalComponent implements OnInit {
     this.getAcquaintances()
 
     this.reset();
+
   }
 
   closeModal() {
@@ -108,6 +110,8 @@ export class RegisterModalComponent implements OnInit {
 
   getQualifications() {
     this.getItemsService.getQualifications().subscribe(qualifications => {
+      console.log(qualifications);
+
       this.qualifications = qualifications
     })
   }
@@ -167,7 +171,15 @@ export class RegisterModalComponent implements OnInit {
 
   }
 
+  onlyNumbers(event) {
+    let regEx = /^[0-9]+$/
+    if (!regEx.test(event.key)) event.preventDefault()
+  }
+
   RegisterWithUs() {
+
+    this.formSubmitted = true
+
     if (this.registerData.ticket_phone_number.indexOf(this.countryCode) == -1) {
       this.registerData.ticket_phone_number = this.countryCode + this.registerData.ticket_phone_number
     }
@@ -176,7 +188,7 @@ export class RegisterModalComponent implements OnInit {
       this.isSubmited = true;
     }, error => {
       error.error.errors.forEach(errorValue => {
-        this.toastr.error(errorValue.value)
+        // this.toastr.error(errorValue.value)
         this.isSubmited = false;
       })
     })

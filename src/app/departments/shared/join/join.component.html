@@ -1,6 +1,9 @@
 <div class="text-center my-5">
-  <p *ngIf="translate.currentLang == 'ar'">للتسجيل  في القسم قم بملء استمارة التقديم عبر الإنترنت</p>
-  <p *ngIf="translate.currentLang == 'en'">To enroll in the department, please complete the online application form.</p>
+  <p *ngIf="translate.currentLang == 'ar'">للتسجيل في القسم قم بملء استمارة التقديم عبر الإنترنت</p>
+  <p *ngIf="translate.currentLang == 'en'">To enroll in the department, please complete
+    the online application form.</p>
+  <p *ngIf="translate.currentLang == 'gr'">Um sich in der Abteilung einzuschreiben, füllen Sie bitte das
+    Online-Bewerbungsformular aus.</p>
   <button class="primary" (click)="register()">{{"REGISTER_NOW" | translate}}</button>
 </div>
 <div class="containerOfJoin">
@@ -13,7 +16,8 @@
       <p>{{ "OBTAIN_CERTIFICATE" | translate }}</p>
       <div class="actions">
         <button class="primary" (click)="register()">{{ "REGISTER_NOW" | translate }}</button>
-        <button class="primary-outline" [routerLink]="'../../about-academy'" [queryParams]="{item: 'departments'}">{{ "KNOWING_DEPARTS" | translate }}</button>
+        <button class="primary-outline" [routerLink]="'../../about-academy'"
+          [queryParams]="{item: 'departments'}">{{ "KNOWING_DEPARTS" | translate }}</button>
       </div>
     </div>
   </div>

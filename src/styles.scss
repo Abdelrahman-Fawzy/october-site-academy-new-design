@@ -2,7 +2,8 @@
 @import "abstracts/mixins", "abstracts/variables";
 
 
-html[lang="en"] {
+html[lang="en"],
+html[lang="gr"] {
   direction: ltr;
   body {
     font-family: 'Tajawal', sans-serif;
@@ -251,7 +252,7 @@ ul.list-unstyled { padding: 0 }
       ul.navbar-nav {
         li {
           a {
-            font-size: $fontSize + 1;
+            font-size: $fontSize;
           }
         }
       }

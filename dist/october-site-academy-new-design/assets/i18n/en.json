@@ -34,6 +34,7 @@
   "REGISTER": "Register Now",
   "AR": "Arabic",
   "EN": "ENGLISH",
+  "GR": "Germany",
 
   "WELCOME": "Welcome to 6 October Academy",
   "FIRST_TECHNICIAN": "the pioneer in technical training in Egypt.",
@@ -124,6 +125,7 @@
   "TYPE_MESSAGE": "Enter your message",
   "NAME_REQUIRED": "Name Is Required",
   "QUALIFICATION_REQUIRED": "Qualification Is Required",
+  "COUNTRY_REQUIRED": "Country is Required ",
   "GOVERNORATE_REQUIRED": "Governorate Is Required",
   "ACQUAINTENCE_REQUIRED": "how did you hear about us? Is Required",
   "PHONE_REQUIRED": "Mobile Number Is Required",

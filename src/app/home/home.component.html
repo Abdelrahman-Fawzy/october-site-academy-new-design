@@ -117,7 +117,7 @@
 </div>
 <div class="academy_numbers">
   <div class="container">
-    <h4 data-aos="fade-left">{{"ACADEMY_NUMBERS" | translate}}</h4>
+    <h4 data-aos="fade-up">{{"ACADEMY_NUMBERS" | translate}}</h4>
     <!-- <p data-aos="fade-right" class="directP">{{"FACTS" | translate}}</p> -->
     <div class="row" data-aos="fade-up">
       <div class="col-lg-3 col-sm-6">
@@ -178,7 +178,7 @@
   </div>
 </div>
 <div class="mediaGallery">
-  <h3 data-aos="fade-left">{{"PICTURES_FROM_ACADEMY" | translate}}</h3>
+  <h3 data-aos="fade-up">{{"PICTURES_FROM_ACADEMY" | translate}}</h3>
   <div class="points d-none d-md-block">
     <img src="assets/images/shapes/points.png" alt="points">
   </div>
@@ -266,24 +266,24 @@
   </ngx-slick-carousel>
 </div>
 <div class="faq">
-  <h3 data-aos="fade-left">{{"ABOUT_SUB_ITEMS.FAQ" | translate}}</h3>
+  <h3 data-aos="fade-up">{{"ABOUT_SUB_ITEMS.FAQ" | translate}}</h3>
   <div class="container">
     <accordion [isAnimated]="true">
       <accordion-group data-aos="fade-up"
-        [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية انى اكمل بعد سنتين ؟' : 'Is it possible to continue for an additional two years?'"
+        [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية انى اكمل بعد سنتين ؟' : translate.currentLang == 'gr' ? 'Ist eine Fortsetzung für weitere zwei Jahre möglich?' : 'Is it possible to continue for an additional two years?'"
         [isOpen]="isFirstOpen">
         <p>{{ "POSSABILITY_OF_CONTINUING" | translate }}</p>
       </accordion-group>
       <accordion-group data-aos="fade-up"
-        [heading]="translate.currentLang == 'ar' ? 'هل الشهادة معتمدة ولا لا ؟ هي اعتماد الشهادة منين ؟' : 'Is the certificate accredited or not? Where is the certificate accredited from?'">
+        [heading]="translate.currentLang == 'ar' ? 'هل الشهادة معتمدة ولا لا ؟ هي اعتماد الشهادة منين ؟' : translate.currentLang == 'gr' ? 'Ist das Zertifikat akkreditiert oder nicht? Woher wird das Zertifikat akkreditiert?' : 'Is the certificate accredited or not? Where is the certificate accredited from?'">
         <p>{{ "CERTIFIED_CERTIFICATION" | translate }}</p>
       </accordion-group>
       <accordion-group data-aos="fade-up"
-        [heading]="translate.currentLang == 'ar' ? 'هل الشهادة موثقة خارجيا؟ هي الشهادة معتمدة من الخارجية؟' : 'Is the certificate internationally authenticated? Is the certificate accredited by the Ministry of Foreign Affairs?'">
+        [heading]="translate.currentLang == 'ar' ? 'هل الشهادة موثقة خارجيا؟ هي الشهادة معتمدة من الخارجية؟' : translate.currentLang == 'gr' ? 'Ist das Zertifikat international beglaubigt? Ist das Zertifikat vom Außenministerium akkreditiert?' : 'Is the certificate internationally authenticated? Is the certificate accredited by the Ministry of Foreign Affairs?'">
         <p>{{ "ACCREDIATED_CERTIFICATION" | translate }}</p>
       </accordion-group>
       <accordion-group data-aos="fade-up"
-        [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية للتوظيف ؟ الأكاديمية بتوظفني بعد ما اتخرج ؟' : 'Is there a possibility for employment? Will the academy provide me with job opportunities after graduation?'">
+        [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية للتوظيف ؟ الأكاديمية بتوظفني بعد ما اتخرج ؟' : translate.currentLang == 'gr' ? 'Besteht die Möglichkeit einer Anstellung? Bietet mir die Akademie nach meinem Abschluss Berufsmöglichkeiten?' : 'Is there a possibility for employment? Will the academy provide me with job opportunities after graduation?'">
         <p>{{ "POSSABILITY_OF_EMPLOYING" | translate }}</p>
       </accordion-group>
     </accordion>

@@ -10,7 +10,7 @@ export interface Data {
 }
 
 export interface List {
-  country_id: number;
-  country_name: string;
-  country_phone_code: number;
+  id: number;
+  name: string;
+  phone_code: number;
 }

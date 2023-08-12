@@ -25,30 +25,30 @@ export class GetItemsService {
   constructor(private http: HttpClient) { }
 
   getGraduationYears(): Observable<GraduationYears> {
-    return this.http.post<GraduationYears>(this.baseUrl + 'erp/registers/get_graduationYear', {}, httpOptions)
+    return this.http.post<GraduationYears>(this.baseUrl + 'erp/institutionsManagement/get_graduationYear', {}, httpOptions)
   }
 
   getQualifications(): Observable<Qualifications> {
-    return this.http.post<Qualifications>(this.baseUrl + 'erp/registers/get_qualifications', {}, httpOptions)
+    return this.http.post<Qualifications>(this.baseUrl + 'erp/institutionsManagement/get_qualifications', {}, httpOptions)
   }
 
   getCountries(): Observable<Countries> {
-    return this.http.post<Countries>(this.baseUrl + 'erp/countries/get_countries', {}, httpOptions)
+    return this.http.post<Countries>(this.baseUrl + 'erp/institutionsManagement/get_countries', {}, httpOptions)
   }
 
   getGovernorates(): Observable<Governorates> {
-    return this.http.post<Governorates>(this.baseUrl + 'erp/registers/get_governorate', {}, httpOptions)
+    return this.http.post<Governorates>(this.baseUrl + 'erp/institutionsManagement/get_governorates', {}, httpOptions)
   }
 
   getSections(): Observable<Sections> {
-    return this.http.post<Sections>(this.baseUrl + 'erp/registers/get_sections', {}, httpOptions)
+    return this.http.post<Sections>(this.baseUrl + 'erp/institutionsManagement/get_sections', {}, httpOptions)
   }
 
   getBranches(): Observable<Branches> {
-    return this.http.post<Branches>(this.baseUrl + 'erp/registers/get_branches', {}, httpOptions)
+    return this.http.post<Branches>(this.baseUrl + 'erp/institutionsManagement/get_branches', {}, httpOptions)
   }
 
   getAcquaintances(): Observable<Acquaintance> {
-    return this.http.post<Acquaintance>(this.baseUrl + 'erp/registers/get_acquaintance', {}, httpOptions)
+    return this.http.post<Acquaintance>(this.baseUrl + 'erp/institutionsManagement/get_acquaintances', {}, httpOptions)
   }
 }

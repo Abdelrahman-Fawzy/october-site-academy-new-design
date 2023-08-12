@@ -10,6 +10,6 @@ export interface Data {
 }
 
 export interface List {
-  qualification_id: number
-  acquaintance_name: string
+  id: number
+  name: string
 }

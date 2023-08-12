@@ -10,6 +10,6 @@ export interface Data {
 }
 
 export interface List {
-  section_id: number
-  section_name: string
+  id: number
+  name: string
 }

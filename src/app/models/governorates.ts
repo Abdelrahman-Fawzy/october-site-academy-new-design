@@ -10,6 +10,6 @@ export interface Data {
 }
 
 export interface List {
-  governorate_id: number
-  governorate_name: string
+  id: number
+  name: string
 }

@@ -159,14 +159,14 @@ export class RegisterModalComponent implements OnInit {
   getCountryCode(code?: any) {
     if (this.studentNationality == 'egyptian') {
       this.countryIndex = this.countries.data.list.findIndex(object => {
-        return object.country_id == code
+        return object.id == code
       })
-      this.countryCode = this.countries.data.list[this.countryIndex].country_phone_code
+      this.countryCode = this.countries.data.list[this.countryIndex].phone_code
     } else {
       this.countryIndex = this.countries.data.list.findIndex(object => {
-        return object.country_id == Number(this.registerData.country_id)
+        return object.id == Number(this.registerData.country_id)
       })
-      this.countryCode = this.countries.data.list[this.countryIndex].country_phone_code
+      this.countryCode = this.countries.data.list[this.countryIndex].phone_code
     }
 
   }
@@ -188,7 +188,7 @@ export class RegisterModalComponent implements OnInit {
       this.isSubmited = true;
     }, error => {
       error.error.errors.forEach(errorValue => {
-        // this.toastr.error(errorValue.value)
+        this.toastr.error(errorValue.value)
         this.isSubmited = false;
       })
     })

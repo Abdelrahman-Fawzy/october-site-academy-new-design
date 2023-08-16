@@ -187,8 +187,9 @@ export class RegisterModalComponent implements OnInit {
     this.registerService.Register(this.registerData).subscribe(response => {
       this.isSubmited = true;
     }, error => {
-      error.error.errors.forEach(errorValue => {
-        this.toastr.error(errorValue.value)
+      // console.log(error);
+      error.error?.errors.forEach(errorValue => {
+        // this.toastr.error(errorValue.value)
         this.isSubmited = false;
       })
     })

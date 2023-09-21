@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { RegisterModalComponent } from '../shared/register-modal/register-modal.component';
@@ -17,6 +17,9 @@ export class HomeComponent implements OnInit {
   slideIndex = 1;
   GallerySlides = document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>
   demos = document.getElementsByClassName("demo");
+  // experienceYearsStop
+  // academyDepartsStop
+  // staffNumberStop
 
   Departments = [
     {
@@ -54,9 +57,81 @@ export class HomeComponent implements OnInit {
       DepartName: this.translate.currentLang == 'ar' ? 'مساحة وخرائط' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Survey And Maps',
       DepartLink: '/departments/maps-department'
     },
+    {
+      DepartImg: 'assets/images/home-welcoming/construction.png',
+      DepartName: this.translate.currentLang == 'ar' ? 'التشييد والبناء' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Construction',
+      DepartLink: '/departments/construction-and-buildings-department'
+    },
+    {
+      DepartImg: 'assets/images/home-welcoming/electronics.png',
+      DepartName: this.translate.currentLang == 'ar' ? 'صيانة الأجهزة الإلكترونية' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Maintenance of electronic devices',
+      DepartLink: '/departments/electronics-department'
+    },
+    {
+      DepartImg: 'assets/images/home-welcoming/analysis.png',
+      DepartName: this.translate.currentLang == 'ar' ? 'التداول وتحليل الأسواق المالية' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Trading and analysis of financial markets',
+      DepartLink: '/departments/trading-and-analysis-department'
+    },
+    {
+      DepartImg: 'assets/images/home-welcoming/care.png',
+      DepartName: this.translate.currentLang == 'ar' ? 'رعاية المسنين' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Care of the elderly',
+      DepartLink: '/departments/care-of-elderly-department'
+    },
+    {
+      DepartImg: 'assets/images/home-welcoming/graphic.png',
+      DepartName: this.translate.currentLang == 'ar' ? 'تكنولوجيا الجرافيك' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Graphic Technology',
+      DepartLink: '/departments/it-graphic-department'
+    }
   ]
 
   experienceYears = 0;
+  academyDeparts = 0;
+  staffNumber = 0
+
+  // @HostListener('window:scroll', ['$event'])
+  // startCountingAcademyNumbers(event: any) {
+  //   if (this.experienceYears < 26) {
+  //     if (window.scrollY > 550) {
+  //       this.experienceYearsStop = setInterval(() => {
+  //         this.experienceYears++
+  //         if (this.experienceYears == 26) {
+  //           clearInterval(this.experienceYearsStop)
+  //         }
+  //       }, 1000)
+  //     }
+  //   } else {
+  //     clearInterval(this.experienceYearsStop)
+  //     this.experienceYears = 26
+  //   }
+
+  //   if (this.academyDeparts < 8) {
+  //     if (window.scrollY > 550) {
+  //       this.academyDepartsStop = setInterval(() => {
+  //         this.academyDeparts++
+  //         if (this.academyDeparts == 8) {
+  //           clearInterval(this.academyDepartsStop)
+  //         }
+  //       }, 1000)
+  //     }
+  //   } else {
+  //     clearInterval(this.academyDepartsStop)
+  //     this.academyDeparts = 8
+  //   }
+
+  //   if (this.staffNumber < 60) {
+  //     if (window.scrollY > 550) {
+  //       this.staffNumberStop = setInterval(() => {
+  //         this.staffNumber++
+  //         if (this.staffNumber == 60) {
+  //           clearInterval(this.staffNumberStop)
+  //         }
+  //       }, 1000)
+  //     }
+  //   } else {
+  //     clearInterval(this.staffNumberStop)
+  //     this.staffNumber = 60
+  //   }
+  // }
 
   experienceYearsStop = setInterval(() => {
     this.experienceYears++
@@ -65,8 +140,6 @@ export class HomeComponent implements OnInit {
     }
   }, 100)
 
-  academyDeparts = 0;
-
   academyDepartsStop = setInterval(() => {
     this.academyDeparts++
     if (this.academyDeparts == 8) {
@@ -74,15 +147,12 @@ export class HomeComponent implements OnInit {
     }
   }, 200)
 
-  staffNumber = 0
-
   staffNumberStop = setInterval(() => {
     this.staffNumber++
     if (this.staffNumber == 60) {
       clearInterval(this.staffNumberStop)
     }
   }, 50)
-
 
   slides = [
     { img: "assets/images/partners/helwan.png" },
@@ -96,6 +166,47 @@ export class HomeComponent implements OnInit {
     { img: "assets/images/partners/cairo.png" },
   ];
 
+  departmentSliderConfig = {
+    rtl: this.translate.currentLang == 'ar' ? true : false,
+    dots: true,
+    arrows: false,
+    autoplay: false,
+    speed: 1500,
+    infinite: false,
+    pauseOnHover: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        },
+      },
+    ],
+  };
   sliderConfig = {
     rtl: this.translate.currentLang == 'ar' ? true : false,
     dots: false,
@@ -164,13 +275,13 @@ export class HomeComponent implements OnInit {
 
   changeOrder() {
     setTimeout(() => {
-      this.change(0, 6)
+      this.change(0, 13)
       this.stopCounter()
     }, 30000)
   }
 
   stopCounter() {
-    if (this.incrementer == 6) {
+    if (this.incrementer == 13) {
       this.incrementer = 0
       this.changeOrder()
     } else {

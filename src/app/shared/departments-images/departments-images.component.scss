@@ -88,7 +88,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: row-reverse;
       gap: 10px;
       img {
         width: 15px;
@@ -96,7 +95,87 @@
       }
     }
   }
+  .departsImages {
+    margin: 1em 0;
+    img.iconic {
+      width: 100%;
+      transition: 0.5s all ease-in-out;
+    }
+    .depart {
+      height: 500px;
 
+    }
+    .firstPart, .fifthPart, .secondPart, .fourthPart, .thirdPart, .sixthPart, .seventhPart, .eightthPart, .depart {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      overflow: hidden;
+      border-radius: 16px;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      margin: 0 5px;
+      .overlay {
+        a { color: $white; }
+      }
+      &:hover:not(.secondPart, .fourthPart, .sixthPart, .eightthPart, .depart) {
+        img.iconic {
+          transform: scale(1.3);
+        }
+        .overlay {
+          opacity: 1;
+        }
+      }
+      img {
+        height: 100%;
+      }
+    }
+    .firstPart, .fifthPart, .seventhPart {
+      justify-content: center;
+      width: auto;
+      height: 500px;
+    }
+    .secondPart, .fourthPart, .sixthPart, .eightthPart {
+      width: 200px;
+      & > div {
+        overflow: hidden;
+        border-radius: 16px;
+        position: relative;
+        height: 215px;
+        width: 100%;
+        &:hover {
+          img.iconic {
+            transform: scale(1.3);
+          }
+          .overlay {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .thirdPart { width: 250px; height: 500px; }
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* Black see-through */
+      color: #f1f1f1;
+      width: 100%;
+      transition: .5s ease;
+      opacity:0;
+      color: $white;
+      font-size: $fontSize;
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
   .responsiveImages {
     flex-wrap: wrap;
     .depart {

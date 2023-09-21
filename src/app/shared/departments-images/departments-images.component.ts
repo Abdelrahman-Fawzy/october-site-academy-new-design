@@ -48,7 +48,44 @@ export class DepartmentsImagesComponent implements OnInit {
       DepartName: this.translate.currentLang == 'ar' ? 'مساحة وخرائط' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Survey And Maps',
       DepartLink: '/departments/maps-department'
     },
+    {
+      DepartImg: 'assets/images/home-welcoming/construction.png',
+      DepartName: this.translate.currentLang == 'ar' ? 'التشييد والبناء' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Construction',
+      DepartLink: '/departments/construction-and-buildings-department'
+    },
+    {
+      DepartImg: 'assets/images/home-welcoming/electronics.png',
+      DepartName: this.translate.currentLang == 'ar' ? 'صيانة الأجهزة الإلكترونية' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Maintenance of electronic devices',
+      DepartLink: '/departments/electronics-department'
+    },
+    {
+      DepartImg: 'assets/images/home-welcoming/analysis.png',
+      DepartName: this.translate.currentLang == 'ar' ? 'التداول وتحليل الأسواق المالية' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Trading and analysis of financial markets',
+      DepartLink: '/departments/trading-and-analysis-department'
+    },
+    {
+      DepartImg: 'assets/images/home-welcoming/care.png',
+      DepartName: this.translate.currentLang == 'ar' ? 'رعاية المسنين' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Care of the elderly',
+      DepartLink: '/departments/care-of-elderly-department'
+    },
+    {
+      DepartImg: 'assets/images/home-welcoming/graphic.png',
+      DepartName: this.translate.currentLang == 'ar' ? 'تكنولوجيا الجرافيك' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Graphic Technology',
+      DepartLink: '/departments/it-graphic-department'
+    }
   ]
+
+  departmentSliderConfig = {
+    rtl: this.translate.currentLang == 'ar' ? true : false,
+    dots: true,
+    arrows: false,
+    autoplay: false,
+    speed: 1500,
+    infinite: false,
+    pauseOnHover: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+  };
 
   constructor(private modalService: BsModalService, public translate: TranslateService) { }
 

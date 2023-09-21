@@ -14,6 +14,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { GraduatesComponent } from './graduates/graduates.component';
 import { AcademyGalleryComponent } from './academy-gallery/academy-gallery.component';
 import { ItGraphicDepartmentComponent } from './departments/it-graphic-department/it-graphic-department.component';
+import { ConstructionAndBuildingsComponent } from './departments/construction-and-buildings/construction-and-buildings.component';
+import { ElectronicsComponent } from './departments/electronics/electronics.component';
+import { TradingAndAnalysisComponent } from './departments/trading-and-analysis/trading-and-analysis.component';
+import { CareOfElderlyComponent } from './departments/care-of-elderly/care-of-elderly.component';
 
 const routes: Routes = [
   {
@@ -64,6 +68,26 @@ const routes: Routes = [
   {
     path: 'departments/journalism-department',
     component: JournalismDepartmentComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'departments/construction-and-buildings-department',
+    component: ConstructionAndBuildingsComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'departments/electronics-department',
+    component: ElectronicsComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'departments/trading-and-analysis-department',
+    component: TradingAndAnalysisComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'departments/care-of-elderly-department',
+    component: CareOfElderlyComponent,
     pathMatch: 'full'
   },
   {

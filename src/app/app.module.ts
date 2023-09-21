@@ -38,6 +38,11 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ItGraphicDepartmentComponent } from './departments/it-graphic-department/it-graphic-department.component';
 import { ToastrModule } from 'ngx-toastr';
+import { IntroduceToJobComponent } from './about-academy/introduce-to-job/introduce-to-job.component';
+import { ConstructionAndBuildingsComponent } from './departments/construction-and-buildings/construction-and-buildings.component';
+import { ElectronicsComponent } from './departments/electronics/electronics.component';
+import { TradingAndAnalysisComponent } from './departments/trading-and-analysis/trading-and-analysis.component';
+import { CareOfElderlyComponent } from './departments/care-of-elderly/care-of-elderly.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +69,12 @@ import { ToastrModule } from 'ngx-toastr';
     AcademyGalleryComponent,
     RegisterModalComponent,
     ToTopButtonComponent,
-    ItGraphicDepartmentComponent
+    ItGraphicDepartmentComponent,
+    IntroduceToJobComponent,
+    ConstructionAndBuildingsComponent,
+    ElectronicsComponent,
+    TradingAndAnalysisComponent,
+    CareOfElderlyComponent
   ],
   imports: [
     BrowserModule,

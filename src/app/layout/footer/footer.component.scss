@@ -1,11 +1,13 @@
 @import "../../../abstracts/variables", "../../../abstracts/mixins";
 footer {
   position: relative;
-  .footer-box {padding: 0em 10em 0;}
+  background-color: #E7F1F0;
+  margin-top: 5em;
+  .footer-box {padding: 10em 10em 3em; text-align: center;}
   .contact {
     margin-top: 3em;
     p {
-      color: #fff;
+      color: #363636;
       font-size: 3em;
     }
     .socialLinks {
@@ -14,7 +16,7 @@ footer {
         text-align: center;
         i {
           width: 15%;
-          color: #fff;
+          color: #363636;
         }
       }
     }
@@ -22,13 +24,13 @@ footer {
   .anotherLinks {
     margin-top: 7em;
     p {
-      color: #fff;
+      color: #363636;
       font-size: 3em;
     }
     .links {
       a {
         display: block;
-        color: #fff;
+        color: #363636;
         margin-bottom: 1em;
         font-size: 1.3em;
       }
@@ -37,7 +39,7 @@ footer {
   .anotherPages {
     font-weight: 500;
     a {
-      color: #fff;
+      color: #363636;
       display: block;
       margin-bottom: 1em;
       font-size: $fontSize + 2;
@@ -47,7 +49,7 @@ footer {
   .contact-us {
     text-align: left;
     .contacts-ways {
-      color: #fff;
+      color: #363636;
       h6 {
         margin-bottom: 1em;
         img {
@@ -62,19 +64,20 @@ footer {
     }
   }
   .copyRight {
+    background-color: $mainGreenColor;
     display: flex;
-    margin: 0 17em;
+    margin: 0;
     color: #fff;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding-bottom: 1.5em;
+    padding-bottom: 0;
     p {
       font-size: 16px;
     }
     img {margin-bottom: 1em;}
   }
   p.directP {
-    color: #fff;
+    color: #363636;
     font-size: $fontSize + 10;
   }
   // .margin-top-10 {
@@ -84,7 +87,7 @@ footer {
   //   margin-top: 7em;
   // }
   .questions {
-    // background-image: url('/assets/images/shapes/questions.png');
+    //background-image: url('/assets/images/shapes/questions.png');
     background-position: center;
     background-size: 100% 100%;
     width: 80%;
@@ -134,12 +137,17 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     // padding: 13em 0em 2em;
+    .questions {
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
   }
 }
 
 @media (max-width: 1199px) {
   footer {
-    background-color: #37c3ad;
     background-image: none !important;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
@@ -149,6 +157,7 @@ footer {
       border-radius: 15px;
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 16%);
       background: #fff;
+      background-image: none !important;
       .background {
         padding: 2em;
         flex-wrap: wrap;
@@ -160,10 +169,10 @@ footer {
       padding: 2em 4em 0;
     }
   }
-  .copyRight {
-    margin: 0 2em !important;
-    padding-bottom: 1em;
-  }
+  // .copyRight {
+  //   margin: 0 2em !important;
+  //   padding-bottom: 1em;
+  // }
 }
 
 @media (max-width: 991px) {
@@ -182,8 +191,8 @@ footer {
   .social { width: 100%; }
 }
 @media (max-width: 575px) {
-  .copyRight {
-    margin: 0 2em !important;
-    padding-bottom: 1em;
-  }
+  // .copyRight {
+  //   margin: 0 2em !important;
+  //   padding-bottom: 1em;
+  // }
 }

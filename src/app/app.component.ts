@@ -1,5 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import * as AOS from 'aos'
 
 @Component({
@@ -9,7 +11,8 @@ import * as AOS from 'aos'
 })
 export class AppComponent implements OnInit {
 
-  constructor(@Inject(DOCUMENT) private document: Document) { }
+  constructor(@Inject(DOCUMENT) private document: Document, private readonly route: ActivatedRoute,
+  private readonly titleService: Title) { }
 
   ngOnInit(): void {
     this.document.documentElement.lang = localStorage.getItem("currentLang");
@@ -33,5 +36,6 @@ export class AppComponent implements OnInit {
       mirror: false, // whether elements should animate out while scrolling past them
       anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
     })
+    this.titleService.setTitle(this.route.snapshot.data['title'])
   }
 }

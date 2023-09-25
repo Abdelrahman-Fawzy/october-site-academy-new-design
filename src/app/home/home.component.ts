@@ -3,6 +3,8 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { RegisterModalComponent } from '../shared/register-modal/register-modal.component';
 import { TranslateService } from '@ngx-translate/core';
+import { ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -258,11 +260,13 @@ export class HomeComponent implements OnInit {
     items: 3,
     navSpeed: 2000
   }
-  constructor(private modalService: BsModalService, public translate: TranslateService) { }
+  constructor(private modalService: BsModalService, public translate: TranslateService, private readonly route: ActivatedRoute,
+    private readonly titleService: Title) { }
 
   ngOnInit(): void {
     this.test()
     this.showSlides(this.slideIndex)
+    this.titleService.setTitle(this.route.snapshot.data['title'])
   }
 
   register() {

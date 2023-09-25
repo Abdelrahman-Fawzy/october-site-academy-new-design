@@ -18,97 +18,157 @@ import { ConstructionAndBuildingsComponent } from './departments/construction-an
 import { ElectronicsComponent } from './departments/electronics/electronics.component';
 import { TradingAndAnalysisComponent } from './departments/trading-and-analysis/trading-and-analysis.component';
 import { CareOfElderlyComponent } from './departments/care-of-elderly/care-of-elderly.component';
+import { TranslateService } from '@ngx-translate/core';
+
+let academyName = {
+  nameEn: '6 October Academy',
+  nameAr: 'أكاديمية 6 أكتوبر'
+}
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName?.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'about-academy',
     component: AboutAcademyComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName?.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'departments/petrol-department',
     component: PetrolDepartmentComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName?.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'departments/maps-department',
     component: MapsDepartmentComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'departments/medical-department',
     component: MedicalDepartmentComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'departments/it-department',
     component: ItDepartmentComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'departments/it-graphic-department',
     component: ItGraphicDepartmentComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'departments/bussiness-department',
     component: BussinessDepartmentComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'departments/hotels-department',
     component: HotelsDepartmentComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'departments/journalism-department',
     component: JournalismDepartmentComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'departments/construction-and-buildings-department',
     component: ConstructionAndBuildingsComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'departments/electronics-department',
     component: ElectronicsComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'departments/trading-and-analysis-department',
     component: TradingAndAnalysisComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'departments/care-of-elderly-department',
     component: CareOfElderlyComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'academy-gallery',
     component: AcademyGalleryComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'studying-system',
     component: StudyingSystemComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'graduates',
     component: GraduatesComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   },
   {
     path: 'contact-us',
     component: ContactUsComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
   }
 ];
 
@@ -116,4 +176,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

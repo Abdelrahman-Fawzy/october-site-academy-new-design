@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -11,7 +12,8 @@ export class AcademyGalleryComponent implements OnInit {
   isFirstOpen = true;
   param;
 
-  constructor(private route: ActivatedRoute, public translate: TranslateService) { }
+  constructor(private route: ActivatedRoute, public translate: TranslateService,
+    private readonly titleService: Title) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
@@ -26,6 +28,8 @@ export class AcademyGalleryComponent implements OnInit {
     if ( this.param == 'training') document.getElementById("trainingS").click();
 
     // document.getElementById("mediaDefaultOpen").click();
+
+    
   }
 
   openTab(evt, tabName) {

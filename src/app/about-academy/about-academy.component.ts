@@ -4,6 +4,7 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { RegisterModalComponent } from '../shared/register-modal/register-modal.component';
 import { TranslateService } from '@ngx-translate/core';
 import { IntroduceToJobComponent } from './introduce-to-job/introduce-to-job.component';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about-academy',
@@ -16,7 +17,8 @@ export class AboutAcademyComponent implements OnInit {
   modalRef?: BsModalRef;
   param;
 
-  constructor(private route: ActivatedRoute, private modalService: BsModalService, public translate: TranslateService) { }
+  constructor(private route: ActivatedRoute, private modalService: BsModalService, public translate: TranslateService,
+    private readonly titleService: Title) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
@@ -30,6 +32,7 @@ export class AboutAcademyComponent implements OnInit {
     if (this.param == 'conversations') document.getElementById("academyConversations").click();
 
     document.getElementById("defaultChildOpen").click();
+    this.titleService.setTitle(this.route.snapshot.data['title'])
   }
 
   openTab(evt, tabName) {

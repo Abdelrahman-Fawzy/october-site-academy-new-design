@@ -5,6 +5,10 @@ import { RegisterModalComponent } from '../shared/register-modal/register-modal.
 import { TranslateService } from '@ngx-translate/core';
 import { IntroduceToJobComponent } from './introduce-to-job/introduce-to-job.component';
 import { Title } from '@angular/platform-browser';
+import { GetItemsService } from '../services/get-items.service';
+import { JobsList } from '../models/jobs';
+import { ToastrService } from 'ngx-toastr';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-about-academy',
@@ -16,9 +20,20 @@ export class AboutAcademyComponent implements OnInit {
   isFirstOpen = true;
   modalRef?: BsModalRef;
   param;
+  jobs: JobsList
+  JobsForm: FormGroup;
+  jobCodeFormControl: FormControl
+  formValid: boolean = false
+  jobFormValues;
+  jobDetails
 
-  constructor(private route: ActivatedRoute, private modalService: BsModalService, public translate: TranslateService,
-    private readonly titleService: Title) { }
+  constructor(private route: ActivatedRoute, 
+    private modalService: BsModalService, 
+    public translate: TranslateService,
+    private readonly titleService: Title,
+    private getItemsService: GetItemsService,
+    private toastr: ToastrService,
+    ) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
@@ -33,6 +48,12 @@ export class AboutAcademyComponent implements OnInit {
 
     document.getElementById("defaultChildOpen").click();
     this.titleService.setTitle(this.route.snapshot.data['title'])
+
+    this.getJobs()
+
+    this.JobsForm = new FormGroup({
+      code: new FormControl('', Validators.required)
+    })
   }
 
   openTab(evt, tabName) {
@@ -71,40 +92,65 @@ export class AboutAcademyComponent implements OnInit {
     this.modalRef = this.modalService.show(IntroduceToJobComponent, { class: 'modal-xl modal-dialog-centered' });
   }
 
-  jobs = [
-    {
-      jobName: this.translate.currentLang == 'ar' ? 'رئيس فرع المؤسسة' : `Head of the institution's branch`,
-      code: 'L41BR'
-    },
-    {
-      jobName: this.translate.currentLang == 'ar' ? 'رئيس وحدة الموارد البشرية بالمؤسسة' : `Head of the organization's human resources unit`,
-      code: 'L42HR'
-    },
-    {
-      jobName: this.translate.currentLang == 'ar' ? 'رئيس وحدة الترويج والتنسيق والتسجيل' : `Head of the Promotion, Coordination and Registration Unit`,
-      code: 'L43SAL'
-    },
-    {
-      jobName: this.translate.currentLang == 'ar' ? 'مسئول ترويج و مبيعات عبر الشبكة' : 'Network promotion and sales officer',
-      code: 'L44TS'
-    },
-    {
-      jobName: this.translate.currentLang == 'ar' ? 'رئيس وحدة التدريب الميدانى' : `Head of the field training unit`,
-      code: 'L45FT'
-    },
-    {
-      jobName: this.translate.currentLang == 'ar' ? 'محاسب' : `accountant`,
-      code: 'L46AC'
-    },
-    {
-      jobName: this.translate.currentLang == 'ar' ? 'مسئول جرافيكس ديزاين' : `Graphics Design Responsible`,
-      code: 'L47BR'
+  getJobs() {
+    this.getItemsService.getJobs().subscribe(jobs => {
+      this.jobs = jobs
+      console.log(this.jobs.data.list);
+    })
+  }
+
+  copyToClipBoard(code) {
+    if (code != '') {
+      console.log(code);
+      let jobCode = document.createElement('input')
+      jobCode.style.position = 'fixed'
+      jobCode.style.top = '0'
+      jobCode.style.left = '0'
+      jobCode.style.opacity = '0'
+      jobCode.value = code
+      document.body.appendChild(jobCode)
+      jobCode.focus()
+      jobCode.select()
+      document.execCommand('copy')
+      document.body.removeChild(jobCode)
+      this.toastr.success('copied to clipBoard')
     }
-  ]
+  }
+
+  // jobs = [
+  //   {
+  //     jobName: this.translate.currentLang == 'ar' ? 'رئيس فرع المؤسسة' : `Head of the institution's branch`,
+  //     code: 'L41BR'
+  //   },
+  //   {
+  //     jobName: this.translate.currentLang == 'ar' ? 'رئيس وحدة الموارد البشرية بالمؤسسة' : `Head of the organization's human resources unit`,
+  //     code: 'L42HR'
+  //   },
+  //   {
+  //     jobName: this.translate.currentLang == 'ar' ? 'رئيس وحدة الترويج والتنسيق والتسجيل' : `Head of the Promotion, Coordination and Registration Unit`,
+  //     code: 'L43SAL'
+  //   },
+  //   {
+  //     jobName: this.translate.currentLang == 'ar' ? 'مسئول ترويج و مبيعات عبر الشبكة' : 'Network promotion and sales officer',
+  //     code: 'L44TS'
+  //   },
+  //   {
+  //     jobName: this.translate.currentLang == 'ar' ? 'رئيس وحدة التدريب الميدانى' : `Head of the field training unit`,
+  //     code: 'L45FT'
+  //   },
+  //   {
+  //     jobName: this.translate.currentLang == 'ar' ? 'محاسب' : `accountant`,
+  //     code: 'L46AC'
+  //   },
+  //   {
+  //     jobName: this.translate.currentLang == 'ar' ? 'مسئول جرافيكس ديزاين' : `Graphics Design Responsible`,
+  //     code: 'L47BR'
+  //   }
+  // ]
 
   sliderConfig = {
     rtl: this.translate.currentLang == 'ar' ? true : false,
-    dots: true,
+    dots: false,
     arrows: false,
     autoplay: true,
     speed: 1500,
@@ -150,5 +196,35 @@ export class AboutAcademyComponent implements OnInit {
       },
     ],
   };
+
+  validateForm() {
+    if (!this.jobFormValues.code) {
+      this.toastr.error('هذا الحقل مطلوب')
+      this.formValid = false
+    } else {
+      this.formValid = true
+    }
+    return this.formValid
+  }
+
+  getJob() {
+    this.jobFormValues = this.JobsForm.value
+
+    let dataToSend = {
+      code: this.jobFormValues.code
+    }
+
+    if (this.validateForm()) {
+      this.getItemsService.getJobByCode(dataToSend).subscribe(data => {
+        console.log(data);
+        this.jobDetails = data.data
+      }, error => {
+        console.log(error);
+        error.error?.errors.forEach(errorValue => {
+          this.toastr.error(errorValue.value)
+        })
+      })
+    }
+  }
 
 }

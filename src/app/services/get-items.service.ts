@@ -8,6 +8,7 @@ import { Sections } from '../models/sections';
 import { Branches } from '../models/branches';
 import { Acquaintance } from '../models/acquaintance';
 import { Countries } from '../models/countries';
+import { JobByCode, JobsList } from '../models/jobs';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -50,5 +51,13 @@ export class GetItemsService {
 
   getAcquaintances(): Observable<Acquaintance> {
     return this.http.post<Acquaintance>(this.baseUrl + 'erp/institutionsManagement/get_acquaintances', {}, httpOptions)
+  }
+
+  getJobs(): Observable<JobsList> {
+    return this.http.post<JobsList>(this.baseUrl + 'erp/jobs/getjobs', {}, httpOptions)
+  }
+
+  getJobByCode(code): Observable<JobByCode> {
+    return this.http.post<JobByCode>(this.baseUrl + 'erp/jobs/getJobsByCode', code, httpOptions)
   }
 }

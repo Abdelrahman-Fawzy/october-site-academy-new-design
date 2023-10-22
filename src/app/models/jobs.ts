@@ -35,3 +35,11 @@ export interface JobByCodeData {
     code: string
 }
 
+export interface JobIntroduce {
+  jprequest_name: string
+  jprequest_email: string
+  jprequest_job_code: string
+  jprequest_phone_number: string
+  papers: string
+}
+

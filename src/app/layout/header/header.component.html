@@ -138,12 +138,12 @@
             <div class="d-none d-xl-flex" style="gap: 2em;">
               <div class="firstPart">
                 <li>
-                  <a [routerLink]="'departments/bussiness-department'" [routerLinkActive]="'active'"
+                  <a [routerLink]="'departments/maps-department'" [routerLinkActive]="'active'"
                     [routerLinkActiveOptions]="{exact: true}">
                     <div class="img-icon">
-                      <img src="assets/images/departments-icons/bussiness.png" alt="bussiness">
+                      <img src="assets/images/departments-icons/maps.png" alt="maps">
                     </div>
-                    {{ "DEPARTMENTS_SUB_ITEMS.BUSSINESS" | translate }}
+                    {{ "DEPARTMENTS_SUB_ITEMS.MAPS" | translate }}
                   </a>
                 </li>
                 <li>
@@ -165,17 +165,35 @@
                   </a>
                 </li>
                 <li>
-                  <a [routerLink]="'departments/petrol-department'" [routerLinkActive]="'active'"
+                  <a [routerLink]="'departments/electronics-department'" [routerLinkActive]="'active'"
                     [routerLinkActiveOptions]="{exact: true}">
                     <div class="img-icon">
-                      <img src="assets/images/departments-icons/oil.png" alt="oil">
+                      <img src="assets/images/departments-icons/electronicsIcon.svg" alt="electronics">
                     </div>
-                    {{ "DEPARTMENTS_SUB_ITEMS.PETROLIUM" | translate }}
+                    {{ "DEPARTMENTS_SUB_ITEMS.ELECTRONICS" | translate }}
                   </a>
                 </li>
               </div>
               <div class="line"></div>
               <div class="secondPart">
+                <li>
+                  <a [routerLink]="'departments/bussiness-department'" [routerLinkActive]="'active'"
+                    [routerLinkActiveOptions]="{exact: true}">
+                    <div class="img-icon">
+                      <img src="assets/images/departments-icons/bussiness.png" alt="bussiness">
+                    </div>
+                    {{ "DEPARTMENTS_SUB_ITEMS.BUSSINESS" | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'departments/trading-and-analysis-department'" [routerLinkActive]="'active'"
+                    [routerLinkActiveOptions]="{exact: true}">
+                    <div class="img-icon">
+                      <img src="assets/images/departments-icons/analysisIcon.svg" alt="analysis">
+                    </div>
+                    {{ "DEPARTMENTS_SUB_ITEMS.ANALYSIT" | translate }}
+                  </a>
+                </li>
                 <li>
                   <a [routerLink]="'departments/medical-department'" [routerLinkActive]="'active'"
                     [routerLinkActiveOptions]="{exact: true}">
@@ -183,6 +201,27 @@
                       <img src="assets/images/departments-icons/medical.png" alt="medical">
                     </div>
                     {{ "DEPARTMENTS_SUB_ITEMS.MEDICAL" | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'departments/care-of-elderly-department'" [routerLinkActive]="'active'"
+                    [routerLinkActiveOptions]="{exact: true}">
+                    <div class="img-icon">
+                      <img src="assets/images/departments-icons/careIcon.svg" alt="care">
+                    </div>
+                    {{ "DEPARTMENTS_SUB_ITEMS.CARING" | translate }}
+                  </a>
+                </li>
+              </div>
+              <div class="line"></div>
+              <div class="thirdPart">
+                <li>
+                  <a [routerLink]="'departments/petrol-department'" [routerLinkActive]="'active'"
+                    [routerLinkActiveOptions]="{exact: true}">
+                    <div class="img-icon">
+                      <img src="assets/images/departments-icons/oil.png" alt="oil">
+                    </div>
+                    {{ "DEPARTMENTS_SUB_ITEMS.PETROLIUM" | translate }}
                   </a>
                 </li>
                 <li>
@@ -204,18 +243,6 @@
                   </a>
                 </li>
                 <li>
-                  <a [routerLink]="'departments/maps-department'" [routerLinkActive]="'active'"
-                    [routerLinkActiveOptions]="{exact: true}">
-                    <div class="img-icon">
-                      <img src="assets/images/departments-icons/maps.png" alt="maps">
-                    </div>
-                    {{ "DEPARTMENTS_SUB_ITEMS.MAPS" | translate }}
-                  </a>
-                </li>
-              </div>
-              <div class="line"></div>
-              <div class="thirdPart">
-                <li>
                   <a [routerLink]="'departments/construction-and-buildings-department'" [routerLinkActive]="'active'"
                     [routerLinkActiveOptions]="{exact: true}">
                     <div class="img-icon">
@@ -224,61 +251,16 @@
                     {{ "DEPARTMENTS_SUB_ITEMS.ENGINEERING" | translate }}
                   </a>
                 </li>
-                <li>
-                  <a [routerLink]="'departments/electronics-department'" [routerLinkActive]="'active'"
-                    [routerLinkActiveOptions]="{exact: true}">
-                    <div class="img-icon">
-                      <img src="assets/images/departments-icons/electronicsIcon.svg" alt="electronics">
-                    </div>
-                    {{ "DEPARTMENTS_SUB_ITEMS.ELECTRONICS" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a [routerLink]="'departments/trading-and-analysis-department'" [routerLinkActive]="'active'"
-                    [routerLinkActiveOptions]="{exact: true}">
-                    <div class="img-icon">
-                      <img src="assets/images/departments-icons/analysisIcon.svg" alt="analysis">
-                    </div>
-                    {{ "DEPARTMENTS_SUB_ITEMS.ANALYSIT" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a [routerLink]="'departments/care-of-elderly-department'" [routerLinkActive]="'active'"
-                    [routerLinkActiveOptions]="{exact: true}">
-                    <div class="img-icon">
-                      <img src="assets/images/departments-icons/careIcon.svg" alt="care">
-                    </div>
-                    {{ "DEPARTMENTS_SUB_ITEMS.CARING" | translate }}
-                  </a>
-                </li>
               </div>
             </div>
             <div class="d-xl-none responsiveCategories">
               <li>
-                <a [routerLink]="'departments/petrol-department'" [routerLinkActive]="'active'"
+                <a [routerLink]="'departments/maps-department'" [routerLinkActive]="'active'"
                   [routerLinkActiveOptions]="{exact: true}">
                   <div class="img-icon">
-                    <img src="assets/images/departments-icons/oil.png" alt="oil">
+                    <img src="assets/images/departments-icons/maps.png" alt="maps">
                   </div>
-                  {{ "DEPARTMENTS_SUB_ITEMS.PETROLIUM" | translate }}
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="'departments/medical-department'" [routerLinkActive]="'active'"
-                  [routerLinkActiveOptions]="{exact: true}">
-                  <div class="img-icon">
-                    <img src="assets/images/departments-icons/medical.png" alt="medical">
-                  </div>
-                  {{ "DEPARTMENTS_SUB_ITEMS.MEDICAL" | translate }}
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="'departments/it-department'" [routerLinkActive]="'active'"
-                  [routerLinkActiveOptions]="{exact: true}">
-                  <div class="img-icon">
-                    <img src="assets/images/departments-icons/it.png" alt="it">
-                  </div>
-                  {{ "DEPARTMENTS_SUB_ITEMS.IT" | translate }}
+                  {{ "DEPARTMENTS_SUB_ITEMS.MAPS" | translate }}
                 </a>
               </li>
               <li>
@@ -291,12 +273,21 @@
                 </a>
               </li>
               <li>
-                <a [routerLink]="'departments/maps-department'" [routerLinkActive]="'active'"
+                <a [routerLink]="'departments/it-department'" [routerLinkActive]="'active'"
                   [routerLinkActiveOptions]="{exact: true}">
                   <div class="img-icon">
-                    <img src="assets/images/departments-icons/maps.png" alt="maps">
+                    <img src="assets/images/departments-icons/it.png" alt="it">
                   </div>
-                  {{ "DEPARTMENTS_SUB_ITEMS.MAPS" | translate }}
+                  {{ "DEPARTMENTS_SUB_ITEMS.IT" | translate }}
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="'departments/electronics-department'" [routerLinkActive]="'active'"
+                  [routerLinkActiveOptions]="{exact: true}">
+                  <div class="img-icon">
+                    <img src="assets/images/departments-icons/electronicsIcon.svg" alt="electronics">
+                  </div>
+                  {{ "DEPARTMENTS_SUB_ITEMS.ELECTRONICS" | translate }}
                 </a>
               </li>
               <li>
@@ -306,6 +297,42 @@
                     <img src="assets/images/departments-icons/bussiness.png" alt="bussiness">
                   </div>
                   {{ "DEPARTMENTS_SUB_ITEMS.BUSSINESS" | translate }}
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="'departments/trading-and-analysis-department'" [routerLinkActive]="'active'"
+                  [routerLinkActiveOptions]="{exact: true}">
+                  <div class="img-icon">
+                    <img src="assets/images/departments-icons/analysisIcon.svg" alt="analysis">
+                  </div>
+                  {{ "DEPARTMENTS_SUB_ITEMS.ANALYSIT" | translate }}
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="'departments/medical-department'" [routerLinkActive]="'active'"
+                  [routerLinkActiveOptions]="{exact: true}">
+                  <div class="img-icon">
+                    <img src="assets/images/departments-icons/medical.png" alt="medical">
+                  </div>
+                  {{ "DEPARTMENTS_SUB_ITEMS.MEDICAL" | translate }}
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="'departments/care-of-elderly-department'" [routerLinkActive]="'active'"
+                  [routerLinkActiveOptions]="{exact: true}">
+                  <div class="img-icon">
+                    <img src="assets/images/departments-icons/careIcon.svg" alt="care">
+                  </div>
+                  {{ "DEPARTMENTS_SUB_ITEMS.CARING" | translate }}
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="'departments/petrol-department'" [routerLinkActive]="'active'"
+                  [routerLinkActiveOptions]="{exact: true}">
+                  <div class="img-icon">
+                    <img src="assets/images/departments-icons/oil.png" alt="oil">
+                  </div>
+                  {{ "DEPARTMENTS_SUB_ITEMS.PETROLIUM" | translate }}
                 </a>
               </li>
               <li>
@@ -333,33 +360,6 @@
                     <img src="assets/images/departments-icons/constructionIcon.svg" alt="construction">
                   </div>
                   {{ "DEPARTMENTS_SUB_ITEMS.ENGINEERING" | translate }}
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="'departments/electronics-department'" [routerLinkActive]="'active'"
-                  [routerLinkActiveOptions]="{exact: true}">
-                  <div class="img-icon">
-                    <img src="assets/images/departments-icons/electronicsIcon.svg" alt="electronics">
-                  </div>
-                  {{ "DEPARTMENTS_SUB_ITEMS.ELECTRONICS" | translate }}
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="'departments/trading-and-analysis-department'" [routerLinkActive]="'active'"
-                  [routerLinkActiveOptions]="{exact: true}">
-                  <div class="img-icon">
-                    <img src="assets/images/departments-icons/analysisIcon.svg" alt="analysis">
-                  </div>
-                  {{ "DEPARTMENTS_SUB_ITEMS.ANALYSIT" | translate }}
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="'departments/care-of-elderly-department'" [routerLinkActive]="'active'"
-                  [routerLinkActiveOptions]="{exact: true}">
-                  <div class="img-icon">
-                    <img src="assets/images/departments-icons/careIcon.svg" alt="care">
-                  </div>
-                  {{ "DEPARTMENTS_SUB_ITEMS.CARING" | translate }}
                 </a>
               </li>
             </div>

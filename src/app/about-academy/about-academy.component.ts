@@ -89,7 +89,10 @@ export class AboutAcademyComponent implements OnInit {
   }
 
   introduceToJob() {
-    this.modalRef = this.modalService.show(IntroduceToJobComponent, { class: 'modal-xl modal-dialog-centered' });
+    let initialState = {
+      jobCode: this.jobFormValues.code
+    }
+    this.modalRef = this.modalService.show(IntroduceToJobComponent, { initialState, class: 'modal-xl modal-dialog-centered' });
   }
 
   getJobs() {

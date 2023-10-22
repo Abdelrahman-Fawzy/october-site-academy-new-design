@@ -7,6 +7,7 @@
 
 input.form-control {
   border: 1px solid $mainGreenColor;
+  background-color: #FFF;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -79,3 +80,54 @@ input.form-control {
     }
   }
 }
+
+.custom-file-upload {
+  width: 100%;
+  label.mainLabel {
+    color: #424242;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .upload-box {
+    width: 100%;
+    display: flex;
+    .upload {
+      padding: 10px 14px;
+      width: 50%;
+      border-radius: 0px 8px 8px 0px;
+      background: #F5F7FD;
+      box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(103, 110, 118, 0.16), 0px 2px 5px 0px rgba(103, 110, 118, 0.08);
+      cursor: pointer;
+      label {
+        margin: 0;
+        cursor: pointer;
+      }
+    }
+    .file-info {
+      display: flex;
+      padding: 10px 14px;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      border-radius: 8px 0px 0px 8px;
+      background: #FFF;
+      box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(103, 110, 118, 0.16), 0px 2px 5px 0px rgba(103, 110, 118, 0.08);
+      width: 100%;
+      span#file-chosen {
+        color: #424242;
+      }
+    }
+  }
+}
+
+.confirmed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+

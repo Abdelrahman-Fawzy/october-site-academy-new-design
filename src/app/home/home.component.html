@@ -1,120 +1,3 @@
-<!-- <div class="welcoming" data-aos="fade-up">
-  <div class="container">
-    <h2>{{"WELCOME" | translate}}</h2>
-    <p class="directP">{{"FIRST_TECHNICIAN" | translate}}</p>
-    <div class="actions">
-      <button class="primary" (click)="register()">{{"REGISTER_NOW" | translate}}</button>
-      <button class="primary-outline" [routerLink]="'about-academy'"
-        [queryParams]="{item: 'departments'}">{{"KNOWING_DEPARTS" | translate}}</button>
-    </div>
-    <div class="images d-none d-md-flex">
-      <div class="firstPart">
-        <img class="iconic" [src]="Departments[0].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[0].DepartLink">{{Departments[0].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-        </div>
-      </div>
-      <div class="secondPart">
-        <div class="img1">
-          <img class="iconic" [src]="Departments[1].DepartImg" alt="">
-          <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-            <a [routerLink]="Departments[1].DepartLink">{{Departments[1].DepartName}}</a>
-            <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-          </div>
-        </div>
-        <div class="img2">
-          <img class="iconic" [src]="Departments[2].DepartImg" alt="">
-          <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-            <a [routerLink]="Departments[2].DepartLink">{{Departments[2].DepartName}}</a>
-            <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="thirdPart">
-        <img class="iconic" [src]="Departments[3].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[3].DepartLink">{{Departments[3].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-        </div>
-      </div>
-      <div class="fourthPart">
-        <div class="img1">
-          <img class="iconic" [src]="Departments[4].DepartImg" alt="">
-          <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-            <a [routerLink]="Departments[4].DepartLink">{{Departments[4].DepartName}}</a>
-            <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-          </div>
-        </div>
-        <div class="img2">
-          <img class="iconic" [src]="Departments[5].DepartImg" alt="">
-          <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-            <a [routerLink]="Departments[5].DepartLink">{{Departments[5].DepartName}}</a>
-            <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="fifthPart">
-        <img class="iconic" [src]="Departments[6].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[6].DepartLink">{{Departments[6].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-        </div>
-      </div>
-    </div>
-    <div class="images responsiveImages d-md-none">
-      <div class="depart">
-        <img class="iconic" [src]="Departments[0].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[0].DepartLink">{{Departments[0].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-        </div>
-      </div>
-      <div class="depart">
-        <img class="iconic" [src]="Departments[1].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[1].DepartLink">{{Departments[1].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-        </div>
-      </div>
-      <div class="depart">
-        <img class="iconic" [src]="Departments[2].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[2].DepartLink">{{Departments[2].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-        </div>
-      </div>
-      <div class="depart">
-        <img class="iconic" [src]="Departments[3].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[3].DepartLink">{{Departments[3].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-        </div>
-      </div>
-      <div class="depart">
-        <img class="iconic" [src]="Departments[4].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[4].DepartLink">{{Departments[4].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-        </div>
-      </div>
-      <div class="depart">
-        <img class="iconic" [src]="Departments[5].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[5].DepartLink">{{Departments[5].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-        </div>
-      </div>
-      <div class="depart">
-        <img class="iconic" [src]="Departments[6].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[6].DepartLink">{{Departments[6].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 <div class="welcoming" data-aos="fade-up">
   <div class="container">
     <h2>{{"WELCOME" | translate}}</h2>
@@ -439,19 +322,13 @@
     <div class="row">
       <div class="col-lg-6">
         <div class="title">
-          <h1>دكتور / أحمد محمد سليمان شلبى</h1>
-          <span>رئيس مجلس الاإدارة</span>
+          <h1>{{ 'President.name' | translate}}</h1>
+          <span>{{ 'President.position' | translate}}</span>
         </div>
-        <span class="word">كلمة رئيس مجلس الإدارة</span>
-        <p>في مؤسسة 6 أكتوبر للتمية البشرية نعمل على دعم رؤية الدولة المصرية 2030 بكل قوة حباً وانتماءً لهذا الوطن ،
-          وايماناً بما يمتلكه من قوى بشرية غير عادية ومقدرات اقتصادية لا يستهان بها .</p>
-        <p>وتعمل مؤسسة 6 أكتوبر للتمية البشرية منذ تأسسها عام 2016م في جمهورية مصر العربية كشريك رائد في مجال التدريب
-          المهني و التقني في العديد من التخصصات التي يطلبها سوق العمل العربي مع الاهتمام بمناسبة المدخلات وصحة العمليات
-          وجودة المخرجات .</p>
-        <p>وعلى الرغم من الأوقات الصعبة التي ووجهتنا في مسيرتنا ، فنحن نعتقد أننا وصلنا بنجاح إلى مرحلة من الثقة بالنفس
-          الاحترام المتبادل بين شركائنا، بما يمكننا من العطاء المستمر في المرحلة القادمة. ولعل روح الفريق العالية التي
-          تسود بيئة العمل بالمؤسسة تدفعنا لتحقيق نفس أهدافنا ورؤيتنا على نطاق أكبر وفق خطة استراتيجية مبنية على معايير
-          مهنية متخصصة في المجال ، لذا نحن نعمل جميعا لبناء مستقبل قوي وفعال ومزدهر .</p>
+        <span class="word">{{ 'President.hisWord' | translate}}</span>
+        <p>{{ 'President.partOne' | translate}}</p>
+        <p>{{ 'President.partTwo' | translate}}</p>
+        <p>{{ 'President.partThree' | translate}}</p>
       </div>
       <div class="col-lg-6">
         <div class="president_img">

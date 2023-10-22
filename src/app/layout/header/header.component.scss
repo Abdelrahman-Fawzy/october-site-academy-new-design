@@ -74,8 +74,8 @@ ul.categories li a {
   color: #363636 !important;
   font-size: $fontSize !important;
   display: flex;
-  align-items: center;
-  gap: 5px;
+  // align-items: center;
+  gap: 10px;
 }
 ul.categories li a .img-icon {
   width: 20px;

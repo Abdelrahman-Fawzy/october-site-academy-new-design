@@ -1,5 +1,5 @@
 <app-department-header
-  [departName]="translate.currentLang == 'ar' ? 'قسم إدارة الأعمال' : translate.currentLang == 'gr' ? 'Abteilung für Betriebswirtschaftslehre' : 'Department of Business Administration '"
+  [departName]="translate.currentLang == 'ar' ? 'برنامج إدارة الأعمال' : translate.currentLang == 'gr' ? 'Abteilung für Betriebswirtschaftslehre' : 'Department of Business Administration '"
   [departImg]="'assets/images/departments-icons/bussinessDepartCover.svg'">
 </app-department-header>
 
@@ -11,8 +11,8 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_VISION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">تسعى أكاديمية 6 أكتوبر فى قسم إدارة الأعمال إلى توفير مقومات التطوير
-          المستمر للتعليم فى المجال ، والارتقاء بخريجي القسم إلى مستوى التميز والقدرة التنافسية العالية لتلبية متطلبات
+        <p *ngIf="translate.currentLang == 'ar'">تسعى مركز 6 أكتوبر فى برنامج إدارة الأعمال إلى توفير مقومات التطوير
+          المستمر للتعليم فى المجال ، والارتقاء بخريجي البرنامج إلى مستوى التميز والقدرة التنافسية العالية لتلبية متطلبات
           سوق العمل من فنيين و إداريين متميزين ذوى كفاءة ومهارة عالية لقيادة منظمات الأعمال في مجتمع المعرفة و إعداد
           الكوادر الإدارية وتطوير مهاراتهم وقدراتهم لمواكبة احتياجات سوق العمل في منشآت القطاعين العام والخاص ، للعمل فى
           الوزارات والهيئات وكبرى الشركات ومكاتب المحاسبة</p>
@@ -42,7 +42,7 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_MESSAGE" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">تتبلور رسالة القسم في إعداد وتأهيل خريجين على مستوى عال من الكفاءة و
+        <p *ngIf="translate.currentLang == 'ar'">تتبلور رسالة البرنامج في إعداد وتأهيل خريجين على مستوى عال من الكفاءة و
           الفاعلية لقيادة منظمات الأعمال و تلبية احتياجات سوق العمل محلياً وإقليميا ودولياً و تزويدِ الطلبةِ بالأسسِ
           العلميةِ لمُمارسةِ العمليةِ الإداريةِ بكفاءةٍ وفعالية بالاضافة الى إمداد القطاعين الخاص والعام بالكوادر
           المتخصصة والتي يحتاج إليها المجتمع في مواصلة عملية التنمية - تطوير المهارة الإدارية من خلال التركيز المتوازن
@@ -146,7 +146,7 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_STAFF" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">يضم القسم نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين
+        <p *ngIf="translate.currentLang == 'ar'">يضم البرنامج نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين
           والمهندسين الأكفاء وذوي خبرة عالية أكاديمياً وتدريبياً</p>
         <p *ngIf="translate.currentLang == 'en'">The department comprises a teaching
           staff, including professors, teaching assistant, and competent engineers, all of whom possess extensive
@@ -162,7 +162,7 @@
       </div>
       <div class="text">
         <h6>{{ "GRADUATE_JOB_DESCRIPTION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بهام إدارة الأعمال
+        <p *ngIf="translate.currentLang == 'ar'">يهدف البرنامج الى تأهيل الخريج ليكون قادر على القيام بهام إدارة الأعمال
           والعمل كمساعد ( محاسب - تسويق - مسوق إلكترونى - مدير إدارة - مدير عام - أخصائي تخطيط - شئون عاملين)</p>
         <p *ngIf="translate.currentLang == 'en'">The department aims to prepare
           graduates to be capable of performing various business management functions and working as assistants in roles
@@ -174,23 +174,10 @@
           arbeiten.</p>
       </div>
     </div>
-    <div class="staff">
-      <div class="img">
-        <img src="assets/images/departments-icons/books.svg" alt="">
-      </div>
-      <div class="text">
-        <h6>{{ "ACADEMIC_SYSTEM" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">عامان دراسيان 4 ترم.</p>
-        <p *ngIf="translate.currentLang == 'en'">The academic program spans two
-          academic years, consisting of four semesters.</p>
-        <p *ngIf="translate.currentLang == 'gr'">Das akademische Programm erstreckt sich über zwei Studienjahre,
-          bestehend aus vier Semestern.</p>
-      </div>
-    </div>
   </div>
   <div class="staff-img d-none d-lg-block">
     <img src="assets/images/departments-icons/bussinessDepartStaff.png" alt="">
   </div>
 </div>
-<app-training-gallery></app-training-gallery>
+<app-training-gallery [imagesList]="imagesList"></app-training-gallery>
 <app-join></app-join>

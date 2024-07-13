@@ -3,13 +3,13 @@
   "ABOUT": "About Academy",
   "ABOUT_SUB_ITEMS": {
     "VISION": "Academy Vision",
-    "DEPARTMENTS": "Academic Departments ",
+    "DEPARTMENTS": "Academic Training Programs",
     "ACCEPTENCE": "Applying and Acceptance",
     "PARTNERS": "Partners",
     "JOBS": "Jobs Opportunities",
     "FAQ": "frequently asked questions"
   },
-  "DEPARTMENTS": "Departments",
+  "DEPARTMENTS": "Training Programs",
   "DEPARTMENTS_SUB_ITEMS": {
     "PETROLIUM": "Petroleum Services",
     "MEDICAL": "Nursing Assistance",
@@ -40,14 +40,14 @@
   "EN": "ENGLISH",
   "GR": "Germany",
 
-  "WELCOME": "Welcome to 6 October Academy",
+  "WELCOME": "Welcome to 6th of October Centers",
   "FIRST_TECHNICIAN": "the pioneer in technical training in Egypt.",
   "REGISTER_NOW": "Register Now",
-  "KNOWING_DEPARTS": "Explore our departments",
+  "KNOWING_DEPARTS": "Explore our Training Programs",
   "ACADEMY_NUMBERS": "The Academy In Figures",
   "FACTS": "Facts And Figures For The 6th Of October Academy During The Previous Years",
   "EXPERIENCE_YEARS": "Years Of Experience",
-  "DEPARTS_NUMBER": "Number Of Academy Departments",
+  "DEPARTS_NUMBER": "Number Of Academy Training Programs",
   "GRADUATES_NUMBER": "Number Of Graduates",
   "STAFF_NUMBER": "Number Of Teaching Staff",
   "PICTURES_FROM_ACADEMY": "Pictures From The Academy",
@@ -105,7 +105,7 @@
   "OUR_SLOGAN": "Our Motto",
   "OUR_EQUATION": "Our Equation",
   "OUR_QUESTION": "Our Question",
-  "DEPARTS": "Departments",
+  "DEPARTS": "Training Programs",
 
   "ADMISSION_REQUIREMENTS": "Admission Requirements",
   "REQUIRED_PAPERS": "Required Documents for Applying",

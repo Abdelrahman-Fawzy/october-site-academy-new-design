@@ -1,289 +1,612 @@
 <div class="welcoming" data-aos="fade-up">
   <div class="container">
-    <h2>{{"WELCOME" | translate}}</h2>
-    <p class="directP">{{"FIRST_TECHNICIAN" | translate}}</p>
+    <h2>{{ "WELCOME" | translate }}</h2>
+    <p class="directP">{{ "FIRST_TECHNICIAN" | translate }}</p>
     <div class="actions">
-      <button class="primary" (click)="register()">{{"REGISTER_NOW" | translate}}</button>
-      <button class="primary-outline" [routerLink]="'about-academy'"
-        [queryParams]="{item: 'departments'}">{{"KNOWING_DEPARTS" | translate}}</button>
+      <button class="primary" (click)="register()">
+        {{ "REGISTER_NOW" | translate }}
+      </button>
+      <button
+        class="primary-outline"
+        [routerLink]="'about-academy'"
+        [queryParams]="{ item: 'departments' }"
+      >
+        {{ "KNOWING_DEPARTS" | translate }}
+      </button>
+    </div>
+
+    <div class="images d-none d-md-flex">
+      <div class="firstPart">
+        <img class="iconic" [src]="Departments[0].DepartImg" alt="" />
+        <div
+          class="overlay"
+          [ngStyle]="{
+            'flex-direction':
+              translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+          }"
+        >
+          <a [routerLink]="Departments[0].DepartLink">{{
+            Departments[0].DepartName
+          }}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="" />
+        </div>
+      </div>
+      <div class="secondPart">
+        <div class="img1">
+          <img class="iconic" [src]="Departments[1].DepartImg" alt="" />
+          <div
+            class="overlay"
+            [ngStyle]="{
+              'flex-direction':
+                translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+            }"
+          >
+            <a [routerLink]="Departments[1].DepartLink">{{
+              Departments[1].DepartName
+            }}</a>
+            <img
+              class="arrow"
+              src="assets/images/icons/arrow-back.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="img2">
+          <img class="iconic" [src]="Departments[2].DepartImg" alt="" />
+          <div
+            class="overlay"
+            [ngStyle]="{
+              'flex-direction':
+                translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+            }"
+          >
+            <a [routerLink]="Departments[2].DepartLink">{{
+              Departments[2].DepartName
+            }}</a>
+            <img
+              class="arrow"
+              src="assets/images/icons/arrow-back.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="thirdPart">
+        <img class="iconic" [src]="Departments[3].DepartImg" alt="" />
+        <div
+          class="overlay"
+          [ngStyle]="{
+            'flex-direction':
+              translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+          }"
+        >
+          <a [routerLink]="Departments[3].DepartLink">{{
+            Departments[3].DepartName
+          }}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="" />
+        </div>
+      </div>
+      <div class="thirdPart">
+        <img class="iconic" [src]="Departments[4].DepartImg" alt="" />
+        <div
+          class="overlay"
+          [ngStyle]="{
+            'flex-direction':
+              translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+          }"
+        >
+          <a [routerLink]="Departments[4].DepartLink">{{
+            Departments[4].DepartName
+          }}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="" />
+        </div>
+      </div>
+      <div class="fourthPart">
+        <div class="img1">
+          <img class="iconic" [src]="Departments[5].DepartImg" alt="" />
+          <div
+            class="overlay"
+            [ngStyle]="{
+              'flex-direction':
+                translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+            }"
+          >
+            <a [routerLink]="Departments[5].DepartLink">{{
+              Departments[5].DepartName
+            }}</a>
+            <img
+              class="arrow"
+              src="assets/images/icons/arrow-back.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="img2">
+          <img class="iconic" [src]="Departments[6].DepartImg" alt="" />
+          <div
+            class="overlay"
+            [ngStyle]="{
+              'flex-direction':
+                translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+            }"
+          >
+            <a [routerLink]="Departments[6].DepartLink">{{
+              Departments[6].DepartName
+            }}</a>
+            <img
+              class="arrow"
+              src="assets/images/icons/arrow-back.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="fifthPart">
+        <img class="iconic" [src]="Departments[7].DepartImg" alt="" />
+        <div
+          class="overlay"
+          [ngStyle]="{
+            'flex-direction':
+              translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+          }"
+        >
+          <a [routerLink]="Departments[7].DepartLink">{{
+            Departments[7].DepartName
+          }}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="" />
+        </div>
+      </div>
     </div>
     <div class="images responsiveImages d-md-none">
       <div class="depart">
-        <img class="iconic" [src]="Departments[0].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[0].DepartLink">{{Departments[0].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        <img class="iconic" [src]="Departments[0].DepartImg" alt="" />
+        <div
+          class="overlay"
+          [ngStyle]="{
+            'flex-direction':
+              translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+          }"
+        >
+          <a [routerLink]="Departments[0].DepartLink">{{
+            Departments[0].DepartName
+          }}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="" />
         </div>
       </div>
       <div class="depart">
-        <img class="iconic" [src]="Departments[1].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[1].DepartLink">{{Departments[1].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        <img class="iconic" [src]="Departments[1].DepartImg" alt="" />
+        <div
+          class="overlay"
+          [ngStyle]="{
+            'flex-direction':
+              translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+          }"
+        >
+          <a [routerLink]="Departments[1].DepartLink">{{
+            Departments[1].DepartName
+          }}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="" />
         </div>
       </div>
       <div class="depart">
-        <img class="iconic" [src]="Departments[2].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[2].DepartLink">{{Departments[2].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        <img class="iconic" [src]="Departments[2].DepartImg" alt="" />
+        <div
+          class="overlay"
+          [ngStyle]="{
+            'flex-direction':
+              translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+          }"
+        >
+          <a [routerLink]="Departments[2].DepartLink">{{
+            Departments[2].DepartName
+          }}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="" />
         </div>
       </div>
       <div class="depart">
-        <img class="iconic" [src]="Departments[3].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[3].DepartLink">{{Departments[3].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        <img class="iconic" [src]="Departments[3].DepartImg" alt="" />
+        <div
+          class="overlay"
+          [ngStyle]="{
+            'flex-direction':
+              translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+          }"
+        >
+          <a [routerLink]="Departments[3].DepartLink">{{
+            Departments[3].DepartName
+          }}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="" />
         </div>
       </div>
       <div class="depart">
-        <img class="iconic" [src]="Departments[4].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[4].DepartLink">{{Departments[4].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        <img class="iconic" [src]="Departments[4].DepartImg" alt="" />
+        <div
+          class="overlay"
+          [ngStyle]="{
+            'flex-direction':
+              translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+          }"
+        >
+          <a [routerLink]="Departments[4].DepartLink">{{
+            Departments[4].DepartName
+          }}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="" />
         </div>
       </div>
       <div class="depart">
-        <img class="iconic" [src]="Departments[5].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[5].DepartLink">{{Departments[5].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        <img class="iconic" [src]="Departments[5].DepartImg" alt="" />
+        <div
+          class="overlay"
+          [ngStyle]="{
+            'flex-direction':
+              translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+          }"
+        >
+          <a [routerLink]="Departments[5].DepartLink">{{
+            Departments[5].DepartName
+          }}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="" />
         </div>
       </div>
       <div class="depart">
-        <img class="iconic" [src]="Departments[6].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[6].DepartLink">{{Departments[6].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        <img class="iconic" [src]="Departments[6].DepartImg" alt="" />
+        <div
+          class="overlay"
+          [ngStyle]="{
+            'flex-direction':
+              translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+          }"
+        >
+          <a [routerLink]="Departments[6].DepartLink">{{
+            Departments[6].DepartName
+          }}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="" />
         </div>
       </div>
       <div class="depart">
-        <img class="iconic" [src]="Departments[7].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[7].DepartLink">{{Departments[7].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-        </div>
-      </div>
-      <div class="depart">
-        <img class="iconic" [src]="Departments[8].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[8].DepartLink">{{Departments[8].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-        </div>
-      </div>
-      <div class="depart">
-        <img class="iconic" [src]="Departments[9].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[9].DepartLink">{{Departments[9].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-        </div>
-      </div>
-      <div class="depart">
-        <img class="iconic" [src]="Departments[10].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[10].DepartLink">{{Departments[10].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-        </div>
-      </div>
-      <div class="depart">
-        <img class="iconic" [src]="Departments[11].DepartImg" alt="">
-        <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-          <a [routerLink]="Departments[11].DepartLink">{{Departments[11].DepartName}}</a>
-          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        <img class="iconic" [src]="Departments[7].DepartImg" alt="" />
+        <div
+          class="overlay"
+          [ngStyle]="{
+            'flex-direction':
+              translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+          }"
+        >
+          <a [routerLink]="Departments[7].DepartLink">{{
+            Departments[7].DepartName
+          }}</a>
+          <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="" />
         </div>
       </div>
     </div>
+
+
+
+
+
+    <!-- <div class="departsImages d-none d-md-block">
+      <ngx-slick-carousel
+        class="carousel"
+        #slickModal="slick-carousel"
+        [config]="departmentSliderConfig"
+      >
+        <div ngxSlickItem class="slide">
+          <div class="depart">
+            <div class="firstPart">
+              <img class="iconic" [src]="Departments[0].DepartImg" alt="" />
+              <div
+                class="overlay"
+                [ngStyle]="{
+                  'flex-direction':
+                    translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+                }"
+              >
+                <a [routerLink]="Departments[0].DepartLink">{{
+                  Departments[0].DepartName
+                }}</a>
+                <img
+                  class="arrow"
+                  src="assets/images/icons/arrow-back.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ngxSlickItem class="slide">
+          <div class="depart">
+            <div class="secondPart">
+              <div class="img1">
+                <img class="iconic" [src]="Departments[1].DepartImg" alt="" />
+                <div
+                  class="overlay"
+                  [ngStyle]="{
+                    'flex-direction':
+                      translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+                  }"
+                >
+                  <a [routerLink]="Departments[1].DepartLink">{{
+                    Departments[1].DepartName
+                  }}</a>
+                  <img
+                    class="arrow"
+                    src="assets/images/icons/arrow-back.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="img2">
+                <img class="iconic" [src]="Departments[2].DepartImg" alt="" />
+                <div
+                  class="overlay"
+                  [ngStyle]="{
+                    'flex-direction':
+                      translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+                  }"
+                >
+                  <a [routerLink]="Departments[2].DepartLink">{{
+                    Departments[2].DepartName
+                  }}</a>
+                  <img
+                    class="arrow"
+                    src="assets/images/icons/arrow-back.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ngxSlickItem class="slide">
+          <div class="depart">
+            <div class="thirdPart">
+              <img class="iconic" [src]="Departments[3].DepartImg" alt="" />
+              <div
+                class="overlay"
+                [ngStyle]="{
+                  'flex-direction':
+                    translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+                }"
+              >
+                <a [routerLink]="Departments[3].DepartLink">{{
+                  Departments[3].DepartName
+                }}</a>
+                <img
+                  class="arrow"
+                  src="assets/images/icons/arrow-back.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ngxSlickItem class="slide">
+          <div class="depart">
+            <div class="fourthPart">
+              <div class="img1">
+                <img class="iconic" [src]="Departments[4].DepartImg" alt="" />
+                <div
+                  class="overlay"
+                  [ngStyle]="{
+                    'flex-direction':
+                      translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+                  }"
+                >
+                  <a [routerLink]="Departments[4].DepartLink">{{
+                    Departments[4].DepartName
+                  }}</a>
+                  <img
+                    class="arrow"
+                    src="assets/images/icons/arrow-back.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="img2">
+                <img class="iconic" [src]="Departments[5].DepartImg" alt="" />
+                <div
+                  class="overlay"
+                  [ngStyle]="{
+                    'flex-direction':
+                      translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+                  }"
+                >
+                  <a [routerLink]="Departments[5].DepartLink">{{
+                    Departments[5].DepartName
+                  }}</a>
+                  <img
+                    class="arrow"
+                    src="assets/images/icons/arrow-back.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ngxSlickItem class="slide">
+          <div class="depart">
+            <div class="fifthPart">
+              <img class="iconic" [src]="Departments[6].DepartImg" alt="" />
+              <div
+                class="overlay"
+                [ngStyle]="{
+                  'flex-direction':
+                    translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+                }"
+              >
+                <a [routerLink]="Departments[6].DepartLink">{{
+                  Departments[6].DepartName
+                }}</a>
+                <img
+                  class="arrow"
+                  src="assets/images/icons/arrow-back.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ngxSlickItem class="slide">
+          <div class="depart">
+            <div class="sixthPart">
+              <div class="img1">
+                <img class="iconic" [src]="Departments[7].DepartImg" alt="" />
+                <div
+                  class="overlay"
+                  [ngStyle]="{
+                    'flex-direction':
+                      translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+                  }"
+                >
+                  <a [routerLink]="Departments[7].DepartLink">{{
+                    Departments[7].DepartName
+                  }}</a>
+                  <img
+                    class="arrow"
+                    src="assets/images/icons/arrow-back.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="img2">
+                <img class="iconic" [src]="Departments[8].DepartImg" alt="" />
+                <div
+                  class="overlay"
+                  [ngStyle]="{
+                    'flex-direction':
+                      translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+                  }"
+                >
+                  <a [routerLink]="Departments[8].DepartLink">{{
+                    Departments[8].DepartName
+                  }}</a>
+                  <img
+                    class="arrow"
+                    src="assets/images/icons/arrow-back.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ngxSlickItem class="slide">
+          <div class="depart">
+            <div class="seventhPart">
+              <img class="iconic" [src]="Departments[9].DepartImg" alt="" />
+              <div
+                class="overlay"
+                [ngStyle]="{
+                  'flex-direction':
+                    translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+                }"
+              >
+                <a [routerLink]="Departments[9].DepartLink">{{
+                  Departments[9].DepartName
+                }}</a>
+                <img
+                  class="arrow"
+                  src="assets/images/icons/arrow-back.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ngxSlickItem class="slide">
+          <div class="depart">
+            <div class="eightthPart">
+              <div class="img1">
+                <img class="iconic" [src]="Departments[10].DepartImg" alt="" />
+                <div
+                  class="overlay"
+                  [ngStyle]="{
+                    'flex-direction':
+                      translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+                  }"
+                >
+                  <a [routerLink]="Departments[10].DepartLink">{{
+                    Departments[10].DepartName
+                  }}</a>
+                  <img
+                    class="arrow"
+                    src="assets/images/icons/arrow-back.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="img2">
+                <img class="iconic" [src]="Departments[11].DepartImg" alt="" />
+                <div
+                  class="overlay"
+                  [ngStyle]="{
+                    'flex-direction':
+                      translate.currentLang == 'ar' ? 'row-reverse' : 'row'
+                  }"
+                >
+                  <a [routerLink]="Departments[11].DepartLink">{{
+                    Departments[11].DepartName
+                  }}</a>
+                  <img
+                    class="arrow"
+                    src="assets/images/icons/arrow-back.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ngx-slick-carousel>
+    </div> -->
   </div>
-  <div class="departsImages d-none d-md-block">
-    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="departmentSliderConfig">
-      <div ngxSlickItem class="slide">
-        <!-- <div class="depart">
-          <img class="iconic" [src]="depart.DepartImg" alt="">
-          <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-            <a [routerLink]="depart.DepartLink">{{depart.DepartName}}</a>
-            <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-          </div>
-        </div> -->
-        <div class="depart">
-          <div class="firstPart">
-            <img class="iconic" [src]="Departments[0].DepartImg" alt="">
-            <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-              <a [routerLink]="Departments[0].DepartLink">{{Departments[0].DepartName}}</a>
-              <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-            </div>
-          </div>
+  <div class="academy_numbers">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h4 data-aos="fade-up">{{ "ACADEMY_NUMBERS" | translate }}</h4>
+          <p data-aos="fade-right" class="directP">{{ "FACTS" | translate }}</p>
         </div>
-      </div>
-      <div ngxSlickItem class="slide">
-        <div class="depart">
-          <div class="secondPart">
-            <div class="img1">
-              <img class="iconic" [src]="Departments[1].DepartImg" alt="">
-              <div class="overlay"
-                [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-                <a [routerLink]="Departments[1].DepartLink">{{Departments[1].DepartName}}</a>
-                <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+        <div class="col-lg-6">
+          <div class="box">
+            <div class="column-one">
+              <div class="fact">
+                <div class="img">
+                  <img src="assets/images/icons/departments.svg" alt="" />
+                </div>
+                <span class="num">{{ academyDeparts }}</span>
+                <span class="title">{{ "DEPARTS_NUMBER" | translate }}</span>
+              </div>
+              <div class="fact">
+                <div class="img">
+                  <img src="assets/images/icons/graduates.svg" alt="" />
+                </div>
+                <span class="num">28693</span>
+                <span class="title">{{ "GRADUATES_NUMBER" | translate }}</span>
               </div>
             </div>
-            <div class="img2">
-              <img class="iconic" [src]="Departments[2].DepartImg" alt="">
-              <div class="overlay"
-                [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-                <a [routerLink]="Departments[2].DepartLink">{{Departments[2].DepartName}}</a>
-                <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+            <div class="column-two">
+              <div class="fact">
+                <div class="img">
+                  <img src="assets/images/icons/experience.svg" alt="" />
+                </div>
+                <span class="num">{{ experienceYears }}</span>
+                <span class="title">{{ "EXPERIENCE_YEARS" | translate }}</span>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div ngxSlickItem class="slide">
-        <div class="depart">
-          <div class="thirdPart">
-            <img class="iconic" [src]="Departments[3].DepartImg" alt="">
-            <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-              <a [routerLink]="Departments[3].DepartLink">{{Departments[3].DepartName}}</a>
-              <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div ngxSlickItem class="slide">
-        <div class="depart">
-          <div class="fourthPart">
-            <div class="img1">
-              <img class="iconic" [src]="Departments[4].DepartImg" alt="">
-              <div class="overlay"
-                [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-                <a [routerLink]="Departments[4].DepartLink">{{Departments[4].DepartName}}</a>
-                <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
+              <div class="fact">
+                <div class="img">
+                  <img src="assets/images/icons/staff.svg" alt="" />
+                </div>
+                <span class="num">{{ staffNumber }}</span>
+                <span class="title">{{ "STAFF_NUMBER" | translate }}</span>
               </div>
-            </div>
-            <div class="img2">
-              <img class="iconic" [src]="Departments[5].DepartImg" alt="">
-              <div class="overlay"
-                [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-                <a [routerLink]="Departments[5].DepartLink">{{Departments[5].DepartName}}</a>
-                <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div ngxSlickItem class="slide">
-        <div class="depart">
-          <div class="fifthPart">
-            <img class="iconic" [src]="Departments[6].DepartImg" alt="">
-            <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-              <a [routerLink]="Departments[6].DepartLink">{{Departments[6].DepartName}}</a>
-              <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div ngxSlickItem class="slide">
-        <div class="depart">
-          <div class="sixthPart">
-            <div class="img1">
-              <img class="iconic" [src]="Departments[7].DepartImg" alt="">
-              <div class="overlay"
-                [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-                <a [routerLink]="Departments[7].DepartLink">{{Departments[7].DepartName}}</a>
-                <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-              </div>
-            </div>
-            <div class="img2">
-              <img class="iconic" [src]="Departments[8].DepartImg" alt="">
-              <div class="overlay"
-                [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-                <a [routerLink]="Departments[8].DepartLink">{{Departments[8].DepartName}}</a>
-                <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div ngxSlickItem class="slide">
-        <div class="depart">
-          <div class="seventhPart">
-            <img class="iconic" [src]="Departments[9].DepartImg" alt="">
-            <div class="overlay" [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-              <a [routerLink]="Departments[9].DepartLink">{{Departments[9].DepartName}}</a>
-              <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div ngxSlickItem class="slide">
-        <div class="depart">
-          <div class="eightthPart">
-            <div class="img1">
-              <img class="iconic" [src]="Departments[10].DepartImg" alt="">
-              <div class="overlay"
-                [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-                <a [routerLink]="Departments[10].DepartLink">{{Departments[10].DepartName}}</a>
-                <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-              </div>
-            </div>
-            <div class="img2">
-              <img class="iconic" [src]="Departments[11].DepartImg" alt="">
-              <div class="overlay"
-                [ngStyle]="{'flex-direction' : translate.currentLang == 'ar' ? 'row-reverse' : 'row'}">
-                <a [routerLink]="Departments[11].DepartLink">{{Departments[11].DepartName}}</a>
-                <img class="arrow" src="assets/images/icons/arrow-back.svg" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </ngx-slick-carousel>
-  </div>
-</div>
-<div class="academy_numbers">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <h4 data-aos="fade-up">{{"ACADEMY_NUMBERS" | translate}}</h4>
-        <p data-aos="fade-right" class="directP">{{"FACTS" | translate}}</p>
-      </div>
-      <div class="col-lg-6">
-        <div class="box">
-          <div class="column-one">
-            <div class="fact">
-              <div class="img">
-                <img src="assets/images/icons/departments.svg" alt="">
-              </div>
-              <span class="num">{{academyDeparts}}</span>
-              <span class="title">{{"DEPARTS_NUMBER" | translate}}</span>
-            </div>
-            <div class="fact">
-              <div class="img">
-                <img src="assets/images/icons/graduates.svg" alt="">
-              </div>
-              <span class="num">28693</span>
-              <span class="title">{{"GRADUATES_NUMBER" | translate}}</span>
-            </div>
-          </div>
-          <div class="column-two">
-            <div class="fact">
-              <div class="img">
-                <img src="assets/images/icons/experience.svg" alt="">
-              </div>
-              <span class="num">{{experienceYears}}</span>
-              <span class="title">{{"EXPERIENCE_YEARS" | translate}}</span>
-            </div>
-            <div class="fact">
-              <div class="img">
-                <img src="assets/images/icons/staff.svg" alt="">
-              </div>
-              <span class="num">{{staffNumber}}</span>
-              <span class="title">{{"STAFF_NUMBER" | translate}}</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- <div class="container">
+    <!-- <div class="container">
     <h4 data-aos="fade-up">{{"ACADEMY_NUMBERS" | translate}}</h4>
     <div class="row" data-aos="fade-up">
       <div class="col-lg-3 col-sm-6">
@@ -316,143 +639,167 @@
       </div>
     </div>
   </div> -->
-</div>
-<div class="president_word">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="title">
-          <h1>{{ 'President.name' | translate}}</h1>
-          <span>{{ 'President.position' | translate}}</span>
+  </div>
+  <div class="president_word">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="title">
+            <h1>{{ "President.name" | translate }}</h1>
+            <span>{{ "President.position" | translate }}</span>
+          </div>
+          <span class="word">{{ "President.hisWord" | translate }}</span>
+          <p>{{ "President.partOne" | translate }}</p>
+          <p>{{ "President.partTwo" | translate }}</p>
+          <p>{{ "President.partThree" | translate }}</p>
         </div>
-        <span class="word">{{ 'President.hisWord' | translate}}</span>
-        <p>{{ 'President.partOne' | translate}}</p>
-        <p>{{ 'President.partTwo' | translate}}</p>
-        <p>{{ 'President.partThree' | translate}}</p>
-      </div>
-      <div class="col-lg-6">
-        <div class="president_img">
-          <img src="assets/images/president.png" alt="president">
+        <div class="col-lg-6">
+          <div class="president_img">
+            <img src="assets/images/president.png" alt="president" />
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="about">
-  <div class="container">
-    <div class="row align-items-baseline">
-      <div class="col-lg-3">
-        <div class="logo">
-          <img src="assets/images/main_assets/New_Logo.png" alt="logo">
+  <div class="about">
+    <div class="container">
+      <div class="row align-items-baseline">
+        <div class="col-lg-3">
+          <div class="logo">
+            <img src="assets/images/main_assets/New_Logo.png" alt="logo" />
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="intro">
+            <div class="points">
+              <img src="assets/images/shapes/points.png" alt="" />
+            </div>
+            <div class="img">
+              <img src="assets/images/image1.png" alt="" />
+            </div>
+            <div class="video">
+              <button>
+                <img src="assets/images/icons/play.png" alt="" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-lg-9">
-        <div class="intro">
-          <div class="points">
-            <img src="assets/images/shapes/points.png" alt="">
-          </div>
+    </div>
+  </div>
+  <div class="mediaGallery">
+    <h3 data-aos="fade-up">{{ "PICTURES_FROM_ACADEMY" | translate }}</h3>
+    <div class="points d-none d-md-block">
+      <img src="assets/images/shapes/points.png" alt="points" />
+    </div>
+    <owl-carousel-o
+      class="d-none d-xl-block"
+      [options]="customOptions"
+      data-aos="fade-up"
+    >
+      <ng-template carouselSlide>
+        <div class="gallery">
           <div class="img">
-            <img src="assets/images/image1.png" alt="">
-          </div>
-          <div class="video">
-            <button>
-              <img src="assets/images/icons/play.png" alt="">
-            </button>
+            <img src="/assets/images/gallery.png" alt="" />
           </div>
         </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="gallery">
+          <div class="img">
+            <img src="/assets/images/gallery.png" alt="" />
+          </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="gallery">
+          <div class="img">
+            <img src="/assets/images/gallery.png" alt="" />
+          </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="gallery">
+          <div class="img">
+            <img src="/assets/images/gallery.png" alt="" />
+          </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="gallery">
+          <div class="img">
+            <img src="/assets/images/gallery.png" alt="" />
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+    <div class="container d-xl-none" data-aos="fade-up">
+      <div class="academy-gallery">
+        <div class="slides">
+          <div class="mySlides">
+            <img src="/assets/images/gallery.png" alt="" />
+          </div>
+          <div class="mySlides">
+            <img src="/assets/images/gallery.png" alt="" />
+          </div>
+          <div class="mySlides">
+            <img src="/assets/images/gallery.png" alt="" />
+          </div>
+          <div class="mySlides">
+            <img src="/assets/images/gallery.png" alt="" />
+          </div>
+          <a class="prev" (click)="plusSlides(-1)">&#10095;</a>
+          <a class="next" (click)="plusSlides(1)">&#10094;</a>
+        </div>
+        <div class="images">
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="/assets/images/gallery.png"
+              (click)="currentSlide(1)"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="/assets/images/gallery.png"
+              (click)="currentSlide(2)"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="/assets/images/gallery.png"
+              (click)="currentSlide(3)"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="/assets/images/gallery.png"
+              (click)="currentSlide(4)"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="mediaGallery">
-  <h3 data-aos="fade-up">{{"PICTURES_FROM_ACADEMY" | translate}}</h3>
-  <div class="points d-none d-md-block">
-    <img src="assets/images/shapes/points.png" alt="points">
+  <app-branches></app-branches>
+  <div class="partners">
+    <h3>{{ "SUCCESS_PARTNERS" | translate }}</h3>
+    <ngx-slick-carousel
+      class="carousel"
+      #slickModal="slick-carousel"
+      [config]="sliderConfig"
+    >
+      <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <div class="partner">
+          <img src="{{ slide.img }}" alt="" />
+        </div>
+      </div>
+    </ngx-slick-carousel>
   </div>
-  <owl-carousel-o class="d-none d-xl-block" [options]="customOptions" data-aos="fade-up">
-    <ng-template carouselSlide>
-      <div class="gallery">
-        <div class="img">
-          <img src="/assets/images/gallery.png" alt="">
-        </div>
-      </div>
-    </ng-template>
-    <ng-template carouselSlide>
-      <div class="gallery">
-        <div class="img">
-          <img src="/assets/images/gallery.png" alt="">
-        </div>
-      </div>
-    </ng-template>
-    <ng-template carouselSlide>
-      <div class="gallery">
-        <div class="img">
-          <img src="/assets/images/gallery.png" alt="">
-        </div>
-      </div>
-    </ng-template>
-    <ng-template carouselSlide>
-      <div class="gallery">
-        <div class="img">
-          <img src="/assets/images/gallery.png" alt="">
-        </div>
-      </div>
-    </ng-template>
-    <ng-template carouselSlide>
-      <div class="gallery">
-        <div class="img">
-          <img src="/assets/images/gallery.png" alt="">
-        </div>
-      </div>
-    </ng-template>
-  </owl-carousel-o>
-  <div class="container d-xl-none" data-aos="fade-up">
-    <div class="academy-gallery">
-      <div class="slides">
-        <div class="mySlides">
-          <img src="/assets/images/gallery.png" alt="">
-        </div>
-        <div class="mySlides">
-          <img src="/assets/images/gallery.png" alt="">
-        </div>
-        <div class="mySlides">
-          <img src="/assets/images/gallery.png" alt="">
-        </div>
-        <div class="mySlides">
-          <img src="/assets/images/gallery.png" alt="">
-        </div>
-        <a class="prev" (click)="plusSlides(-1)">&#10095;</a>
-        <a class="next" (click)="plusSlides(1)">&#10094;</a>
-      </div>
-      <div class="images">
-        <div class="column">
-          <img class="demo cursor" src="/assets/images/gallery.png" (click)="currentSlide(1)">
-        </div>
-        <div class="column">
-          <img class="demo cursor" src="/assets/images/gallery.png" (click)="currentSlide(2)">
-        </div>
-        <div class="column">
-          <img class="demo cursor" src="/assets/images/gallery.png" (click)="currentSlide(3)">
-        </div>
-        <div class="column">
-          <img class="demo cursor" src="/assets/images/gallery.png" (click)="currentSlide(4)">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<app-branches></app-branches>
-<div class="partners">
-  <h3>{{"SUCCESS_PARTNERS" | translate}}</h3>
-  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="sliderConfig">
-    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-      <div class="partner">
-        <img src="{{ slide.img }}" alt="">
-      </div>
-    </div>
-  </ngx-slick-carousel>
-</div>
-<!-- <div class="faq">
+  <!-- <div class="faq">
   <h3 data-aos="fade-up">{{"ABOUT_SUB_ITEMS.FAQ" | translate}}</h3>
   <div class="container">
     <accordion [isAnimated]="true">
@@ -470,7 +817,7 @@
         <p>{{ "ACCREDIATED_CERTIFICATION" | translate }}</p>
       </accordion-group>
       <accordion-group data-aos="fade-up"
-        [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية للتوظيف ؟ الأكاديمية بتوظفني بعد ما اتخرج ؟' : translate.currentLang == 'gr' ? 'Besteht die Möglichkeit einer Anstellung? Bietet mir die Akademie nach meinem Abschluss Berufsmöglichkeiten?' : 'Is there a possibility for employment? Will the academy provide me with job opportunities after graduation?'">
+        [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية للتوظيف ؟ المركز بتوظفني بعد ما اتخرج ؟' : translate.currentLang == 'gr' ? 'Besteht die Möglichkeit einer Anstellung? Bietet mir die Akademie nach meinem Abschluss Berufsmöglichkeiten?' : 'Is there a possibility for employment? Will the academy provide me with job opportunities after graduation?'">
         <p>{{ "POSSABILITY_OF_EMPLOYING" | translate }}</p>
       </accordion-group>
     </accordion>
@@ -480,23 +827,28 @@
       [queryParams]="{item: 'conversations'}">{{"MORE_QUESTIONS" | translate}}</button>
   </div>
 </div> -->
-<div class="contact">
-  <div class="container">
-    <div class="box">
-      <div class="contact-us">
-        <h4>{{"KEEP_IN_TOUCH" | translate}}</h4>
-        <p>{{"ENTER_EMAIL_TO_JOIN" | translate}}</p>
-        <form>
-          <div class="email">
-            <input type="text" class="form-control" placeholder="{{'EMAIL' | translate}}">
-            <button class="forward">
-              <img src="assets/images/icons/forward.png" alt="forward">
-            </button>
-          </div>
-        </form>
-      </div>
-      <div class="img">
-        <img src="assets/images/books.png" alt="books">
+  <div class="contact">
+    <div class="container">
+      <div class="box">
+        <div class="contact-us">
+          <h4>{{ "KEEP_IN_TOUCH" | translate }}</h4>
+          <p>{{ "ENTER_EMAIL_TO_JOIN" | translate }}</p>
+          <form>
+            <div class="email">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="{{ 'EMAIL' | translate }}"
+              />
+              <button class="forward">
+                <img src="assets/images/icons/forward.png" alt="forward" />
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="img">
+          <img src="assets/images/books.png" alt="books" />
+        </div>
       </div>
     </div>
   </div>

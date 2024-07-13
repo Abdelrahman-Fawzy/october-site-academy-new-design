@@ -56,7 +56,7 @@
             <div class="text">
               <p *ngIf="translate.currentLang == 'ar'">تقديم خدمة تعليمية تدريبية مهنية متميزة ،تعتمد على الابداع في
                 التعليم والإمتاع فى التدريب وصولاً الى الاتقان فى المخرج ، بغرض خدمة المجتمع وفق معايير الجودة المهنية
-                ومن خلال التعاون والشراكة مع مؤسسات رسمية وأكاديمية ، لتأهيل كوادر مهنية مميزة قادرة علي تحقيق المتطلبات
+                ومن خلال التعاون والشراكة مع مؤسسات رسمية ومركز ، لتأهيل كوادر مهنية مميزة قادرة علي تحقيق المتطلبات
                 القياسية المطلوبة بأسواق العمل محلياً واقليمياً ودولياً.</p>
               <p *ngIf="translate.currentLang == 'en'">
                 We aim to provide a comprehensive and distinguished educational service that relies on critical thinking
@@ -358,50 +358,6 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="depart">
-              <div class="img">
-                <img src="assets/images/departments-icons/construction.svg" alt="">
-              </div>
-              <div class="info">
-                <a
-                  routerLink="/departments/construction-and-buildings-department">{{ "DEPARTMENTS_SUB_ITEMS.ENGINEERING" | translate}}</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="depart">
-              <div class="img">
-                <img src="assets/images/departments-icons/electronics.svg" alt="">
-              </div>
-              <div class="info">
-                <a
-                  routerLink="/departments/electronics-department">{{ "DEPARTMENTS_SUB_ITEMS.ELECTRONICS" | translate}}</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="depart">
-              <div class="img">
-                <img src="assets/images/departments-icons/analyst.svg" alt="">
-              </div>
-              <div class="info">
-                <a
-                  routerLink="/departments/trading-and-analysis-department">{{ "DEPARTMENTS_SUB_ITEMS.ANALYSIT" | translate}}</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="depart">
-              <div class="img">
-                <img src="assets/images/departments-icons/caring.svg" alt="">
-              </div>
-              <div class="info">
-                <a
-                  routerLink="/departments/care-of-elderly-department">{{ "DEPARTMENTS_SUB_ITEMS.CARING" | translate}}</a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -478,9 +434,9 @@
     </div>
     <div class="tabcontent" id="partners">
       <div class="container">
-        <p *ngIf="translate.currentLang == 'ar'">على مدى السنوات السابقة استطاعت أكاديمية 6 أكتوبر من تكوين علاقات
+        <p *ngIf="translate.currentLang == 'ar'">على مدى السنوات السابقة استطاعت مركز 6 أكتوبر من تكوين علاقات
           ناجحة تتسم بالاستقرار والاستمرارية مع مجموعة من أكبر الجامعات والمعاهد المصرية بالإضافة إلى مجموعة من
-          المستشفيات والمصانع والشركات . ونجحت في استثمار تلك الثقة المتبادلة في تطوير اعمالها وتصبح أكاديمية 6 أكتوبر
+          المستشفيات والمصانع والشركات . ونجحت في استثمار تلك الثقة المتبادلة في تطوير اعمالها وتصبح مركز 6 أكتوبر
           الأولى في التعليم الفني في مصر</p>
         <p *ngIf="translate.currentLang == 'en'">Throughout the previous years, 6
           October Academy has managed to establish successful and enduring relationships with a group of major Egyptian
@@ -725,7 +681,7 @@
             <p>{{ "ACCREDIATED_CERTIFICATION" | translate }}</p>
           </accordion-group>
           <accordion-group
-            [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية للتوظيف ؟ الأكاديمية بتوظفني بعد ما اتخرج ؟' : translate.currentLang == 'gr' ? 'Besteht die Möglichkeit einer Anstellung? Bietet mir die Akademie nach meinem Abschluss Berufsmöglichkeiten?' : 'Is there a possibility for employment? Will the academy provide me with job opportunities after graduation?'">
+            [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية للتوظيف ؟ المركز بتوظفني بعد ما اتخرج ؟' : translate.currentLang == 'gr' ? 'Besteht die Möglichkeit einer Anstellung? Bietet mir die Akademie nach meinem Abschluss Berufsmöglichkeiten?' : 'Is there a possibility for employment? Will the academy provide me with job opportunities after graduation?'">
             <p>{{ "POSSABILITY_OF_EMPLOYING" | translate }}</p>
           </accordion-group>
           <accordion-group

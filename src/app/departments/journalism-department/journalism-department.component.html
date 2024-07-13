@@ -1,5 +1,5 @@
 <app-department-header
-  [departName]="translate.currentLang == 'ar' ? 'قسم الصحافة والإعلام' : translate.currentLang == 'gr' ? 'Abteilung für Mediendienste' : 'Department of Media Services'"
+  [departName]="translate.currentLang == 'ar' ? 'برنامج الصحافة والإعلام' : translate.currentLang == 'gr' ? 'Abteilung für Mediendienste' : 'Department of Media Services'"
   [departImg]="'assets/images/departments-icons/journalismDepartCover.svg'">
 </app-department-header>
 
@@ -11,7 +11,7 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_VISION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar' ">تسعى أكاديمية 6 أكتوبر من خلال قسم الخدمات الإعلامية والصحفية لأن تكون
+        <p *ngIf="translate.currentLang == 'ar' ">تسعى مركز 6 أكتوبر من خلال برنامج الخدمات الإعلامية والصحفية لأن تكون
           الرائدة فى اعداد الكوادر الفنية المتخصصة فى المجال، كما تسعى الى تميز خريجها لتكون أفضل الكوادر وأن تجتذب أعلي
           الكفاءات العلمية للتطوير الدائم المتلائم مع احتياجات سوق العمل الإعلامى بتدريس المواد المتعلقة بالصحافة
           والاذاعة والتليفزيون والعلاقات العامة على يد نخبة متميزة من اعضاء هيئة التدريس والهيئة المعاونة .</p>
@@ -36,9 +36,9 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_MESSAGE" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar' ">تتبلور رسالة القسم في إعداد وتأهيل خريجين على مستوى عال من الكفاءة و
+        <p *ngIf="translate.currentLang == 'ar' ">تتبلور رسالة البرنامج في إعداد وتأهيل خريجين على مستوى عال من الكفاءة و
           الفاعلية و تلبية احتياجات سوق وتحقيق مكانة متقدمة بين أفضل اكاديميات الصحافة والاعلام في مصر والوطن العربي من
-          خلال تأهيل الخريجين للمنافسة في سوق العمل المحلي والوطني والعالمي فى المجال الصحفي والإعلامي لتكون الأكاديمية
+          خلال تأهيل الخريجين للمنافسة في سوق العمل المحلي والوطني والعالمي فى المجال الصحفي والإعلامي لتكون المركز
           في مقدمة الاكاديميات المصرية والعربية للصحافة والإعلام.</p>
         <p *ngIf="translate.currentLang == 'en' ">The mission of the department is to
           prepare and qualify graduates at a high level of competence and effectiveness, meeting the needs of the market
@@ -124,7 +124,7 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_STAFF" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar' ">يضم القسم نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين
+        <p *ngIf="translate.currentLang == 'ar' ">يضم البرنامج نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين
           والمهندسين الأكفاء وذوي خبرة عالية أكاديمياً وتدريبياً</p>
         <p *ngIf="translate.currentLang == 'en' ">The department includes a group of
           professors and teaching assistants to teach academic subjects for the Department of Journalism and
@@ -140,7 +140,7 @@
       </div>
       <div class="text">
         <h6>{{ "GRADUATE_JOB_DESCRIPTION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar' ">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بمختلف اعمال الخدمات
+        <p *ngIf="translate.currentLang == 'ar' ">يهدف البرنامج الى تأهيل الخريج ليكون قادر على القيام بمختلف اعمال الخدمات
           الإعلامية والصحفية وتأهيلهم لسوق العمل فى المجال الصحفي والإعلامي وفق ما يتطلبه من مؤهلات دراسية وتدريبية،
           ليصبح قادر على العمل كمراسل او محرر صحفي فى الصحف الورقية والالكترونية، او معد ومذيع فى الراديو والتليفزيون
         </p>
@@ -156,23 +156,10 @@
           Digitalzeitungen oder als Produzent und Moderator im Hörfunk vorbereitet.</p>
       </div>
     </div>
-    <div class="staff">
-      <div class="img">
-        <img src="assets/images/departments-icons/books.svg" alt="">
-      </div>
-      <div class="text">
-        <h6>{{ "ACADEMIC_SYSTEM" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">عامان دراسيان 4 ترم.</p>
-        <p *ngIf="translate.currentLang == 'en'">The academic program spans two
-          academic years, consisting of four semesters.</p>
-        <p *ngIf="translate.currentLang == 'gr'">Das akademische Programm erstreckt sich über zwei Studienjahre,
-          bestehend aus vier Semestern.</p>
-      </div>
-    </div>
   </div>
   <div class="staff-img d-none d-lg-block">
     <img src="assets/images/departments-icons/journalismDepartStaff.png" alt="">
   </div>
 </div>
-<app-training-gallery></app-training-gallery>
+<app-training-gallery [imagesList]="imagesList"></app-training-gallery>
 <app-join></app-join>

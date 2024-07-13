@@ -1,5 +1,5 @@
 <app-department-header
-  [departName]="translate.currentLang == 'ar' ? 'قسم الخدمات البترولية' : translate.currentLang == 'gr' ? 'Abteilung für Erdöldienstleistungen' : 'Department of Petroleum Services' "
+  [departName]="translate.currentLang == 'ar' ? 'برنامج الخدمات البترولية' : translate.currentLang == 'gr' ? 'Abteilung für Erdöldienstleistungen' : 'Department of Petroleum Services' "
   [departImg]="'assets/images/departments-icons/petrolDepartCover.svg'">
 </app-department-header>
 
@@ -11,11 +11,11 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_VISION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">تسعى أكاديمية 6 أكتوبر فى قسم تكنولوجيا الخدمات البترولية إلى توفير
+        <p *ngIf="translate.currentLang == 'ar'">تسعى مركز 6 أكتوبر فى برنامج تكنولوجيا الخدمات البترولية إلى توفير
           مقومات التطوير المستمر للتعليم فى مجال الخدمات البترولية لمواكبة التطورات العلمية والمهنية المتسارعة فى مجال
-          البترول، والارتقاء بخريجي القسم إلى مستوى التميز والقدرة التنافسية العالية لتلبية متطلبات سوق الخدمات
+          البترول، والارتقاء بخريجي البرنامج إلى مستوى التميز والقدرة التنافسية العالية لتلبية متطلبات سوق الخدمات
           البترولية فى مصر والمنطقة العربية.</p>
-        <p *ngIf="translate.currentLang == 'ar'">ويُقْصَدُ به القسم المنوظ بالعملية التعليمية الكاملة لطلاب التخصص
+        <p *ngIf="translate.currentLang == 'ar'">ويُقْصَدُ به البرنامج المنوظ بالعملية التعليمية الكاملة لطلاب التخصص
           والمسؤول عن إعداد وتخريج اختصاصى مهنى فى الخدمات البترولية (الحفر – اللحام – اللحام تحت الماء – فنيات معامل
           التكرير ) حسب المتطلبات المهنية الواردة في اللائحة.</p>
 
@@ -47,7 +47,7 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_MESSAGE" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">تتبلور رسالة القسم في توظيف جميع الخبرات المتخصصة فى مجال الخدمات
+        <p *ngIf="translate.currentLang == 'ar'">تتبلور رسالة البرنامج في توظيف جميع الخبرات المتخصصة فى مجال الخدمات
           البترولية لتقديم حلول متميزة فى مجال الحفر والللحام والتكرير بغرض الالتزام بالمعايير والمستويات العالمية في
           نظم الخدمات البترولية ومواكبة التقدم والتطور في مجال البترول والتركيز على متطلبات السوق الفنية- تقديم أفضل
           المهارات المتعلقة بالخدمات البترولية والتى تطلبها شركات البترول المحلية والدولية.</p>
@@ -132,7 +132,7 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_STAFF" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">يضم القسم نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين
+        <p *ngIf="translate.currentLang == 'ar'">يضم البرنامج نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين
           والمهندسين الأكفاء وذوي خبرة عالية أكاديمياً وتدريبياً</p>
         <p *ngIf="translate.currentLang == 'en'">The department comprises a teaching
           staff, including professors, teaching assistant, and competent engineers, all of whom possess extensive
@@ -148,7 +148,7 @@
       </div>
       <div class="text">
         <h6>{{ "GRADUATE_JOB_DESCRIPTION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام بالمهام الفنية لمساعد
+        <p *ngIf="translate.currentLang == 'ar'">يهدف البرنامج الى تأهيل الخريج ليكون قادر على القيام بالمهام الفنية لمساعد
           الخدمات البترولية في كافة المنظمات العاملة في المجال ويكون ذو كفاء عالية وملم بكافة متطلبات سوق العمل.</p>
         <p *ngIf="translate.currentLang == 'en'">The department's objective is to
           qualify the graduate to carry out the technical tasks of a petroleum services assistant in all organizations
@@ -160,23 +160,10 @@
           Anforderungen des Arbeitsmarktes bestens vertraut.</p>
       </div>
     </div>
-    <div class="staff">
-      <div class="img">
-        <img src="assets/images/departments-icons/books.svg" alt="">
-      </div>
-      <div class="text">
-        <h6>{{ "ACADEMIC_SYSTEM" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">عامان دراسيان 4 ترم.</p>
-        <p *ngIf="translate.currentLang == 'en'">The academic program spans two
-          academic years, consisting of four semesters.</p>
-        <p *ngIf="translate.currentLang == 'gr'">Das akademische Programm erstreckt sich über zwei Studienjahre,
-          bestehend aus vier Semestern.</p>
-      </div>
-    </div>
   </div>
   <div class="staff-img d-none d-lg-block">
     <img src="assets/images/departments-icons/petrolDepartStaff.png" alt="">
   </div>
 </div>
-<app-training-gallery></app-training-gallery>
+<app-training-gallery [imagesList]="imagesList"></app-training-gallery>
 <app-join></app-join>

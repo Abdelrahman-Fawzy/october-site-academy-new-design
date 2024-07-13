@@ -4,6 +4,14 @@ footer {
   background-color: #E7F1F0;
   margin-top: 5em;
   .footer-box {padding: 10em 10em 3em; text-align: center;}
+  .logo {
+    width: 260px;
+    height: auto;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
   .contact {
     margin-top: 3em;
     p {
@@ -56,9 +64,10 @@ footer {
           width: 20px;
           height: 20px;
         }
-        span {
+        span, a {
           margin: 0 10px;
-          font-size: 1.3em
+          font-size: 1.3em;
+          color: #363636;
         }
       }
     }
@@ -113,7 +122,8 @@ footer {
         }
         ul {
           display: flex;
-          justify-content: space-around;
+          justify-content: center;
+          gap: 1em;
           li {
             width: 20px;
             height: 20px;

@@ -21,8 +21,8 @@ import { CareOfElderlyComponent } from './departments/care-of-elderly/care-of-el
 import { TranslateService } from '@ngx-translate/core';
 
 let academyName = {
-  nameEn: '6 October Academy',
-  nameAr: 'أكاديمية 6 أكتوبر'
+  nameEn: '6th of October centers',
+  nameAr: 'مراكز 6 أكتوبر'
 }
 
 const routes: Routes = [

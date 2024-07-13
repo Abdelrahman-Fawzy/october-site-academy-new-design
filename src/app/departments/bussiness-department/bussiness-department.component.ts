@@ -8,9 +8,20 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class BussinessDepartmentComponent implements OnInit {
 
+  imagesList = []
+
   constructor(public translate: TranslateService) { }
 
   ngOnInit(): void {
+    this.fillImagedList()
+  }
+
+  fillImagedList() {
+    let imagesCount = 5;
+
+    for (let i = 1; i <= imagesCount; i++) {
+      this.imagesList.push(`assets/images/departments-icons/bussiness/${i}.png`)
+    }
   }
 
 }

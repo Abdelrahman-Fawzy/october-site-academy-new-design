@@ -1,5 +1,5 @@
 <app-department-header
-  [departName]="translate.currentLang == 'ar' ? 'قسم المساحة والخرائط' : translate.currentLang == 'gr' ? 'Abteilung für Vermessungsdienste' : 'Department of Survey services'"
+  [departName]="translate.currentLang == 'ar' ? 'برنامج المساحة والخرائط' : translate.currentLang == 'gr' ? 'Abteilung für Vermessungsdienste' : 'Department of Survey services'"
   [departImg]="'assets/images/departments-icons/mapsDepartCover.svg'">
 </app-department-header>
 
@@ -11,11 +11,11 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_VISION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">تسعى أكاديمية 6 أكتوبر فى قسم تكنولوجيا الخدمات المساحية إلى توفير
+        <p *ngIf="translate.currentLang == 'ar'">تسعى مركز 6 أكتوبر فى برنامج تكنولوجيا الخدمات المساحية إلى توفير
           مقومات التطوير المستمر للتعليم فى مجال الخدمات المساحية لمواكبة التطورات العلمية والمهنية المتسارعة فى المجال
-          ، والارتقاء بخريجي القسم إلى مستوى التميز والقدرة التنافسية العالية لتلبية متطلبات سوق العمل من فنى المساحة
+          ، والارتقاء بخريجي البرنامج إلى مستوى التميز والقدرة التنافسية العالية لتلبية متطلبات سوق العمل من فنى المساحة
           والخرائط فى مصر والمنطقة العربية.</p>
-        <p *ngIf="translate.currentLang == 'ar'">ويُقْصَدُ به القسم المنوظ بالعملية التعليمية الكاملة لطلاب التخصص
+        <p *ngIf="translate.currentLang == 'ar'">ويُقْصَدُ به البرنامج المنوظ بالعملية التعليمية الكاملة لطلاب التخصص
           والمسؤول عن إعداد وتخريج اختصاصى مهنى فى الخدمات المساحية حسب المتطلبات المهنية الواردة في اللائحة.</p>
 
         <p *ngIf="translate.currentLang == 'en'">October 6 Academy seeks, in the
@@ -47,8 +47,8 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_MESSAGE" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">تتبلور رسالة القسم في تأهيل المتدربين فنياً فى مجال الخدمات الصحية بغرض
-          الالتزام بالمعايير والمستويات العالمية في المجال و تأهيل خريجي القسم تأهيلا تقنيا في مجال المساحة والخرائط
+        <p *ngIf="translate.currentLang == 'ar'">تتبلور رسالة البرنامج في تأهيل المتدربين فنياً فى مجال الخدمات الصحية بغرض
+          الالتزام بالمعايير والمستويات العالمية في المجال و تأهيل خريجي البرنامج تأهيلا تقنيا في مجال المساحة والخرائط
           وبما يسهم في تلبية احتياجات سوق العمل في المشاريع الهندسية المختلفة (مساحية وانشائية) على اختلاف احجامها
           بالقطاعين العام والخاص داخل وخارج الجمهورية.</p>
         <p *ngIf="translate.currentLang == 'en'">The department's mission is focused on
@@ -162,7 +162,7 @@
       </div>
       <div class="text">
         <h6>{{ "DEPART_STAFF" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">يضم القسم نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين
+        <p *ngIf="translate.currentLang == 'ar'">يضم البرنامج نخبة من أميز أعضاء هيئة التدريس من الأساتذة والمعيدين
           والمهندسين الأكفاء وذوي خبرة عالية أكاديمياً وتدريبياً</p>
         <p *ngIf="translate.currentLang == 'en'">The department comprises a teaching
           staff, including professors, teaching assistant, and competent engineers, all of whom possess extensive
@@ -178,7 +178,7 @@
       </div>
       <div class="text">
         <h6>{{ "GRADUATE_JOB_DESCRIPTION" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">يهدف القسم الى تأهيل الخريج ليكون قادر على القيام باجراء الرفع المساحي
+        <p *ngIf="translate.currentLang == 'ar'">يهدف البرنامج الى تأهيل الخريج ليكون قادر على القيام باجراء الرفع المساحي
           ذات الدقة العالية للمشاريع الهندسية (السدود ،الخزانات ، الجسور ، الانفاق , وطرق المطارات) من اجل بناء قاعدة
           بيانات وانتاج الخرائط الرقمية في مختلف المجالات – شبكات المياه – شبكات الكهرباء- الصرف الصحي – الطرق – المصانع
           الكبرى و غيرها استخدام نظم المعلومات الجغرافية حساب كميات الحفر والردم الازمة للمشروعات كمشروعات الطرق
@@ -197,24 +197,11 @@
           Aushub- und Füllmengen, die für Projekte wie Straßenbau und Nivellierung erforderlich sind.</p>
       </div>
     </div>
-    <div class="staff">
-      <div class="img">
-        <img src="assets/images/departments-icons/books.svg" alt="">
-      </div>
-      <div class="text">
-        <h6>{{ "ACADEMIC_SYSTEM" | translate }}</h6>
-        <p *ngIf="translate.currentLang == 'ar'">عامان دراسيان 4 ترم.</p>
-        <p *ngIf="translate.currentLang == 'en'">The academic program spans two
-          academic years, consisting of four semesters.</p>
-        <p *ngIf="translate.currentLang == 'gr'">Das akademische Programm erstreckt sich über zwei Studienjahre,
-          bestehend aus vier Semestern.</p>
-      </div>
-    </div>
   </div>
   <div class="staff-img d-none d-lg-block">
     <img src="assets/images/departments-icons/mapsDepartStaff.png" alt="">
   </div>
 </div>
 
-<app-training-gallery></app-training-gallery>
+<app-training-gallery [imagesList]="imagesList"></app-training-gallery>
 <app-join></app-join>

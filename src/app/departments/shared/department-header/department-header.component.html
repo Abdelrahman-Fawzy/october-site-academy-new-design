@@ -4,7 +4,7 @@
       <div class="first-part">
         <h3>{{departName}}</h3>
         <p>
-          {{ translate.currentLang == 'ar' ? 'للتسجيل في القسم' : translate.currentLang == 'gr' ? 'Für die Immatrikulation im Fachbereich' : 'For enrollment in the department'}}<br>
+          {{ translate.currentLang == 'ar' ? 'للتسجيل في البرنامج' : translate.currentLang == 'gr' ? 'Für die Immatrikulation im Fachbereich' : 'For enrollment in the department'}}<br>
           {{ translate.currentLang == 'ar' ? 'قم بملء استمارة التقديم عبر الإنترنت' : translate.currentLang == 'gr' ? 'Bitte füllen Sie das Online-Bewerbungsformular aus.' : 'Please fill out the online application form.'}}
         </p>
         <button class="primary-white" (click)="register()">{{ 'REGISTER_NOW' | translate }}</button>

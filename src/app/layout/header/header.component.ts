@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
     if(!localStorage.getItem('currentLang')) {
       localStorage.setItem('currentLang', 'ar')
       this.currentLang = localStorage.getItem("currentLang")
+      this.translate.use(this.currentLang)
     }
     this.currentLang = localStorage.getItem("currentLang") || "ar";
     this.translate.use(this.currentLang)

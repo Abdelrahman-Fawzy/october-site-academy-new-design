@@ -17,6 +17,10 @@ export class HeaderComponent implements OnInit {
   constructor(private modalService: BsModalService, public translate: TranslateService, @Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
+    if(!localStorage.getItem('currentLang')) {
+      localStorage.setItem('currentLang', 'ar')
+      this.currentLang = localStorage.getItem("currentLang")
+    }
     this.currentLang = localStorage.getItem("currentLang") || "ar";
     this.translate.use(this.currentLang)
   }

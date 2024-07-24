@@ -21,6 +21,15 @@
   }
   .navbar-collapse {
     justify-content: space-evenly;
+    .nav-lists {
+      gap: 0.5em;
+      ul.social { gap: 10px; }
+      .divider {
+        height: 1px;
+        width: 100%;
+        background: #D4D4D4;
+      }
+    }
     ul.navbar-nav {
       gap: 2px;
       li {

@@ -43,6 +43,9 @@ import { ConstructionAndBuildingsComponent } from './departments/construction-an
 import { ElectronicsComponent } from './departments/electronics/electronics.component';
 import { TradingAndAnalysisComponent } from './departments/trading-and-analysis/trading-and-analysis.component';
 import { CareOfElderlyComponent } from './departments/care-of-elderly/care-of-elderly.component';
+import { ButtonModule } from 'primeng/button';
+import { SharedModule } from './shared/shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -89,6 +92,8 @@ import { CareOfElderlyComponent } from './departments/care-of-elderly/care-of-el
     FormsModule,
     ReactiveFormsModule,
     BsDropdownModule,
+    ButtonModule,
+    SharedModule,
     ToastrModule.forRoot({
       positionClass: localStorage.getItem('currentLang') == 'ar' ? 'toast-bottom-right' : 'toast-bottom-left'
     }),

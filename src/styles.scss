@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "abstracts/mixins", "abstracts/variables";
 
+@import "primeng/resources/themes/saga-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
 
 html[lang="en"],
 html[lang="gr"] {
@@ -86,6 +89,7 @@ html[lang="ar"] {
       right: -22px;
     }
   }
+  .branches .branch { direction: rtl; font-family: 'cairo'; }
   .about-academy {
     .tabcontent {
       &#vision {
@@ -274,6 +278,22 @@ ul.list-unstyled { padding: 0 }
       }
     }
   }
+}
+
+p-carousel { direction: ltr; }
+
+.p-carousel .p-carousel-indicators .p-carousel-indicator button {
+  background-color: #D9D9D9;
+  width: 14px;
+  height: 14px;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  border-radius: 50%;
+}
+
+.p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+  width: 3rem;
+  background-color: $mainBlueColor;
+  border-radius: 7px;
 }
 
 /* Importing Bootstrap SCSS file. */

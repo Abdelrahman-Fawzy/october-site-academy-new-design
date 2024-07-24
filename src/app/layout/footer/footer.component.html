@@ -1,93 +1,31 @@
 <!-- [ngStyle]="{'background-image': translate.currentLang == 'ar'
 ? 'url(/assets/images/main_assets/footer.png)'
 : 'url(/assets/images/main_assets/footerEnglish.png)'}" -->
-<footer>
-  <div class="questions" [ngStyle]="{'background-image': translate.currentLang == 'ar'
-      ? 'url(/assets/images/shapes/questions.png)'
-      : 'url(/assets/images/shapes/questionsEnglish.png)'}">
-    <div class="background">
-      <div class="texts">
-        <h4>{{"DO_YOU_HAVE_QUESTIONS" | translate}}</h4>
-        <p>{{"WE_HAVE_TEAM" | translate}}</p>
-      </div>
-      <div class="social">
-        <h3>{{"CONTACT_US" | translate}}</h3>
-        <ul class="list-unstyled">
-          <li>
-            <a href="https://www.facebook.com/6octoberacademy?mibextid=kFxxJD" target="_blank">
-              <img src="assets/images/icons/facebook.svg" alt="facebook">
-            </a>
-          </li>
-          <!-- <li><img src="assets/images/icons/google.svg" alt="google"></li>
-          <li><img src="assets/images/icons/twitter.svg" alt="twitter"></li> -->
-          <li>
-            <a href="https://www.instagram.com/6octoberhd?igsh=dzdxZDVhdTQxdmFq" target="_blank">
-              <img src="assets/images/icons/instagram.svg" alt="instagram">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<footer class="footer">
   <div class="footer-box d-flex flex-wrap">
-    <div class="col-lg-3 col-sm-6 flexBox" data-aos="fade-up">
-      <div class="logo">
+    <div class="logo">
+      <div class="img">
         <img src="assets/images/main_assets/New_Logo.png" alt="logo" />
       </div>
     </div>
-    <div class="col-lg-3 col-sm-6" data-aos="fade-up">
-      <div class="anotherPages margin-top-7">
-        <p class="directP">{{"ANOTHER_LINKS" | translate}}</p>
-        <a [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">
-          {{"DEPARTMENTS" | translate}}
-        </a>
-        <a [routerLink]="'studying-system'">
-          {{"ACADEMIC_SYSTEM" | translate}}
-        </a>
-        <a (click)="register()">
-          {{"ONLINE_REGISTER" | translate}}
-        </a>
-        <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'buildings'}">
-          {{"MEDIA" | translate}}
-        </a>
-        <a [routerLink]="'graduates'">
-          {{"GRADUATES" | translate}}
-        </a>
-      </div>
+    <div class="contacts-ways">
+      <h6>
+        <span>15650</span>
+        <img src="assets/images/icons/handphone.svg" alt="call">
+      </h6>
+      <h6>
+        <span>01000005387</span>
+        <img src="assets/images/icons/dark_whatsapp.svg" alt="whatsapp">
+      </h6>
+      <h6>
+        <a href="mailto:info@6ohd.com">info@6ohd.com</a>
+        <img src="assets/images/icons/dark_envelope.svg" alt="">
+      </h6>
     </div>
-    <div class="col-lg-3 col-sm-6" data-aos="fade-up">
-      <div class="anotherPages margin-top-10">
-        <a [routerLink]="'about-academy'" [queryParams]="{item: 'partners'}">
-          {{"SUCCESS_PARTNERS" | translate}}
-        </a>
-        <a href="https://e-learning.6ohd.com/ar/login" target="_blank">
-          {{"PLATFORM" | translate}}
-        </a>
-        <a [routerLink]="'about-academy'" [queryParams]="{item: 'conversations'}">
-          {{"QUESTION_ANSWER" | translate}}
-        </a>
-        <a [routerLink]="'about-academy'" [queryParams]="{item: 'jobs'}">
-          {{"ABOUT_SUB_ITEMS.JOBS" | translate}}
-        </a>
-      </div>
-    </div>
-    <div class="col-lg-3 col-sm-6" data-aos="fade-up">
-      <div class="contact-us margin-top-7">
-        <p class="directP">{{"CONTACT_US" | translate}}</p>
-        <div class="contacts-ways">
-          <h6>
-            <span>15650</span>
-            <img src="assets/images/icons/handphone.svg" alt="call">
-          </h6>
-          <h6>
-            <span>01000005387</span>
-            <img src="assets/images/icons/dark_whatsapp.svg" alt="whatsapp">
-          </h6>
-          <h6>
-            <a href="mailto:info@6ohd.com">info@6ohd.com</a>
-            <img src="assets/images/icons/dark_envelope.svg" alt="">
-          </h6>
-        </div>
+    <div class="hotline">
+      <span>اتصل بنا</span>
+      <div class="img">
+        <img src="assets/images/main_assets/hotline.svg" alt="">
       </div>
     </div>
   </div>

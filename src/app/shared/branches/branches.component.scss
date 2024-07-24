@@ -2,45 +2,93 @@
 @import "../../../abstracts/variables", "../../../abstracts/mixins";
 .branches {
   text-align: center;
-  padding: 4em 0;
-  h3 {
-    color: $mainBlueColor;
+  padding: 4em 2em;
+  .header {
     margin-bottom: 1em;
-    font-weight: 600;
+    h3 {
+      color: $mainBlueColor;
+      font-weight: 600;
+    }
+    .img {
+      width: 200px;
+      height: 100px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
   .branch {
-    padding: 1em;
-    img.location {
-      width: 45px;
+    border: 1px solid #E5E5E6;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-gap: 1em;
+    gap: 1em;
+    margin: 0.5rem;
+    min-height: 330px;
+    .branch-header {
+      text-align: right;
+      h4 {
+        font-size: $fontSize + 6;
+        color: $mainBlueColor;
+        margin: 0.5em 0;
+        font-weight: 600;
+      }
+      span {
+        font-size: 16px;
+        color: #626467;
+      }
     }
-    h4 {
-      font-size: $fontSize + 6;
-      color: $mainBlueColor;
-      margin: 0.5em 0;
-      font-weight: 600;
-    }
-    p {
-      color: #363636;
-      font-weight: 600;
-      font-size: $fontSize - 2;
-    }
-    ul {
-      li {
-        &:not(:last-child) {
-          margin-bottom: 0.5em;
-        }
-        img {
-          width: $fontSize + 2;
-          margin: 0 10px;
+    .info {
+      ul {
+        gap: 0.5em;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        li {
+          display: flex;
+          align-items: center;
+          text-align: right;
+          gap: 10px;
+          width: 100%;
+          span {
+            font-size: 16px;
+            color: #626467;
+          }
         }
       }
     }
-    a.getDirections {
-      text-decoration: none;
-      span {
-        color: $mainGreenColor;
-        margin: 0 10px;
-        cursor: pointer;
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      a.getDirections {
+        color: #fff;
+        background: #58AC33;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        flex: 6;
+        span {
+          margin: 0 10px;
+          cursor: pointer;
+          color: #fff;
+        }
+      }
+      a.getFacebook {
+        background: #353688;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        flex: 1;
       }
     }
     &:hover {
@@ -94,6 +142,21 @@
       img {
         width: 100%;
       }
+    }
+  }
+}
+
+@media ( max-width: 576px) {
+  .branches {
+    .header {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center !important;
+      gap: 2em;
+    }
+    .footer {
+      flex-direction: column;
+      a.getDirections, a.getFacebook { flex: unset;}
     }
   }
 }

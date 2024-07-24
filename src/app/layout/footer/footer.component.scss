@@ -1,65 +1,33 @@
 @import "../../../abstracts/variables", "../../../abstracts/mixins";
-footer {
+
+footer.footer {
   position: relative;
   background-color: #E7F1F0;
   margin-top: 5em;
-  .footer-box {padding: 10em 10em 3em; text-align: center;}
-  .logo {
-    width: 260px;
-    height: auto;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .contact {
-    margin-top: 3em;
-    p {
-      color: #363636;
-      font-size: 3em;
-    }
-    .socialLinks {
-      a {
-        font-size: 1.3em;
-        text-align: center;
-        i {
-          width: 15%;
-          color: #363636;
-        }
+  .footer-box {
+    padding: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    .logo {
+      width: 260px;
+      height: auto;
+      img {
+        width: 100%;
+        height: 100%;
       }
     }
-  }
-  .anotherLinks {
-    margin-top: 7em;
-    p {
-      color: #363636;
-      font-size: 3em;
-    }
-    .links {
-      a {
-        display: block;
-        color: #363636;
-        margin-bottom: 1em;
-        font-size: 1.3em;
-      }
-    }
-  }
-  .anotherPages {
-    font-weight: 500;
-    a {
-      color: #363636;
-      display: block;
-      margin-bottom: 1em;
-      font-size: $fontSize + 2;
-      cursor: pointer;
-    }
-  }
-  .contact-us {
-    text-align: left;
     .contacts-ways {
-      color: #363636;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
       h6 {
-        margin-bottom: 1em;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        justify-content: flex-end;
         img {
           width: 20px;
           height: 20px;
@@ -69,6 +37,17 @@ footer {
           font-size: 1.3em;
           color: #363636;
         }
+      }
+    }
+    .hotline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+      span {
+        color: #363636;
+        font-size: 35px;
+        font-weight: 700;
       }
     }
   }
@@ -85,124 +64,22 @@ footer {
     }
     img {margin-bottom: 1em;}
   }
-  p.directP {
-    color: #363636;
-    font-size: $fontSize + 10;
-  }
-  // .margin-top-10 {
-  //   margin-top: 10em;
-  // }
-  // .margin-top-7 {
-  //   margin-top: 7em;
-  // }
-  .questions {
-    //background-image: url('/assets/images/shapes/questions.png');
-    background-position: center;
-    background-size: 100% 100%;
-    width: 80%;
-    margin: auto;
-    .background {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 7em;
-      .texts {
-        h4 {
-          color: #52585B;
-          margin-bottom: 1em;
-        }
-        p {
-          color: #161E6D;
-        }
-      }
-      .social {
-        h3 {
-          font-weight: 600;
-          margin-bottom: 0.5em;
-        }
-        ul {
-          display: flex;
-          justify-content: center;
-          gap: 1em;
-          li {
-            width: 20px;
-            height: 20px;
-            img {
-              width: 100%;
-              height: 100%;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 
 
 
 @media (min-width: 1200px) {
-  footer {
-    // background-image: url("/assets/images/main_assets/footer.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    // padding: 13em 0em 2em;
-    .questions {
-      position: absolute;
-      top: -50%;
-      left: 50%;
-      transform: translate(-50%, 50%);
-    }
-  }
 }
 
 @media (max-width: 1199px) {
-  footer {
-    background-image: none !important;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-    .questions {
-      position: relative;
-      top: -2em;
-      border-radius: 15px;
-      box-shadow: 0px 3px 6px rgba(0, 0, 0, 16%);
-      background: #fff;
-      background-image: none !important;
-      .background {
-        padding: 2em;
-        flex-wrap: wrap;
-        text-align: center;
-        gap: 1em;
-      }
-    }
-    .footer-box {
-      padding: 2em 4em 0;
-    }
-  }
-  // .copyRight {
-  //   margin: 0 2em !important;
-  //   padding-bottom: 1em;
-  // }
 }
 
 @media (max-width: 991px) {
-  .footer-box {
-    padding: 2em 0em 0em !important;
-    text-align: center !important;
-    & > div { margin-bottom: 1em; }
-  }
-  .contact-us {
-    text-align: center !important;
-  }
 }
 
 @media (max-width: 767px) {
-  .texts { width: 100%; }
-  .social { width: 100%; }
 }
+
 @media (max-width: 575px) {
-  // .copyRight {
-  //   margin: 0 2em !important;
-  //   padding-bottom: 1em;
-  // }
 }

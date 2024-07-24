@@ -1,6 +1,6 @@
 {
   "HOME": "الرئيسية",
-  "ABOUT": "من نحن",
+  "ABOUT": "نبذة عن المؤسسة",
   "ABOUT_SUB_ITEMS": {
     "VISION": "الرؤية والرسالة",
     "DEPARTMENTS": "البرامج التدريبية",
@@ -20,7 +20,7 @@
     "HOTELS": "الخدمات السياحية والفندقية",
     "JOURNALISM": "الصحافة و الإعلام"
   },
-  "MEDIA": "الميديا",
+  "MEDIA": "المركز الاعلامي",
   "MEDIA_SUB_ITEMS": {
     "BUILDINGS": "قاعات و مباني المركز",
     "GRADUATION_PARTIES": "حفلات التخرج",
@@ -30,7 +30,8 @@
   "ACADEMIC_SYSTEM": "النظام الدراسى",
   "GRADUATES": "الخريجين",
   "PLATFORM": "المنصة الإلكترونية",
-  "CONTACT_US": "تواصل معنا",
+  "MINISTER_VISIT": "زيارة وزير العمل",
+  "CONTACT_US": "اتصل بنا",
   "REGISTER": "سجل الأن",
   "AR": "اللغة العربية",
   "EN": "اللغة الإنجليزية",
@@ -43,9 +44,9 @@
   "ACADEMY_NUMBERS": "مراكز 6 أكتوبر في أرقام",
   "FACTS": "حقائق وأرقام خاصة بمراكز 6 أكتوبر خلال السنوات السابقة",
   "EXPERIENCE_YEARS": "عدد سنوات الخبرة",
-  "DEPARTS_NUMBER": "عدد البرامج التدريبية بالمركز",
+  "DEPARTS_NUMBER": "عدد البرامج التدريبية",
   "GRADUATES_NUMBER": "عدد الخريجين",
-  "STAFF_NUMBER": "عدد أعضاء هيئة التدريس",
+  "STAFF_NUMBER": "أعضاء هيئة التدريس",
   "PICTURES_FROM_ACADEMY": "صور من المركز",
   "GET_DIRECTIONS": "أحصل على الإتجاهات",
   "ACADEMY_BRANCHES": "فروع مراكز 6 أكتوبر",
@@ -197,5 +198,5 @@
   "ANOTHER_LINKS": "روابط أخري",
   "ONLINE_REGISTER": "التسجيل اونلاين",
   "QUESTION_ANSWER": "FAQs سؤال و جواب",
-  "COPYRIGHT": "جميع الحقوق محفوظة 2022"
+  "COPYRIGHT": "جميع الحقوق محفوظة 2024"
 }

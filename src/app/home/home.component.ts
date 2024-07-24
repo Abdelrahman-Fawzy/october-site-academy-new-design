@@ -66,6 +66,8 @@ export class HomeComponent implements OnInit {
     }
   ]
 
+  videos: any[] = []
+
   experienceYears = 0;
   academyDeparts = 0;
   staffNumber = 0
@@ -240,13 +242,57 @@ export class HomeComponent implements OnInit {
     items: 3,
     navSpeed: 2000
   }
+
+  responsiveOptions
+  photosResponsiveOptions
+
+  photos: any[] = []
+
   constructor(private modalService: BsModalService, public translate: TranslateService, private readonly route: ActivatedRoute,
-    private readonly titleService: Title) { }
+    private readonly titleService: Title) { 
+      this.responsiveOptions = [
+        {
+            breakpoint: '1024px',
+            numVisible: 2,
+            numScroll: 1
+        },
+        {
+            breakpoint: '768px',
+            numVisible: 1,
+            numScroll: 1
+        },
+        {
+            breakpoint: '560px',
+            numVisible: 1,
+            numScroll: 1
+        }
+      ];
+      this.photosResponsiveOptions = [
+        {
+            breakpoint: '1024px',
+            numVisible: 5,
+            numScroll: 1
+        },
+        {
+            breakpoint: '768px',
+            numVisible: 3,
+            numScroll: 1
+        },
+        {
+            breakpoint: '560px',
+            numVisible: 1,
+            numScroll: 1
+        }
+      ];
+    }
 
   ngOnInit(): void {
     this.test()
-    this.showSlides(this.slideIndex)
+    // this.showSlides(this.slideIndex)
     this.titleService.setTitle(this.route.snapshot.data['title'])
+
+    this.fillVideos()
+    this.fillPhotos()
   }
 
   register() {
@@ -278,25 +324,72 @@ export class HomeComponent implements OnInit {
     this.Departments.splice(to, 0, this.Departments.splice(from, 1)[0]);
   }
 
-  plusSlides(n) {
-    this.showSlides(this.slideIndex += n);
+  // plusSlides(n) {
+  //   this.showSlides(this.slideIndex += n);
+  // }
+
+  // currentSlide(n) {
+  //   this.showSlides(this.slideIndex = n);
+  // }
+
+  // showSlides(n) {
+  //   if (n > this.GallerySlides.length) { this.slideIndex = 1 }
+  //   if (n < 1) { this.slideIndex = this.GallerySlides.length }
+  //   for (let i = 0; i < this.GallerySlides.length; i++) {
+  //     this.GallerySlides[i].style.display = "none";
+  //   }
+  //   for (let i = 0; i < this.demos.length; i++) {
+  //     this.demos[i].className = this.demos[i].className.replace(" active", "");
+  //   }
+  //   this.GallerySlides[this.slideIndex - 1].style.display = "block";
+  //   this.demos[this.slideIndex - 1].className += " active";
+  // }
+
+  fillVideos() {
+    this.videos = [
+      {
+        id: 1,
+        video_image: "/assets/images/video.png",
+        video_name: "اسم الفيديو",
+        video_description: "لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي"
+      },
+      {
+        id: 2,
+        video_image: "/assets/images/video.png",
+        video_name: "اسم الفيديو",
+        video_description: "لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي"
+      },
+      {
+        id: 3,
+        video_image: "/assets/images/video.png",
+        video_name: "اسم الفيديو",
+        video_description: "لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي"
+      },
+      {
+        id: 4,
+        video_image: "/assets/images/video.png",
+        video_name: "اسم الفيديو",
+        video_description: "لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي"
+      },
+    ]
+
+    console.log(this.videos);
+    
   }
 
-  currentSlide(n) {
-    this.showSlides(this.slideIndex = n);
-  }
+  fillPhotos() {
+    let photosLength = 5
+    let count = 0
 
-  showSlides(n) {
-    if (n > this.GallerySlides.length) { this.slideIndex = 1 }
-    if (n < 1) { this.slideIndex = this.GallerySlides.length }
-    for (let i = 0; i < this.GallerySlides.length; i++) {
-      this.GallerySlides[i].style.display = "none";
+    for (let i = 1; i <= photosLength * 2; i++) {
+      count++
+      this.photos.push({
+        image: `assets/images/slider/${(count > 5 ? count = 1 : count)}.png`
+      })
     }
-    for (let i = 0; i < this.demos.length; i++) {
-      this.demos[i].className = this.demos[i].className.replace(" active", "");
-    }
-    this.GallerySlides[this.slideIndex - 1].style.display = "block";
-    this.demos[this.slideIndex - 1].className += " active";
+
+    console.log(this.photos);
+    
   }
 
 }

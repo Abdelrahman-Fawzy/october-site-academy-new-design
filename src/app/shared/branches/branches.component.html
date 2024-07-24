@@ -27,7 +27,8 @@
               <div class="img">
                 <img src="assets/images/icons/grey-envelope.svg" alt="">
               </div>
-              <span>{{branch.email_address}}</span>
+              <!-- <a [href]="'mailto:' + branch.email_address">{{branch.email_address}}</a> -->
+              <a target="_blank" [href]="'https://mail.google.com/mail/?view=cm&fs=1&to=' + branch.email_address">{{branch.email_address}}</a>
             </li>
           </ul>
         </div>
@@ -39,7 +40,7 @@
             <img src="assets/images/icons/white-arrow.svg" alt="arrow"
               [ngStyle]="{'transform': translate.currentLang == 'ar' ? 'rotate(0deg)' : 'rotate(180deg)' }">
           </a>
-          <a class="getFacebook">
+          <a [href]="branch.facebook_link" target="_blank" class="getFacebook">
             <img src="assets/images/icons/white-facebook.svg">
           </a>
         </div>

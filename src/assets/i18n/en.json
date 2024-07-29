@@ -2,6 +2,8 @@
   "HOME": "Home",
   "ABOUT": "About Academy",
   "ABOUT_SUB_ITEMS": {
+    "BIOGRAPHY": "The Biography",
+    "CHAIRMAN_SPEECH": "Chairman's Speech",
     "VISION": "Academy Vision",
     "DEPARTMENTS": "Academic Training Programs",
     "ACCEPTENCE": "Applying and Acceptance",
@@ -81,6 +83,10 @@
   "BENHA_BRANCH_ADDRESS": "Corniche El Nile, Al Villas District, Street No. 2, next to the Governor's Rest House",
   "NEW_CAIRO_BRANCH": "Academy branch in Heliopolis",
   "NEW_CAIRO_BRANCH_ADDRESS": "17 Mohamed El Mahdy Street, off Abdullah Daraz, behind the Girls College Metro Station",
+  "ZAGAZIG_BRANCH": "Zagazig branch",
+  "ZAGAZIG_BRANCH_ADDRESS": "Loaloat Al-Qawmia Tower - New International Road Square, after Al-Mansoura - Zagazig - Sharqia parking lot",
+  "KAFR_ELSHEIKH_BRANCH": "Kafr El-sheikh branch",
+  "KAFR_ELSHEIKH_BRANCH_ADDRESS": "1 State Lawsuits Authority - Taxes Street - First Kafr El-Sheikh - Kafr El-Sheikh",
 
   "POSSABILITY_OF_CONTINUING": "The Academy qualifies you for a professional qualification within only two academic years. There are no institutes or academies outside the coordination office in the Arab Republic of Egypt that offer the possibility of continuing the study beyond the two academic years, as the program is completed within this timeframe.",
   "CERTIFIED_CERTIFICATION": "You will obtain a professionally accredited qualification from major Egyptian universities.",

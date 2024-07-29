@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit {
       localStorage.setItem('currentLang', 'ar')
       this.currentLang = localStorage.getItem("currentLang")
       this.translate.use(this.currentLang)
+      window.location.reload()
     }
     this.currentLang = localStorage.getItem("currentLang") || "ar";
     this.translate.use(this.currentLang)

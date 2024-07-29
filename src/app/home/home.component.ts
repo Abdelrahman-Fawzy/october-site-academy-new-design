@@ -5,6 +5,7 @@ import { RegisterModalComponent } from '../shared/register-modal/register-modal.
 import { TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { PartnerDetailsComponent } from '../shared/partner-details/partner-details.component';
 
 @Component({
   selector: 'app-home',
@@ -119,35 +120,35 @@ export class HomeComponent implements OnInit {
 
   experienceYearsStop = setInterval(() => {
     this.experienceYears++
-    if (this.experienceYears == 26) {
+    if (this.experienceYears == 28) {
       clearInterval(this.experienceYearsStop)
     }
   }, 100)
 
   academyDepartsStop = setInterval(() => {
     this.academyDeparts++
-    if (this.academyDeparts == 8) {
+    if (this.academyDeparts == 17) {
       clearInterval(this.academyDepartsStop)
     }
   }, 200)
 
   staffNumberStop = setInterval(() => {
     this.staffNumber++
-    if (this.staffNumber == 60) {
+    if (this.staffNumber == 112) {
       clearInterval(this.staffNumberStop)
     }
   }, 50)
 
   slides = [
-    { img: "assets/images/partners/helwan.png" },
-    { img: "assets/images/partners/adults.png" },
-    { img: "assets/images/partners/assiut.png" },
-    { img: "assets/images/partners/dubai.png" },
-    { img: "assets/images/partners/investigation.png" },
-    { img: "assets/images/partners/azhar.png" },
-    { img: "assets/images/partners/benha.png" },
-    { img: "assets/images/partners/watny.png" },
-    { img: "assets/images/partners/cairo.png" },
+    { img: "assets/images/partners/helwan.png", Partner: "جامعة حلوان" },
+    { img: "assets/images/partners/adults.png", Partner: "جهاز تشغيل شباب الخريجين" },
+    { img: "assets/images/partners/assiut.png", Partner: "جامعة اسيوط" },
+    { img: "assets/images/partners/dubai.png", Partner: "حكومة دبي" },
+    { img: "assets/images/partners/investigation.png", Partner: "وزارة الاستثمار و التعاون الدولي" },
+    { img: "assets/images/partners/azhar.png", Partner: "جامعة الازهر" },
+    { img: "assets/images/partners/benha.png", Partner: "جامعة بنها" },
+    { img: "assets/images/partners/watny.png", Partner: "المجلس الوطني للتدريب و التعليم" },
+    { img: "assets/images/partners/cairo.png", Partner: "جامعة القاهرة" },
   ];
 
   departmentSliderConfig = {
@@ -193,7 +194,7 @@ export class HomeComponent implements OnInit {
   };
   sliderConfig = {
     rtl: this.translate.currentLang == 'ar' ? true : false,
-    dots: false,
+    dots: true,
     arrows: false,
     autoplay: true,
     speed: 1500,
@@ -213,6 +214,92 @@ export class HomeComponent implements OnInit {
         breakpoint: 991,
         settings: {
           slidesToShow: 3,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        },
+      },
+    ],
+  };
+
+  videosSliderConfig = {
+    rtl: this.translate.currentLang == 'ar' ? true : false,
+    dots: true,
+    arrows: false,
+    autoplay: false,
+    speed: 1500,
+    infinite: true,
+    pauseOnHover: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        },
+      },
+    ],
+  };
+  photosSliderConfig = {
+    rtl: this.translate.currentLang == 'ar' ? true : false,
+    dots: true,
+    arrows: false,
+    autoplay: false,
+    speed: 1500,
+    infinite: true,
+    pauseOnHover: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '60px',
+    variableWidth: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
           arrows: false,
         },
       },
@@ -349,26 +436,32 @@ export class HomeComponent implements OnInit {
     this.videos = [
       {
         id: 1,
-        video_image: "/assets/images/video.png",
-        video_name: "اسم الفيديو",
-        video_description: "لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي"
+        video_url: "https://player.vimeo.com/video/989687022?h=82077ccfb6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        video_name: "زيارة وزير العمل",
+        video_description: " لأول مرة على مستوى مراكز التدريب المهني في مصر زيارة معالي وزير العمل للمقر الرئيسي بالجيزة"
       },
       {
         id: 2,
-        video_image: "/assets/images/video.png",
-        video_name: "اسم الفيديو",
+        video_url: "https://player.vimeo.com/video/989687022?h=82077ccfb6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        video_name: "آراء خريجين ٦ أكتوبر",
         video_description: "لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي"
       },
       {
         id: 3,
-        video_image: "/assets/images/video.png",
-        video_name: "اسم الفيديو",
+        video_url: "https://player.vimeo.com/video/989682520?h=aec8bed83b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        video_name: "آراء خريجين ٦ أكتوبر",
         video_description: "لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي"
       },
       {
         id: 4,
-        video_image: "/assets/images/video.png",
-        video_name: "اسم الفيديو",
+        video_url: "https://player.vimeo.com/video/989666052?h=9dcf8139c3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        video_name: "مراكز 6 اكتوبر",
+        video_description: "الأولي ف التدريب المهني"
+      },
+      {
+        id: 5,
+        video_url: "https://player.vimeo.com/video/989669825?h=a3a6953b0e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        video_name: "مساعد الخدمات الصحية",
         video_description: "لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي"
       },
     ]
@@ -378,18 +471,26 @@ export class HomeComponent implements OnInit {
   }
 
   fillPhotos() {
-    let photosLength = 5
+    let photosLength = 8
     let count = 0
 
-    for (let i = 1; i <= photosLength * 2; i++) {
+    for (let i = 1; i <= photosLength; i++) {
       count++
       this.photos.push({
-        image: `assets/images/slider/${(count > 5 ? count = 1 : count)}.png`
+        image: `assets/images/slider/${i}.JPG`
       })
     }
 
     console.log(this.photos);
     
+  }
+
+  partnerDetails(Partner: string, partnerImg: string) {
+    const initialState = {
+      Partner,
+      partnerImg
+    };
+    this.modalRef = this.modalService.show(PartnerDetailsComponent, { initialState, class: 'modal-xl modal-dialog-centered' });
   }
 
 }

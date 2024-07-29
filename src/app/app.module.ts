@@ -45,6 +45,11 @@ import { TradingAndAnalysisComponent } from './departments/trading-and-analysis/
 import { CareOfElderlyComponent } from './departments/care-of-elderly/care-of-elderly.component';
 import { ButtonModule } from 'primeng/button';
 import { SharedModule } from './shared/shared/shared.module';
+import { BiographyComponent } from './about-academy/biography/biography.component';
+import { ChairmanSpeechComponent } from './about-academy/chairman-speech/chairman-speech.component';
+import { VisionComponent } from './about-academy/vision/vision.component';
+import { PartnersComponent } from './about-academy/partners/partners.component';
+import { PartnerDetailsComponent } from './shared/partner-details/partner-details.component';
 
 
 @NgModule({
@@ -77,7 +82,12 @@ import { SharedModule } from './shared/shared/shared.module';
     ConstructionAndBuildingsComponent,
     ElectronicsComponent,
     TradingAndAnalysisComponent,
-    CareOfElderlyComponent
+    CareOfElderlyComponent,
+    BiographyComponent,
+    ChairmanSpeechComponent,
+    VisionComponent,
+    PartnersComponent,
+    PartnerDetailsComponent
   ],
   imports: [
     BrowserModule,

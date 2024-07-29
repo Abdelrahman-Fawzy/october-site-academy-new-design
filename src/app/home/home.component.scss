@@ -193,7 +193,7 @@
     }
   }
   button.primary {
-    @include buttons(#58AC33, #58AC33, $white, $fontSize , #58AC33, $white);
+    @include buttons($secondGreenColor, $secondGreenColor, $white, $fontSize , $secondGreenColor, $white);
   }
   button.primary-outline {
     @include buttons(transparent, $mainBlueColor, $mainBlueColor, $fontSize, $white,$mainBlueColor);
@@ -304,9 +304,13 @@
 .branches { margin-top: 5em; }
 .photos {
   background: #181922;
-  padding: 3em 2em 0;
+  padding: 3em 2em;
   .photo {
     margin: 0.2rem;
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
   }
 }
 .partners {

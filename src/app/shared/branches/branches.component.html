@@ -5,23 +5,27 @@
       <img src="assets/images/main_assets/hotline.svg" alt="">
     </div>
   </div>
-  <p-carousel [value]="branches" [numVisible]="3" [showNavigators]="false" [numScroll]="1" [responsiveOptions]="responsiveOptions">
-    <ng-template let-branch pTemplate="branch">
+  <ngx-slick-carousel
+    class="carousel"
+    #slickModal="slick-carousel"
+    [config]="branchesSliderConfig"
+  >
+    <div ngxSlickItem *ngFor="let branch of branches" class="slide">
       <div class="branch">
         <div class="branch-header">
-          <h4>{{ branch.branch_name | translate}}</h4>
-          <span class="license">{{branch.license}}</span>
+          <h4>{{ branch?.branch_name | translate}}</h4>
+          <span class="license">{{branch?.license}}</span>
         </div>
         <div class="info">
           <ul class="list-unstyled">
             <li>
-              <span>{{ branch.branch_address | translate}}</span>
+              <span>{{ branch?.branch_address | translate}}</span>
             </li>
             <li>
               <div class="img">
                 <img src="assets/images/icons/grey-whatsapp.svg" alt="">
               </div>
-              <span>{{branch.whatsapp_number}}</span>
+              <span>{{branch?.whatsapp_number}}</span>
             </li>
             <li>
               <div class="img">
@@ -45,8 +49,49 @@
           </a>
         </div>
       </div>
+    </div>
+  </ngx-slick-carousel>
+  <!-- <p-carousel [value]="branches" [numVisible]="3" [showNavigators]="false" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+    <ng-template let-branch pTemplate="branch">
+      <div class="branch">
+        <div class="branch-header">
+          <h4>{{ branch.branch_name | translate}}</h4>
+          <span class="license">{{branch.license}}</span>
+        </div>
+        <div class="info">
+          <ul class="list-unstyled">
+            <li>
+              <span>{{ branch.branch_address | translate}}</span>
+            </li>
+            <li>
+              <div class="img">
+                <img src="assets/images/icons/grey-whatsapp.svg" alt="">
+              </div>
+              <span>{{branch.whatsapp_number}}</span>
+            </li>
+            <li>
+              <div class="img">
+                <img src="assets/images/icons/grey-envelope.svg" alt="">
+              </div>
+              <a target="_blank" [href]="'https://mail.google.com/mail/?view=cm&fs=1&to=' + branch.email_address">{{branch.email_address}}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer">
+          <a class="getDirections"
+            [href]="branch.directions"
+            target="_blank">
+            <span>{{'GET_DIRECTIONS' | translate}}</span>
+            <img src="assets/images/icons/white-arrow.svg" alt="arrow"
+              [ngStyle]="{'transform': translate.currentLang == 'ar' ? 'rotate(0deg)' : 'rotate(180deg)' }">
+          </a>
+          <a [href]="branch.facebook_link" target="_blank" class="getFacebook">
+            <img src="assets/images/icons/white-facebook.svg">
+          </a>
+        </div>
+      </div>
     </ng-template>
-  </p-carousel>
+  </p-carousel> -->
   <div class="row">
     <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up">
       <div class="branch">

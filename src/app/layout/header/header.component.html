@@ -11,30 +11,33 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="nav-lists d-flex align-items-center flex-column gap-3">
-        <ul class="list-unstyled d-flex align-items-center m-0 social">
-          <li>
-            <a href="https://www.facebook.com/6octoberacademy?mibextid=kFxxJD" target="_blank">
-              <img src="assets/images/icons/black-Facebook.svg" alt="facebook">
-            </a>
-          </li>
-          <!-- <li><img src="assets/images/icons/google.svg" alt="google"></li>
-          <li><img src="assets/images/icons/twitter.svg" alt="twitter"></li> -->
-          <li>
-            <a href="https://www.instagram.com/6octoberhd?igsh=dzdxZDVhdTQxdmFq" target="_blank">
-              <img src="assets/images/icons/black-instagram.svg" alt="instagram">
-            </a>
-          </li>
-          <li>
-            <a href="https://youtube.com/@6octoberhd?si=fXPm9_JAdfaDhX1h" target="_blank">
-              <img src="assets/images/icons/black-youtube.svg" alt="youtube">
-            </a>
-          </li>
-          <li>
-            <a href="https://www.tiktok.com/@6octoberhd?is_from_webapp=1&sender_device=pc" target="_blank">
-              <img src="assets/images/icons/black-tiktok.svg" alt="tiktok">
-            </a>
-          </li>
-        </ul>
+        <div class="nav-actions d-flex align-items-center justify-content-between full-width">
+          <ul class="list-unstyled d-flex align-items-center m-0 social">
+            <li>
+              <a href="https://www.facebook.com/6octoberacademy?mibextid=kFxxJD" target="_blank">
+                <img src="assets/images/icons/black-Facebook.svg" alt="facebook">
+              </a>
+            </li>
+            <!-- <li><img src="assets/images/icons/google.svg" alt="google"></li>
+            <li><img src="assets/images/icons/twitter.svg" alt="twitter"></li> -->
+            <li>
+              <a href="https://www.instagram.com/6octoberhd?igsh=dzdxZDVhdTQxdmFq" target="_blank">
+                <img src="assets/images/icons/black-instagram.svg" alt="instagram">
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com/@6octoberhd?si=fXPm9_JAdfaDhX1h" target="_blank">
+                <img src="assets/images/icons/black-youtube.svg" alt="youtube">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@6octoberhd?is_from_webapp=1&sender_device=pc" target="_blank">
+                <img src="assets/images/icons/black-tiktok.svg" alt="tiktok">
+              </a>
+            </li>
+          </ul>
+          <button class="primary" (click)="register()">{{ "REGISTER_NOW" | translate }}</button>
+        </div>
         <div class="divider"></div>
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -43,123 +46,94 @@
             </a>
           </li>
           <li class="nav-item categoriesList">
-            <a class="nav-link" [routerLink]="'about-academy'" [queryParams]="{item: 'vision'}"
-              [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
-              {{ "ABOUT" | translate }}
+            <a class="nav-link">
+              <span>{{ "ABOUT" | translate }}</span>
+              <div class="img">
+                <img src="assets/images/icons/arrow-down-black.svg" alt="">
+              </div>
             </a>
             <ul class="list-unstyled categories">
               <div class="d-none d-xl-flex" style="gap: 2em;">
                 <div class="firstPart">
                   <ul class="list-unstyled">
                     <li>
-                      <a [routerLink]="'about-academy'" [queryParams]="{item: 'vision'}">
+                      <a [routerLink]="'biography'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
                         <div class="img-icon">
-                          <img src="assets/images/about-icons/vision.png" alt="vision">
+                          <img src="assets/images/about-icons/biography.svg" alt="biography">
+                        </div>
+                        {{ "ABOUT_SUB_ITEMS.BIOGRAPHY" | translate }}
+                      </a>
+                    </li>
+                    <li>
+                      <a [routerLink]="'chairman-speech'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+                        <div class="img-icon">
+                          <img src="assets/images/about-icons/chairman-speech.svg" alt="speech">
+                        </div>
+                        {{ "ABOUT_SUB_ITEMS.CHAIRMAN_SPEECH" | translate }}
+                      </a>
+                    </li>
+                    <li>
+                      <a [routerLink]="'vision'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+                        <div class="img-icon">
+                          <img src="assets/images/about-icons/vision.svg" alt="vision">
                         </div>
                         {{ "ABOUT_SUB_ITEMS.VISION" | translate }}
                       </a>
                     </li>
-                    <li>
-                      <a [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">
+                    <!-- <li>
+                      <a [routerLink]="'partners'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
                         <div class="img-icon">
-                          <img src="assets/images/about-icons/departs.png" alt="departs">
+                          <img src="assets/images/about-icons/partners.svg" alt="partners">
                         </div>
-                        {{ "ABOUT_SUB_ITEMS.DEPARTMENTS" | translate }}
+                        {{ "ABOUT_SUB_ITEMS.PARTNERS" | translate }}
                       </a>
-                    </li>
-                    <li>
-                      <a [routerLink]="'about-academy'" [queryParams]="{item: 'acceptence'}">
-                        <div class="img-icon">
-                          <img src="assets/images/about-icons/acceptence.png" alt="acceptence">
-                        </div>
-                        {{ "ABOUT_SUB_ITEMS.ACCEPTENCE" | translate }}
-                      </a>
-                    </li>
-  
+                    </li> -->
                   </ul>
-                </div>
-                <div class="line"></div>
-                <div class="secondPart">
-                  <li>
-                    <a [routerLink]="'about-academy'" [queryParams]="{item: 'partners'}">
-                      <div class="img-icon">
-                        <img src="assets/images/about-icons/partners.png" alt="partners">
-                      </div>
-                      {{ "ABOUT_SUB_ITEMS.PARTNERS" | translate }}
-                    </a>
-                  </li>
-                  <li>
-                    <a [routerLink]="'about-academy'" [queryParams]="{item: 'jobs'}">
-                      <div class="img-icon">
-                        <img src="assets/images/about-icons/jobs.png" alt="jobs">
-                      </div>
-                      {{ "ABOUT_SUB_ITEMS.JOBS" | translate }}
-                    </a>
-                  </li>
-                  <li>
-                    <a [routerLink]="'about-academy'" [queryParams]="{item: 'conversations'}">
-                      <div class="img-icon">
-                        <img src="assets/images/about-icons/conversations.png" alt="conversations">
-                      </div>
-                      {{ "ABOUT_SUB_ITEMS.FAQ" | translate }}
-                    </a>
-                  </li>
                 </div>
               </div>
               <div class="d-xl-none responsiveCategories">
                 <li>
-                  <a [routerLink]="'about-academy'" [queryParams]="{item: 'vision'}">
+                  <a [routerLink]="'biography'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
                     <div class="img-icon">
-                      <img src="assets/images/about-icons/vision.png" alt="vision">
+                      <img src="assets/images/about-icons/biography.svg" alt="biography">
+                    </div>
+                    {{ "ABOUT_SUB_ITEMS.BIOGRAPHY" | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'chairman-speech'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+                    <div class="img-icon">
+                      <img src="assets/images/about-icons/chairman-speech.svg" alt="speech">
+                    </div>
+                    {{ "ABOUT_SUB_ITEMS.CHAIRMAN_SPEECH" | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'vision'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+                    <div class="img-icon">
+                      <img src="assets/images/about-icons/vision.svg" alt="vision">
                     </div>
                     {{ "ABOUT_SUB_ITEMS.VISION" | translate }}
                   </a>
                 </li>
                 <li>
-                  <a [routerLink]="'about-academy'" [queryParams]="{item: 'departments'}">
+                  <a [routerLink]="'partners'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
                     <div class="img-icon">
-                      <img src="assets/images/about-icons/departs.png" alt="departs">
-                    </div>
-                    {{ "ABOUT_SUB_ITEMS.DEPARTMENTS" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a [routerLink]="'about-academy'" [queryParams]="{item: 'acceptence'}">
-                    <div class="img-icon">
-                      <img src="assets/images/about-icons/acceptence.png" alt="acceptence">
-                    </div>
-                    {{ "ABOUT_SUB_ITEMS.ACCEPTENCE" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a [routerLink]="'about-academy'" [queryParams]="{item: 'partners'}">
-                    <div class="img-icon">
-                      <img src="assets/images/about-icons/partners.png" alt="partners">
+                      <img src="assets/images/about-icons/partners.svg" alt="partners">
                     </div>
                     {{ "ABOUT_SUB_ITEMS.PARTNERS" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a [routerLink]="'about-academy'" [queryParams]="{item: 'jobs'}">
-                    <div class="img-icon">
-                      <img src="assets/images/about-icons/jobs.png" alt="jobs">
-                    </div>
-                    {{ "ABOUT_SUB_ITEMS.JOBS" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a [routerLink]="'about-academy'" [queryParams]="{item: 'conversations'}">
-                    <div class="img-icon">
-                      <img src="assets/images/about-icons/conversations.png" alt="conversations">
-                    </div>
-                    {{ "ABOUT_SUB_ITEMS.FAQ" | translate }}
                   </a>
                 </li>
               </div>
             </ul>
           </li>
           <li class="nav-item categoriesList">
-            <a class="nav-link"> <span class="caret"></span> {{ "DEPARTMENTS" | translate }}</a>
+            <a class="nav-link">
+              <span>{{ "DEPARTMENTS" | translate }}</span>
+              <div class="img">
+                <img src="assets/images/icons/arrow-down-black.svg" alt="">
+              </div>
+            </a>
             <ul class="list-unstyled categories">
               <div class="d-none d-xl-flex" style="gap: 2em;">
                 <div class="firstPart">
@@ -319,7 +293,10 @@
           <li class="nav-item categoriesList">
             <a class="nav-link" [routerLink]="'academy-gallery'" [queryParams]="{item: 'buildings'}"
               [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
-              {{ "MEDIA" | translate }}
+              <span>{{ "MEDIA" | translate }}</span>
+              <div class="img">
+                <img src="assets/images/icons/arrow-down-black.svg" alt="">
+              </div>
             </a>
             <ul class="list-unstyled categories gallery">
               <div class="d-none d-xl-flex" style="gap: 2em;">
@@ -428,7 +405,6 @@
         </ul>
       </div>
       <div class="actions d-flex align-items-center" style="gap: 10px;">
-        <button class="primary" (click)="register()">{{ "REGISTER" | translate }}</button>
         <div class="btn-group" dropdown>
           <button id="button-animated" dropdownToggle type="button" class="dropdown-toggle"
             aria-controls="dropdown-animated">

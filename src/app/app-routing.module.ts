@@ -19,6 +19,10 @@ import { ElectronicsComponent } from './departments/electronics/electronics.comp
 import { TradingAndAnalysisComponent } from './departments/trading-and-analysis/trading-and-analysis.component';
 import { CareOfElderlyComponent } from './departments/care-of-elderly/care-of-elderly.component';
 import { TranslateService } from '@ngx-translate/core';
+import { BiographyComponent } from './about-academy/biography/biography.component';
+import { ChairmanSpeechComponent } from './about-academy/chairman-speech/chairman-speech.component';
+import { VisionComponent } from './about-academy/vision/vision.component';
+import { PartnersComponent } from './about-academy/partners/partners.component';
 
 let academyName = {
   nameEn: '6th of October centers',
@@ -29,6 +33,38 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName?.nameEn : academyName.nameAr
+    }
+  },
+  {
+    path: 'biography',
+    component: BiographyComponent,
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName?.nameEn : academyName.nameAr
+    }
+  },
+  {
+    path: 'chairman-speech',
+    component: ChairmanSpeechComponent,
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName?.nameEn : academyName.nameAr
+    }
+  },
+  {
+    path: 'vision',
+    component: VisionComponent,
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName?.nameEn : academyName.nameAr
+    }
+  },
+  {
+    path: 'partners',
+    component: PartnersComponent,
     pathMatch: 'full',
     data: {
       title: localStorage.getItem("currentLang") == 'en' ? academyName?.nameEn : academyName.nameAr

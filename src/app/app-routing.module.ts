@@ -23,6 +23,8 @@ import { BiographyComponent } from './about-academy/biography/biography.componen
 import { ChairmanSpeechComponent } from './about-academy/chairman-speech/chairman-speech.component';
 import { VisionComponent } from './about-academy/vision/vision.component';
 import { PartnersComponent } from './about-academy/partners/partners.component';
+import { RecruitmentComponent } from './recruitment/recruitment.component';
+import { CommonQuestionsComponent } from './common-questions/common-questions.component';
 
 let academyName = {
   nameEn: '6th of October centers',
@@ -185,6 +187,22 @@ const routes: Routes = [
   {
     path: 'studying-system',
     component: StudyingSystemComponent,
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
+  },
+  {
+    path: 'recruitment',
+    component: RecruitmentComponent,
+    pathMatch: 'full',
+    data: {
+      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+    }
+  },
+  {
+    path: 'common-questions',
+    component: CommonQuestionsComponent,
     pathMatch: 'full',
     data: {
       title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr

@@ -8,7 +8,7 @@
     "PARTNERS": "الشركاء",
     "DEPARTMENTS": "البرامج التدريبية",
     "ACCEPTENCE": "التقديم و القبول",
-    "JOBS": "الوظائف",
+    "JOBS": "التوظيف",
     "FAQ": "الأسئلة الشائعة"
   },
   "DEPARTMENTS": "البرامج التدريبية",
@@ -24,10 +24,12 @@
   },
   "MEDIA": "المركز الاعلامي",
   "MEDIA_SUB_ITEMS": {
-    "BUILDINGS": "قاعات و مباني المركز",
+    "BUILDINGS": "صور المراكز",
     "GRADUATION_PARTIES": "حفلات التخرج",
     "CONFERENCES": "المؤتمرات و الندوات و الأخبار",
-    "TRAINING": "التدريب العملي"
+    "TRAINING": "التدريب العملي",
+    "THEORETICAL_TRAINING": "التدريب النظري",
+    "FUN_ACTIVITIES": "الأنشطة الترفيهية"
   },
   "ACADEMIC_SYSTEM": "النظام الدراسى",
   "GRADUATES": "الخريجين",

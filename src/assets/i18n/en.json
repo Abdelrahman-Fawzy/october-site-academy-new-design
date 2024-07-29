@@ -31,7 +31,9 @@
     "BUILDINGS": "Academy Halls and Buildings",
     "GRADUATION_PARTIES": "Graduation Parties",
     "CONFERENCES": "Conferences, Seminars And News",
-    "TRAINING": "Practical Training"
+    "TRAINING": "Practical Training",
+    "THEORETICAL_TRAINING": "Theoretical Training",
+    "FUN_ACTIVITIES": "Fun Activities"
   },
   "ACADEMIC_SYSTEM": "Academic System",
   "GRADUATES": "Graduates",

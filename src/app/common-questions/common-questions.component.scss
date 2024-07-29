@@ -1,0 +1,40 @@
+.page {
+  .common-questions-box {
+    background-color: #181922;
+    display: flex;
+    gap: 15px;
+    padding: 3em 0;
+    .box1 {
+      width: 55%;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      .header {
+        h3 {
+          color: #D4D4D4;
+          font-size: 45px;
+          font-weight: 700;
+        }
+        p {
+          font-size: 18px;
+          margin: 0;
+          color: #CACBCD;
+          line-height: 30px;
+        }
+      }
+      .content {
+        overflow-y: auto;
+        height: 65vh;    
+      }
+    }
+    .box-2 {
+      width: 45%;
+      .img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

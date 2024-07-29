@@ -127,7 +127,13 @@
               </div>
             </ul>
           </li>
-          <li class="nav-item categoriesList">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'studying-system'" [routerLinkActive]="'active'"
+              [routerLinkActiveOptions]="{exact: true}">
+              {{ "ACADEMIC_SYSTEM" | translate }}
+            </a>
+          </li>
+          <!-- <li class="nav-item categoriesList">
             <a class="nav-link">
               <span>{{ "DEPARTMENTS" | translate }}</span>
               <div class="img">
@@ -289,7 +295,7 @@
                 </li>
               </div>
             </ul>
-          </li>
+          </li> -->
           <li class="nav-item categoriesList">
             <a class="nav-link" [routerLink]="'academy-gallery'" [queryParams]="{item: 'buildings'}"
               [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
@@ -304,26 +310,15 @@
                   <li>
                     <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'buildings'}">
                       <div class="img-icon">
-                        <img src="assets/images/media-icons/buildings.png" alt="buildings">
+                        <img src="assets/images/media-icons/pictures.svg" alt="buildings">
                       </div>
                       {{ "MEDIA_SUB_ITEMS.BUILDINGS" | translate }}
                     </a>
                   </li>
                   <li>
-                    <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'graduation-party'}">
-                      <div class="img-icon">
-                        <img src="assets/images/media-icons//graduations-party.png" alt="graduations-party">
-                      </div>
-                      {{ "MEDIA_SUB_ITEMS.GRADUATION_PARTIES" | translate }}
-                    </a>
-                  </li>
-                </div>
-                <div class="line"></div>
-                <div class="secondPart">
-                  <li>
                     <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'conferences'}">
                       <div class="img-icon">
-                        <img src="assets/images/media-icons/conferences.png" alt="conferences">
+                        <img src="assets/images/media-icons/conferences.svg" alt="conferences">
                       </div>
                       {{ "MEDIA_SUB_ITEMS.CONFERENCES" | translate }}
                     </a>
@@ -331,9 +326,33 @@
                   <li>
                     <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'training'}">
                       <div class="img-icon">
-                        <img src="assets/images/media-icons/training.png" alt="training">
+                        <img src="assets/images/media-icons/training.svg" alt="training">
                       </div>
                       {{ "MEDIA_SUB_ITEMS.TRAINING" | translate }}
+                    </a>
+                  </li>
+                  <li>
+                    <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'training'}">
+                      <div class="img-icon">
+                        <img src="assets/images/media-icons/theoretical-training.svg" alt="training">
+                      </div>
+                      {{ "MEDIA_SUB_ITEMS.THEORETICAL_TRAINING" | translate }}
+                    </a>
+                  </li>
+                  <li>
+                    <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'graduation-party'}">
+                      <div class="img-icon">
+                        <img src="assets/images/media-icons//puzzle.svg" alt="graduations-party">
+                      </div>
+                      {{ "MEDIA_SUB_ITEMS.FUN_ACTIVITIES" | translate }}
+                    </a>
+                  </li>
+                  <li>
+                    <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'graduation-party'}">
+                      <div class="img-icon">
+                        <img src="assets/images/media-icons//graduations-party.svg" alt="graduations-party">
+                      </div>
+                      {{ "MEDIA_SUB_ITEMS.GRADUATION_PARTIES" | translate }}
                     </a>
                   </li>
                 </div>
@@ -342,23 +361,15 @@
                 <li>
                   <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'buildings'}">
                     <div class="img-icon">
-                      <img src="assets/images/media-icons/buildings.png" alt="buildings">
+                      <img src="assets/images/media-icons/pictures.svg" alt="buildings">
                     </div>
                     {{ "MEDIA_SUB_ITEMS.BUILDINGS" | translate }}
                   </a>
                 </li>
                 <li>
-                  <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'graduation-party'}">
-                    <div class="img-icon">
-                      <img src="assets/images/media-icons//graduations-party.png" alt="graduations-party">
-                    </div>
-                    {{ "MEDIA_SUB_ITEMS.GRADUATION_PARTIES" | translate }}
-                  </a>
-                </li>
-                <li>
                   <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'conferences'}">
                     <div class="img-icon">
-                      <img src="assets/images/media-icons/conferences.png" alt="conferences">
+                      <img src="assets/images/media-icons/conferences.svg" alt="conferences">
                     </div>
                     {{ "MEDIA_SUB_ITEMS.CONFERENCES" | translate }}
                   </a>
@@ -366,29 +377,59 @@
                 <li>
                   <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'training'}">
                     <div class="img-icon">
-                      <img src="assets/images/media-icons/training.png" alt="training">
+                      <img src="assets/images/media-icons/training.svg" alt="training">
                     </div>
                     {{ "MEDIA_SUB_ITEMS.TRAINING" | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'training'}">
+                    <div class="img-icon">
+                      <img src="assets/images/media-icons/theoretical-training.svg" alt="training">
+                    </div>
+                    {{ "MEDIA_SUB_ITEMS.THEORETICAL_TRAINING" | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'graduation-party'}">
+                    <div class="img-icon">
+                      <img src="assets/images/media-icons//puzzle.svg" alt="graduations-party">
+                    </div>
+                    {{ "MEDIA_SUB_ITEMS.FUN_ACTIVITIES" | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'graduation-party'}">
+                    <div class="img-icon">
+                      <img src="assets/images/media-icons//graduations-party.svg" alt="graduations-party">
+                    </div>
+                    {{ "MEDIA_SUB_ITEMS.GRADUATION_PARTIES" | translate }}
                   </a>
                 </li>
               </div>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="'studying-system'" [routerLinkActive]="'active'"
+            <a class="nav-link" href="https://e-learning.6ohd.com/ar/login" target="_blank">
+              {{ "PLATFORM" | translate }}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'recruitment'" [routerLinkActive]="'active'"
               [routerLinkActiveOptions]="{exact: true}">
-              {{ "ACADEMIC_SYSTEM" | translate }}
+              {{ "ABOUT_SUB_ITEMS.JOBS" | translate }}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'common-questions'" [routerLinkActive]="'active'"
+              [routerLinkActiveOptions]="{exact: true}">
+              {{ "ABOUT_SUB_ITEMS.FAQ" | translate }}
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="'graduates'" [routerLinkActive]="'active'"
               [routerLinkActiveOptions]="{exact: true}">
               {{ "GRADUATES" | translate }}
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://e-learning.6ohd.com/ar/login" target="_blank">
-              {{ "PLATFORM" | translate }}
             </a>
           </li>
           <li class="nav-item">

@@ -1,0 +1,93 @@
+<div class="page">
+  <div class="common-questions-box">
+    <div class="box1">
+      <div class="header">
+        <h3>الاسئلة الشائعة</h3>
+        <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر</p>
+      </div>
+      <div class="content">
+        <accordion [isAnimated]="true">
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية انى اكمل بعد سنتين ؟' : translate.currentLang == 'gr' ? 'Ist eine Fortsetzung für weitere zwei Jahre möglich?' : 'Is it possible to continue for an additional two years?'"
+            [isOpen]="isFirstOpen">
+            <p>{{ "POSSABILITY_OF_CONTINUING" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هل الشهادة معتمدة ولا لا ؟ هي اعتماد الشهادة منين ؟' : translate.currentLang == 'gr' ? 'Ist das Zertifikat akkreditiert oder nicht? Woher wird das Zertifikat akkreditiert?' : 'Is the certificate accredited or not? Where is the certificate accredited from?'">
+            <p>{{ "CERTIFIED_CERTIFICATION" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هل الشهادة موثقة خارجيا؟ هي الشهادة معتمدة من الخارجية؟' : translate.currentLang == 'gr' ? 'Ist das Zertifikat international beglaubigt? Ist das Zertifikat vom Außenministerium akkreditiert?' : 'Is the certificate internationally authenticated? Is the certificate accredited by the Ministry of Foreign Affairs?'">
+            <p>{{ "ACCREDIATED_CERTIFICATION" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هل في إمكانية للتوظيف ؟ المركز بتوظفني بعد ما اتخرج ؟' : translate.currentLang == 'gr' ? 'Besteht die Möglichkeit einer Anstellung? Bietet mir die Akademie nach meinem Abschluss Berufsmöglichkeiten?' : 'Is there a possibility for employment? Will the academy provide me with job opportunities after graduation?'">
+            <p>{{ "POSSABILITY_OF_EMPLOYING" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هل لديكم فروع اخرى ؟ (هي دي اول مرة تفتحوا )' : translate.currentLang == 'gr' ? 'Haben Sie noch weitere Filialen? (Ist das Ihre erste Eröffnung?)' : 'Do you have any other branches? (Is this your first time opening?)'">
+            <p>{{ "HAVING_OTHER_BRANCHES" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar'
+            ? 'هل في امكانية دمج الدراسة بالاكاديمية واي مكان اخر ؟ انا بدرس في كلية او مكان تاني ممكن ادرس عندكم انا مجند او انا هدخل الجيش ينفع اقدم في الاكاديمية'
+            : translate.currentLang == 'gr' ? 'Ist es möglich, mein Studium an Ihrer Hochschule mit einem anderen Studienort zu kombinieren? Ich studiere derzeit an einer anderen Hochschule oder Institution. Kann ich auch an Ihrer Akademie studieren?' : 'Is it possible to combine my studies at your academy with another place? I am currently studying at another college or institution. Can I study at your academy as well? I am a conscript or will be entering the military service. Is it possible for me to apply to the academy?' ">
+            <p>{{ "COMBINE_STUDIES" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هل فى سكن للمغتربين ؟ هل الاكاديمية بتوفر سكن ؟' : translate.currentLang == 'gr' ? 'Gibt es Unterkunftsmöglichkeiten für nichtansässige Studierende? Stellt die Akademie Unterkünfte zur Verfügung?' : 'Is there accommodation available for non-resident students? Does the academy provide accommodation?' ">
+            <p>{{ "POSSABILITY_OF_HOUSING" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'الدراسة لمدة قد إيه أو كام سنة ؟' : translate.currentLang == 'gr' ? 'Wie lange dauert das Studium ? Oder wie viele Jahre ?' : 'What is the duration of the study? Or how many years?' ">
+            <p>{{ "HOW_LONG_OF_STYUDYING" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'ماهي اماكن التدريب العملي ؟' : translate.currentLang == 'gr' ? 'An welchen Orten findet die praktische Ausbildung statt?' : 'What are the places of practical training?' ">
+            <p>{{ "PRACTICAL_TRAINING_PLACES" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هل يمكن كتابة طالب في الرقم القومي ؟' : translate.currentLang == 'gr' ? 'Kann man im Personalausweis „Student“ vermerken?' : 'Is it possible to write student in the national ID?' ">
+            <p>{{ "STUDENT_NATIONAL_NUMBER" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم سياحة؟' : translate.currentLang == 'gr' ? 'Welche Karrieremöglichkeiten gibt es nach dem Abschluss in der Tourismusabteilung?' : 'What are the career options after graduating from the Tourism Department?' ">
+            <p>{{ "GRADUATE_FROM_TOURISM" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم بترول ؟' : translate.currentLang == 'gr' ? 'Welche Karrieremöglichkeiten gibt es nach dem Abschluss an der Erdölabteilung?' : 'What are the career options after graduating from the Petroleum Department?' ">
+            <p>{{ "GRADUATE_FROM_PETROLIUM" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم تكنولوجيا ؟' : translate.currentLang == 'gr' ? 'Welche Karrieremöglichkeiten gibt es nach dem Abschluss im Fachbereich Technik?' : 'What are the career options after graduating from the Technology Department?' ">
+            <p>{{ "GRADUATE_FROM_IT" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم ادارة اعمال ؟' : translate.currentLang == 'gr' ? 'Welche Karrieremöglichkeiten gibt es nach dem Abschluss im Fachbereich Betriebswirtschaftslehre?' : 'What are the career options after graduating from the Business Administration Department?' ">
+            <p>{{ "GRADUATE_FROM_BUSSINESS" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم مساحة ؟' : translate.currentLang == 'gr' ? 'Welche Karrieremöglichkeiten gibt es nach dem Abschluss in der Vermessungsabteilung?' : 'What are the career options after graduating from the Surveying Department?' ">
+            <p>{{ "GRADUATE_FROM_SURVEYING" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم خدمات طبية ؟' : translate.currentLang == 'gr' ? 'Welche Karrieremöglichkeiten gibt es nach dem Abschluss im Bereich Medizinische Dienste?' : 'What career options are available after graduating from the Medical Services Department?' ">
+            <p>{{ "GRADUATE_FROM_MEDICAL" | translate }}</p>
+          </accordion-group>
+          <accordion-group
+            [heading]="translate.currentLang == 'ar' ? 'هتخرج ايه من قسم صحافة واعلام؟' : translate.currentLang == 'gr' ? 'Welche Karrieremöglichkeiten gibt es nach dem Abschluss des Fachbereichs Journalismus und Medien?' : 'What career options are available after graduating from the Journalism and Media Department?' ">
+            <p>{{ "GRADUATE_FROM_MEDIA" | translate }}</p>
+          </accordion-group>
+        </accordion>
+      </div>
+    </div>
+    <div class="box-2">
+      <div class="img">
+        <img src="assets/images/Group 1171274859.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="branches">
+    <app-branches></app-branches>
+  </div>
+</div>

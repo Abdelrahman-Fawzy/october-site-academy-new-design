@@ -50,6 +50,8 @@ import { ChairmanSpeechComponent } from './about-academy/chairman-speech/chairma
 import { VisionComponent } from './about-academy/vision/vision.component';
 import { PartnersComponent } from './about-academy/partners/partners.component';
 import { PartnerDetailsComponent } from './shared/partner-details/partner-details.component';
+import { RecruitmentComponent } from './recruitment/recruitment.component';
+import { CommonQuestionsComponent } from './common-questions/common-questions.component';
 
 
 @NgModule({
@@ -87,7 +89,9 @@ import { PartnerDetailsComponent } from './shared/partner-details/partner-detail
     ChairmanSpeechComponent,
     VisionComponent,
     PartnersComponent,
-    PartnerDetailsComponent
+    PartnerDetailsComponent,
+    RecruitmentComponent,
+    CommonQuestionsComponent
   ],
   imports: [
     BrowserModule,

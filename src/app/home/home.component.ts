@@ -275,27 +275,30 @@ export class HomeComponent implements OnInit {
       },
     ],
   };
+
+  currentCenterIndex = 0; // Initially set to the center image
+
   photosSliderConfig = {
     rtl: this.translate.currentLang == 'ar' ? true : false,
     dots: true,
     arrows: false,
     autoplay: false,
     speed: 1500,
-    infinite: true,
+    infinite: false,
     pauseOnHover: true,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: '60px',
-    variableWidth: false,
+    // centerMode: true,
+    // centerPadding: '60px',
+    // variableWidth: false,
     responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          arrows: false,
-        },
-      },
+      // {
+      //   breakpoint: 1200,
+      //   settings: {
+      //     slidesToShow: 3,
+      //     arrows: false,
+      //   },
+      // },
       {
         breakpoint: 991,
         settings: {
@@ -491,6 +494,12 @@ export class HomeComponent implements OnInit {
       partnerImg
     };
     this.modalRef = this.modalService.show(PartnerDetailsComponent, { initialState, class: 'modal-xl modal-dialog-centered' });
+  }
+
+  afterChange(event: any): void {
+    console.log(event);
+    
+    this.currentCenterIndex = event.currentSlide + 2; // Adjust for centering logic
   }
 
 }

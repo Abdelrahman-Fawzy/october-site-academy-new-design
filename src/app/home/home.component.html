@@ -900,8 +900,9 @@
       class="carousel"
       #slickModal="slick-carousel"
       [config]="photosSliderConfig"
+      (afterChange)="afterChange($event)"
     >
-      <div ngxSlickItem *ngFor="let photo of photos" class="slide">
+      <div ngxSlickItem *ngFor="let photo of photos;let i = index" class="slide" [ngClass]="{'center-slide': i === currentCenterIndex}">
         <div class="item">
           <div class="photo">
             <img [src]="photo.image" alt="">

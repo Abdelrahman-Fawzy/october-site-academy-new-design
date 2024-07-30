@@ -332,6 +332,24 @@ ul.list-unstyled { padding: 0 }
   width: 100%;
 }
 
+.welcoming {
+  .photos {
+    .carousel {
+      direction: rtl;
+      .slick-track {
+        display: flex;
+      }
+      .slick-slide {
+        height: 300px;
+        // width: 400px !important;
+      }
+      .center-slide {
+        width: 700px !important;
+      }
+    }
+  }
+}
+
 @media (min-width: 1200px) {
   .navbar {
     .navbar-collapse {

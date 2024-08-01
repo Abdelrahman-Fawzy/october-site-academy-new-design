@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { RegisterModalComponent } from '../shared/register-modal/register-modal.component';
 import { TranslateService } from '@ngx-translate/core';
@@ -9,6 +9,7 @@ import { GetItemsService } from '../services/get-items.service';
 import { JobsList } from '../models/jobs';
 import { ToastrService } from 'ngx-toastr';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-about-academy',
@@ -33,12 +34,24 @@ export class AboutAcademyComponent implements OnInit {
     private readonly titleService: Title,
     private getItemsService: GetItemsService,
     private toastr: ToastrService,
-    ) { }
+    private router: Router
+    ) { 
+      this.router.events.pipe(
+        filter(e => e instanceof NavigationEnd)
+      ).subscribe((ev: any) => {
+        // this.currentRoute = ev.url
+        // console.log(`this.currentRoute`, this.currentRoute);
+        // console.log(this.currentRoute.includes('dashboard'));
+        // window.location.reload();
+      })
+    }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       this.param = params.item
     })
+    console.log(this.param);
+    
     if (this.param == 'vision') document.getElementById("academyVision").click();
     if (this.param == 'departments') document.getElementById("academyDepartments").click();
     if (this.param == 'acceptence') document.getElementById("academyAcceptence").click();

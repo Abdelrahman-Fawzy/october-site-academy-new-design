@@ -18,14 +18,12 @@ export class AcademyGalleryComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       this.param = params.item
+      console.log(this.param);
+      if ( this.param == 'buildings') document.getElementById("mediaDefaultOpen").click();
+      if ( this.param == 'conferences') document.getElementById("conferencesAndNews").click();
+      if ( this.param == 'graduation-party') document.getElementById("parties").click();
+      if ( this.param == 'training') document.getElementById("trainingS").click();
     })
-
-    console.log(this.param);
-
-    if ( this.param == 'buildings') document.getElementById("mediaDefaultOpen").click();
-    if ( this.param == 'conferences') document.getElementById("conferencesAndNews").click();
-    if ( this.param == 'graduation-party') document.getElementById("parties").click();
-    if ( this.param == 'training') document.getElementById("trainingS").click();
 
     // document.getElementById("mediaDefaultOpen").click();
 

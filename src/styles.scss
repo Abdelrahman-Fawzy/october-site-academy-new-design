@@ -340,7 +340,7 @@ ul.list-unstyled { padding: 0 }
         display: flex;
       }
       .slick-slide {
-        height: 300px;
+        height: 230px;
         // width: 400px !important;
       }
       .center-slide {
@@ -349,6 +349,8 @@ ul.list-unstyled { padding: 0 }
     }
   }
 }
+
+.player { width: 100%; }
 
 @media (min-width: 1200px) {
   .navbar {

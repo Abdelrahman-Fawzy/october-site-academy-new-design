@@ -26,44 +26,44 @@ export class HomeComponent implements OnInit {
 
   Departments = [
     {
-      DepartImg: 'assets/images/home-welcoming/bussiness.jpg',
+      DepartImg: 'assets/images/home-welcoming/imagesUpdated/bussiness.jpg',
       DepartName: localStorage.getItem("currentLang") == 'ar' ? 'إدارة الأعمال' : localStorage.getItem("currentLang") == 'gr' ? 'Betriebswirtschaftslehre' : 'Business Management',
       DepartLink: '/departments/bussiness-department'
     },
     {
-      DepartImg: 'assets/images/home-welcoming/new_petrolium.png',
-      DepartName: this.translate.currentLang == 'ar' ? 'الخدمات البترولية' : localStorage.getItem("currentLang") == 'gr' ? 'Erdöldienstleistungen' : 'Petroleum Services',
-      DepartLink: '/departments/petrol-department'
-    },
-    {
-      DepartImg: 'assets/images/home-welcoming/new_medical.png',
-      DepartName: this.translate.currentLang == 'ar' ? 'الخدمات الصحية' : localStorage.getItem("currentLang") == 'gr' ? 'Gesundheitsdienste' : 'Medical Services',
-      DepartLink: '/departments/medical-department'
-    },
-    {
-      DepartImg: 'assets/images/home-welcoming/new_hotels.png',
-      DepartName: this.translate.currentLang == 'ar' ? 'الخدمات السياحية و الفندقية' : localStorage.getItem("currentLang") == 'gr' ? 'Tourismus und Hotels' : 'Tourism And Hotels',
-      DepartLink: '/departments/hotels-department'
-    },
-    {
-      DepartImg: 'assets/images/home-welcoming/new_media.png',
+      DepartImg: 'assets/images/home-welcoming/imagesUpdated/media.jpg',
       DepartName: this.translate.currentLang == 'ar' ? 'الصحافة و الإعلام' : localStorage.getItem("currentLang") == 'gr' ? 'Mediendienste' : 'Journalism and Media',
       DepartLink: '/departments/journalism-department'
     },
     {
-      DepartImg: 'assets/images/home-welcoming/new_it.png',
+      DepartImg: 'assets/images/home-welcoming/imagesUpdated/it.jpg',
       DepartName: this.translate.currentLang == 'ar' ? 'تكنولوجيا المعلومات و الشبكات' : localStorage.getItem("currentLang") == 'gr' ? 'Netzwerktechnologie' : 'Information Technology',
       DepartLink: '/departments/it-department'
     },
     {
-      DepartImg: 'assets/images/home-welcoming/new_graphic.png',
+      DepartImg: 'assets/images/home-welcoming/imagesUpdated/maps.jpg',
+      DepartName: this.translate.currentLang == 'ar' ? 'المساحة و الخرائط' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Survey And Maps',
+      DepartLink: '/departments/maps-department'
+    },
+    {
+      DepartImg: 'assets/images/home-welcoming/imagesUpdated/hotels.jpg',
+      DepartName: this.translate.currentLang == 'ar' ? 'الخدمات السياحية و الفندقية' : localStorage.getItem("currentLang") == 'gr' ? 'Tourismus und Hotels' : 'Tourism And Hotels',
+      DepartLink: '/departments/hotels-department'
+    },
+    {
+      DepartImg: 'assets/images/home-welcoming/imagesUpdated/petrolium.jpg',
+      DepartName: this.translate.currentLang == 'ar' ? 'الخدمات البترولية' : localStorage.getItem("currentLang") == 'gr' ? 'Erdöldienstleistungen' : 'Petroleum Services',
+      DepartLink: '/departments/petrol-department'
+    },
+    {
+      DepartImg: 'assets/images/home-welcoming/imagesUpdated/graphic.jpg',
       DepartName: this.translate.currentLang == 'ar' ? 'تكنولوجيا الجرافيك' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Graphic Technology',
       DepartLink: '/departments/it-graphic-department'
     },
     {
-      DepartImg: 'assets/images/home-welcoming/new_maps.png',
-      DepartName: this.translate.currentLang == 'ar' ? 'المساحة و الخرائط' : localStorage.getItem("currentLang") == 'gr' ? 'Vermessungsdienste' : 'Survey And Maps',
-      DepartLink: '/departments/maps-department'
+      DepartImg: 'assets/images/home-welcoming/imagesUpdated/medical.jpg',
+      DepartName: this.translate.currentLang == 'ar' ? 'الخدمات الصحية' : localStorage.getItem("currentLang") == 'gr' ? 'Gesundheitsdienste' : 'Medical Services',
+      DepartLink: '/departments/medical-department'
     }
   ]
 
@@ -377,7 +377,7 @@ export class HomeComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    this.test()
+    // this.test()
     // this.showSlides(this.slideIndex)
     this.titleService.setTitle(this.route.snapshot.data['title'])
 
@@ -389,30 +389,30 @@ export class HomeComponent implements OnInit {
     this.modalRef = this.modalService.show(RegisterModalComponent, { class: 'modal-xl modal-dialog-centered' });
   }
 
-  test() {
-    this.changeOrder()
-  }
+  // test() {
+  //   this.changeOrder()
+  // }
 
-  changeOrder() {
-    setTimeout(() => {
-      this.change(0, 13)
-      this.stopCounter()
-    }, 30000)
-  }
+  // changeOrder() {
+  //   setTimeout(() => {
+  //     this.change(0, 13)
+  //     this.stopCounter()
+  //   }, 30000)
+  // }
 
-  stopCounter() {
-    if (this.incrementer == 13) {
-      this.incrementer = 0
-      this.changeOrder()
-    } else {
-      this.incrementer = this.incrementer + 1
-      this.changeOrder()
-    }
-  }
+  // stopCounter() {
+  //   if (this.incrementer == 13) {
+  //     this.incrementer = 0
+  //     this.changeOrder()
+  //   } else {
+  //     this.incrementer = this.incrementer + 1
+  //     this.changeOrder()
+  //   }
+  // }
 
-  change(from, to) {
-    this.Departments.splice(to, 0, this.Departments.splice(from, 1)[0]);
-  }
+  // change(from, to) {
+  //   this.Departments.splice(to, 0, this.Departments.splice(from, 1)[0]);
+  // }
 
   // plusSlides(n) {
   //   this.showSlides(this.slideIndex += n);

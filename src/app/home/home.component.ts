@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { RegisterModalComponent } from '../shared/register-modal/register-modal.component';
@@ -12,12 +12,13 @@ import { PartnerDetailsComponent } from '../shared/partner-details/partner-detai
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   isFirstOpen = true;
   modalRef?: BsModalRef;
   incrementer = 0
   slideIndex = 1;
+  trainingSlideIndex = 1
   GallerySlides = document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>
   demos = document.getElementsByClassName("demo");
   // experienceYearsStop
@@ -338,6 +339,9 @@ export class HomeComponent implements OnInit {
 
   photos: any[] = []
 
+  trainingImages: string[] = []
+  trainingImagesShown: string[] = []
+
   constructor(private modalService: BsModalService, public translate: TranslateService, private readonly route: ActivatedRoute,
     private readonly titleService: Title) { 
       this.responsiveOptions = [
@@ -374,6 +378,27 @@ export class HomeComponent implements OnInit {
             numScroll: 1
         }
       ];
+
+      this.trainingImages = [
+        '/assets/images/small-image.png',
+        '/assets/images/small-image.png',
+        '/assets/images/small-image.png',
+        '/assets/images/small-image.png',
+        '/assets/images/small-image.png',
+        '/assets/images/small-image.png',
+        '/assets/images/small-image.png',
+        '/assets/images/small-image.png',
+      ]
+      this.trainingImagesShown = [
+        '/assets/images/big-image.png',
+        '/assets/images/big-image.png',
+        '/assets/images/big-image.png',
+        '/assets/images/big-image.png',
+        '/assets/images/big-image.png',
+        '/assets/images/big-image.png',
+        '/assets/images/big-image.png',
+        '/assets/images/big-image.png',
+      ]
     }
 
   ngOnInit(): void {
@@ -383,6 +408,48 @@ export class HomeComponent implements OnInit {
 
     this.fillVideos()
     this.fillPhotos()
+  }
+  
+  ngAfterViewInit(): void {
+    this.trainingShowSlides(this.trainingSlideIndex)
+    document.getElementById('defaultOpen').click()
+  }
+
+  openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  currentSlide(n) {
+    this.trainingShowSlides(this.trainingSlideIndex = n);
+  }
+
+  trainingShowSlides(n) {
+    let i;
+    let slides: any = document.getElementsByClassName("galleryImg");
+    let dots = document.getElementsByClassName("demo");
+    console.log(slides);
+    console.log(dots);
+    
+    if (n > slides.length) {this.trainingSlideIndex = 1}
+    if (n < 1) {this.trainingSlideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[this.trainingSlideIndex-1].style.display = "block";
+    dots[this.trainingSlideIndex-1].className += " active";
   }
 
   register() {

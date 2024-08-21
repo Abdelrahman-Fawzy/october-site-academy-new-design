@@ -52,6 +52,7 @@ import { PartnersComponent } from './about-academy/partners/partners.component';
 import { PartnerDetailsComponent } from './shared/partner-details/partner-details.component';
 import { RecruitmentComponent } from './recruitment/recruitment.component';
 import { CommonQuestionsComponent } from './common-questions/common-questions.component';
+import { MinistryOfLaborVisitComponent } from './ministry-of-labor-visit/ministry-of-labor-visit.component';
 
 
 @NgModule({
@@ -91,7 +92,8 @@ import { CommonQuestionsComponent } from './common-questions/common-questions.co
     PartnersComponent,
     PartnerDetailsComponent,
     RecruitmentComponent,
-    CommonQuestionsComponent
+    CommonQuestionsComponent,
+    MinistryOfLaborVisitComponent
   ],
   imports: [
     BrowserModule,

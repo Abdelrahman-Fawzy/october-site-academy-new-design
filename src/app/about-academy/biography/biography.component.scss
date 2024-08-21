@@ -89,21 +89,30 @@
         display: flex;
         justify-content: end;
         .content-box {
-          width: 90%;
+          width: 95%;
           display: flex;
           gap: 3em;
           .item {
-            height: 600px;
+            height: 650px;
             display: flex;
             flex-direction: column;
+            .d-flex {
+              gap: 10px;
+            }
             &:first-child {
               justify-content: end;
+              margin-top: 5em;
+              width: 40%;
             }
             &:nth-child(2) {
-              justify-content: center;
+              justify-content: end;
+              margin-top: 5em;
+              width: 30%;
             }
             &:last-child {
-              justify-content: start;
+              justify-content: end;
+              margin-top: 5em;
+              width: 30%;
             }
             .item-box {
               display: flex;
@@ -112,7 +121,7 @@
               .item-header {
                 display: flex;
                 align-items: end;
-                justify-content: space-evenly;
+                justify-content: flex-start;
                 span {
                   font-size: 32px;
                   font-weight: 700;
@@ -125,6 +134,22 @@
                 p {
                   margin: 0;
                   font-size: 16px;
+                }
+                ul {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                  li {
+                    display: flex;
+                    align-items: center;
+                    gap: 7px;
+                    &::before {
+                      content: '';
+                      width: 7px;
+                      height: 7px;
+                      background-color: #fff;
+                    }
+                  }
                 }
               }
             }

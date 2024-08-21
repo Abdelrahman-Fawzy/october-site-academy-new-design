@@ -893,29 +893,43 @@
     <app-branches></app-branches>
   </div>
   <div class="photos">
-    <ngx-slick-carousel
-      class="carousel"
-      #slickModal="slick-carousel"
-      [config]="photosSliderConfig"
-      (afterChange)="afterChange($event)"
-    >
-      <div ngxSlickItem *ngFor="let photo of photos;let i = index" class="slide" [ngClass]="{'center-slide': i === currentCenterIndex}">
-        <div class="item">
-          <div class="photo">
-            <img [src]="photo.image" alt="">
+    <div class="header">
+      <h3>{{ '6OCTOBERPHOTOS' | translate }}</h3>
+      <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي</p>
+    </div>
+    <div class="gallery">
+      <div class="categories">
+        <div class="tab">
+          <button id="defaultOpen" class="tablinks" (click)="openTab($event, '6OctoberBranches')">مراكز 6 اكتوبر</button>
+          <button class="tablinks" (click)="openTab($event, 'StudentsTraining')">تدريبات الطلاب</button>
+        </div>
+        
+        <div id="6OctoberBranches" class="tabcontent">
+          <div class="gallery-container">
+            <div class="images">
+              <div class="img demo" *ngFor="let image of trainingImages;let i = index" (click)="currentSlide(i + 1)">
+                <img [src]="image" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="StudentsTraining" class="tabcontent">
+          <div class="gallery-container">
+            <div class="images">
+              <div class="img demo" *ngFor="let image of trainingImages;let i = index" (click)="currentSlide(i + 1)">
+                <img [src]="image" alt="">
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </ngx-slick-carousel>
-    <!-- <p-carousel [value]="photos" [numVisible]="5" [numScroll]="1" [showNavigators]="false" [circular]="true" [responsiveOptions]="photosResponsiveOptions">
-      <ng-template let-photo pTemplate="item">
-        <div class="item">
-          <div class="photo">
-            <img [src]="photo.image" alt="" style="width: 100%;">
-          </div>
+      <div class="galleryImgBox">
+        <div class="galleryImg" *ngFor="let image of trainingImagesShown">
+          <img [src]="image" alt="">
         </div>
-      </ng-template>
-    </p-carousel> -->
+      </div>
+    </div>
   </div>
   <div class="partners">
     <h3>{{ "SUCCESS_PARTNERS" | translate }}</h3>

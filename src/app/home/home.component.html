@@ -651,98 +651,164 @@
       <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي</p>
     </div>
     <div class="content">
-      <ngx-slick-carousel
-        class="carousel"
-        #slickModal="slick-carousel"
-        [config]="videosSliderConfig"
-      >
-        <div ngxSlickItem *ngFor="let video of videos" class="slide">
-          <div class="item">
-            <div class="video">
-              <div class="video-img">
-                <ng-container *ngIf="video.id == 1">
-                  <!-- <div style="padding:177.78% 0 0 0;position:relative;">
-                    <iframe 
-                      src="https://www.youtube.com/embed/LhRGOOEwmSw" 
-                      frameborder="0" 
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
-                      style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                      title="2">
-                    </iframe>
-                  </div> -->
-                  <iframe 
-                    src="https://www.youtube.com/embed/LhRGOOEwmSw"
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                    frameborder="0">
-                  </iframe>
-                </ng-container>
-                <ng-container *ngIf="video.id == 2">
-                  <!-- <div style="padding:177.78% 0 0 0;position:relative;">
-                    <iframe 
-                      src="https://player.vimeo.com/video/989687022?h=82077ccfb6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                      frameborder="0" 
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
-                      style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                      title="2">
-                    </iframe>
-                  </div>
-                  <script src="https://player.vimeo.com/api/player.js"></script> -->
-                  <iframe 
-                    src="https://player.vimeo.com/video/989687022?h=82077ccfb6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                    frameborder="0"
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write">
-                  </iframe>
-                </ng-container>
-                <ng-container *ngIf="video.id == 3">
-                  <iframe 
-                    src="https://player.vimeo.com/video/989682520?h=aec8bed83b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                    frameborder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                    title="1">
-                  </iframe>
-                </ng-container>
-                <ng-container *ngIf="video.id == 4">
-                  <iframe 
-                    src="https://player.vimeo.com/video/989666052?h=9dcf8139c3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                    frameborder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                    title="reel 6 Octobar Final 4 (1)">
-                  </iframe>
-                </ng-container>
-                <ng-container *ngIf="video.id == 5">
-                  <iframe 
-                    src="https://player.vimeo.com/video/989669825?h=a3a6953b0e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                    frameborder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                    title="Health services department video 2">
-                  </iframe>
-                </ng-container>
-              </div>
-              <div class="video-content">
-                <h4>{{video.video_name}}</h4>
-                <p>{{video.video_description}}</p>
-              </div>
-            </div>
-          </div>
+      <div class="videosCategoriesTabs">
+        <div class="tab">
+          <button id="videoDefaultOpen" class="videoTablinks" (click)="openVideoTab($event, 'videos6OctoberBranches')">مراكز 6 اكتوبر</button>
+          <button class="videoTablinks" (click)="openVideoTab($event, 'videosStudentsTraining')">تدريبات الطلاب</button>
         </div>
-      </ngx-slick-carousel>
-      <!-- <p-carousel [value]="videos" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
-        <ng-template let-video pTemplate="item">
-          <div class="item">
-            <div class="video">
-              <div class="video-img">
-                <div class="img">
-                  <img [src]="video.video_image" alt="">
+        <div id="videos6OctoberBranches" class="videoTabcontent">
+          <ngx-slick-carousel
+            class="carousel"
+            #slickModal="slick-carousel"
+            [config]="videosSliderConfig"
+          >
+            <div ngxSlickItem *ngFor="let video of videos6octoberCenter;let i = index" class="slide">
+              <div class="videoItem" (click)="videosCurrentSlide(i + 1)">
+                <div class="video">
+                  <div class="video-img">
+                    <img src="assets/images/small-image.png" alt="">
+                  </div>
+                  <div class="video-content">
+                    <h4>{{video.video_name}}</h4>
+                    <p>{{video.video_description}}</p>
+                  </div>
                 </div>
               </div>
-              <div class="video-content">
-                <h4>{{video.video_name}}</h4>
-                <p>{{video.video_description}}</p>
+            </div>
+          </ngx-slick-carousel>
+          <div class="videoIframe">
+            <iframe 
+              src="https://www.youtube.com/embed/nq4JD-kUQmE" 
+              title="المهندس فؤاد عبد المنعم المدير الاداري لمؤسسة 6 أكتوبر للتنمية البشرية يحكي تاريخ إنشاء المؤسسة" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="videoIframe">
+            <iframe 
+              src="https://www.youtube.com/embed/LhRGOOEwmSw" 
+              title="📢 زيارة معالي وزير العمل / حسن شحاتة للمقر الرئيسي بالجيزة …." 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="videoIframe">
+            <iframe 
+              src="https://www.youtube.com/embed/947RNk2-J9I" 
+              title="التفاعل اليومي داخل مراكز 6 أكتوبر" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="videoIframe">
+            <iframe 
+              src="https://www.youtube.com/embed/DfizEfucrU8" 
+              title="🚨مجال البترول يحتاج إلى العمل الميداني واكتساب المهارات اللازمة منك، لحجز مكانك في الوظائف الشاغرة💪" 
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        
+        <div id="videosStudentsTraining" class="videoTabcontent">
+          <ngx-slick-carousel
+            class="carousel"
+            #slickModal="slick-carousel"
+            [config]="studentsTrainingSliderConfig"
+          >
+            <div ngxSlickItem *ngFor="let video of videosStudentsTraining;let i = index" class="slide">
+              <div class="studentsVideoItem" (click)="videosStudentsTrainingShowSlides(i + 1)">
+                <div class="video">
+                  <div class="video-img">
+                    <img src="assets/images/small-image.png" alt="">
+                  </div>
+                  <div class="video-content">
+                    <h4>{{video.video_name}}</h4>
+                    <p>{{video.video_description}}</p>
+                  </div>
+                </div>
               </div>
             </div>
+          </ngx-slick-carousel>
+          <div class="studentsVideoIframe">
+            <iframe
+              src="https://www.youtube.com/embed/7am7aoWa3pM" 
+              title="قصة نجاح المتدرب جرجس مجدي درس المساحة والخرائط في مراكز 6 أكتوبر للتدريب المهني." 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
           </div>
-        </ng-template>
-      </p-carousel> -->
+          <div class="studentsVideoIframe">
+            <iframe
+              src="https://www.youtube.com/embed/Odjsi4f9CHU" 
+              title="تجربه عمر هاني داخل مراكز 6 أكتوبر من الناحية العملية والتدريبية" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="studentsVideoIframe">
+            <iframe
+              src="https://www.youtube.com/embed/H72ZscRMIAI" 
+              title="الطالب فتحي أبو بكر تخصص تكنولوجيا المعلومات - شبكات، يحكي لنا عن تجربته داخل مراكز 6 أكتوبر" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="studentsVideoIframe">
+            <iframe
+              src="https://www.youtube.com/embed/OnvJrZUDrNg" 
+              title="👨🏻‍🎓بما إنك خريج مميز وإتدربت معانا في مراكز 6 أكتوبر #رقم_1_في_التدريب_المهني" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="studentsVideoIframe">
+            <iframe
+              src="https://www.youtube.com/embed/SSc_ypauwIM" 
+              title="بما إنك خريج مميز" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="studentsVideoIframe">
+            <iframe
+              src="https://www.youtube.com/embed/xWVK0gxCiec" 
+              title="ما انك خريج مميز" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="studentsVideoIframe">
+            <iframe
+              src="https://www.youtube.com/embed/akG3XvcWeAs" 
+              title="قصة نجاح محمد أنور واحد من شباب كتير إتخرجوا من مراكز 6 أكتوبر للتدريب المهني" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- <div class="president_word">

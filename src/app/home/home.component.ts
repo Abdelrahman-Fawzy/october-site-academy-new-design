@@ -19,6 +19,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   incrementer = 0
   slideIndex = 1;
   trainingSlideIndex = 1
+  videosSlideIndex = 1
+  studentsVideosSlideIndex = 1
   GallerySlides = document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>
   demos = document.getElementsByClassName("demo");
   // experienceYearsStop
@@ -68,7 +70,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
   ]
 
-  videos: any[] = []
+  videos6octoberCenter: any[] = []
+  videosStudentsTraining: any[] = []
 
   experienceYears = 0;
   academyDeparts = 0;
@@ -241,7 +244,49 @@ export class HomeComponent implements OnInit, AfterViewInit {
     arrows: false,
     autoplay: false,
     speed: 1500,
-    infinite: true,
+    infinite: false,
+    pauseOnHover: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        },
+      },
+    ],
+  };
+
+  studentsTrainingSliderConfig = {
+    rtl: this.translate.currentLang == 'ar' ? true : false,
+    dots: true,
+    arrows: false,
+    autoplay: false,
+    speed: 1500,
+    infinite: false,
     pauseOnHover: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -411,8 +456,25 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
   
   ngAfterViewInit(): void {
+    this.videosShowSlides(this.videosSlideIndex)
+    this.videosStudentsTrainingShowSlides(this.trainingSlideIndex)
     this.trainingShowSlides(this.trainingSlideIndex)
+    document.getElementById('videoDefaultOpen').click()
     document.getElementById('defaultOpen').click()
+  }
+
+  openVideoTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("videoTabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("videoTablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
   }
 
   openTab(evt, tabName) {
@@ -429,8 +491,57 @@ export class HomeComponent implements OnInit, AfterViewInit {
     evt.currentTarget.className += " active";
   }
 
+  videosCurrentSlide(n) {
+    this.videosShowSlides(this.videosSlideIndex = n);
+  }
+
+  studentsVideosCurrentSlide(n) {
+    this.videosStudentsTrainingShowSlides(this.studentsVideosSlideIndex = n);
+  }
+
   currentSlide(n) {
     this.trainingShowSlides(this.trainingSlideIndex = n);
+  }
+
+  videosShowSlides(n) {
+    let i;
+    let slides: any = document.getElementsByClassName("videoIframe");
+    let dots = document.getElementsByClassName("videoItem");
+    if (n > slides.length) {this.videosSlideIndex = 1}
+    if (n < 1) {this.videosSlideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[this.videosSlideIndex-1].style.display = "block";
+    dots[this.videosSlideIndex-1].className += " active";
+  }
+
+  videosStudentsTrainingShowSlides(n) {
+    this.studentsVideosSlideIndex = n
+    let i;
+    let slides: any = document.getElementsByClassName("studentsVideoIframe");
+    let dots = document.getElementsByClassName("studentsVideoItem");
+    
+    if (n > slides.length) {
+      this.studentsVideosSlideIndex = 1
+    }
+    
+    if (n < 1) {
+      this.studentsVideosSlideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[this.studentsVideosSlideIndex-1].style.display = "block";
+    dots[this.studentsVideosSlideIndex-1].className += " active";
   }
 
   trainingShowSlides(n) {
@@ -439,7 +550,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     let dots = document.getElementsByClassName("demo");
     console.log(slides);
     console.log(dots);
-    
+    this.trainingSlideIndex = n
     if (n > slides.length) {this.trainingSlideIndex = 1}
     if (n < 1) {this.trainingSlideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
@@ -503,40 +614,68 @@ export class HomeComponent implements OnInit, AfterViewInit {
   // }
 
   fillVideos() {
-    this.videos = [
+    this.videos6octoberCenter = [
       {
         id: 1,
-        video_url: "https://player.vimeo.com/video/989687022?h=82077ccfb6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        video_name: "زيارة وزير العمل",
-        video_description: " لأول مرة على مستوى مراكز التدريب المهني في مصر زيارة معالي وزير العمل للمقر الرئيسي بالجيزة"
+        video_name: "المهندس فؤاد عبدالمنعم",
+        video_description: "المهندس فؤاد عبد المنعم المدير الاداري لمؤسسة 6 أكتوبر للتنمية البشرية يحكي تاريخ إنشاء المؤسسة"
       },
       {
         id: 2,
-        video_url: "https://player.vimeo.com/video/989687022?h=82077ccfb6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        video_name: "آراء خريجين ٦ أكتوبر",
-        video_description: "لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي"
+        video_name: "زيارة وزير العمل",
+        video_description: "زيارة معالي وزير العمل / حسن شحاتة للمقر الرئيسي بالجيزة"
       },
       {
         id: 3,
-        video_url: "https://player.vimeo.com/video/989682520?h=aec8bed83b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        video_name: "آراء خريجين ٦ أكتوبر",
-        video_description: "لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي"
+        video_name: "التفاعل اليومي",
+        video_description: "التفاعل اليومي داخل مراكز 6 أكتوبر"
       },
       {
         id: 4,
-        video_url: "https://player.vimeo.com/video/989666052?h=9dcf8139c3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        video_name: "مراكز 6 اكتوبر",
-        video_description: "الأولي ف التدريب المهني"
+        video_name: "مجال البترول",
+        video_description: "مجال البترول يحتاج إلى العمل الميداني واكتساب المهارات اللازمة منك، لحجز مكانك في الوظائف الشاغرة"
+      }
+    ]
+
+    this.videosStudentsTraining = [
+      {
+        id: 1,
+        video_name: "قصة نجاح جرجس مجدي",
+        video_description: "قصة نجاح المتدرب جرجس مجدي درس المساحة والخرائط في مراكز 6 أكتوبر للتدريب المهني"
+      },
+      {
+        id: 2,
+        video_name: "قصة نجاح عمر هاني",
+        video_description: "تجربه عمر هاني داخل مراكز 6 أكتوبر من الناحية العملية والتدريبية"
+      },
+      {
+        id: 3,
+        video_name: "قصة نجاح فتحي أبو بكر",
+        video_description: "الطالب فتحي أبو بكر تخصص تكنولوجيا المعلومات - شبكات، يحكي لنا عن تجربته داخل مراكز 6 أكتوبر"
+      },
+      {
+        id: 4,
+        video_name: "بما إنك خريج مميز",
+        video_description: "بما إنك خريج مميز وإتدربت معانا في مراكز 6 أكتوبر"
       },
       {
         id: 5,
-        video_url: "https://player.vimeo.com/video/989669825?h=a3a6953b0e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        video_name: "مساعد الخدمات الصحية",
-        video_description: "لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي"
+        video_name: "بما إنك خريج مميز",
+        video_description: "بما إنك خريج مميز"
       },
+      {
+        id: 6,
+        video_name: "بما إنك خريج مميز",
+        video_description: "بما إنك خريج مميز"
+      },
+      {
+        id: 7,
+        video_name: "قصة نجاح محمد أنور",
+        video_description: "قصة نجاح محمد أنور واحد من شباب كتير إتخرجوا من مراكز 6 أكتوبر للتدريب المهني"
+      }
     ]
 
-    console.log(this.videos);
+    console.log(this.videos6octoberCenter);
     
   }
 

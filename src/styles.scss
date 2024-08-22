@@ -352,6 +352,12 @@ ul.list-unstyled { padding: 0 }
 
 .player { width: 100%; }
 
+.videosCategoriesTabs .slick-track {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 @media (min-width: 1200px) {
   .navbar {
     .navbar-collapse {

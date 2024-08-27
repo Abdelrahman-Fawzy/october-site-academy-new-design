@@ -37,7 +37,8 @@
         </div>
         <div class="col-lg-8">
           <div class="form-group">
-            <label for="nationalId">{{ "ID" | translate}}</label>
+            <label for="nationalId" *ngIf="this.studentNationality == 'foreign'">{{ "ID" | translate}}</label>
+            <label for="nationalId" *ngIf="this.studentNationality == 'egyptian'">{{ "NATIONAL_ID" | translate}}</label>
             <input [(ngModel)]="registerData.national_id" formControlName="national_id" id="nationalId" type="number"
               class="form-control">
           </div>

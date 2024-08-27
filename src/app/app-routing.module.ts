@@ -201,14 +201,14 @@ const routes: Routes = [
       title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
     }
   },
-  {
-    path: 'common-questions',
-    component: CommonQuestionsComponent,
-    pathMatch: 'full',
-    data: {
-      title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
-    }
-  },
+  // {
+  //   path: 'common-questions',
+  //   component: CommonQuestionsComponent,
+  //   pathMatch: 'full',
+  //   data: {
+  //     title: localStorage.getItem("currentLang") == 'en' ? academyName.nameEn : academyName.nameAr
+  //   }
+  // },
   {
     path: 'graduates',
     component: GraduatesComponent,

@@ -148,7 +148,8 @@
   "CHOOSE_FROM_DEVICE": "Choose from your device",
   "CV": "Resume/CV",
   "MESSAGE": "Message",
-  "ID": "National ID",
+  "ID": "ID Number",
+  "NATIONAL_ID": "National Id",
   "QUALIFICATION": "Qualification",
   "GRADUATION_YEAR": "Year of Graduation",
   "COUNTRY": "Nationailty",
@@ -212,5 +213,5 @@
   "ANOTHER_LINKS": "Other Links",
   "ONLINE_REGISTER": "Online Registration Academy",
   "QUESTION_ANSWER": "Frequently Asked Questions (FAQs)",
-  "COPYRIGHT": "All rights reserved 2024"
+  "COPYRIGHT": "All rights reserved to 6th of October Foundation for Human Development 2020"
 }

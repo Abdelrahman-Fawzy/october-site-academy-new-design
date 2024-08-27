@@ -12,20 +12,28 @@
   <div class="container">
     <div class="tabs">
       <button id="mediaDefaultOpen" class="tabLinks" (click)="openTab($event, 'buildings')">
-        <img src="assets/images/media-icons/buildings.svg" alt="">
+        <img src="assets/images/media-icons/pictures.svg" alt="">
         {{"MEDIA_SUB_ITEMS.BUILDINGS" | translate}}
       </button>
-      <button id="conferencesAndNews" class="tabLinks" (click)="openTab($event, 'conferences')">
-        <img src="assets/images/media-icons/conferences.svg" alt="">
-        {{"MEDIA_SUB_ITEMS.CONFERENCES" | translate}}
+      <button id="trainingS" class="tabLinks" (click)="openTab($event, 'training')">
+        <img src="assets/images/media-icons/training.svg" alt="">
+        {{"MEDIA_SUB_ITEMS.TRAINING" | translate}}
+      </button>
+      <button id="theoreticalTrainingS" class="tabLinks" (click)="openTab($event, 'theoreticalTraining')">
+        <img src="assets/images/media-icons/theoretical-training.svg" alt="">
+        {{"MEDIA_SUB_ITEMS.THEORETICAL_TRAINING" | translate}}
+      </button>
+      <button id="funActivities" class="tabLinks" (click)="openTab($event, 'fun_activities')">
+        <img src="assets/images/media-icons/graduations-party.svg" alt="">
+        {{"MEDIA_SUB_ITEMS.FUN_ACTIVITIES" | translate}}
       </button>
       <button id="parties" class="tabLinks" (click)="openTab($event, 'graduation-party')">
         <img src="assets/images/media-icons/graduations-party.svg" alt="">
         {{"MEDIA_SUB_ITEMS.GRADUATION_PARTIES" | translate}}
       </button>
-      <button id="trainingS" class="tabLinks" (click)="openTab($event, 'training')">
-        <img src="assets/images/media-icons/training.svg" alt="">
-        {{"MEDIA_SUB_ITEMS.TRAINING" | translate}}
+      <button id="conferencesAndNews" class="tabLinks" (click)="openTab($event, 'conferences')">
+        <img src="assets/images/media-icons/conferences.svg" alt="">
+        {{"MEDIA_SUB_ITEMS.CONFERENCES" | translate}}
       </button>
     </div>
   </div>
@@ -476,6 +484,814 @@
                 </div>
                 <h6>{{"TANTA_BRANCH" | translate}}</h6>
                 <button class="primary" (click)="openBranch('tantaBranch')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tabcontent" id="training">
+      <div class="all-trainings" id="all-trainings">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="container">
+              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
+                التدريب العملى لطلاب المركز هو واحد من أهم المراحل التي نركز عليها فى تعليم وتأهيل خريجين قادرين علي
+                تلبية متطلبات سوق العمل
+              </p>
+              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
+                التدريب العملي هو تطبيق عملى على ما تم تدريسه لطلاب المركز من خلال تجارب ميدانية تكسب الطالب المعرفة
+                و المهارة عن بيئة العمل الحقيقية التي سوف يواجهها بعد التخرج
+              </p>
+
+              <p class="training-p" *ngIf="translate.currentLang == 'en'">
+                Practical training for our academy students is one of the most crucial stages we emphasize in educating
+                and preparing graduates capable of meeting the demands of the job market.
+              </p>
+              <p class="training-p" *ngIf="translate.currentLang == 'en'">
+                Practical Training is the practical application of what has been taught to the students of the academy
+                through field experiences that equip the students with knowledge and skills about the real work
+                environment they will encounter after graduation.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="img">
+              <img src="assets/images/trainingFirst.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="img">
+              <img src="assets/images/trainingSecond.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="container">
+              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
+                قد عملت إدارة المركز خلال السنوات الماضية على توفير كل الإمكانات والسبل التي من شأنها إرساء قواعد
+                عملية تدريبية متينة الأساس، عميقة المفاهيم، مفصلة الأهداف ومحددة المراحل والخطوات، بحيث تكون مكملة
+                ومحققة للخطط الدراسية المختلفة
+              </p>
+              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
+                و فى سبيل تحقيق هذا الغرض سارعت المركز بالشراكة مع كبرى الشركات و المصانع والفنادق والهيئات سواء فى
+                القطاع العام أو الخاص ,كل المحافل ذات الصلة بالتدريب العملى لإتاحة التدريب العملى لطلاب المركز لديهم
+              </p>
+
+              <p class="training-p" *ngIf="translate.currentLang == 'en'">
+                Throughout the past years, the Academy's management has diligently worked to provide all the necessary
+                resources and means to establish a solid and comprehensive training framework. This framework is
+                characterized by profound concepts, detailed objectives, defined stages, and steps, complementing and
+                fulfilling the various academic curricula.
+              </p>
+              <p class="training-p" *ngIf="translate.currentLang == 'en'">
+                In pursuit of this objective, the Academy has promptly established partnerships with leading companies,
+                factories, hotels, and organizations, whether in the public or private sector, all relevant entities
+                involved in practical training. This enables the provision of practical training opportunities for the
+                Academy's students.
+              </p>
+            </div>
+          </div>
+        </div>
+        <h4 class="my-4">{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-training" id="training1">
+        <h4>{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/16.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/81.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/101.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/54.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/95.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/31.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/53.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/30.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/25.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/52.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/98.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/78.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">{{"ANOTHER_TRAINING_PHOTOS" | translate}}</h4>
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-training" id="training2">
+        <h4>{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/16.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/81.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/101.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/54.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/95.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/31.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/53.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/30.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/25.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/52.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/98.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/78.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">{{"ANOTHER_TRAINING_PHOTOS" | translate}}</h4>
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-training" id="training3">
+        <h4>{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/16.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/81.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/101.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/54.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/95.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/31.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/53.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/30.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/25.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/52.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/98.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/78.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">{{"ANOTHER_TRAINING_PHOTOS" | translate}}</h4>
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tabcontent" id="theoreticalTraining">
+      <div class="all-trainings" id="all-trainings">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="container">
+              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
+                التدريب العملى لطلاب المركز هو واحد من أهم المراحل التي نركز عليها فى تعليم وتأهيل خريجين قادرين علي
+                تلبية متطلبات سوق العمل
+              </p>
+              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
+                التدريب العملي هو تطبيق عملى على ما تم تدريسه لطلاب المركز من خلال تجارب ميدانية تكسب الطالب المعرفة
+                و المهارة عن بيئة العمل الحقيقية التي سوف يواجهها بعد التخرج
+              </p>
+
+              <p class="training-p" *ngIf="translate.currentLang == 'en'">
+                Practical training for our academy students is one of the most crucial stages we emphasize in educating
+                and preparing graduates capable of meeting the demands of the job market.
+              </p>
+              <p class="training-p" *ngIf="translate.currentLang == 'en'">
+                Practical Training is the practical application of what has been taught to the students of the academy
+                through field experiences that equip the students with knowledge and skills about the real work
+                environment they will encounter after graduation.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="img">
+              <img src="assets/images/trainingFirst.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="img">
+              <img src="assets/images/trainingSecond.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="container">
+              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
+                قد عملت إدارة المركز خلال السنوات الماضية على توفير كل الإمكانات والسبل التي من شأنها إرساء قواعد
+                عملية تدريبية متينة الأساس، عميقة المفاهيم، مفصلة الأهداف ومحددة المراحل والخطوات، بحيث تكون مكملة
+                ومحققة للخطط الدراسية المختلفة
+              </p>
+              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
+                و فى سبيل تحقيق هذا الغرض سارعت المركز بالشراكة مع كبرى الشركات و المصانع والفنادق والهيئات سواء فى
+                القطاع العام أو الخاص ,كل المحافل ذات الصلة بالتدريب العملى لإتاحة التدريب العملى لطلاب المركز لديهم
+              </p>
+
+              <p class="training-p" *ngIf="translate.currentLang == 'en'">
+                Throughout the past years, the Academy's management has diligently worked to provide all the necessary
+                resources and means to establish a solid and comprehensive training framework. This framework is
+                characterized by profound concepts, detailed objectives, defined stages, and steps, complementing and
+                fulfilling the various academic curricula.
+              </p>
+              <p class="training-p" *ngIf="translate.currentLang == 'en'">
+                In pursuit of this objective, the Academy has promptly established partnerships with leading companies,
+                factories, hotels, and organizations, whether in the public or private sector, all relevant entities
+                involved in practical training. This enables the provision of practical training opportunities for the
+                Academy's students.
+              </p>
+            </div>
+          </div>
+        </div>
+        <h4 class="my-4">{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-training" id="training1">
+        <h4>{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/16.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/81.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/101.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/54.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/95.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/31.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/53.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/30.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/25.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/52.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/98.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/78.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">{{"ANOTHER_TRAINING_PHOTOS" | translate}}</h4>
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-training" id="training2">
+        <h4>{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/16.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/81.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/101.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/54.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/95.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/31.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/53.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/30.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/25.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/52.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/98.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/78.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">{{"ANOTHER_TRAINING_PHOTOS" | translate}}</h4>
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specific-training" id="training3">
+        <h4>{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/16.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/81.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/101.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/54.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/95.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/31.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/53.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/30.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/25.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/52.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/98.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="img">
+                <img src="assets/images/departments-icons/78.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <h4 class="another-title">{{"ANOTHER_TRAINING_PHOTOS" | translate}}</h4>
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/first.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/second.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="training">
+                <div class="img">
+                  <img src="assets/images/third.png" alt="">
+                </div>
+                <h6>عنوان الصور</h6>
+                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
@@ -1636,105 +2452,52 @@
         </div>
       </div>
     </div>
-    <div class="tabcontent" id="training">
-      <div class="all-trainings" id="all-trainings">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="container">
-              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
-                التدريب العملى لطلاب المركز هو واحد من أهم المراحل التي نركز عليها فى تعليم وتأهيل خريجين قادرين علي
-                تلبية متطلبات سوق العمل
-              </p>
-              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
-                التدريب العملي هو تطبيق عملى على ما تم تدريسه لطلاب المركز من خلال تجارب ميدانية تكسب الطالب المعرفة
-                و المهارة عن بيئة العمل الحقيقية التي سوف يواجهها بعد التخرج
-              </p>
+    <div class="tabcontent" id="fun_activities">
+      <h4>{{"ACADEMY_GRADUATION_PARTIES_PHOTOS" | translate }}</h4>
+      <p *ngIf="translate.currentLang == 'ar' ">تهتم إدارة المركز بحفلات التخرج للطلبة الخريجين وتكريم الطلبة
+        المتفوقين بحضور عدد من الفنانين ونخبة من الاعلاميين والنجوم</p>
+      <p *ngIf="translate.currentLang == 'en'">The Academy's management takes great
+        care of the graduation parties for the graduating students and honors outstanding students in the presence of
+        several artists, media figures, and celebrities.</p>
+      <p *ngIf="translate.currentLang == 'gr'">Die Leitung der Akademie kümmert sich intensiv um die Abschlussfeiern der
+        Absolventen und ehrt herausragende Studierende im Beisein zahlreicher Künstler, Medienschaffender und
+        Prominenter.</p>
 
-              <p class="training-p" *ngIf="translate.currentLang == 'en'">
-                Practical training for our academy students is one of the most crucial stages we emphasize in educating
-                and preparing graduates capable of meeting the demands of the job market.
-              </p>
-              <p class="training-p" *ngIf="translate.currentLang == 'en'">
-                Practical Training is the practical application of what has been taught to the students of the academy
-                through field experiences that equip the students with knowledge and skills about the real work
-                environment they will encounter after graduation.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="img">
-              <img src="assets/images/trainingFirst.png" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="img">
-              <img src="assets/images/trainingSecond.png" alt="">
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="container">
-              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
-                قد عملت إدارة المركز خلال السنوات الماضية على توفير كل الإمكانات والسبل التي من شأنها إرساء قواعد
-                عملية تدريبية متينة الأساس، عميقة المفاهيم، مفصلة الأهداف ومحددة المراحل والخطوات، بحيث تكون مكملة
-                ومحققة للخطط الدراسية المختلفة
-              </p>
-              <p class="training-p" *ngIf="translate.currentLang == 'ar'">
-                و فى سبيل تحقيق هذا الغرض سارعت المركز بالشراكة مع كبرى الشركات و المصانع والفنادق والهيئات سواء فى
-                القطاع العام أو الخاص ,كل المحافل ذات الصلة بالتدريب العملى لإتاحة التدريب العملى لطلاب المركز لديهم
-              </p>
-
-              <p class="training-p" *ngIf="translate.currentLang == 'en'">
-                Throughout the past years, the Academy's management has diligently worked to provide all the necessary
-                resources and means to establish a solid and comprehensive training framework. This framework is
-                characterized by profound concepts, detailed objectives, defined stages, and steps, complementing and
-                fulfilling the various academic curricula.
-              </p>
-              <p class="training-p" *ngIf="translate.currentLang == 'en'">
-                In pursuit of this objective, the Academy has promptly established partnerships with leading companies,
-                factories, hotels, and organizations, whether in the public or private sector, all relevant entities
-                involved in practical training. This enables the provision of practical training opportunities for the
-                Academy's students.
-              </p>
-            </div>
-          </div>
-        </div>
-        <h4 class="my-4">{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
+      <div class="all-classes" id="all-classes">
         <div class="container">
           <div class="row">
             <div class="col-lg-4 col-md-6">
-              <div class="training">
+              <div class="class">
                 <div class="img">
                   <img src="assets/images/first.png" alt="">
                 </div>
-                <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
+                <h6>{{"CLASS2022" | translate}}</h6>
+                <button class="primary" (click)="openClass('2022class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="training">
+              <div class="class">
                 <div class="img">
                   <img src="assets/images/second.png" alt="">
                 </div>
-                <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
+                <h6>{{"CLASS2021" | translate}}</h6>
+                <button class="primary" (click)="openClass('2021class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="training">
+              <div class="class">
                 <div class="img">
                   <img src="assets/images/third.png" alt="">
                 </div>
-                <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
+                <h6>{{"CLASS2020" | translate}}</h6>
+                <button class="primary" (click)="openClass('2020class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="specific-training" id="training1">
-        <h4>{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
+      <div class="specific-class" id="2022class">
+        <h4 class="title-name">{{"CLASS2022" | translate}}</h4>
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -1803,40 +2566,40 @@
             </div>
           </div>
 
-          <h4 class="another-title">{{"ANOTHER_TRAINING_PHOTOS" | translate}}</h4>
+          <h4 class="another-title">{{"ANOTHER_PARTIES_PHOTOS" | translate}}</h4>
           <div class="row">
             <div class="col-lg-4 col-md-6">
-              <div class="training">
+              <div class="class">
                 <div class="img">
                   <img src="assets/images/first.png" alt="">
                 </div>
-                <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
+                <h6>{{"CLASS2022" | translate}}</h6>
+                <button class="primary" (click)="openClass('2022class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="training">
+              <div class="class">
                 <div class="img">
                   <img src="assets/images/second.png" alt="">
                 </div>
-                <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
+                <h6>{{"CLASS2021" | translate}}</h6>
+                <button class="primary" (click)="openClass('2021class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="training">
+              <div class="class">
                 <div class="img">
                   <img src="assets/images/third.png" alt="">
                 </div>
-                <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
+                <h6>{{"CLASS2020" | translate}}</h6>
+                <button class="primary" (click)="openClass('2020class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="specific-training" id="training2">
-        <h4>{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
+      <div class="specific-class" id="2021class">
+        <h4 class="title-name">{{"CLASS2021" | translate}}</h4>
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -1905,40 +2668,40 @@
             </div>
           </div>
 
-          <h4 class="another-title">{{"ANOTHER_TRAINING_PHOTOS" | translate}}</h4>
+          <h4 class="another-title">{{"ANOTHER_PARTIES_PHOTOS" | translate}}</h4>
           <div class="row">
             <div class="col-lg-4 col-md-6">
-              <div class="training">
+              <div class="class">
                 <div class="img">
                   <img src="assets/images/first.png" alt="">
                 </div>
-                <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
+                <h6>{{"CLASS2022" | translate}}</h6>
+                <button class="primary" (click)="openClass('2022class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="training">
+              <div class="class">
                 <div class="img">
                   <img src="assets/images/second.png" alt="">
                 </div>
-                <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
+                <h6>{{"CLASS2021" | translate}}</h6>
+                <button class="primary" (click)="openClass('2021class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="training">
+              <div class="class">
                 <div class="img">
                   <img src="assets/images/third.png" alt="">
                 </div>
-                <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
+                <h6>{{"CLASS2020" | translate}}</h6>
+                <button class="primary" (click)="openClass('2020class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="specific-training" id="training3">
-        <h4>{{"ANOTHER_ACADEMY_TRAINING_PHOTOS" | translate}}</h4>
+      <div class="specific-class" id="2020class">
+        <h4 class="title-name">{{"CLASS2020" | translate}}</h4>
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -2007,33 +2770,33 @@
             </div>
           </div>
 
-          <h4 class="another-title">{{"ANOTHER_TRAINING_PHOTOS" | translate}}</h4>
+          <h4 class="another-title">{{"ANOTHER_PARTIES_PHOTOS" | translate}}</h4>
           <div class="row">
             <div class="col-lg-4 col-md-6">
-              <div class="training">
+              <div class="class">
                 <div class="img">
                   <img src="assets/images/first.png" alt="">
                 </div>
-                <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training1')">{{"VIEW_PHOTOS" | translate}}</button>
+                <h6>{{"CLASS2022" | translate}}</h6>
+                <button class="primary" (click)="openClass('2022class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="training">
+              <div class="class">
                 <div class="img">
                   <img src="assets/images/second.png" alt="">
                 </div>
-                <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training2')">{{"VIEW_PHOTOS" | translate}}</button>
+                <h6>{{"CLASS2021" | translate}}</h6>
+                <button class="primary" (click)="openClass('2021class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="training">
+              <div class="class">
                 <div class="img">
                   <img src="assets/images/third.png" alt="">
                 </div>
-                <h6>عنوان الصور</h6>
-                <button class="primary" (click)="openTraining('training3')">{{"VIEW_PHOTOS" | translate}}</button>
+                <h6>{{"CLASS2020" | translate}}</h6>
+                <button class="primary" (click)="openClass('2020class')">{{"VIEW_PHOTOS" | translate}}</button>
               </div>
             </div>
           </div>

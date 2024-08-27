@@ -12,31 +12,31 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="nav-lists d-flex align-items-center flex-column gap-3">
         <div class="nav-actions d-flex align-items-center justify-content-between full-width">
+          <button class="primary" (click)="register()">{{ "REGISTER_NOW" | translate }}</button>
           <ul class="list-unstyled d-flex align-items-center m-0 social">
             <li>
               <a href="https://www.facebook.com/6octoberacademy?mibextid=kFxxJD" target="_blank">
-                <img src="assets/images/icons/black-Facebook.svg" alt="facebook">
+                <img src="assets/images/icons/colored_facebook.svg" alt="facebook">
               </a>
             </li>
             <!-- <li><img src="assets/images/icons/google.svg" alt="google"></li>
             <li><img src="assets/images/icons/twitter.svg" alt="twitter"></li> -->
             <li>
               <a href="https://www.instagram.com/6octoberhd?igsh=dzdxZDVhdTQxdmFq" target="_blank">
-                <img src="assets/images/icons/black-instagram.svg" alt="instagram">
+                <img src="assets/images/icons/colored_instagram.svg" alt="instagram">
               </a>
             </li>
             <li>
               <a href="https://youtube.com/@6octoberhd?si=fXPm9_JAdfaDhX1h" target="_blank">
-                <img src="assets/images/icons/black-youtube.svg" alt="youtube">
+                <img src="assets/images/icons/colored_youtube.svg" alt="youtube">
               </a>
             </li>
             <li>
               <a href="https://www.tiktok.com/@6octoberhd?is_from_webapp=1&sender_device=pc" target="_blank">
-                <img src="assets/images/icons/black-tiktok.svg" alt="tiktok">
+                <img src="assets/images/icons/colored_tiktok.svg" alt="tiktok">
               </a>
             </li>
           </ul>
-          <button class="primary" (click)="register()">{{ "REGISTER_NOW" | translate }}</button>
         </div>
         <div class="divider"></div>
         <ul class="navbar-nav">
@@ -324,7 +324,7 @@
                     </a>
                   </li>
                   <li>
-                    <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'training'}">
+                    <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'theoreticalTraining'}">
                       <div class="img-icon">
                         <img src="assets/images/media-icons/theoretical-training.svg" alt="training">
                       </div>
@@ -332,9 +332,9 @@
                     </a>
                   </li>
                   <li>
-                    <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'graduation-party'}">
+                    <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'fun_activities'}">
                       <div class="img-icon">
-                        <img src="assets/images/media-icons//puzzle.svg" alt="graduations-party">
+                        <img src="assets/images/media-icons/puzzle.svg" alt="graduations-party">
                       </div>
                       {{ "MEDIA_SUB_ITEMS.FUN_ACTIVITIES" | translate }}
                     </a>
@@ -342,7 +342,7 @@
                   <li>
                     <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'graduation-party'}">
                       <div class="img-icon">
-                        <img src="assets/images/media-icons//graduations-party.svg" alt="graduations-party">
+                        <img src="assets/images/media-icons/graduations-party.svg" alt="graduations-party">
                       </div>
                       {{ "MEDIA_SUB_ITEMS.GRADUATION_PARTIES" | translate }}
                     </a>
@@ -375,7 +375,7 @@
                   </a>
                 </li>
                 <li>
-                  <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'training'}">
+                  <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'theoreticalTraining'}">
                     <div class="img-icon">
                       <img src="assets/images/media-icons/theoretical-training.svg" alt="training">
                     </div>
@@ -383,9 +383,9 @@
                   </a>
                 </li>
                 <li>
-                  <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'graduation-party'}">
+                  <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'fun_activities'}">
                     <div class="img-icon">
-                      <img src="assets/images/media-icons//puzzle.svg" alt="graduations-party">
+                      <img src="assets/images/media-icons/puzzle.svg" alt="graduations-party">
                     </div>
                     {{ "MEDIA_SUB_ITEMS.FUN_ACTIVITIES" | translate }}
                   </a>
@@ -393,7 +393,7 @@
                 <li>
                   <a [routerLink]="'academy-gallery'" [queryParams]="{item: 'graduation-party'}">
                     <div class="img-icon">
-                      <img src="assets/images/media-icons//graduations-party.svg" alt="graduations-party">
+                      <img src="assets/images/media-icons/graduations-party.svg" alt="graduations-party">
                     </div>
                     {{ "MEDIA_SUB_ITEMS.GRADUATION_PARTIES" | translate }}
                   </a>
@@ -420,12 +420,12 @@
               {{ "ABOUT_SUB_ITEMS.JOBS" | translate }}
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" [routerLink]="'common-questions'" [routerLinkActive]="'active'"
               [routerLinkActiveOptions]="{exact: true}">
               {{ "ABOUT_SUB_ITEMS.FAQ" | translate }}
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" [routerLink]="'graduates'" [routerLinkActive]="'active'"
               [routerLinkActiveOptions]="{exact: true}">

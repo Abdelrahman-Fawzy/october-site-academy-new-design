@@ -88,7 +88,7 @@ export class BranchesComponent implements OnInit, AfterViewInit {
     this.branches = [
       {
         branch_name: "KAFR_ELSHEIKH_BRANCH",
-        license: "",
+        license: "حاصل على رخصة من وزارة العمل 2024",
         branch_address: "KAFR_ELSHEIKH_BRANCH_ADDRESS",
         whatsapp_number: "01000005387",
         email_address: "kafr.el-sheikh@6ohd.com",
@@ -97,21 +97,12 @@ export class BranchesComponent implements OnInit, AfterViewInit {
       },
       {
         branch_name: "ZAGAZIG_BRANCH",
-        license: "",
+        license: "حاصل على رخصة من وزارة العمل 2024",
         branch_address: "ZAGAZIG_BRANCH_ADDRESS",
         whatsapp_number: "01000005387",
         email_address: "el-zagazig@6ohd.com",
         directions: "https://maps.google.com/?q=30.600536,31.487640",
         facebook_link: "https://www.facebook.com/6oHD.Zagazig?mibextid=kFxxJD"
-      },
-      {
-        branch_name: "NEW_CAIRO_BRANCH",
-        license: "",
-        branch_address: "NEW_CAIRO_BRANCH_ADDRESS",
-        whatsapp_number: "01000005387",
-        email_address: "misr.elgededa@6ohd.com",
-        directions: "https://maps.app.goo.gl/mTAdmRVJEfm66U2d7?g_st=iw",
-        facebook_link: "https://www.facebook.com/6ohd.Heliopolis?mibextid=kFxxJD"
       },
       {
         branch_name: "BENHA_BRANCH",
@@ -139,6 +130,15 @@ export class BranchesComponent implements OnInit, AfterViewInit {
         email_address: "6oa.Shubra@6oHD.CoM",
         directions: "https://maps.app.goo.gl/ox3WhmSUoznjboD37",
         facebook_link: "https://www.facebook.com/6Oa.Shubra?mibextid=eQY6cl"
+      },
+      {
+        branch_name: "NEW_CAIRO_BRANCH",
+        license: "حاصل على رخصة من وزارة العمل 2024",
+        branch_address: "NEW_CAIRO_BRANCH_ADDRESS",
+        whatsapp_number: "01000005387",
+        email_address: "misr.elgededa@6ohd.com",
+        directions: "https://maps.app.goo.gl/mTAdmRVJEfm66U2d7?g_st=iw",
+        facebook_link: "https://www.facebook.com/6ohd.Heliopolis?mibextid=kFxxJD"
       },
       {
         branch_name: "GIZA_BRANCH",

@@ -127,21 +127,21 @@ export class HomeComponent implements OnInit, AfterViewInit {
     if (this.experienceYears == 28) {
       clearInterval(this.experienceYearsStop)
     }
-  }, 100)
+  }, 150)
 
   academyDepartsStop = setInterval(() => {
     this.academyDeparts++
     if (this.academyDeparts == 17) {
       clearInterval(this.academyDepartsStop)
     }
-  }, 200)
+  }, 400)
 
   staffNumberStop = setInterval(() => {
     this.staffNumber++
     if (this.staffNumber == 112) {
       clearInterval(this.staffNumberStop)
     }
-  }, 50)
+  }, 250)
 
   slides = [
     { img: "assets/images/partners/helwan.png", Partner: "جامعة حلوان" },
@@ -238,89 +238,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
     ],
   };
 
-  videosSliderConfig = {
-    rtl: this.translate.currentLang == 'ar' ? true : false,
-    dots: true,
-    arrows: false,
-    autoplay: false,
-    speed: 1500,
-    infinite: false,
-    pauseOnHover: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-        },
-      },
-    ],
-  };
+  videosSliderConfig = {}
 
-  studentsTrainingSliderConfig = {
-    rtl: this.translate.currentLang == 'ar' ? true : false,
-    dots: true,
-    arrows: false,
-    autoplay: false,
-    speed: 1500,
-    infinite: false,
-    pauseOnHover: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-        },
-      },
-    ],
-  };
+  studentsTrainingSliderConfig = {}
 
   currentCenterIndex = 0; // Initially set to the center image
 
@@ -424,16 +344,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
         }
       ];
 
-      this.trainingImages = [
-        '/assets/images/small-image.png',
-        '/assets/images/small-image.png',
-        '/assets/images/small-image.png',
-        '/assets/images/small-image.png',
-        '/assets/images/small-image.png',
-        '/assets/images/small-image.png',
-        '/assets/images/small-image.png',
-        '/assets/images/small-image.png',
-      ]
+      // this.trainingImages = [
+      //   '/assets/images/small-image.png',
+      //   '/assets/images/small-image.png',
+      //   '/assets/images/small-image.png',
+      //   '/assets/images/small-image.png',
+      //   '/assets/images/small-image.png',
+      //   '/assets/images/small-image.png',
+      //   '/assets/images/small-image.png',
+      //   '/assets/images/small-image.png',
+      // ]
       this.trainingImagesShown = [
         '/assets/images/big-image.png',
         '/assets/images/big-image.png',
@@ -453,6 +373,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
     this.fillVideos()
     this.fillPhotos()
+    this.fillTrainingImagesPhotos()
+    this.fillVideosCarousel()
   }
   
   ngAfterViewInit(): void {
@@ -463,18 +385,107 @@ export class HomeComponent implements OnInit, AfterViewInit {
     document.getElementById('defaultOpen').click()
   }
 
+  fillVideosCarousel() {
+    this.videosSliderConfig = {
+      rtl: this.translate.currentLang == 'ar' ? true : false,
+      dots: true,
+      arrows: false,
+      autoplay: false,
+      speed: 1500,
+      infinite: false,
+      pauseOnHover: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            arrows: false,
+          },
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+            arrows: false,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            arrows: false,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            arrows: false,
+          },
+        },
+      ],
+    };
+
+    this.studentsTrainingSliderConfig = {
+      rtl: this.translate.currentLang == 'ar' ? true : false,
+      dots: true,
+      arrows: false,
+      autoplay: false,
+      speed: 1500,
+      infinite: false,
+      pauseOnHover: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            arrows: false,
+          },
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+            arrows: false,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            arrows: false,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            arrows: false,
+          },
+        },
+      ],
+    };
+  }
+
   openVideoTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("videoTabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+      tabcontent[i].style.height = "0";
+      tabcontent[i].style.padding = "0";
     }
     tablinks = document.getElementsByClassName("videoTablinks");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(tabName).style.display = "block";
+    document.getElementById(tabName).style.height = "100%";
+    document.getElementById(tabName).style.padding = "6px 12px";
     evt.currentTarget.className += " active";
+    this.fillVideosCarousel()
   }
 
   openTab(evt, tabName) {
@@ -567,6 +578,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.modalRef = this.modalService.show(RegisterModalComponent, { class: 'modal-xl modal-dialog-centered' });
   }
 
+  fillTrainingImagesPhotos() {
+    let imagesCount = 8;
+
+    for (let i = 1; i <= imagesCount; i++) {
+      this.trainingImages.push(`/assets/images/slider/${i}.JPG`)
+    }
+
+    console.log(this.trainingImages);
+    
+  }
+
   // test() {
   //   this.changeOrder()
   // }
@@ -617,21 +639,25 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.videos6octoberCenter = [
       {
         id: 1,
+        video_image: 'assets/images/sliderScreens/fouad.png',
         video_name: "المهندس فؤاد عبدالمنعم",
         video_description: "المهندس فؤاد عبد المنعم المدير الاداري لمؤسسة 6 أكتوبر للتنمية البشرية يحكي تاريخ إنشاء المؤسسة"
       },
       {
         id: 2,
+        video_image: 'assets/images/sliderScreens/minstry-visit.png',
         video_name: "زيارة وزير العمل",
         video_description: "زيارة معالي وزير العمل / حسن شحاتة للمقر الرئيسي بالجيزة"
       },
       {
         id: 3,
+        video_image: 'assets/images/sliderScreens/interaction.png',
         video_name: "التفاعل اليومي",
         video_description: "التفاعل اليومي داخل مراكز 6 أكتوبر"
       },
       {
         id: 4,
+        video_image: 'assets/images/sliderScreens/petrolium.png',
         video_name: "مجال البترول",
         video_description: "مجال البترول يحتاج إلى العمل الميداني واكتساب المهارات اللازمة منك، لحجز مكانك في الوظائف الشاغرة"
       }
@@ -640,36 +666,43 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.videosStudentsTraining = [
       {
         id: 1,
+        video_image: 'assets/images/sliderScreens/gerges.png',
         video_name: "قصة نجاح جرجس مجدي",
         video_description: "قصة نجاح المتدرب جرجس مجدي درس المساحة والخرائط في مراكز 6 أكتوبر للتدريب المهني"
       },
       {
         id: 2,
+        video_image: 'assets/images/sliderScreens/omarHany.png',
         video_name: "قصة نجاح عمر هاني",
         video_description: "تجربه عمر هاني داخل مراكز 6 أكتوبر من الناحية العملية والتدريبية"
       },
       {
         id: 3,
+        video_image: 'assets/images/sliderScreens/fathy.png',
         video_name: "قصة نجاح فتحي أبو بكر",
         video_description: "الطالب فتحي أبو بكر تخصص تكنولوجيا المعلومات - شبكات، يحكي لنا عن تجربته داخل مراكز 6 أكتوبر"
       },
       {
         id: 4,
+        video_image: 'assets/images/sliderScreens/special1.png',
         video_name: "بما إنك خريج مميز",
         video_description: "بما إنك خريج مميز وإتدربت معانا في مراكز 6 أكتوبر"
       },
       {
         id: 5,
+        video_image: 'assets/images/sliderScreens/special2.png',
         video_name: "بما إنك خريج مميز",
         video_description: "بما إنك خريج مميز"
       },
       {
         id: 6,
+        video_image: 'assets/images/sliderScreens/special3.png',
         video_name: "بما إنك خريج مميز",
         video_description: "بما إنك خريج مميز"
       },
       {
         id: 7,
+        video_image: 'assets/images/sliderScreens/anwar.png',
         video_name: "قصة نجاح محمد أنور",
         video_description: "قصة نجاح محمد أنور واحد من شباب كتير إتخرجوا من مراكز 6 أكتوبر للتدريب المهني"
       }

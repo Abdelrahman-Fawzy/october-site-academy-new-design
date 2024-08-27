@@ -34,7 +34,7 @@
     flex-wrap: wrap;
     // width: 75%;
     // margin: auto;
-    gap: 3em;
+    gap: 2em;
     background: #fff;
     padding: 15px;
     border-radius: 20px 20px 0 0;
@@ -253,7 +253,8 @@
         }
       }
     }
-    &#graduation-party {
+    &#graduation-party,
+    &#fun_activities {
       .class {
         padding: 10px;
         background: $white;
@@ -292,7 +293,8 @@
         }
       }
     }
-    &#training {
+    &#training,
+    &#theoreticalTraining {
       .training-p {
         color: #707070;
         font-size: 20px;

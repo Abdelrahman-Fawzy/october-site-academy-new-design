@@ -653,12 +653,12 @@
     <div class="content">
       <div class="videosCategoriesTabs">
         <div class="tab">
-          <button id="videoDefaultOpen" class="videoTablinks" (click)="openVideoTab($event, 'videos6OctoberBranches')">مراكز 6 اكتوبر</button>
-          <button class="videoTablinks" (click)="openVideoTab($event, 'videosStudentsTraining')">تدريبات الطلاب</button>
+          <button id="videoDefaultOpen" class="videoTablinks" (click)="openVideoTab($event, 'videos6OctoberBranches')">مقتطفات من المركز</button>
+          <button class="videoTablinks" (click)="openVideoTab($event, 'videosStudentsTraining')">قصص نجاح طلابنا</button>
         </div>
         <div id="videos6OctoberBranches" class="videoTabcontent">
           <ngx-slick-carousel
-            class="carousel"
+            class="carousel videosSlider"
             #slickModal="slick-carousel"
             [config]="videosSliderConfig"
           >
@@ -666,7 +666,7 @@
               <div class="videoItem" (click)="videosCurrentSlide(i + 1)">
                 <div class="video">
                   <div class="video-img">
-                    <img src="assets/images/small-image.png" alt="">
+                    <img [src]="video.video_image" alt="">
                   </div>
                   <div class="video-content">
                     <h4>{{video.video_name}}</h4>
@@ -719,7 +719,7 @@
         
         <div id="videosStudentsTraining" class="videoTabcontent">
           <ngx-slick-carousel
-            class="carousel"
+            class="carousel videosSlider"
             #slickModal="slick-carousel"
             [config]="studentsTrainingSliderConfig"
           >
@@ -727,7 +727,7 @@
               <div class="studentsVideoItem" (click)="videosStudentsTrainingShowSlides(i + 1)">
                 <div class="video">
                   <div class="video-img">
-                    <img src="assets/images/small-image.png" alt="">
+                    <img [src]="video.video_image" alt="">
                   </div>
                   <div class="video-content">
                     <h4>{{video.video_name}}</h4>
@@ -991,7 +991,7 @@
         </div>
       </div>
       <div class="galleryImgBox">
-        <div class="galleryImg" *ngFor="let image of trainingImagesShown">
+        <div class="galleryImg" *ngFor="let image of trainingImages">
           <img [src]="image" alt="">
         </div>
       </div>

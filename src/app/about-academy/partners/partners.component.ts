@@ -12,9 +12,10 @@ export class PartnersComponent implements OnInit, AfterViewInit {
   constructor() { 
     this.partners = [
       { 
-        img: "assets/images/partners/helwan.png", 
-        Partner: "جامعة حلوان",
-        divElement: 'helwan'
+        img: "assets/images/partners/labor_ministry.jpg", 
+        Partner: "وزارة العمل - الإدارة المركزية للتدريب المهني",
+        info: 'حاصلين على الترخيص رقم 1 في التدريب المهني الصادربتاريخ 28-2-2024 وفقا لقانون العمل رقم 12 لسنة 2003',
+        divElement: 'labor'
       },
       { 
         img: "assets/images/partners/adults.png", 

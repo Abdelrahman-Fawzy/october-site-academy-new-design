@@ -20,9 +20,11 @@ export class AcademyGalleryComponent implements OnInit {
       this.param = params.item
       console.log(this.param);
       if ( this.param == 'buildings') document.getElementById("mediaDefaultOpen").click();
+      if ( this.param == 'training') document.getElementById("trainingS").click();
+      if ( this.param == 'theoreticalTraining') document.getElementById("theoreticalTrainingS").click();
       if ( this.param == 'conferences') document.getElementById("conferencesAndNews").click();
       if ( this.param == 'graduation-party') document.getElementById("parties").click();
-      if ( this.param == 'training') document.getElementById("trainingS").click();
+      if ( this.param == 'fun_activities') document.getElementById("funActivities").click();
     })
 
     // document.getElementById("mediaDefaultOpen").click();

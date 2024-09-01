@@ -18,7 +18,7 @@ export class PartnersComponent implements OnInit, AfterViewInit {
         divElement: 'labor'
       },
       { 
-        img: "assets/images/partners/labor_ministry.jpg", 
+        img: "assets/images/soro/military.jpg", 
         Partner: "وزارة الدفاع- إدارة التعليم و التدريب المهنى.",
         info: 'إنطلاقا من مبدأ التكامل و العمل المشترك وتبادل الخبرات بين القوات المسلحة والمؤسسات العاملة في مجال التدريب المهني تم اللإتفاق على بروتوكول تعاون الصادر بتاريخ 14-2-2024 . ',
         divElement: 'defense'
@@ -77,7 +77,7 @@ export class PartnersComponent implements OnInit, AfterViewInit {
         divElement: 'assiut'
       },
       { 
-        img: "assets/images/soro/images.png", 
+        img: "assets/images/soro/dummy.jpg", 
         Partner: "جامعة أسيوط – وحدة نقل التكنولوجيا المتكاملةITTU  ",
         info: '27/08/2018',
         divElement: 'ITTU'
@@ -101,7 +101,7 @@ export class PartnersComponent implements OnInit, AfterViewInit {
         divElement: 'helwan'
       },
       { 
-        img: "assets/images/soro/elaosboa15427.jpg", 
+        img: "assets/images/soro/dummy.jpg", 
         Partner: "جامعة بنها – كلية الأداب – مركز الدراسات الإنسانية 30-10-2013",
         info: '',
         divElement: 'benha'
@@ -158,7 +158,7 @@ export class PartnersComponent implements OnInit, AfterViewInit {
         divElement: 'seagarden'
       },
       { 
-        img: "assets/images/soro/فندق سى جاردن.jpg", 
+        img: "assets/images/soro/dummy.jpg", 
         Partner: "قرية جولدن فايف السياحية",
         info: `تدريب على جميع أعمال السياحة والفنادق بتاريخ 18-01-2004`,
         divElement: 'goldenFive'
@@ -170,31 +170,31 @@ export class PartnersComponent implements OnInit, AfterViewInit {
         divElement: 'arabella'
       },
       { 
-        img: "assets/images/soro/SSSSSSSS-e1618917520840.jpg", 
+        img: "assets/images/soro/dummy.jpg", 
         Partner: "جمعية رساله – مستشفى رسالة ",
         info: ``,
         divElement: 'resala'
       },
       { 
-        img: "assets/images/soro/SSSSSSSS-e1618917520840.jpg", 
+        img: "assets/images/soro/dummy.jpg", 
         Partner: "مستشفى الريان التخصصى",
         info: ``,
         divElement: 'rayan'
       },
       { 
-        img: "assets/images/soro/SSSSSSSS-e1618917520840.jpg", 
+        img: "assets/images/soro/dummy.jpg", 
         Partner: "مستشفى الحرية",
         info: ``,
         divElement: 'freedom'
       },
       { 
-        img: "assets/images/soro/SSSSSSSS-e1618917520840.jpg", 
+        img: "assets/images/soro/dummy.jpg", 
         Partner: "هيئة الأبنية التعليمية",
         info: ``,
         divElement: 'abnia'
       },
       { 
-        img: "assets/images/soro/SSSSSSSS-e1618917520840.jpg", 
+        img: "assets/images/soro/dummy.jpg", 
         Partner: "شركة باور للخدمات البترولية",
         info: ``,
         divElement: 'power'

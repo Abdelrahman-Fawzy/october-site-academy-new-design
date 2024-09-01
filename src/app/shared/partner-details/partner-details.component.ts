@@ -11,13 +11,11 @@ export class PartnerDetailsComponent implements OnInit {
   modalRef?: BsModalRef;
   @Input() Partner;
   @Input() partnerImg;
+  @Input() partnerInfo;
 
   constructor(private modalService: BsModalService) { }
 
   ngOnInit(): void {
-    console.log(this.Partner);
-    console.log(this.partnerImg);
-    
   }
 
   closeModal() {

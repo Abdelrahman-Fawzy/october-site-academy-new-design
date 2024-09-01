@@ -109,7 +109,7 @@ export class BranchesComponent implements OnInit, AfterViewInit {
         license: "حاصل على رخصة من وزارة العمل 2024",
         branch_address: "BENHA_BRANCH_ADDRESS",
         whatsapp_number: "01000005387",
-        email_address: "6oa.Benha@6oHD.CoM",
+        email_address: "6oa.Benha@6ohd.CoM",
         directions: "https://maps.app.goo.gl/Q2PtdNU8U7fjYF5",
         facebook_link: "https://www.facebook.com/6oa.Banha?mibextid=eQY6cl"
       },
@@ -118,7 +118,7 @@ export class BranchesComponent implements OnInit, AfterViewInit {
         license: "حاصل على رخصة من وزارة العمل 2024",
         branch_address: "GHARBIA_BRANCH_ADDRESS",
         whatsapp_number: "01000005387",
-        email_address: "6oa.Tanta@6oHD.CoM",
+        email_address: "6oa.Tanta@6ohd.CoM",
         directions: "https://maps.app.goo.gl/MJa5ygweMaNewZqE8",
         facebook_link: "https://www.facebook.com/6octoberacademy.tanta?mibextid=eQY6cl"
       },
@@ -127,7 +127,7 @@ export class BranchesComponent implements OnInit, AfterViewInit {
         license: "حاصل على رخصة من وزارة العمل 2024",
         branch_address: "QALYUBIA_BRANCH_ADDRESS",
         whatsapp_number: "01000005387",
-        email_address: "6oa.Shubra@6oHD.CoM",
+        email_address: "6oa.Shubra@6ohd.CoM",
         directions: "https://maps.app.goo.gl/ox3WhmSUoznjboD37",
         facebook_link: "https://www.facebook.com/6Oa.Shubra?mibextid=eQY6cl"
       },
@@ -145,7 +145,7 @@ export class BranchesComponent implements OnInit, AfterViewInit {
         license: "حاصل على رخصة من وزارة العمل 2024",
         branch_address: "GIZA_BRANCH_ADDRESS",
         whatsapp_number: "01000005387",
-        email_address: "6oa.Haram@6oHD.CoM",
+        email_address: "6oa.Haram@6ohd.CoM",
         directions: "https://maps.app.goo.gl/9DJaK94J2nAfUfb67",
         facebook_link: "https://www.facebook.com/6octoberacademy?mibextid=eQY6cl"
       }

@@ -563,6 +563,11 @@
       </div> -->
     </div>
   </div>
+  <!-- <div class="counter-section">
+    <span *ngFor="let item of counters; let i = index" #counterSpan [attr.data-target]="item.targetNumber">
+      {{ item.startNumber }}
+    </span>
+  </div> -->
   <div class="academy_numbers">
     <div class="container">
       <div class="row align-items-center">
@@ -580,14 +585,14 @@
                 <div class="img">
                   <img src="assets/images/icons/departments.svg" alt="" />
                 </div>
-                <span class="num">{{ academyDeparts }}</span>
+                <span class="num" #counterSpan [attr.data-target]="counters[0].targetNumber">{{ counters[0].startNumber }}</span>
                 <span class="title">{{ "DEPARTS_NUMBER" | translate }}</span>
               </div>
               <div class="fact">
                 <div class="img">
                   <img src="assets/images/icons/graduates.svg" alt="" />
                 </div>
-                <span class="num">28693</span>
+                <span class="num" #counterSpan [attr.data-target]="counters[1].targetNumber">{{ counters[1].startNumber }}</span>
                 <span class="title">{{ "GRADUATES_NUMBER" | translate }}</span>
               </div>
             </div>
@@ -596,14 +601,14 @@
                 <div class="img">
                   <img src="assets/images/icons/experience.svg" alt="" />
                 </div>
-                <span class="num">{{ experienceYears }}</span>
+                <span class="num" #counterSpan [attr.data-target]="counters[2].targetNumber">{{ counters[2].startNumber }}</span>
                 <span class="title">{{ "EXPERIENCE_YEARS" | translate }}</span>
               </div>
               <div class="fact">
                 <div class="img">
                   <img src="assets/images/icons/staff.svg" alt="" />
                 </div>
-                <span class="num">{{ staffNumber }}</span>
+                <span class="num" #counterSpan [attr.data-target]="counters[3].targetNumber">{{ counters[3].startNumber }}</span>
                 <span class="title">{{ "STAFF_NUMBER" | translate }}</span>
               </div>
             </div>
@@ -648,7 +653,6 @@
   <div class="videos">
     <div class="header">
       <h3>فيديوهات 6 اكتوبر</h3>
-      <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي</p>
     </div>
     <div class="content">
       <div class="videosCategoriesTabs">
@@ -961,7 +965,6 @@
   <div class="photos">
     <div class="header">
       <h3>{{ '6OCTOBERPHOTOS' | translate }}</h3>
-      <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي</p>
     </div>
     <div class="gallery">
       <div class="categories">
@@ -1005,7 +1008,7 @@
       [config]="sliderConfig"
     >
       <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-        <div class="partner" (click)="partnerDetails(slide.Partner, slide.img)">
+        <div class="partner" (click)="partnerDetails(slide.Partner, slide.img, slide.info)">
           <img src="{{ slide.img }}" alt="" />
         </div>
       </div>
